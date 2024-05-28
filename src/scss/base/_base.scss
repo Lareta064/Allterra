@@ -1,5 +1,53 @@
+@font-face{
+	font-family: 'Inter';
+	src: url('../fonts/Inter-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
 
-
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter-ExtraBold.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
 *, *:after, *:before {
 	box-sizing: border-box;
 	background-repeat: no-repeat;
@@ -23,7 +71,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	color: $black;
+	color: $text-dark;
 	font-family: $font-family;
 	font-size: 16px;
 	background-color: $white;
@@ -33,6 +81,7 @@ body {
 a,
 a:hover {
 	text-decoration: none;
+	color: $bg-black;
 }
 
 ul {
@@ -103,4 +152,13 @@ input[type="submit"] {
 	box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
 	background: var(--white);
 	padding: 20px 24px;
+}
+.flex-item{
+	display: flex;
+	align-items: center;
+	column-gap:8px;
+	svg,img{
+		flex-shrink: 0;
+		object-fit: contain;
+	}
 }

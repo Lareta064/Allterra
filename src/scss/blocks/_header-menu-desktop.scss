@@ -4,14 +4,17 @@
 	height: 48px;
 	display: flex;
 	align-items: center;
+	&__column{margin-left: 138px;}
 }
 .header-top__nav{
-	flex-grow: 1;
+	// flex-grow: 1;
+	margin-left: auto;
+	
 	&>ul{
 		display: flex;
 		align-items: center;
 		column-gap:42px;
-		li:has(ul){
+		li:has(.drop-menu-wrapper){
 			position: relative;
 			padding-right: 17px;
 			&:before{
@@ -33,8 +36,8 @@
 			padding-block: 3px;
 			transition: .3s; 
 		}
-		
-		li ul{
+		&>li>a{opacity: .8;}
+		.drop-menu-wrapper{
 			position: relative;
 			z-index: -1;
 			opacity: 0;
@@ -43,14 +46,17 @@
 			top: calc(100% - 10px);
 			top:100%;
 			left: -24px;
-			width: 228px;
+			width: max-content;
 			transition: .3s; 
 			@include shadow-border;
-			
+			img{
+				box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15);
+			}
 			
 			a{
 				font-size: 16px;
 				line-height: 1.75;
+				// white-space: nowrap;
 				&:hover{
 					color: $main-accent;
 				}
@@ -62,10 +68,28 @@
 		padding-block: 14px;
 		a{padding-block:4px;}
 	}
-	&>ul>li:hover > a{
-		border-bottom: 1px solid $text-dark;
+	&>ul>li>a{
+		position: relative;
+		
+		&:before {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			bottom: 3px;
+			background-color: $text-dark;
+			opacity: 0;
+			transition: .3s; 
+		}
 	}
-	li:hover ul{
+	&>ul>li:hover > a{
+		opacity: 1;
+		&:before{opacity: 1;}
+	}
+	li:hover .drop-menu-wrapper{
 		transform: translateY(-2px);
 		opacity: 1;
 		z-index: 2;
@@ -73,4 +97,48 @@
 	li:hover:before{
 		transform: rotate(180deg);
 	}
+}
+.drop-menu-countries{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap:40px;
+	.drop-menu__col{
+		min-width: 160px;
+	   
+				
+			
+	}
+	.drop-menu__col-title{margin-bottom: 16px;}
+	.drop-menu__col-title, .drop-menu__col-title * {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 1,54;
+		text-transform: uppercase;
+		color: $text-dark;
+		opacity: .6;
+	}
+	.drop-menu__col-list>*+*{margin-top: 4px;}
+}
+.contact-item{
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 1.33;
+	color: #4c5360;
+	white-space: nowrap;
+	position: relative;
+	padding-block:3px;
+	&:before{
+	    content: '';
+		display: block;
+		height: 1px;
+		width: 100%;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		bottom: 3px;
+		background-color: $text-dark;
+		opacity: 0;
+		transition: .3s;
+	}
+	&:hover:before{opacity: 1;}
 }
