@@ -1,0 +1,5 @@
+mixin menu-list(arg)
+	ul
+		each item of arg
+			li( class= (item.activeClass == "active" ? "active" : "")) 
+				a(href="#!") !{item.name}

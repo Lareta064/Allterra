@@ -1,0 +1,36 @@
+//========== HEADER =========
+header.header
+	//======= HEADER TOP =======
+	.header-top
+		.container
+			.header-flex
+				//======HEADER TOP MENU ======
+				nav.header-top__nav
+					ul
+						//======single LI====
+						li.drop-meny-li
+							a(href="#!") О компании
+							//======single LI Drop-menu====
+							+menu-list([{name:'Об Allterra Education'}, {name:'Обращение директора'},{name:'Вакансии'},{name:'Partner`s zone'},{name:'Отзывы'} ])
+						
+						//======single LI====
+						li.drop-meny-li
+							a(href="#!") Все услуги
+							+menu-list([{name:'Об Allterra Education'}, {name:'Обращение директора'},{name:'Вакансии'},{name:'Partner`s zone'},{name:'Отзывы'} ])
+						
+						//======single LI====
+						li.drop-meny-li
+							a(href="#!") Страны
+							+menu-list([{name:'Об Allterra Education'}, {name:'Обращение директора'},{name:'Вакансии'},{name:'Partner`s zone'},{name:'Отзывы'} ])
+						//======single LI====
+						li
+							a(href="#!") Справочник поступающего
+
+						//======single LI====
+						li
+							a(href="#!") Новости
+						//======single LI====
+						li
+							a(href="#!") Контакты
+				//======RIGHT COLUMN =====
+				.header-top__column

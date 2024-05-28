@@ -2,6 +2,9 @@
 
 *, *:after, *:before {
 	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 html {
@@ -23,6 +26,7 @@ body {
 	color: $black;
 	font-family: $font-family;
 	font-size: 16px;
+	background-color: $white;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -86,3 +90,17 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
+.container {
+	width: min(1280px, 100%);
+	padding-inline: 20px;
+	margin: 0 auto;
+
+	@media (max-width: 1023px) {
+		padding-inline: 16px;
+	}
+}
+@mixin shadow-border{
+	box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
+	background: var(--white);
+	padding: 20px 24px;
+}
