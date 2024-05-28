@@ -151,7 +151,7 @@ input[type="submit"] {
 @mixin shadow-border{
 	box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
 	background: var(--white);
-	padding: 20px 24px;
+	
 }
 .flex-item{
 	display: flex;

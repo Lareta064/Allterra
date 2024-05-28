@@ -39,8 +39,8 @@
 		&>li>a{opacity: .8;}
 		.drop-menu-wrapper{
 			position: relative;
-			z-index: -1;
-			opacity: 0;
+			// z-index: -1;
+			// opacity: 0;
 			transform: translateY(20px);
 			position: absolute;
 			top: calc(100% - 10px);
@@ -49,6 +49,11 @@
 			width: max-content;
 			transition: .3s; 
 			@include shadow-border;
+			max-height: 0;
+			overflow: hidden;
+			&>*{
+				padding: 20px 24px;
+			}
 			img{
 				box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15);
 			}
@@ -91,8 +96,9 @@
 	}
 	li:hover .drop-menu-wrapper{
 		transform: translateY(-2px);
-		opacity: 1;
+		// opacity: 1;
 		z-index: 2;
+		max-height: unset;
 	}
 	li:hover:before{
 		transform: rotate(180deg);
