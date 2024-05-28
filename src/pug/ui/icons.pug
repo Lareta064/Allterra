@@ -1,0 +1,64 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Иконки
+
+				.container-dashboard__content
+					ul
+						li.dark-bg
+							svg.svg-search
+								use(href="../img/spriteSvg.svg#svg-search")
+
+							pre.
+								svg.svg-search
+									use(href="./img/spriteSvg.svg#svg-search")
+								
+						li
+							svg.svg-chevron-down
+								use(href="../img/spriteSvg.svg#svg-chevron-down")
+
+							pre.
+								svg.svg-chevron-down
+									use(href="./img/spriteSvg.svg#svg-chevron-down")
+
+						li
+							svg.svg-cross
+								use(href="../img/spriteSvg.svg#svg-cross")
+
+							pre.
+								svg.svg-cross
+									use(href="./img/spriteSvg.svg#svg-cross")
+
+						li.dark-bg
+							svg.svg-arrow
+								use(href="../img/spriteSvg.svg#svg-arrow")
+
+							pre.
+								svg.svg-arrow
+									use(href="./img/spriteSvg.svg#svg-arrow")
+
+						li.dark-bg
+							svg.svg-check
+								use(href="../img/spriteSvg.svg#svg-check")
+
+							pre.
+								svg.svg-check
+									use(href="./img/spriteSvg.svg#svg-check")
