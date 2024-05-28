@@ -13,14 +13,14 @@
 		column-gap:42px;
 		li:has(ul){
 			position: relative;
-			padding-right: 16px;
+			padding-right: 17px;
 			&:before{
 				content: '';
 				display: block;
 				width: 11px;
 				height: 6px;
 				position: absolute;
-				top: 9px;
+				top: 23px;
 				right: 0;
 				transition: .3s; 
 				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L4.70276 4.29135C5.15743 4.69549 5.84257 4.69549 6.29724 4.29135L10 1' stroke='%232DBFCA' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
@@ -33,18 +33,21 @@
 			padding-block: 3px;
 			transition: .3s; 
 		}
+		
 		li ul{
 			position: relative;
-			// z-index: -1;
-			// opacity: 0;
+			z-index: -1;
+			opacity: 0;
 			transform: translateY(20px);
 			position: absolute;
 			top: calc(100% - 10px);
+			top:100%;
 			left: -24px;
 			width: 228px;
 			transition: .3s; 
-			
 			@include shadow-border;
+			
+			
 			a{
 				font-size: 16px;
 				line-height: 1.75;
@@ -55,11 +58,15 @@
 			li +li{margin-top: 12px;}
 		}
 	}
+	&>ul>li{
+		padding-block: 14px;
+		a{padding-block:4px;}
+	}
 	&>ul>li:hover > a{
-		border-bottom: 1px solid $text-dark;;
+		border-bottom: 1px solid $text-dark;
 	}
 	li:hover ul{
-		transform: translateY(0);
+		transform: translateY(-2px);
 		opacity: 1;
 		z-index: 2;
 	}
