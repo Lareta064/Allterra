@@ -11,3 +11,6 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
    box-shadow: 0 0 0px 1000px #fff inset;
 }
+.search-btn:hover {
+  background: rgba(255, 255, 255, .1);
+}

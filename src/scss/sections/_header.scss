@@ -3,4 +3,17 @@
 		display: flex;
 		align-items: center;
 	}
+	&-column{
+		display: flex;
+		align-items: center;
+		column-gap:16px;
+		margin-left: 100px;
+	}
+}
+.logo{
+	flex-shrink: 0;
+}
+.svg-logo{
+	width: 105px;
+	height: 32px;
 }

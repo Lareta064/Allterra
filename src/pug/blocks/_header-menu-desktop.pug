@@ -4,21 +4,21 @@ mixin country-item(img, txt)
 		span #{txt}
 //========== HEADER =========
 header.header
-	//======= HEADER TOP =======
+	//======= HEADER TOP ROW=======
 	.header-top
 		.container
 			.header-flex
-				//======HEADER TOP MENU ======
-				nav.header-top__nav
+				//======//====== NAVIGATION ===== ======
+				nav.header-nav
 					ul
 						//======single LI====
-						li.drop-meny-li
+						li.drop-menu-li
 							a(href="#!") О компании
 							//======single LI Drop-menu====
 							+menu-list([{name:'Об Allterra Education'}, {name:'Обращение директора'},{name:'Вакансии'},{name:'Partner`s zone'},{name:'Отзывы'} ])
 						
 						//======single LI====
-						li.drop-meny-li
+						li.drop-menu-li
 							a(href="#!") Все услуги
 							+menu-list([{name:'Поступление в школу'}, {name:'Поступление в университет'},{name:'Каникулы за рубежом'},{name:'Искусство и дизайн'}])
 						
@@ -71,5 +71,33 @@ header.header
 						li
 							a(href="#!") Контакты
 				//======RIGHT COLUMN =====
-				.header-top__column
+				.header-column
 					a(href="tel:88005114993").contact-item 8 (800) 511-4993
+	
+	//======= HEADER BOTTOM ROW =======
+	.header-bottom
+		.container
+			.header-flex
+				//=======LOGO=====
+				a(href="#!").logo
+					svg.svg-logo
+						use( href='./img/spriteSvg.svg#logo')
+				
+				//====== NAVIGATION =====
+				.header-nav
+					ul
+						li
+							a(href="") Высшее образование
+						li
+							a(href="") Среднее образование
+						li.drop-menu-li
+							a(href="") Языковая программа
+							+menu-list([{name:'Китайский'}, {name:'Японский'},{name:'Английский'},{name:'Испанский'}])
+						li
+							a(href="") Учебные заведения
+				.header-column
+					button.btn-icon.search-btn
+						svg.svg-search
+							use( href='./img/spriteSvg.svg#svg-search')
+						
+					button(type="button").btn-accent Консультация
