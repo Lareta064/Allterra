@@ -1,3 +1,104 @@
+mixin country-item(img, txt)
+	a(href="#!").flex-item
+		img(src="./img/flags/"+ img +".svg", width="24"  height="16" alt="icon")
+		span #{txt}
+//========== HEADER =========
 header.header
-	.container
+	//======= HEADER TOP ROW=======
+	.header-top
+		.container
+			.header-flex
+				//======//====== NAVIGATION ===== ======
+				nav.header-nav
+					ul
+						//======single LI====
+						li.menu-li.drop-menu-li
+							a(href="#!") О компании
+							//======single LI Drop-menu====
+							+menu-list([{name:'Об Allterra Education'}, {name:'Обращение директора'},{name:'Вакансии'},{name:'Partner`s zone'},{name:'Отзывы'} ])
+						
+						//======single LI====
+						li.menu-li.drop-menu-li
+							a(href="#!") Все услуги
+							+menu-list([{name:'Поступление в школу'}, {name:'Поступление в университет'},{name:'Каникулы за рубежом'},{name:'Искусство и дизайн'}])
+						
+						//======single LI====
+						li.menu-li.drop-menu-li
+							a(href="#!") Страны
+							.drop-menu-wrapper
+								.drop-menu-countries
+									.drop-menu__col
+										.drop-menu__col-title
+											p Англоговорящие
+										.drop-menu__col-list
+											+country-item('uk', 'Великобритания')
+											+country-item('usa', 'США')
+											+country-item('irl', 'Ирландия')
+											+country-item('can', 'Канада')
+											+country-item('aus', 'Австралия')
+											+country-item('malta', 'Мальта')
+										
+									.drop-menu__col
+										.drop-menu__col-title
+											p Европа
+										.drop-menu__col-list
+											+country-item('swich', 'Швейцария')
+											+country-item('spain', 'Испания')
+											+country-item('de', 'Германия')
+											+country-item('fr', 'Франция')
+											+country-item('nid', 'Голландия')
+											+country-item('fin', 'Финлядия')
+									.drop-menu__col
+										.drop-menu__col-title
+											p Азия
+										.drop-menu__col-list
+											+country-item('sing', 'Сингапур')
+											+country-item('oae', 'ОАЭ')
+											+country-item('tln', 'Тайланд')
+											+country-item('kor', 'Южная Корея')
+											+country-item('mls', 'Малайзия')
+											+country-item('china', 'Китай')
+								.drop-menu-footer
+
+						//======single LI====
+						li.menu-li
+							a(href="#!") Справочник поступающего
+
+						//======single LI====
+						li.menu-li
+							a(href="#!") Новости
+						//======single LI====
+						li.menu-li
+							a(href="#!") Контакты
+				//======RIGHT COLUMN =====
+				.header-column
+					a(href="tel:88005114993").contact-item 8 (800) 511-4993
+	
+	//======= HEADER BOTTOM ROW =======
+	.header-bottom
+		.container
+			.header-flex
+				//=======LOGO=====
+				a(href="#!").logo
+					svg.svg-logo
+						use( href='./img/spriteSvg.svg#logo')
+				
+				//====== NAVIGATION =====
+				.header-nav
+					ul
+						li.menu-li
+							a(href="") Высшее образование
+						li.menu-li
+							a(href="") Среднее образование
+						li.menu-li.drop-menu-li
+							a(href="") Языковая программа
+							+menu-list([{name:'Китайский'}, {name:'Японский'},{name:'Английский'},{name:'Испанский'}])
+						li.menu-li
+							a(href="") Учебные заведения
+				.header-column
+					button.btn-icon.search-btn
+						svg.svg-search
+							use( href='./img/spriteSvg.svg#svg-search')
+						
+					button(type="button").btn-accent Консультация
 		
