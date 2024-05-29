@@ -158,6 +158,22 @@ input[type="submit"] {
 		object-fit: contain;
 	}
 }
+.flex-row,.flex-center-y, .flex-center-x, .flex-center,
+.flex-col {
+	display: flex;
+	align-items: flex-start;
+}
+.flex-center-x,
+.flex-center{
+	justify-content: center;
+}
+.flex-center-y,.flex-center{
+	align-items: center;
+}
+.flex-col{
+	flex-direction: column;
+	&>*{width: 100%;}
+}
 .w-100{
 	width: 100% !important;
 }

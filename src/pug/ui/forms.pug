@@ -22,6 +22,19 @@ html(lang="ru")
 				h2 Форма
 
 				.container-dashboard__content
+					form.header-search.flex-center-y
+						.form_field
+							input(type="text" name="" placeholder="Поиск по сайту")
+							
+							//===== clean input button =====
+							button(type="rezet").btn-icon
+								svg.svg-cross
+									use( href='../img/spriteSvg.svg#svg-cross')
+						
+						//======FORM BUTTON=====		
+						.form__btn
+							button(type="submit").btn-accent Найти
+					
 					.form_field
 						input(type="text" name="name" placeholder="Ваше имя*")
 					pre.
