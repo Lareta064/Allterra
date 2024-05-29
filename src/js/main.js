@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
     /*===============MOBILE MENU ==================*/
 	const menuToggle = document.querySelector('#menu-toggle');
-	const mobileMenu = document.querySelector('#header-menu');
+	const mobileMenu = document.querySelector('#mobile-menu');
 	
 
 	if (menuToggle) {

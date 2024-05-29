@@ -1,0 +1,62 @@
+/*==============MOBILE MENU===============*/
+.mobile-menu-wrapper{
+	position: fixed;
+	z-index: 8;
+	top: 68px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(21, 21, 21, 0.4);
+	display: flex;
+	justify-content: flex-end;
+}
+.mobile-menu-content{
+	padding: 38px 16px;
+	width: min(360px, 100%);
+	background-color: #fff;
+	a:not(.accent-link){
+		font-size: 15px;
+		line-height: 1.6;
+		color: $text-dark
+	}
+}
+.mobile-menu{
+	li +li{margin-top: 24px;}
+
+	.menu-item.drop-menu-li{
+		&:after{
+			transform: rotate(-90deg);
+			top:7px;
+		}
+	}
+	.drop-menu-wrapper{
+		position: fixed;
+		top: 68px;
+		bottom: 0;
+		right: 0;
+		width: min(360px, 100%);
+		background-color: white;
+		z-index: 2;
+		padding: 38px 16px;
+		height: calc(100dvh - 68px);
+		overflow: hidden;
+		overflow-y: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{
+			display: none;
+		}
+	}
+	.drop-menu__header{
+		margin-bottom: 30px;
+		.accent-link{font-size: 15px;}
+		
+	}
+	.drop-menu-countries{
+		grid-template-columns: 1fr;
+		row-gap:24px;
+		.drop-menu__col-title{margin-bottom: 13px;}
+	}
+	.drop-menu-countries .drop-menu__col-list>*+* {
+		margin-top: 15px;
+	}
+}

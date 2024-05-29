@@ -1,7 +1,7 @@
 .svg-search,.svg-arrow, .svg-check, .svg-phone {
 	color: $white;
 }
-.svg-search, .svg-chevron-down,.svg-phone{fill: transparent;}
+.svg-search, .svg-chevron-down,.svg-phone,.svg-chevron{fill: transparent;}
 .svg-search{
 	width: 18px;
 	height: 19px;
@@ -10,6 +10,19 @@
 	width: 11px;
 	height: 6px;
 	color: $main-accent;
+}
+.svg-chevron{
+	width: 7px;
+	height: 14px;
+	color: $main-accent;
+}
+.chevron-back{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='14' viewBox='0 0 7 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.125 12.625L1.83365 7.79724C1.42951 7.34257 1.42951 6.65743 1.83365 6.20276L6.125 1.375' stroke='%232DBFCA' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
+	background-size: auto;
+
 }
 .svg-cross{
 	width: 16px;
@@ -29,4 +42,13 @@
 .svg-phone{
 	width: 18px;
 	height: 18px;
+}
+.back-link{
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.11;
+	color: $text-dark;
 }

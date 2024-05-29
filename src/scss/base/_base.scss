@@ -158,16 +158,17 @@ input[type="submit"] {
 		object-fit: contain;
 	}
 }
-.flex-row,.flex-center-y, .flex-center-x, .flex-center,
+.flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,
 .flex-col {
 	display: flex;
 	align-items: flex-start;
 }
+.flex-justify{justify-content: space-between;}
 .flex-center-x,
 .flex-center{
 	justify-content: center;
 }
-.flex-center-y,.flex-center{
+.flex-center-y,.flex-center,.flex-justify{
 	align-items: center;
 }
 .flex-col{

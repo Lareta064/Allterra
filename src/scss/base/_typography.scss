@@ -1,7 +1,7 @@
 .accent-txt, .accent-link{
 	color: $main-accent;
 }
-.accent-link{
+*.accent-link{
 	position: relative;
 	&:before{
 		content:'';

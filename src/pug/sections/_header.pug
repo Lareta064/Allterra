@@ -122,3 +122,84 @@ header.header
 					button(type="button").menu-toggle#menu-toggle
 						span
 
+	//=========HEADER MOBILE MENU ======
+	.mobile-menu-wrapper#mobile-menu
+		.mobile-menu-content
+			nav.mobile-menu
+				ul
+					li.menu-item
+						a(href="#!") Высшее образование
+					li.menu-item
+						a(href="#!") Среднее образование
+					//=======MENU ITEM ======
+					li.menu-item.drop-menu-li
+						a(href="#!") Языковая программа
+						//========CHILD MENU ======
+						.drop-menu-wrapper
+							.drop-menu__header.flex-justify
+								.back-link
+									span.chevron-back
+									p Языковая программа
+							
+							.drop-menu__list
+								a(href="#!") Какая-то программа
+								a(href="#!") Какая-то программа
+								a(href="#!") Какая-то программа
+								a(href="#!") Какая-то программа
+								
+					//=======MENU ITEM ======
+					li.menu-item.drop-menu-li
+						a(href="#!") Страны
+						//========CHILD MENU ======
+						.drop-menu-wrapper
+							.drop-menu__header.flex-justify
+								.back-link
+									span.chevron-back
+									p Страны
+								a(href="#!").accent-link Показать все
+							
+							.drop-menu__list
+								.drop-menu-countries
+									.drop-menu__col
+										.drop-menu__col-title
+											p Англоговорящие
+										.drop-menu__col-list
+											+country-item('uk', 'Великобритания')
+											+country-item('usa', 'США')
+											+country-item('irl', 'Ирландия')
+											+country-item('can', 'Канада')
+											+country-item('aus', 'Австралия')
+											+country-item('malta', 'Мальта')
+										
+									.drop-menu__col
+										.drop-menu__col-title
+											p Европа
+										.drop-menu__col-list
+											+country-item('swich', 'Швейцария')
+											+country-item('spain', 'Испания')
+											+country-item('de', 'Германия')
+											+country-item('fr', 'Франция')
+											+country-item('nid', 'Голландия')
+											+country-item('fin', 'Финлядия')
+									.drop-menu__col
+										.drop-menu__col-title
+											p Азия
+										.drop-menu__col-list
+											+country-item('sing', 'Сингапур')
+											+country-item('oae', 'ОАЭ')
+											+country-item('tln', 'Тайланд')
+											+country-item('kor', 'Южная Корея')
+											+country-item('mls', 'Малайзия')
+											+country-item('china', 'Китай')
+					li.menu-item
+						a(href="#!") Учебные заведения
+					li.menu-item
+						a(href="#!") О компании
+					li.menu-item
+						a(href="#!") Все услуги
+					li.menu-item
+						a(href="#!") Справочник поступающего
+					li.menu-item
+						a(href="#!") Новости
+					li.menu-item
+						a(href="#!") Контакты
