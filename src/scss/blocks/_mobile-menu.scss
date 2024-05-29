@@ -9,6 +9,9 @@
 	background: rgba(21, 21, 21, 0.4);
 	display: flex;
 	justify-content: flex-end;
+	transform: translateX(110%);
+	transition: .3s; 
+	&.active{transform: translateX(0);}
 }
 .mobile-menu-content{
 	padding: 38px 16px;

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	if (menuToggle) {
 
-		/*   клик поиконке гамбургер*/  
+		/*   клик по иконке гамбургер*/  
 		menuToggle.addEventListener('click', ()=> {
 			
 			if (menuToggle.classList.contains('active')) {
