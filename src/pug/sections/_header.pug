@@ -4,19 +4,20 @@ mixin country-item(img, txt)
 		span #{txt}
 //========== HEADER =========
 header.header
-	.header-search-modal.flex-center-x
-		form.header-search.flex-center-y
-			.form_field
-				input(type="text" name="" placeholder="Поиск по сайту")
+	.header-search-popup.flex-center-x#search-popup
+		.header-search-wrapper
+			form.header-search.flex-center-y
+				.form_field
+					input(type="text" name="" placeholder="Поиск по сайту")
+					
+					//===== clean input button =====
+					button(type="reset").btn-icon
+						svg.svg-cross
+							use( href='../img/spriteSvg.svg#svg-cross')
 				
-				//===== clean input button =====
-				button(type="rezet").btn-icon
-					svg.svg-cross
-						use( href='../img/spriteSvg.svg#svg-cross')
-			
-			//======FORM BUTTON=====		
-			.form__btn
-				button(type="submit").btn-accent Найти
+				//======FORM BUTTON=====		
+				.form__btn
+					button(type="submit").btn-accent Найти
 	//======= HEADER TOP ROW=======
 	.header-top
 		.container
@@ -108,8 +109,10 @@ header.header
 							+menu-list([{name:'Китайский'}, {name:'Японский'},{name:'Английский'},{name:'Испанский'}])
 						li.menu-li
 							a(href="") Учебные заведения
+				
+				//======== BUTTONS GROUP=========
 				.header-column
-					button.btn-icon.search-btn
+					button.btn-icon.search-btn#search-btn
 						svg.svg-search
 							use( href='./img/spriteSvg.svg#svg-search')
 						

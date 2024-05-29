@@ -1,4 +1,4 @@
-.header-search-modal{
+.header-search-popup{
 	backdrop-filter: blur(6px);
 	background: rgba(21, 21, 21, 0.4);
 	padding: 20px;
@@ -8,16 +8,40 @@
 	right: 0;
 	bottom: 0;
 	z-index: 10;
+	overflow: hidden;
+	display: none;
+	.header-search-wrapper{height: 0; overflow: hidden;}
+	&.active{
+		display: flex;
+		
+		.header-search-wrapper{
+			animation-name: fadeUp;
+		    animation-duration: .2s;
+		    animation-timing-function: linear;
+		    animation-fill-mode: forwards;
+			animation-delay: .1s;
+		}
+	}
+}
+@keyframes fadeUp{
+	0%{height: 0;}
+	100% {height: 100px;}
+		
+	
+}
+.header-search-wrapper{
+	width: min(918px, 100%);
 }
 .header-search {
 	padding: 24px;
 	column-gap: 20px;
 	background-color: $white;
-	width: min(918px, 100%);
+	
+	
 	.form_field {
 		flex-grow: 1;
 	}
-
+	
 	input[type="text"] {
 		padding-right: 44px;
 		height: 52px;
