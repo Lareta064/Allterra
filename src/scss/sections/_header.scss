@@ -14,6 +14,10 @@
 		height: 44px;
 	}
 }
+header .logo{
+	margin-right: auto;
+	
+}
 .logo{
 	flex-shrink: 0;
 }
@@ -32,6 +36,10 @@
 
 	.header-column {
 		margin-left: 138px;
+	}
+	@media (max-width: 1279px) {
+	   display: none;
+	   height: 0;
 	}
 }
 
@@ -233,6 +241,12 @@
 	.header-nav>ul {
 		column-gap: 30px;
 	}
-
+	@media (max-width: 1279px) {
+		display: flex;
+		align-items: center;
+		.btn-advice, .header-nav{
+			display: none;
+		}
+	}
 	
 }

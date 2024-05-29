@@ -1,0 +1,76 @@
+/*========GAMBURGER======*/
+.menu-toggle {
+	display: none;
+	flex-shrink: 0;
+	width: 36px;
+	height: 36px;
+	background-color: #fff;
+	z-index: 11;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+@media (max-width: 1279px) {
+	.menu-toggle {
+		display: flex;
+
+	}
+}
+
+.menu-toggle span {
+	position: relative;
+	height: 2px;
+	width: 18px;
+	border-radius: 3px;
+	background-color: $bg-black;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.menu-toggle span:after,
+.menu-toggle span:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	height: 2px;
+	background-color: $bg-black;
+	border-radius: 5px;
+	right: 0;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.menu-toggle span:after {
+	top: -6px;
+}
+
+.menu-toggle span:before {
+	bottom: -6px;
+}
+.active.menu-toggle.active{
+	border-radius: 50%;
+}
+.active.menu-toggle span {
+	background-color: transparent !important;
+}
+
+
+.active.menu-toggle span:after {
+	top: 0px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color:$bg-black;
+}
+
+.active.menu-toggle span:before {
+	bottom: 0px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	background-color: $bg-black;
+}
