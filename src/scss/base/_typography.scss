@@ -1,3 +1,20 @@
-.accent-txt{
+.accent-txt, .accent-link{
 	color: $main-accent;
+}
+.accent-link{
+	position: relative;
+	&:before{
+		content:'';
+		display: block;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		width: 0;
+		background-color: $main-accent;
+		transition: .3s; 
+	}
+	&:hover{color: $main-accent;}
+	&:hover:before{
+		width: 100%;
+	}
 }

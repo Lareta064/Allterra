@@ -110,13 +110,9 @@ img {
 }
 
 input,
-button,
+button{border: none;}
 button:focus,
-input:focus {
-	outline: none;
-	border: none;
-}
-
+input:focus,textarea:focus{outline: none;}
 button {
 	padding: 0;
 	background-color: transparent;
@@ -161,4 +157,7 @@ input[type="submit"] {
 		flex-shrink: 0;
 		object-fit: contain;
 	}
+}
+.w-100{
+	width: 100% !important;
 }

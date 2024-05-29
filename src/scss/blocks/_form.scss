@@ -14,3 +14,86 @@ select:-webkit-autofill:focus {
 .search-btn:hover {
   background: rgba(255, 255, 255, .1);
 }
+.form_field{
+  position: relative;
+  input, textarea{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    color:$bg-black;
+    font-family: $font-family;
+    padding-inline: 20px;
+    height: 70px;
+    background-color: #f0f3f9;
+    border: 1px solid #f0f3f9;
+    
+    &::placeholder{
+      color: rgba(21, 21, 21, .6);
+    }
+    
+  }
+  textarea{
+    padding: 20px;
+    height: 200px;
+    resize: none;
+
+  }
+  label{
+    display: block;
+    position: relative;
+  }
+  @media (max-width: 767px) {
+     input, textarea{
+      padding-inline: 16px;
+      height: 58px;
+     }
+  }
+}
+.form_field.error{
+  input,textarea{
+    border: 1px solid #ff0000;
+  }
+}
+label.form-checkbox {
+  display: flex;
+  column-gap: 16px;
+
+  input[type="input"]{
+     appearance:none;
+     width: 0.01em;
+     height: 0.01em;
+     position: absolute;
+     left: 0;
+     right: 0;
+     opacity: 0;
+  }
+  input ~ .fake-checkbox{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background-color: $main-accent;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 1L5.0625 10L1 5.90909' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+    background-size: 0;
+  }
+  input:checked ~ .fake-checkbox{
+    background-size: auto;
+  }
+  @media (max-width: 1023px) {
+    column-gap: 10px;
+  input~.fake-checkbox{
+    width: 20px;
+    height: 20px;
+  }
+  }
+}
+.form_field +.form_field{margin-top: 15px;}
+.form-confirm{
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(16, 23, 36, 0.8);
+  @media (max-width: 991px) {
+   font-size: 12px;
+   
+  }
+}

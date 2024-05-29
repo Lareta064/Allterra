@@ -1,5 +1,6 @@
 /***BUTTONS***/
-.btn-accent, .btn-icon{
+.btn-accent, .btn-icon, .btn,.btn-border,.btn-white{
+	padding-inline: 36px;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -8,16 +9,32 @@
 	outline: none;
 	font-family: $font-family;
 	font-weight: 500;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.33;
 	transition: .3s; 
 	text-align: center;
-	height: 44px;
+	height: 64px;
 	line-height: 44px;
+	color: $white;
+	@media (max-width: 1023px) {
+		height: 60px;
+	}
+}
+.btn,.btn-border{
+	background-color: $bg-black;
+	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+	&:hover{
+		background-color: #1f1f1f;;
+	}
+	&:focus {
+		background-color: #1f1f1f;
+		color: rgba(255,255,255, .7);
+	}
+	
 }
 .btn-accent{
 	padding-inline: 20px;
-	color: $white;
+	height: 44px;
 	background: $main-accent;
 	
 	&:hover{
@@ -30,5 +47,27 @@
 }
 .btn-icon{
 	width: 44px;
+	height: 44px;
 	flex-shrink: 0;
+	padding: 8px;
+	@media (max-width: 1023px) {
+		width: 36px;
+		height: 36px;
+	}
+}
+.btn-border{
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 1px 1px 0 rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	
+	font-weight: 400;
+	&:focus{
+		border: 1px solid rgba(255, 255, 255, 0.8);
+	}
+
+}
+.btn-white{
+	background-color: #fff;
+	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+	color:$text-dark;
 }

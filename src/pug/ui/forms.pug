@@ -22,4 +22,40 @@ html(lang="ru")
 				h2 Форма
 
 				.container-dashboard__content
+					.form_field
+						input(type="text" name="name" placeholder="Ваше имя*")
+					pre.
+						.form_field
+							input(type="text" name="name" placeholder="Ваше имя*")						
+					.form_field
+						textarea(name="message" placeholder="Сообщение")
+					pre.
+						.form_field
+							texarea(name="message" placeholder="Сообщение")				
+					.form_field.error
+						input(type="text" name="name" placeholder="Ваше имя*")
+					pre.
+						.form_field.error
+							input(type="text" name="name" placeholder="Ваше имя*")
+
+
 					
+					label.form-checkbox
+						input(type="checkbox" name="name_chk")
+						span.fake-checkbox
+					pre.
+						label.form-checkbox
+							input(type="checkbox" name="name_chk")
+							span.fake-checkbox
+
+					.form-confirm
+						label.form-checkbox
+							input(type="checkbox" name="name_chk")
+							span.fake-checkbox
+							p Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+					pre.
+						.form-confirm
+							label.form-checkbox
+								input(type="checkbox" name="name_chk")
+								span.fake-checkbox
+								p Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
