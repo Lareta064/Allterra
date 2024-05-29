@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 
 	if (menuToggle) {
-
+		const  mobMenuDropItem = mobileMenu.querySelectorAll('.drop-menu-li');
+		
 		/*   клик по иконке гамбургер*/  
 		menuToggle.addEventListener('click', ()=> {
 			
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				menuToggle.classList.remove('active');
 				mobileMenu.classList.remove('active');
 				bodyEl.classList.remove('lock');
+				
 			
 			} else {
 				menuToggle.classList.add('active');
@@ -38,11 +40,16 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 
        /*   клик по мобильному меню*/  
-		mobileMenu.addEventListener('click', () => {
-			menuToggle.classList.remove('active');
-			mobileMenu.classList.remove('active');
-			bodyEl.classList.remove('lock');
-		});
+		
+		for(let item of mobMenuDropItem){
+			item.addEventListener('click', function(e){
+				
+				item.querySelector('.drop-menu-wrapper').classList.add('active');
+			});
+			item.querySelector('.back-link').addEventListener('click', function(){
+				item.querySelector('.drop-menu-wrapper').classList.remove('active');
+			});
+		}
 	}
 	/*================ FIXED BOTTOM BUTTONS============ */
 	const fixedButtons = document.querySelector('#fixed-buttons');

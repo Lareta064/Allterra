@@ -34,7 +34,7 @@
 	}
 	.drop-menu-wrapper{
 		position: fixed;
-		top: 68px;
+		top: 0;
 		bottom: 0;
 		right: 0;
 		width: min(360px, 100%);
@@ -45,6 +45,9 @@
 		overflow: hidden;
 		overflow-y: auto;
 		scrollbar-width: none;
+		transform: translateX(110%);
+		transition: .3s; 
+		&.active{transform: translateX(0);}
 		&::-webkit-scrollbar{
 			display: none;
 		}
