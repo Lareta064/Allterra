@@ -26,7 +26,8 @@
 	background-color: $bg-black;
 	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
 	&:hover{
-		background-color: #1f1f1f;;
+		background-color: #1f1f1f;
+		color: $white;
 	}
 	&:focus {
 		background-color: #1f1f1f;
@@ -42,6 +43,7 @@
 	background: $main-accent;
 	&:hover{
 		background: #19abb6;
+		color: $white;
 	}
 	&:focus {
 		background: #19abb6;
@@ -86,6 +88,9 @@
 	display: none;
 	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
 	background-color: #fff;
+	transform: translateY(150px);
+	transition: .3s;
+	&.active{transform: translateY(0);}
 	.btn-accent, .btn{
 		height: 48px;
 		padding-inline: 20px;

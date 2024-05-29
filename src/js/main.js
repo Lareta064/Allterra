@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 		})
 	}
-
+    /*===============MOBILE MENU ==================*/
 	const menuToggle = document.querySelector('#menu-toggle');
 	const mobileMenu = document.querySelector('#header-menu');
 	
@@ -44,5 +44,15 @@ document.addEventListener("DOMContentLoaded", function (){
 			bodyEl.classList.remove('lock');
 		});
 	}
-
+	/*================ FIXED BOTTOM BUTTONS============ */
+	const fixedButtons = document.querySelector('#fixed-buttons');
+	if(fixedButtons){
+		window.addEventListener('scroll', ()=>{
+			if(window.scrollY > 500){
+				fixedButtons.classList.add('active');
+			}else{
+				fixedButtons.classList.remove('active');
+			}
+		});
+	}
 });
