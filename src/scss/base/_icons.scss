@@ -1,15 +1,15 @@
-
+.svg-search,.svg-arrow, .svg-check, .svg-phone {
+	color: $white;
+}
+.svg-search, .svg-chevron-down,.svg-phone{fill: transparent;}
 .svg-search{
 	width: 18px;
 	height: 19px;
-	color: $white;
-	fill: transparent;
 }
 .svg-chevron-down{
 	width: 11px;
 	height: 6px;
 	color: $main-accent;
-	fill: transparent;
 }
 .svg-cross{
 	width: 16px;
@@ -19,10 +19,14 @@
 .svg-arrow{
 	width: 16px;
 	height: 13px;
-	color: $white;
+	
 }
 .svg-check{
 	width: 15px;
 	height: 11px;
-	color: $white;
+	
+}
+.svg-phone{
+	width: 18px;
+	height: 18px;
 }
