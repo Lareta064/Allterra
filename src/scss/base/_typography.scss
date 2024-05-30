@@ -65,8 +65,18 @@
 	}
 }
 
+.txt-18{
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.6;
 
-
+	@media (max-width: 767px) {
+	   font-size: 16px;
+	}
+}
+.txt-opac{
+	opacity: 0.5;
+}
 .text-block {
 	.txt-20 {
 		margin-bottom: 6px;

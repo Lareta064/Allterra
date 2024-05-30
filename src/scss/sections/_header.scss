@@ -223,12 +223,16 @@ header .logo{
 		color: $white;
 		opacity: 1;
 	}
-	// .menu-li>a{
-	// 	&:before{
-	// 		background-color: $white;
-	// 	}
-	// }
-	
+	.menu-li:hover>a:before {
+		background-color: #fff;
+	}
+	.drop-menu-wrapper a {
+		color: $text-dark ;
+
+		&:hover {
+			color: $main-accent;
+		}
+	}
 }
 .header-bottom {
 	background-color: $bg-black;
