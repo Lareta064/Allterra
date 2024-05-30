@@ -1,0 +1,25 @@
+//============== FAQ ================
+section.faq
+	.container
+		.faq-banner
+			picture
+				source(srcset="./img/main-page/faq-img-mob.webp", media="(max-width: 576px)")
+				source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 1023px)")
+				source(srcset="./img/main-page/faq-img.webp", media="max-width: 1439px)")
+				
+				img(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
+		//=====content======
+		.faq-content.pt-100
+			//====== LEFT COLUMN =====
+			.faq-column
+				h2.h2 Frequently #[span Asked] #[span Question]
+				.faq-contacts
+					p.txt-18 Не нашли ответы на свои вопросы?
+					p.txt-opac Напишите нам: #[a(href="mailto:contact@allterra.ru").accent-link contact@allterra.ru]
+			
+			//====== Right COLUMN =====
+			.faq-acordion
+				include ../blocks/_acordion.pug
+				.faq-contacts
+					p.txt-18 Не нашли ответы на свои вопросы?
+					p.txt-opac Напишите нам: #[a(href="mailto:contact@allterra.ru").accent-link contact@allterra.ru]

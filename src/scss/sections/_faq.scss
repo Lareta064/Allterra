@@ -1,0 +1,72 @@
+.faq{
+	
+	&-column{
+		.h2{
+			color: rgba(16, 23, 36, 0.4);
+			max-width: 15ch;
+		}
+		.h2::first-letter, h2 span::first-letter { color: rgba(16, 23, 36, 1);}
+		span{display: inline-block;}
+		.faq-contacts{
+			display: block;
+			.txt-18{font-weight: 600;}
+			@media (max-width: 899px) {
+			display: none;
+			}
+		}
+		@media (min-width:767px) and (max-width: 1279px) {
+			.h2{
+				text-transform: lowercase;
+				span::first-letter, &::first-letter{text-transform: uppercase;}
+				span{
+					text-transform: lowercase;
+				}
+			}
+		}
+	} 
+	&-content{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 20px;
+		@media (max-width: 899px) {
+			grid-template-columns: 1fr;
+			gap:40px;
+		}
+	}
+	&-contacts{
+		width: min(400px, 100%);
+		padding: 48px 32px;
+		background: #f0f3f9;
+		&>*+*{margin-top: 32px;}
+		margin-top: 80px;
+		@media (max-width: 767px) {
+			max-width: 328px;;
+			padding: 24px 16px;
+			&>*+* {margin-top: 12px;}
+			.txt-18{
+				line-height: 1.71;
+				font-size: 14px;;
+			}
+			.txt-opac{
+				font-size: 14px;
+				line-height: 1.71;
+			}
+					
+				
+		}
+
+	}
+	&-acordion {
+		padding-top: 14px;
+		
+		@media (max-width: 899px) {
+				padding-top: 0;
+			}
+		.faq-contacts {
+			display: none;
+			@media (max-width: 899px) {
+				display: block;
+			}
+		}
+	}
+}

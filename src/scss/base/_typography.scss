@@ -1,5 +1,5 @@
 .h1,
-.h2,
+
 .h3,
 .txt-20 {
 	font-weight: 600;
@@ -33,7 +33,7 @@
 	line-height: 130%;
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
-
+	font-weight: 700;
 	@media (max-width: 1023px) {
 		font-size: 36px;
 	}
@@ -75,7 +75,8 @@
 	}
 }
 .txt-opac{
-	opacity: 0.5;
+	opacity: 0.8;
+	&>*{opacity:1;}
 }
 .text-block {
 	.txt-20 {

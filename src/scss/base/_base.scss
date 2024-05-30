@@ -195,6 +195,12 @@ input[type="submit"] {
 .mb-60 {
 	margin-bottom: 20px;
 }
+.pt-100{ 
+	padding-top: 100px;
+	@media (max-width: 767px) {
+	padding-top: 80px;
+	}
+}
 img.wh-100 {
 	width: 100%;
 	height: 100%;
@@ -208,4 +214,17 @@ img.wh-100 {
 		padding-block: 90px;
 	}
 
+}
+section + section{padding-top: 100px;}
+section:has(+ .dark-bg){
+	padding-bottom: 100px;
+}
+@media (max-width: 767px) {
+section+section {
+		padding-top: 80px;
+	}
+
+	section:has(+ .dark-bg) {
+		padding-bottom: 80px;
+	}
 }
