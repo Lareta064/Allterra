@@ -1,7 +1,7 @@
-.svg-search,.svg-arrow, .svg-check, .svg-phone {
+.svg-search,.svg-arrow, .svg-check, .svg-phone, .svd-minus {
 	color: $white;
 }
-.svg-search, .svg-chevron-down,.svg-phone,.svg-chevron{fill: transparent;}
+.svg-search, .svg-chevron-down,.svg-phone,.svg-chevron, .svg-minus, .svg-plus{fill: transparent;}
 .svg-search{
 	width: 18px;
 	height: 19px;
@@ -77,4 +77,14 @@
 	width: 10px;
 	height: 16px;
 	fill: transparent;
+}
+.svg-minus{
+	width: 18px;
+	height: 2px;
+	color: $white;
+}
+.svg-plus {
+	width: 18px;
+	height: 18px;
+	color: $main-accent;
 }

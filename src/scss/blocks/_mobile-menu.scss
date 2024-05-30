@@ -7,6 +7,7 @@
 	bottom: 0;
 	right: 0;
 	background: rgba(21, 21, 21, 0.4);
+	backdrop-filter: blur(5px);
 	display: flex;
 	justify-content: flex-end;
 	transform: translateX(110%);
@@ -60,7 +61,7 @@
 	}
 	.drop-menu__list{
 		a{
-			display: block;
+			display: flex;
 			padding-block: 6px;
 		}
 		a+a{margin-top: 6px;}
