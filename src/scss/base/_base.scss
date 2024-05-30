@@ -178,3 +178,25 @@ input[type="submit"] {
 .w-100{
 	width: 100% !important;
 }
+.wm-100{
+	@media (max-width: 767px) {
+		width: min(360px, 100%);
+		
+	}
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.mb-60 {
+	margin-bottom: 20px;
+}
+img.wh-100 {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

@@ -12,6 +12,7 @@
 	transform: translateX(110%);
 	transition: .3s; 
 	&.active{transform: translateX(0);}
+	@media(min-width:1280px){display: none;}
 }
 .mobile-menu-content{
 	padding: 38px 16px;
@@ -56,6 +57,13 @@
 		margin-bottom: 30px;
 		.accent-link{font-size: 15px;}
 		
+	}
+	.drop-menu__list{
+		a{
+			display: block;
+			padding-block: 6px;
+		}
+		a+a{margin-top: 6px;}
 	}
 	.drop-menu-countries{
 		grid-template-columns: 1fr;

@@ -106,7 +106,7 @@ header.header
 							a(href="") Среднее образование
 						li.menu-li.drop-menu-li
 							a(href="") Языковая программа
-							+menu-list([{name:'Китайский'}, {name:'Японский'},{name:'Английский'},{name:'Испанский'}])
+							+menu-list([{name:'Название языковой программы'}, {name:'Программа языковая'},{name:'Еще одна программа'},{name:'Другая языковая программа'}])
 						li.menu-li
 							a(href="") Учебные заведения
 				
@@ -142,10 +142,10 @@ header.header
 									p Языковая программа
 							
 							.drop-menu__list
-								a(href="#!") Какая-то программа
-								a(href="#!") Какая-то программа
-								a(href="#!") Какая-то программа
-								a(href="#!") Какая-то программа
+								a(href="#!") Название программы
+								a(href="#!") Еще одна языковая прорамма
+								a(href="#!") Еще одна языковая прорамма
+								a(href="#!") Еще одна языковая прорамма
 								
 					//=======MENU ITEM ======
 					li.menu-item.drop-menu-li
@@ -195,8 +195,35 @@ header.header
 						a(href="#!") Учебные заведения
 					li.menu-item
 						a(href="#!") О компании
+						//========CHILD MENU ======
+						.drop-menu-wrapper
+							.drop-menu__header.flex-justify
+								.back-link
+									span.chevron-back
+									p О компании
+							
+							.drop-menu__list
+								a(href="#!") Об Allterra Education
+								a(href="#!") Обращение директора
+								a(href="#!") Сотрудничество
+								a(href="#!") Вакансии
+								a(href="#!") Partner`s zone
+								a(href="#!") Отзывы
 					li.menu-item
 						a(href="#!") Все услуги
+						//========CHILD MENU ======
+						.drop-menu-wrapper
+							.drop-menu__header.flex-justify
+								.back-link
+									span.chevron-back
+									p О Все услуги
+							
+							.drop-menu__list
+								a(href="#!") Поступление в школу
+								a(href="#!") Поступление в университет
+								a(href="#!") Каникулы за рубежом
+								a(href="#!") Искусство и дизайн
+								
 					li.menu-item
 						a(href="#!") Справочник поступающего
 					li.menu-item

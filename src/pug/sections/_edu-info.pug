@@ -1,0 +1,57 @@
+//========= EDUCATION ========
+section.education
+	.education-title
+		h1.h1 ОБРАЗОВАНИЕ ЗА РУБЕЖОМ #[span с  #[span Allterra&nbsp;Education]]
+		.education-title__btn
+			button(type="button").btn-accent.wm-100 Консультация
+
+
+	//=====  EDUCATION INFO =======
+	.education-info
+		.container
+		
+			.education-banner#video-box
+				video#video(width="100%",  muted autoplay src="./img/main-page/header-video.mp4", type="video/mp4")
+					
+				//- img.wh-100(src="./img/main-page/header-gif.gif", width="1240" height="600" alt="image")
+				button.btn-pause#video-btn
+					span Приостановить видео
+					svg.svg-pause
+						use( href='./img/spriteSvg.svg#svg-pause')
+					
+			
+			.education-offer
+				h2.h2 Среднее образование за&nbsp;рубежом станет основой
+				p.education-offer__text Качественное среднее образование гарантирует место в хороших зарубежных вузах, закладывает необходимые знания ребенку для дальшейшего образования, работы и жизни
+				
+				//========== EDUCATION CARDS ============
+				.education-cards
+					//======single card =======
+					.info-card
+						.info-card__img
+							img.wh-100(src="./img/main-page/edu1.webp", alt=" img")
+						a(href="#!").info-card__text
+							p.h3 Каникулы с изучением языков
+							span.round-arrow
+								svg.svg-arrow
+									use(href="./img/spriteSvg.svg#svg-arrow")
+										
+					//======single card =======
+					.info-card
+						.info-card__img
+							img(src="./img/main-page/edu2.webp", alt=" img")
+						a(href="#!").info-card__text
+							p.h3 Поступление в среднюю школу
+							span.round-arrow
+								svg.svg-arrow
+									use( href='./img/spriteSvg.svg#svg-arrow')
+
+					//======single card =======
+					.info-card
+						.info-card__img
+							img(src="./img/main-page/edu3.webp", alt=" img")
+						a(href="#!").info-card__text
+							p.h3 Поступление в университет
+							span.round-arrow
+								svg.svg-arrow
+									use( href='./img/spriteSvg.svg#svg-arrow')

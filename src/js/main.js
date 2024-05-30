@@ -1,6 +1,27 @@
 document.addEventListener("DOMContentLoaded", function (){
-	/*==============FOR HEADER SEARCH FORM ============= */
 	const bodyEl = document.body;
+	
+	/*========HEADER VIDEO============ */
+	const videoBox = document.querySelector('#video-box');
+	if(videoBox){
+		const videoContent = videoBox.querySelector('#video');
+		const videoToggleBtn = videoBox.querySelector('#video-btn');
+		
+		videoToggleBtn.addEventListener('click', ()=>{
+			if(!videoToggleBtn.classList.contains('active')){
+				videoContent.pause();
+				videoToggleBtn.classList.add('active');
+				
+			}else{
+				videoContent.play();
+				videoToggleBtn.classList.remove('active');
+				
+			}
+			
+		});
+	}
+	/*==============FOR HEADER SEARCH FORM ============= */
+	
 	const openSearchForm = document.querySelector('#search-btn');
 	const searchFormPopup = document.querySelector('#search-popup');
 	if(openSearchForm){
@@ -8,8 +29,10 @@ document.addEventListener("DOMContentLoaded", function (){
 			bodyEl.classList.add('lock');
 			if(searchFormPopup.classList.contains('active')){
 				searchFormPopup.classList.remove('active');
+				bodyEl.classList.remove('lock');
 			}else{
 				searchFormPopup.classList.add('active');
+				bodyEl.classList.add('lock');
 			}
 			
 		})
@@ -26,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		menuToggle.addEventListener('click', ()=> {
 			
 			if (menuToggle.classList.contains('active')) {
-
+				mobileMenu.querySelector('.active')?.classList.remove('active');
 				menuToggle.classList.remove('active');
 				mobileMenu.classList.remove('active');
 				bodyEl.classList.remove('lock');
@@ -43,12 +66,15 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 		for(let item of mobMenuDropItem){
 			item.addEventListener('click', function(e){
-				
 				item.querySelector('.drop-menu-wrapper').classList.add('active');
 			});
-			item.querySelector('.back-link').addEventListener('click', function(){
-				item.querySelector('.drop-menu-wrapper').classList.remove('active');
-			});
+			item.querySelector('.back-link').addEventListener(
+				'click', 
+				(e) => {
+					e.stopPropagation();
+					e.target.closest('.drop-menu-wrapper').classList.remove('active');
+				}
+			);
 		}
 	}
 	/*================ FIXED BOTTOM BUTTONS============ */
@@ -62,4 +88,15 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}
+
+	/*================ STAGES TABS============ */
+	$('.custom-tabs').each(function() {
+		let ths = $(this);
+		ths.find('.custom-tab').not(':first').hide();
+		ths.find('.tab-btn').click(function() {
+			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
+			ths.find('.custom-tab').hide().eq($(this).index()).fadeIn()
+		}).eq(0).addClass('active');
+	});
+
 });

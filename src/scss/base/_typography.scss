@@ -1,3 +1,160 @@
+.h1,
+.h2,
+.h3,
+.txt-20 {
+	font-weight: 600;
+}
+
+.h1,
+.h2 {
+	font-size: 80px;
+	line-height: 110%;
+	letter-spacing: -0.03em;
+	color: $text-dark;
+}
+
+.h1 {
+	font-size: 80px;
+	
+	@media (max-width: 1024px) {
+		font-size: 60px;
+
+	}
+
+	@media (max-width: 767px) {
+		font-size: 40px;
+		font-weight: 800;
+	}
+}
+
+.h2 {
+
+	font-size: 48px;
+	line-height: 130%;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+
+	@media (max-width: 1023px) {
+		font-size: 36px;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 26px;
+	}
+}
+
+.h3 {
+	line-height: 1.60;
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+	text-transform: uppercase;
+	color: $bg-black;
+}
+
+.txt-20 {
+
+	font-size: 20px;
+	line-height: 1.60;
+	letter-spacing: -0.01em;
+	color: $text-dark;
+
+	@media (max-width: 1023px) {
+		font-size: 16px;
+		line-height: 1.3;
+	}
+}
+
+
+
+.text-block {
+	.txt-20 {
+		margin-bottom: 6px;
+
+		@media (max-width: 767px) {
+			margin-bottom: 8px;
+		}
+	}
+
+	.txt-20+* {
+		margin-top: 0 !important;
+	}
+
+	p:not(.txt-20) {
+		line-height: 1.8;
+		margin-top: 1em;
+
+		@media (max-width: 1023px) {
+			font-size: 14px;
+			line-height: 1.71;
+		}
+	}
+
+	ul {
+		margin-top: 16px;
+	}
+}
+
+.text-block+.text-block {
+	margin-top: 30px;
+
+	@media (max-width: 767px) {
+		margin-top: 20px;
+	}
+}
+
+.list-block {
+	li {
+		position: relative;
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		line-height: 1.6;
+
+		@media (max-width: 767px) {
+			line-height: 1.71;
+			font-size: 14px;
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			flex-shrink: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			border: 2px solid $main-accent;
+		}
+	}
+
+	li+li {
+		margin-top: 8px;
+	}
+
+}
+
+.section-btn {
+	margin-top: 48px;
+
+	@media (max-width: 767px) {
+		margin-top: 40px;
+	}
+}
+
+.scroll-x {
+	@media (max-width: 1023px) {
+		width: calc(50% + 50vw);
+		overflow: hidden;
+		overflow-x: auto;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+	}
+}
+
 .accent-txt, .accent-link{
 	color: $main-accent;
 }

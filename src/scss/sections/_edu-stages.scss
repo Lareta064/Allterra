@@ -1,0 +1,12 @@
+.education-stages{
+	padding-block: 90px 100px;
+	background: #f0f3f9;
+	 .h2{
+		font-weight: 700;
+		margin-bottom: 40px;
+	 }
+	 @media (max-width: 767px) {
+		padding-block:80px;
+		.h2 {margin-bottom: 32px;}
+	 }
+}
