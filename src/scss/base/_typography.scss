@@ -30,7 +30,7 @@
 .h2 {
 
 	font-size: 48px;
-	line-height: 130%;
+	line-height: 1.30;
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -42,27 +42,27 @@
 		font-size: 26px;
 	}
 }
-
-.h3 {
-	line-height: 1.60;
-	font-size: 20px;
-	line-height: 1.2;
-	letter-spacing: -0.01em;
+.title-32{
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 1.30;
+	letter-spacing: -0.02em;
 	text-transform: uppercase;
-	color: $bg-black;
+	
 }
-
-.txt-20 {
-
+.h3,.txt-20 {
+	line-height: 1.6;
 	font-size: 20px;
-	line-height: 1.60;
 	letter-spacing: -0.01em;
-	color: $text-dark;
-
+	color: $bg-black;
 	@media (max-width: 1023px) {
 		font-size: 16px;
 		line-height: 1.3;
 	}
+}
+.h3{text-transform: uppercase;}
+.txt-20 {
+	color: $text-dark;
 }
 
 .txt-18{
@@ -199,6 +199,7 @@
 		height: 1px;
 		position: absolute;
 		left: 0;
+		bottom: 0;
 		width: 0;
 		background-color: $main-accent;
 		transition: .3s; 
