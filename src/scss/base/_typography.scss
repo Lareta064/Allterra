@@ -50,6 +50,12 @@
 	text-transform: uppercase;
 	
 }
+// .txt-24{
+// 	font-weight: 600;
+// 	font-size: 24px;
+// 	line-height: 1.33;
+// 	color: $bg-black;
+// }
 .h3,.txt-20 {
 	line-height: 1.6;
 	font-size: 20px;
@@ -73,6 +79,11 @@
 	@media (max-width: 767px) {
 	   font-size: 16px;
 	}
+}
+.txt-body{
+	font-size: 16px;
+	line-height: 1.6;
+	font-weight: 400;
 }
 .txt-opac{
 	opacity: 0.8;
