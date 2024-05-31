@@ -1,0 +1,32 @@
+//========REVIEW SWIPER =======
+section.review-section.dark-bg
+	.container
+		h2.h2 Отзывы
+		.slider-wrapper
+			//======== slider-content =======
+			.review-slider.swiper
+				.swiper-wrapper
+					//===== single slide ========
+					.swiper-slide
+						+review-card({
+							img: 1, name:'Александр Ференц', scool:'Ringling College of Art', loc:'Великобритания', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})(class=" review--short")
+
+					//=====single slide ========
+					.swiper-slide
+						+review-card({
+							img: 2, name:'София', scool:'Sidcot School', loc:'Великобритания', txt: 'Я могу рекомендовать компанию Allterra Education всем, кто планирует отправлять ребенка в Великобританию. '})(class=" review--short")
+
+					//===== single slide ========
+					.swiper-slide
+						+review-card({
+							img: 3, name:'Захар Богданов', scool:"Queen Ethelburga's Collegiate", loc:'Австралия', txt: 'Два года в школе пролетели незаметно, я завел очень много друзей и смог значительно улучшить свой английский.'})(class=" review--short")
+
+					//=====single slide ========
+					.swiper-slide
+						+review-card({
+							img: 4, name:'Иван Рябинин', scool:'Giggleswick School', loc:'Германия', txt: 'Все критерии, по которым мы выбирали школу, совпали.'})(class=" review--short")
+
+			//===== swiper navigation========
+			.slider-nav
+				.swiper-button-next
+				.swiper-button-prev

@@ -205,6 +205,15 @@ document.addEventListener("DOMContentLoaded", function (){
     	$('.accordion-group').simpleAccordion();
 	});
 
-
-
+	/*=================REVIEW SLIDER ================== */
+    var swiper = new Swiper(".review-slider", {
+	   slidesPerView: 2,
+	   loop: true,
+	   speed: 1000,
+	    spaceBetween: 20,
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+    });
 });
