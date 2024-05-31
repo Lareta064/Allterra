@@ -1,0 +1,27 @@
+extends ../layouts/layout-ui.pug
+
+block content
+	.container-dashboard
+		h1 Карточка отзыва
+		.review-card
+			//======= author info =====
+			.review-card__author
+				.review-card__photo
+					img(src="./img/review/author1.webp", width="130" height="130" alt=" img")
+				.review-card__info
+					p.txt-24 Александр Ференц
+					p Генеральный директор ГК «АК-Сервис»
+					.tags-list
+						span #среднее_образование
+						span #родитель
+					a(href="#!").accent-link Ringling College of Art
+			//======= review date
+			.review-card__meta
+				p.txt-14 02.04.2022
+				.flex-item
+					
+			//======= review text
+			.review-card__text
+
+block variables
+	-var title = "Allterra";

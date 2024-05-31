@@ -40,11 +40,11 @@ header.header
 						li.menu-li.drop-menu-li
 							a(href="#!") Страны
 							.drop-menu-wrapper
-								.drop-menu-countries
-									.drop-menu__col
-										.drop-menu__col-title
+								.three-columns-grid
+									.grid-column
+										.grid-column__title
 											p Англоговорящие
-										.drop-menu__col-list
+										.grid-column__list
 											+country-item('uk', 'Великобритания')
 											+country-item('usa', 'США')
 											+country-item('irl', 'Ирландия')
@@ -52,27 +52,29 @@ header.header
 											+country-item('aus', 'Австралия')
 											+country-item('malta', 'Мальта')
 										
-									.drop-menu__col
-										.drop-menu__col-title
+									.grid-column
+										.grid-column__title
 											p Европа
-										.drop-menu__col-list
+										.grid-column__list
 											+country-item('swich', 'Швейцария')
 											+country-item('spain', 'Испания')
 											+country-item('de', 'Германия')
 											+country-item('fr', 'Франция')
 											+country-item('nid', 'Голландия')
 											+country-item('fin', 'Финлядия')
-									.drop-menu__col
-										.drop-menu__col-title
+									.grid-column
+										.grid-column__title
 											p Азия
-										.drop-menu__col-list
+										.grid-column__list
 											+country-item('sing', 'Сингапур')
 											+country-item('oae', 'ОАЭ')
 											+country-item('tln', 'Тайланд')
 											+country-item('kor', 'Южная Корея')
 											+country-item('mls', 'Малайзия')
 											+country-item('china', 'Китай')
+								//======= bottom link =====
 								.drop-menu-footer
+									a(href="#!").accent-link Показать все страны
 
 						//======single LI====
 						li.menu-li
@@ -108,14 +110,27 @@ header.header
 							a(href="") Языковая программа
 							.drop-menu-wrapper
 								.two-colums-grid
+									.grid-column
+										.grid-column__title 
+											p Страны
+										.grid-column__list
+											+country-item('uk', 'Великобритания')
+											+country-item('usa', 'США')
+											+country-item('can', 'Канада')
+											+country-item('aus', 'Австралия')
+											+country-item('spain', 'Испания')
+											+country-item('de', 'Германия')
 									.grid-colum
-										+country-item('uk', 'Великобритания')
-										+country-item('usa', 'США')
-										+country-item('can', 'Канада')
-										+country-item('aus', 'Австралия')
-										+country-item('spain', 'Испания')
-										+country-item('de', 'Германия')
-									.grid-colum
+										.grid-column__title 
+											p Программы
+										.grid-column__list
+											a(href="#!") Язык и спорт
+											a(href="#!") Язык и творчество
+											a(href="#!") Футбольные лагеря
+											a(href="#!") Весенние каникулы
+											a(href="#!") Осенние каникулы
+											a(href="#!") Зимние каникулы
+						
 						li.menu-li
 							a(href="") Учебные заведения
 				
@@ -151,10 +166,27 @@ header.header
 									p Языковая программа
 							
 							.drop-menu__list
-								a(href="#!") Название программы
-								a(href="#!") Еще одна языковая прорамма
-								a(href="#!") Еще одна языковая прорамма
-								a(href="#!") Еще одна языковая прорамма
+								.two-colums-grid
+									.grid-column
+										.grid-column__title 
+											p Страны
+										.grid-column__list
+											+country-item('uk', 'Великобритания')
+											+country-item('usa', 'США')
+											+country-item('can', 'Канада')
+											+country-item('aus', 'Австралия')
+											+country-item('spain', 'Испания')
+											+country-item('de', 'Германия')
+									.grid-colum
+										.grid-column__title 
+											p Программы
+										.grid-column__list
+											a(href="#!") Язык и спорт
+											a(href="#!") Язык и творчество
+											a(href="#!") Футбольные лагеря
+											a(href="#!") Весенние каникулы
+											a(href="#!") Осенние каникулы
+											a(href="#!") Зимние каникулы
 								
 					//=======MENU ITEM ======
 					li.menu-item.drop-menu-li
@@ -168,11 +200,11 @@ header.header
 								a(href="#!").accent-link Показать все
 							
 							.drop-menu__list
-								.drop-menu-countries
-									.drop-menu__col
-										.drop-menu__col-title
+								.three-columns-grid
+									.grid-column
+										.grid-column__title
 											p Англоговорящие
-										.drop-menu__col-list
+										.grid-column__list
 											+country-item('uk', 'Великобритания')
 											+country-item('usa', 'США')
 											+country-item('irl', 'Ирландия')
@@ -180,20 +212,20 @@ header.header
 											+country-item('aus', 'Австралия')
 											+country-item('malta', 'Мальта')
 										
-									.drop-menu__col
-										.drop-menu__col-title
+									.grid-column
+										.grid-column__title
 											p Европа
-										.drop-menu__col-list
+										.grid-column__list
 											+country-item('swich', 'Швейцария')
 											+country-item('spain', 'Испания')
 											+country-item('de', 'Германия')
 											+country-item('fr', 'Франция')
 											+country-item('nid', 'Голландия')
 											+country-item('fin', 'Финлядия')
-									.drop-menu__col
-										.drop-menu__col-title
+									.grid-column
+										.grid-column__title
 											p Азия
-										.drop-menu__col-list
+										.grid-column__list
 											+country-item('sing', 'Сингапур')
 											+country-item('oae', 'ОАЭ')
 											+country-item('tln', 'Тайланд')

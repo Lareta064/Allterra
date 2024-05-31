@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	const bodyEl = document.body;
 	/*========Lazy Load============ */
 	$('.lazy').Lazy();
+	/*========Lazy Load============ */
+	$('.lazy').Lazy();
 	/*========HEADER VIDEO============ */
 	const videoBox = document.querySelector('#video-box');
 	if(videoBox){

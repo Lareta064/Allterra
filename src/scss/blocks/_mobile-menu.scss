@@ -66,12 +66,14 @@
 		}
 		a+a{margin-top: 6px;}
 	}
-	.drop-menu-countries{
+	.three-columns-grid,.two-colums-grid{
 		grid-template-columns: 1fr;
 		row-gap:24px;
-		.drop-menu__col-title{margin-bottom: 13px;}
+		.grid-column__title{margin-bottom: 13px;}
 	}
-	.drop-menu-countries .drop-menu__col-list>*+* {
-		margin-top: 15px;
+	.three-columns-grid ,.two-colums-grid{
+		.grid-column__list>*+* {
+			margin-top: 15px;
+		}
 	}
 }

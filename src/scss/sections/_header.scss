@@ -84,10 +84,11 @@ header .logo{
 			box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15);
 		}
 
-		a {
+		a:not(.accent-link) {
 			font-size: 16px;
 			line-height: 1.75;
-
+			display: flex;
+			column-gap:8px;
 			&:hover {
 				color: $main-accent;
 			}
@@ -96,8 +97,14 @@ header .logo{
 		li+li {
 			margin-top: 12px;
 		}
+		
 	}
-
+	.drop-menu-footer{
+		text-align: center;
+		padding-block: 15px;
+		border-top: 1px solid #F3F5F9;
+		a{color:$main-accent;}
+	}
 	.menu-li {
 		padding-block: 14px;
 
@@ -160,24 +167,21 @@ header .logo{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L4.70276 4.29135C5.15743 4.69549 5.84257 4.69549 6.29724 4.29135L10 1' stroke='%232DBFCA' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
 	}
 }
-.drop-menu-countries {
+.three-columns-grid, .two-colums-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	column-gap: 40px;
 
-	.drop-menu__col {
+	.grid-column {
 		min-width: 160px;
-
-
-
 	}
 
-	.drop-menu__col-title {
+	.grid-column__title {
 		margin-bottom: 16px;
 	}
 
-	.drop-menu__col-title,
-	.drop-menu__col-title * {
+	.grid-column__title,
+	.grid-column__title * {
 		font-weight: 500;
 		font-size: 13px;
 		line-height: 1.54;
@@ -186,11 +190,11 @@ header .logo{
 		opacity: .6;
 	}
 
-	.drop-menu__col-list>*+* {
+	.grid-column__list>*+* {
 		margin-top: 4px;
 	}
 }
-
+.two-colums-grid{grid-template-columns: 1fr 1fr;}
 .contact-item {
 	font-weight: 500;
 	font-size: 15px;
