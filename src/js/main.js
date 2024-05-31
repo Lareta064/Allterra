@@ -207,13 +207,28 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	/*=================REVIEW SLIDER ================== */
     var swiper = new Swiper(".review-slider", {
-	   slidesPerView: 2,
+	   slidesPerView: 1.1,
 	   loop: true,
 	   speed: 1000,
 	    spaceBetween: 20,
        navigation: {
          nextEl: ".swiper-button-next",
          prevEl: ".swiper-button-prev",
+      },
+	  breakpoints: {
+        640: {
+          slidesPerView: 1.1,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        
+	   1280: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
       },
     });
 });

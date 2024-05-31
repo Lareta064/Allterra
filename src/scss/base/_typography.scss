@@ -201,6 +201,7 @@
 }
 *.accent-link{
 	position: relative;
+	width: fit-content!important;
 	&:before{
 		content:'';
 		display: block;
