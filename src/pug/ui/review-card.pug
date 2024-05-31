@@ -3,54 +3,15 @@ extends ../layouts/layout-ui.pug
 block content
 	.container-dashboard
 		h1 Карточка отзыва
-		.review
-			.review__row
-				//======= author info =====
-				.author
-					.author__photo
-						img(src="../img/review/author1.webp", width="130" height="130" alt=" img")
-					.author__info
-						p.author__name Александр Ференц
-						p.author__range Генеральный директор ГК «АК-Сервис»
-						.tags-list
-							span #среднее_образование
-							span #родитель
-						a(href="#!").accent-link Ringling College of Art
-				//======= review date
-				.review__meta
-					p.review-data 02.04.2022
-					p.pin-item США
-					
-			//======= review text
-			.review__text  
-				p Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта...
-				a(href="#!").accent-link Читать далее
+		+review-card({
+			img: 1, name:'Александр Ференц', range:'Генеральный директор ГК «АК-Сервис»', tags:['среднее_образование', 'родитель'], scool:'Ringling College of Art', loc:'США', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})
 
-		.review.review--short
-			.review__row
-				//======= author info =====
-				.author
-					.author__photo
-						img(src="../img/review/author1.webp", width="130" height="130" alt=" img")
-					.author__info
-						p.author__name Александр Ференц
-						p.author__range Генеральный директор ГК «АК-Сервис»
-						.tags-list
-							span #среднее_образование
-							span #родитель
-						a(href="#!").accent-link Ringling College of Art
-				//======= review date
-				.review__meta
-					p.review-data 02.04.2022
-					p.pin-item США
-					
-			//======= review text
-			.review__text  
-				p Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта...
-				a(href="#!").accent-link Читать далее
-			
-			.review__meta.review__meta--mob
-				p.review-data 02.04.2022
-				p.pin-item США
+		+review-card({
+			img: 1, name:'Александр Ференц', scool:'Ringling College of Art', loc:'Великобритания', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})(class=" review--short")
+		pre.
+			+review-card({
+				img: 1, name:'Александр Ференц', scool:'Ringling College of Art', loc:'Великобритания', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})(class=" review--short")
+		
+
 block variables
 	-var title = "Allterra";
