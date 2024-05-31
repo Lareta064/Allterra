@@ -58,7 +58,7 @@ label.form-checkbox {
   display: flex;
   column-gap: 16px;
 
-  input[type="input"]{
+  input[type="checkbox"]{
      appearance:none;
      width: 0.01em;
      height: 0.01em;
@@ -97,3 +97,4 @@ label.form-checkbox {
    
   }
 }
+.form__btn{margin-top: 32px;}

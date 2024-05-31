@@ -1,0 +1,25 @@
+//========= FEEDBACK =========
+section.feedback
+	.container
+		.feedback-content
+			//=====IMG BLOCK ====
+			.feedback-img
+				img.wh-100.lazy(src="./img/main-page/feedback-bg.gif" , alt="alt")
+			
+			//===== FORM BLOCK ====
+			.feedback-form-wrapper
+				h2.h2.border-left Получить консультацию
+				form.feedback-form
+					.form_field
+						input(type="text" name="name" placeholder="Ваше имя*")
+					.form_field
+						input(type="text" name="phone" placeholder="Ваш телефон")
+					.form_field
+						input(type="text" name="email" placeholder="Ваш email")
+					.form-confirm
+						label.form-checkbox
+							input(type="checkbox" name="name_chk")
+							span.fake-checkbox
+							p Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+					.form__btn
+						button(type="submit").btn Получить консультацию

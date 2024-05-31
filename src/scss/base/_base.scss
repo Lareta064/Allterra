@@ -77,7 +77,10 @@ body {
 	background-color: $white;
 	-webkit-font-smoothing: antialiased;
 }
-
+.lock{
+	max-height: 100vh;
+	overflow: hidden;
+}
 a,
 a:hover {
 	text-decoration: none;
@@ -178,12 +181,7 @@ input[type="submit"] {
 .w-100{
 	width: 100% !important;
 }
-.wm-100{
-	@media (max-width: 767px) {
-		width: min(360px, 100%);
-		
-	}
-}
+
 .mb-20 {
 	margin-bottom: 20px;
 }

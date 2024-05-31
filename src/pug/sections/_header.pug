@@ -106,7 +106,16 @@ header.header
 							a(href="") Среднее образование
 						li.menu-li.drop-menu-li
 							a(href="") Языковая программа
-							+menu-list([{name:'Название языковой программы'}, {name:'Программа языковая'},{name:'Еще одна программа'},{name:'Другая языковая программа'}])
+							.drop-menu-wrapper
+								.two-colums-grid
+									.grid-colum
+										+country-item('uk', 'Великобритания')
+										+country-item('usa', 'США')
+										+country-item('can', 'Канада')
+										+country-item('aus', 'Австралия')
+										+country-item('spain', 'Испания')
+										+country-item('de', 'Германия')
+									.grid-colum
 						li.menu-li
 							a(href="") Учебные заведения
 				
@@ -193,7 +202,7 @@ header.header
 											+country-item('china', 'Китай')
 					li.menu-item
 						a(href="#!") Учебные заведения
-					li.menu-item
+					li.menu-item.drop-menu-li
 						a(href="#!") О компании
 						//========CHILD MENU ======
 						.drop-menu-wrapper
@@ -209,14 +218,14 @@ header.header
 								a(href="#!") Вакансии
 								a(href="#!") Partner`s zone
 								a(href="#!") Отзывы
-					li.menu-item
+					li.menu-item.drop-menu-li
 						a(href="#!") Все услуги
 						//========CHILD MENU ======
 						.drop-menu-wrapper
 							.drop-menu__header.flex-justify
 								.back-link
 									span.chevron-back
-									p О Все услуги
+									p Все услуги
 							
 							.drop-menu__list
 								a(href="#!") Поступление в школу

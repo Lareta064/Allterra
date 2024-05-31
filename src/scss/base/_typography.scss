@@ -78,6 +78,28 @@
 	opacity: 0.8;
 	&>*{opacity:1;}
 }
+.border-left{
+	padding-left: 24px;
+	position: relative;
+	&:before{
+		content: '';
+		display: block;
+		width: 4px;
+		position: absolute;
+		background-color: $main-accent;
+		top: 12px;
+		bottom: 12px;
+		left: 0;
+	}
+	@media (max-width: 767px) {
+	padding-left: 16px;
+	&:before{
+		width: 3px;
+		top: 0;
+		bottom: 0;
+	}
+	}
+}
 .text-block {
 	.txt-20 {
 		margin-bottom: 6px;

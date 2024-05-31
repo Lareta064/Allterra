@@ -106,3 +106,12 @@
 		column-gap: 20px;
 	}
 }
+.btn-accent,
+.btn,
+.btn-border,
+.btn-white{
+@media (max-width: 767px) {
+		width: min(360px, 100%);
+
+	}
+}
