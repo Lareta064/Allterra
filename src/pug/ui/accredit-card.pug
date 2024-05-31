@@ -1,0 +1,19 @@
+extends ../layouts/layout-ui.pug
+
+block content
+	.container-dashboard
+		h1 Карточка аккредитации
+		.flex-row(style="gap:40px;")
+			+accredit-card('logo1.svg', 'Allterra Education ', 'входит в список агентств, рекомендованных Британским Советом для профессиональной консультации по учебе в Великобритании')
+		pre.
+			+accredit-card('logo1.svg', 'Allterra Education ', 'входит в список агентств, рекомендованных Британским Советом для профессиональной консультации по учебе в Великобритании')
+		hr
+
+		h1 Блок Карточки аккредитации
+		.accredit-block
+			.flex-row
+				+accredit-card('logo1.svg', 'Allterra Education ', 'входит в список агентств, рекомендованных Британским Советом для профессиональной консультации по учебе в Великобритании')
+				+accredit-card('logo2.webp', 'Allterra Education ', ' является официальным представителем более 300 ведущих  частных школ Великобритании в рамках ассоциации British Boarding  Schools Network')
+			.flex-row
+				+accredit-card('logo3.webp', 'Allterra Education ', ' – член организации ICEF; наши специалисты прошли  профессиональную подготовку и получили международный статус ICEF Trained  Advisors')
+				+accredit-card('logo4.webp', 'Allterra Education ', 'успешно сотрудничает с международной ассоциацией Quality Education, в которую входят лучшие языковые школы и колледжи  планеты')

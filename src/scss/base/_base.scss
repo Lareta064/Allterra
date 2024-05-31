@@ -197,6 +197,13 @@ img.wh-100 {
 	height: 100%;
 	object-fit: cover;
 }
+.img-zoom{
+	*[class*="__img"]{overflow: hidden;}
+	img{transition: .5s; }
+	&:hover img{
+		transform: scale(1.1);
+	}
+}
 .dark-bg{
 	background-color: $bg-black;
 	padding-block: 100px;
@@ -206,6 +213,16 @@ img.wh-100 {
 	}
 
 }
+.center-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 60px;
+	@media (max-width: 767px) {
+		margin-top: 40px;
+	}
+}
+
 section + section{padding-top: 100px;}
 section:has(+ .dark-bg){
 	padding-bottom: 100px;

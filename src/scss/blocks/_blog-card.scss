@@ -1,0 +1,32 @@
+.blog-card{
+	display: block;
+	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+	background: $white;
+	width: min(295px, 100%);
+	&__img{
+		width: 100%;
+		height: 195px;
+	}
+	&__meta{
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+		line-height: 1.71;
+		margin-bottom: 8px;
+		opacity: 0.5;
+	}
+	&__text{
+		padding: 16px;
+		font-size: 14px;
+		display: flex;
+		flex-direction: column;
+		.txt-16{margin-bottom: 36px; font-weight: 600;}
+		.accent-link{margin-top: auto;}
+		.txt-16{transition: .3s;}
+	}
+	&:hover{
+		.txt-16{
+			color: $main-accent;
+		}
+	}
+}

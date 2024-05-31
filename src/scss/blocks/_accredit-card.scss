@@ -1,0 +1,52 @@
+.accredit-card{
+	padding: 20px;
+	background: #f0f3f9;
+	width: min(295px, 100%);
+	.accredit__logo{
+		width: 100%;
+		height: 80px;
+		margin-bottom: 20px;
+		img{
+			height: 80px;
+			width: auto;
+			mix-blend-mode: darken;
+			
+		}
+	}
+	.accredit__text{
+		font-size: 15px;
+		line-height: 1.6;
+
+	}
+	&:nth-child(2){
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.06);
+		background: $white;
+	}
+}
+.accredit-block{
+	.flex-row{
+		column-gap:20px ;
+		align-items: stretch;
+	}
+	:nth-child(2n){
+		.accredit-card{
+			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.06);
+			background: $white;
+		}
+		.accredit-card:nth-child(2){
+			box-shadow:none;
+			background: #f0f3f9;
+		}
+	}
+	.flex-row +.flex-row{margin-top: 20px;}
+	@media (max-width: 576px) {
+		.flex-row{
+			width: 295px;
+			flex-wrap: wrap;
+			row-gap:20px;
+		}
+		.flex-row:nth-child(2n){
+			flex-direction:column-reverse;
+		}
+	}
+}
