@@ -80,6 +80,10 @@ body {
 .lock{
 	max-height: 100vh;
 	overflow: hidden;
+	@media(min-width:1280px){
+		.header-top,
+		.header-bottom, .header + *{padding-right: 17px;}
+	}
 }
 a,
 a:hover {
