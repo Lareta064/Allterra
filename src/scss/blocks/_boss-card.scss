@@ -1,0 +1,39 @@
+.boss-card{
+	padding: 30px;
+	background-color: #fff;
+	display: flex;
+	gap:20px;
+	font-size: 16px;
+	line-height: 1.6;
+	width: min(605px, 100%);
+	flex-shrink: 0;
+	
+	&__img{
+		width: 150px;
+		height: 200px;
+		flex-shrink: 0;
+		background-color: #f0f0f0;
+		overflow: hidden;
+		img{
+			width: 100%;
+			min-height:100%;
+			
+		}
+		@media (max-width: 767px) {height: 150px;}
+	}
+	.flex-col{
+		row-gap: 20px;
+	}
+	@media (max-width: 767px) {
+	  padding: 20px 16px;
+	  flex-direction: column;
+	 
+	}
+}
+.bosses-cards{
+	column-gap: 20px;
+	@media (max-width: 767px) {
+	flex-direction: column;
+	row-gap:16px;
+	}
+}

@@ -1,6 +1,22 @@
 extends ../layouts/layout-ui.pug
 
 block content
-	.container-dashboard
+	.container-dashboard(style="background: #F0F3F9")
 		h1 Карточка Руководителя
+		+boss-card(1, 'Гречко Владимир Ильич')
+		pre.
+			+boss-card(1, 'Гречко Владимир Ильич')
 		
+		.bosses-cards.flex-row
+			//========= single card ===========
+			+boss-card(1, 'Гречко Владимир Ильич')
+			
+			//========= single card ==========
+			+boss-card(2, 'Бякишева Марина Леонидовна')
+		pre.
+			.bosses-cards.flex-row
+				//========= single card ===========
+				+boss-card(1, 'Гречко Владимир Ильич')
+				
+				//========= single card ==========
+				+boss-card(2, 'Бякишева Марина Леонидовна')

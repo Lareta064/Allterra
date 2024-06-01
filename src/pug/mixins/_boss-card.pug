@@ -1,0 +1,8 @@
+mixin boss-card(img, name)
+	.boss-card
+		.boss-card__img
+			img(src="../img/boss/boss"+ img+".webp", width="150" height="200" alt="photo")
+		.flex-col
+			p.txt-20 #{name}
+			p Генеральный директор <br>Опыт работы 27 лет
+			a(href="mailto:grechko@allterra.ru").accent-link grechko@allterra.ru
