@@ -97,6 +97,8 @@
 			bottom: 20px;
 			right: 20px;
 			z-index: 3;
+			transition: .3s; 
+			
 		}
 		@media (max-width: 767px) {
 			
@@ -196,6 +198,7 @@
 	padding-inline: 16px;
 	height: 48px;
 	align-items: center;
+	&:hover {background: rgba(16, 23, 36, 0.8);}
 
 	span {
 		text-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
