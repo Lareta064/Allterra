@@ -166,9 +166,7 @@ input[type="submit"] {
 	display: flex;
 	align-items: flex-start;
 }
-.flex-gap{
-	gap:20px;
-}
+
 .flex-justify, .flex-header{justify-content: space-between;}
 .flex-center-x,
 .flex-center{
@@ -219,15 +217,6 @@ img.wh-100 {
 .light-bg{
 	background-color: #f0f3f9;
 	padding-block: 100px;
-}
-.center-button{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 60px;
-	@media (max-width: 767px) {
-		margin-top: 40px;
-	}
 }
 
 section + section{padding-top: 100px;}

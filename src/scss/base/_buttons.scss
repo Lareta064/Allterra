@@ -111,20 +111,51 @@
 }
 .btn-accent,
 .btn,
-.btn-border,
+.btn,
 .btn-white{
 @media (max-width: 767px) {
 		width: min(360px, 100%);
 
 	}
 }
-*.btn--slim{
+*[class^="btn-"].btn--slim{
 	height: 52px;
 	padding-inline:24px;
 	min-width: 137px;
 	@media (max-width: 767px) {
 		min-width: 54px;
+		height: 52px!important;
 	}
 	
 }
 .btn-white.btn--slim{box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);}
+.center-button {
+	display: flex;
+	justify-content: center;
+	column-gap: 20px;
+	align-items: center;
+	margin-top: 60px;
+
+	@media (max-width: 767px) {
+		margin-top: 40px;
+	}
+}
+
+.btns-group {
+	gap: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.btns-group{
+	column-gap:20px;
+	.btn-accent,
+	.btn,
+	.btn,
+	.btn-white{
+	@media (max-width: 767px) {
+			width: auto;
+	
+		}
+	}
+}

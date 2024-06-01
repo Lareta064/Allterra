@@ -2,5 +2,26 @@
 	.flex-header{
 		margin-bottom: 50px;
 		align-items: flex-end;
+		@media (max-width: 1364px){padding-left:25px}
+		@media (max-width: 1023px) {padding-left: 0px}
 	}
+	.btns-group{
+		display: none;
+	}
+	.flex-header .btns-group {
+		display:flex;
+	}
+	@media (max-width: 1023px) {
+		overflow: hidden;
+	.flex-header .btns-group {
+			display: none!important;
+		}
+		.btns-group {
+			display: flex;
+			margin-top: 40px;
+		}
+	}
+}
+.slider-wrapper .blog-card{
+	width: 100%;
 }

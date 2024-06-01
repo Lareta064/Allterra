@@ -1,6 +1,15 @@
 .slider-wrapper{
 	position: relative;
-	@media (max-width: 1279px) {
+	.swiper-slide {
+		display: flex;
+		height: auto;
+		min-height: 100%;
+
+		&>* {
+			width: 100%;
+		}
+	}
+	@media (max-width: 1364px) {
 	   padding-left: 25px;
 	   padding-right: 25px;
 	    .slider-nav{
@@ -32,7 +41,7 @@
 		font-size: 30px;
 		transition: .3s; 
 		&:hover{
-			
+			color: $main-accent;
 			opacity: 0.4;
 		}
 	}
@@ -63,13 +72,7 @@
 	}
 }
 .review-slider{
-	.swiper-slide{
-		display: flex;
-		height: auto;
-		min-height: 100%;
-		
-		&>*{width: 100%;}
-	}
+	
 	@media (max-width: 767px) {
 	.review{
 		display: flex;

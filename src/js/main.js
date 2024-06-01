@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	/*=================REVIEW SLIDER ================== */
     var reviewSlider = new Swiper(".review-slider", {
-	   slidesPerView: 1.1,
+	   slidesPerView: 1.15,
 	   loop: true,
 	   speed: 1000,
 	    spaceBetween: 20,
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function (){
       },
 	  breakpoints: {
         640: {
-          slidesPerView: 1.1,
+          slidesPerView: 1.2,
           spaceBetween: 16,
         },
         768: {
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function (){
     });
 	/*=================BLOG CARDS SLIDER ================== */
     var blogCardsSliderr = new Swiper(".blog-cards-slider", {
-	   slidesPerView: 1.1,
+	   slidesPerView: 1.15,
 	   loop: true,
 	   speed: 1000,
 	    spaceBetween: 20,
@@ -242,15 +242,22 @@ document.addEventListener("DOMContentLoaded", function (){
          prevEl: ".swiper-button-prev",
       },
 	  breakpoints: {
-        640: {
+        376: {
           slidesPerView: 1.5,
           spaceBetween: 16,
         },
-        768: {
-          slidesPerView: 2.1,
+        576: {
+          slidesPerView: 1.8,
           spaceBetween: 16,
         },
-        
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 16,
+        },
+		1024: {
+		slidesPerView: 3,
+		spaceBetween:20,
+	},       
 	   1280: {
           slidesPerView: 4,
           spaceBetween: 20,
