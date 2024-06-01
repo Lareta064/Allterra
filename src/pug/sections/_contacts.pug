@@ -1,5 +1,5 @@
 //============ CONTACTS ================
-section.contacts.dark-bg(style="background-image: url('./img/contacts.webp')")
+section.contacts.dark-bg
 	.container
 		form.contacts-form.form-opacity
 			p.title-32 Задать вопрос
@@ -16,6 +16,6 @@ section.contacts.dark-bg(style="background-image: url('./img/contacts.webp')")
 				label.form-checkbox
 					input(type="checkbox" name="name_chk")
 					span.fake-checkbox
-					p Ознакомился с #[a.white-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+					span.form-confirm__text Ознакомился с #[a.white-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
 			.form__btn
 				button(type="submit").btn-white.w-100 Получить консультацию

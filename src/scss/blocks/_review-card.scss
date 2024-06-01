@@ -37,6 +37,8 @@
 	.author__photo{
 		width: 128px;
 		flex-shrink:0;
+		aspect-ratio: 1;
+		background-image: url('../img/user.webp');
 		img{
 			width: 100%;
 			aspect-ratio: 1;

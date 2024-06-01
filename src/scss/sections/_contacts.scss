@@ -1,5 +1,5 @@
 .contacts{
-	
+	background-image: url('../img/contacts.webp');
 	.contacts-form{
 		width: min(610px, 100%);
 		margin: 0 auto;
@@ -13,5 +13,8 @@
 		@media (max-width: 767px) {
 			.title-32{margin-bottom: 24px;}
 		}
+	}
+	@media (max-width: 767px) {
+	background-image: url('../img/contacts-mob.webp');
 	}
 }

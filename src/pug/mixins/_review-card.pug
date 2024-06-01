@@ -4,7 +4,7 @@ mixin review-card(arg)
 			//======= author info =====
 			.author
 				.author__photo
-					img(src="../img/review/author"+ arg.img +".webp", width="130" height="130" alt=" img")
+					img(src="./img/review/author"+ arg.img +".webp", width="130" height="130" alt=" img")
 				.author__info
 					p.author__name !{arg.name}
 					
@@ -17,7 +17,7 @@ mixin review-card(arg)
 					a(href="#!").accent-link #{arg.scool}
 			//======= review date
 			.review__meta
-				time 02.04.2022
+				time(datetime="2024-03-12") 02.04.2022
 				p.pin-item  #{arg.loc}
 				
 		//======= review text
@@ -25,5 +25,5 @@ mixin review-card(arg)
 			p #{arg.txt}
 			a(href="#!").accent-link Читать далее
 		.review__meta.review__meta--mob
-			time 02.04.2022
+			time(datetime="2024-03-12") 02.04.2022
 			p.pin-item #{arg.loc}
