@@ -1,0 +1,21 @@
+//============ CONTACTS ================
+section.contacts.dark-bg(style="background-image: url('./img/contacts.webp')")
+	.container
+		form.contacts-form.form-opacity
+			p.title-32 Задать вопрос
+			.form_field
+				input(type="text" name="name" placeholder="Ваше имя*")
+			.form_field
+				input(type="text" name="phone" placeholder="Ваш телефон*")
+			.form_field
+				input(type="text" name="email" placeholder="Ваш email")
+			//====== эелемент .message-field  имеет высоту в зависимости от количества  напечатанного в него текста. То есть высота меняется динамично =======
+			.form_field
+				p.message-field(contenteditable="true" placeholder="Ваш вопрос")
+			.form-confirm
+				label.form-checkbox
+					input(type="checkbox" name="name_chk")
+					span.fake-checkbox
+					p Ознакомился с #[a.white-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+			.form__btn
+				button(type="submit").btn-white.w-100 Получить консультацию

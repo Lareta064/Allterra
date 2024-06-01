@@ -48,8 +48,11 @@
 	line-height: 1.30;
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
+	@media (max-width: 767px) {font-size: 24px;}
 	
-}
+		
+		
+
 .dark-bg .h1, .dark-bg .h2{
 	color: $white;
 }
@@ -214,7 +217,10 @@
 .accent-txt, .accent-link{
 	color: $main-accent;
 }
-*.accent-link{
+.white-link{
+	color: $white;
+}
+*.white-link, *.accent-link{
 	position: relative;
 	width: fit-content!important;
 	&:before{
@@ -233,3 +239,10 @@
 		width: 100%;
 	}
 }
+*.white-link:before{
+	background-color: $white;
+	width: 100%;
+
+}
+*.white-link:hover{color: $white; opacity: 0.8;}
+*.white-link:hover:before{width: 0; }

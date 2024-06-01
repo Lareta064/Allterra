@@ -16,7 +16,7 @@ select:-webkit-autofill:focus {
 }
 .form_field{
   position: relative;
-  input, textarea{
+  input, textarea, .message-field{
     display: block;
     width: 100%;
     font-size: 18px;
@@ -26,7 +26,7 @@ select:-webkit-autofill:focus {
     height: 70px;
     background-color: #f0f3f9;
     border: 1px solid #f0f3f9;
-    
+    outline: none;
     &::placeholder{
       color: rgba(21, 21, 21, .6);
     }
@@ -86,6 +86,8 @@ label.form-checkbox{
     background-color: $main-accent;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 1L5.0625 10L1 5.90909' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
     background-size: 0;
+    cursor:pointer;
+     
   }
   input:checked~.fake-checkbox {
     background-size: auto;
@@ -118,14 +120,35 @@ label.form-radio{
   background: rgba(16, 23, 36, 0.3);
   padding: 40px 64px 48px;
   color: $white;
-  input{
+  input, .message-field{
     height: 66px;
     color: $white;
+    background: rgba(255, 255, 255, 0.1);
     &::placeholder{
       opacity: 0.4;
+      color: $white;
+    }
+  }
+  .form-confirm{
+    color: rgba(255, 255, 255, 0.8);
+    label.form-checkbox input~.fake-checkbox{
+      background-color: #fff;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 1L5.0625 10L1 5.90909' stroke='%23101724' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
     }
   }
   @media (max-width: 1279px) {
       padding: 40px 48px 48px;
   }
+  @media (max-width: 767px) {
+   padding: 32px 16px;
+  }
+}
+.message-field[contentEditable=true]{
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.message-field[contentEditable=true]:empty:before {
+  content: attr(placeholder);
+  opacity: 0.4;
+  color: $white;
 }
