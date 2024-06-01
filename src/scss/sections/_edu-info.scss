@@ -98,17 +98,17 @@
 			right: 20px;
 			z-index: 3;
 			transition: .3s; 
-			
 		}
+		min-height: 328px;
+		img, video{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
 		@media (max-width: 767px) {
 			
 			width: 100%;
-		    min-height: 328px;
-			img, video{
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
 		}
 	}
 	&-offer{
