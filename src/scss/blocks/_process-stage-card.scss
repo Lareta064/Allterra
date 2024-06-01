@@ -1,0 +1,42 @@
+.process-stage{
+	padding: 30px;
+	.flex-row{
+		column-gap:16px;
+		margin-bottom: 16px;
+		font-weight: 600;
+		span{
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			background-color: $main-accent;
+			text-align: center;
+			line-height: 36px;
+			letter-spacing: -0.01em;
+			color: $white;
+		}
+	}
+
+	background-color: $white;
+	.txt-16{line-height: 1.75;}
+	@media (max-width: 767px) {
+		padding: 24px 16px;
+		.flex-row{
+			column-gap: 16px;
+			margin-bottom: 16px;
+		}
+		.txt-16 {line-height: 1.71;}
+			
+		
+	}
+}
+.process-cards{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap:20px;
+	@media (max-width: 1024px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 576px) {
+		grid-template-columns: 1fr
+	}
+}
