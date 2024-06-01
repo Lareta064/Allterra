@@ -263,4 +263,7 @@
 	.contact-name{
 		color: rgba(16, 23, 36, 0.4);
 	}
+	@media (max-width: 767px) {
+		font-size: 14px;
+	}
 }
