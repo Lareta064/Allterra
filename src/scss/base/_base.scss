@@ -237,3 +237,33 @@ section+section {
 		padding-bottom: 80px;
 	}
 }
+.breadcrumb{
+	overflow: hidden;
+	@media (max-width: 767px) {
+		width: calc(50% + 50vw);
+		overflow-x: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{display: none;}
+	}
+}
+.breadcrumb>li{
+	position: relative;
+	display: inline-block;
+	line-height: 1.75;
+	white-space: nowrap;
+	a{color: $white;}
+	&:last-child>*{
+		color: rgba(255, 255, 255, 0.6);
+		pointer-events: none;
+		cursor: default;
+	}
+	&:last-child:hover>*{border:0;}
+	&:hover >*{border-bottom: 1px solid $white;}
+	
+}
+
+.breadcrumb>li+li:before {
+	content: "/\00a0";
+	padding: 0 5px;
+	color: #fff;
+}

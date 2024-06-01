@@ -1,0 +1,90 @@
+.info-card {
+	overflow: hidden;
+	background-color: #fff;
+	width:min(482px, 100%);
+	&__img {
+		height: 212px;
+		background-color: lightgrey;
+		overflow: hidden;
+
+		@media (max-width: 1023px) {
+			width: 100%;
+			height: unset;
+			aspect-ratio: 2 / 1;
+		}
+
+		@media (max-width: 767px) {
+			height: 177px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+
+		}
+	}
+
+	&__text {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		justify-content: space-between;
+
+		svg {
+			flex-shrink: 0;
+		}
+
+		@media (max-width: 767px) {
+			padding: 16px;
+		}
+	}
+
+	.h3 {
+		max-width: 275px;
+		text-transform: uppercase;
+		font-size: 20px;
+		line-height: 1.2;
+
+		@media (max-width: 1279px) {
+
+			max-width: 80%;
+		}
+
+		@media (max-width: 767px) {
+			max-width: 67%;
+			font-size: 16px;
+		}
+	}
+
+}
+.serv-card{
+	display: flex;
+	flex-direction: column;
+	width: min(482px, 100%);
+	background-color: #fff;
+	&__img{
+		width: 100%;
+		aspect-ratio: 295 / 212;
+		flex-shrink: 0;
+	}
+	&__text{
+		padding: 20px;
+		padding-top: 24px;
+		box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		row-gap:12px;
+		p{padding-bottom: 4px; line-height: 1.75;}
+		.round-arrow{margin-top: auto;}
+		.h3{transition: .3s; }
+		.h3:hover{color: $main-accent;}
+		@media (max-width: 767px) {
+			p {
+				padding-bottom: 8px;
+				line-height: 1.71;
+				font-size: 14px;
+			}
+		}
+	}
+}
