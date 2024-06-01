@@ -1,0 +1,11 @@
+.accreditation{
+	.h2{
+		width: 13ch;
+	}
+	&-cards{
+		width: min(610px, 100%);
+	}
+	&-content{
+		align-items: stretch;
+	}
+}
