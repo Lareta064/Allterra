@@ -27,17 +27,29 @@
 		
 	}
 	.swiper-button-next, .swiper-button-prev{
-		color: #ffffff;
-		opacity: 0.4;
+		color: $main-accent;
+		opacity: 1;
 		font-size: 30px;
 		transition: .3s; 
 		&:hover{
-			color: $main-accent;
-			opacity: 1;
+			
+			opacity: 0.4;
 		}
 	}
 	.swiper-button-next{right:0}
 	.swiper-button-prev{left: 0}
+}
+.dark-bg .slider-wrapper{
+	.swiper-button-next,
+		.swiper-button-prev {
+			color: $white;
+			opacity: 0.4;
+			
+			&:hover {
+				
+				opacity: 1;
+			}
+		}
 }
 .review-section{
 	.h2{

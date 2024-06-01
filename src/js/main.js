@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	/*=================REVIEW SLIDER ================== */
-    var swiper = new Swiper(".review-slider", {
+    var reviewSlider = new Swiper(".review-slider", {
 	   slidesPerView: 1.1,
 	   loop: true,
 	   speed: 1000,
@@ -231,4 +231,45 @@ document.addEventListener("DOMContentLoaded", function (){
         },
       },
     });
+	/*=================BLOG CARDS SLIDER ================== */
+    var blogCardsSliderr = new Swiper(".blog-cards-slider", {
+	   slidesPerView: 1.1,
+	   loop: true,
+	   speed: 1000,
+	    spaceBetween: 20,
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+	  breakpoints: {
+        640: {
+          slidesPerView: 1.5,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 2.1,
+          spaceBetween: 16,
+        },
+        
+	   1280: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+
+	// /*********toggle-group toggle class active************* */
+	// const toggleGroup = document.querySelectorAll('.toggle-group');
+	// if(toggleGroup.length > 0){
+	// 	for(let group of toggleGroup){
+	// 		const toggleGroupChilds = group.querySelectorAll('.group-item');
+	// 		for(let item of toggleGroupChilds){
+	// 			item.addEventListener('click', ()=>{
+	// 				const toggleGroupChildsActive = group.querySelector('.active');
+	// 				toggleGroupChildsActive?.classList.remove('active');
+	// 				item.classList.add('active');
+	// 			})
+	// 		}
+	// 	}
+	// }
 });

@@ -98,6 +98,9 @@
 	opacity: 0.8;
 	&>*{opacity:1;}
 }
+.accent-border{
+	border-bottom: 5px solid $main-accent;
+}
 .border-left{
 	padding-left: 24px;
 	position: relative;

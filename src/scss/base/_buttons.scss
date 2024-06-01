@@ -76,6 +76,9 @@
 	background-color: #fff;
 	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
 	color:$text-dark;
+	&:hover{
+		color:rgba(16, 23, 36, .5) ;
+	}
 }
 .fixed-buttons{
 	padding: 10px 20px;
@@ -115,3 +118,13 @@
 
 	}
 }
+*.btn--slim{
+	height: 52px;
+	padding-inline:24px;
+	min-width: 137px;
+	@media (max-width: 767px) {
+		min-width: 54px;
+	}
+	
+}
+.btn-white.btn--slim{box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);}
