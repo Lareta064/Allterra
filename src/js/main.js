@@ -38,7 +38,14 @@ document.addEventListener("DOMContentLoaded", function (){
 				bodyEl.classList.add('lock');
 			}
 			
-		})
+		});
+		/*====== click for overlay ====*/
+		searchFormPopup.addEventListener('click', (e)=>{
+			if(e.target == e.currentTarget){
+				searchFormPopup.classList.remove('active');
+				bodyEl.classList.remove('lock');
+			}
+		});
 	}
     /*===============MOBILE MENU ==================*/
 	const menuToggle = document.querySelector('#menu-toggle');
