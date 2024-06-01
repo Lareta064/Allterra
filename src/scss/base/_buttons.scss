@@ -147,6 +147,9 @@
 	align-items: center;
 	justify-content: center;
 }
+.social{
+	justify-content: flex-start;
+}
 .btns-group{
 	column-gap:20px;
 	.btn-accent,
