@@ -2,20 +2,24 @@ extends ../layouts/layout.pug
 
 block content
 	include ../sections/_header
-	+hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании', 'back-link')
 	//=============MAIN===========
 	main.inner-page
+		+hero-section('about/header-bg.webp',['Главная', 'Об Allterra Education'], 'О компании', 'back-link')
 		include ../sections/_why-us
 		include ../sections/_bosses
 		include ../sections/_statistics
 		include ../sections/_specialization
 		include ../sections/_provide-results
+		include ../sections/_process-section
 
-		include ../sections/_faq
+		include ../sections/_faq-inner
 		include ../sections/_section-review
 		include ../sections/_accredit
 		include ../sections/_contacts
 	include ../sections/_footer
+
+block variables
+	-var title = "О нас";
 
 
 	

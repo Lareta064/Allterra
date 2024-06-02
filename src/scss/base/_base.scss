@@ -237,20 +237,8 @@ address{font-style: normal;}
 	@media (max-width: 767px) {
 		padding-block: 80px;
 	}
-	
 }
-main.inner-page{
-	padding-top: 100px;
-}
- main.inner-page {
- 	padding-top: 80px;
-	@media (max-width: 1279px) {
-		padding-top: 60px;
-	}
-	@media (max-width: 767px) {
-		padding-top: 48px;
-	}
- }
+
 section + section{padding-top: 100px;}
 section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding-bottom: 100px;

@@ -3,12 +3,10 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header.pug
 	//=============MAIN===========
-	main.main-content
-		include ../sections/_edu-info.pug
-		include ../sections/_edu-stages.pug
-		include ../sections/_statistics
-		include ../sections/_faq
-		include ../sections/_feedback
+	main.inner-page
+		+hero-section('greeting/header-bg.webp',['Главная', 'Обращение директора'], 'Обращение директора', 'back-link')
+		
+		include ../sections/_greeting-section
 		include ../sections/_section-review
 		include ../sections/_section-blog
 		include ../sections/_accredit
@@ -16,9 +14,7 @@ block content
 	include ../sections/_footer
 
 block variables
-	-var title = "Allterra";
-
-
+	-var title = "Обращение Директора";
 	
 
 
