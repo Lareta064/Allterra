@@ -7,6 +7,7 @@
 		display: flex;
 		width: 100%;
 	}
+	.flex-justify{column-gap: 16px;}
 	.author{
 		display: flex;
 		flex-grow: 1;
@@ -54,20 +55,15 @@
 			margin-top: auto;
 		}
 	}
-	&__meta{
-		width: fit-content;
+	.review-data,
+	.pin-item{
+		
 		flex-shrink: 0;
 		white-space: nowrap;
 		font-size: 14px;
 		line-height: 1.71;
 		opacity: 0.4;
-		display: flex;
-		flex-direction: column;
-		&>* {width: 100%;}
-		justify-content: space-between;
 		text-align: right;
-				
-			
 	}
 	&__text{
 		width: 100%;
@@ -83,7 +79,7 @@
 		}
 		.accent-link{font-size: 16px;}
 	}
-	.review__meta.review__meta--mob{display: none;}
+	.review__meta{display: none;}
 }
 .tags-list{
 	display: flex;
@@ -115,7 +111,7 @@
 		font-size: 16px;
 		line-height: 1.1;
 	}
-	.review__meta{
+	.review-data, .pin-item{
 		font-size: 16px;
 		line-height: 1.6;
 	}
@@ -147,12 +143,15 @@
 			}
 		.author__range, .author__info .accent-link ,.review__meta,
 			.tags-list{font-size: 12px; line-height: 1.6}
-		.review__meta{display: none;}
-		.review__meta.review__meta--mob{
+		.flex-justify{
+			.pin-item, .review-data{display: none;}
+		}
+		.review__meta{
 			display: flex;
 			flex-direction: row;
 			width: 100%;
 			margin-top: 16px;
+			justify-content: space-between;
 			&>*{width: fit-content;}
 		}
 	}

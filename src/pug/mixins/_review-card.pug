@@ -1,3 +1,32 @@
+//- mixin review-card(arg)
+//- 	.review&attributes(attributes)
+//- 		.review__row
+//- 			//======= author info =====
+//- 			.author
+//- 				.author__photo
+//- 					img(src="../img/review/author"+ arg.img +".webp", width="130" height="130" alt=" img")
+//- 				.author__info
+//- 					p.author__name !{arg.name}
+					
+//- 					if arg.range
+//- 						p.author__range Генеральный директор ГК «АК-Сервис»
+//- 					if arg.tags
+//- 						.tags-list
+//- 							each item of arg.tags
+//- 								span ##{item}
+//- 					a(href="#!").accent-link #{arg.scool}
+//- 			//======= review date
+//- 			.review__meta
+//- 				time(datetime="2024-03-12") 02.04.2022
+//- 				p.pin-item  #{arg.loc}
+				
+//- 		//======= review text
+//- 		.review__text  
+//- 			p #{arg.txt}
+//- 			a(href="#!").accent-link Читать далее
+//- 		.review__meta.review__meta--mob
+//- 			time(datetime="2024-03-12") 02.04.2022
+//- 			p.pin-item #{arg.loc}
 mixin review-card(arg)
 	.review&attributes(attributes)
 		.review__row
@@ -6,24 +35,25 @@ mixin review-card(arg)
 				.author__photo
 					img(src="../img/review/author"+ arg.img +".webp", width="130" height="130" alt=" img")
 				.author__info
-					p.author__name !{arg.name}
-					
+					.flex-justify
+						p.author__name !{arg.name}
+						time.review-data(datetime="2024-03-12") 02.04.2022
 					if arg.range
 						p.author__range Генеральный директор ГК «АК-Сервис»
 					if arg.tags
 						.tags-list
 							each item of arg.tags
 								span ##{item}
-					a(href="#!").accent-link #{arg.scool}
-			//======= review date
-			.review__meta
-				time(datetime="2024-03-12") 02.04.2022
-				p.pin-item  #{arg.loc}
-				
+					
+					.flex-justify.mt-auto
+						a(href="#!").accent-link #{arg.scool}
+						p.pin-item  #{arg.loc}
+			
 		//======= review text
 		.review__text  
 			p #{arg.txt}
 			a(href="#!").accent-link Читать далее
-		.review__meta.review__meta--mob
-			time(datetime="2024-03-12") 02.04.2022
+		
+		.review__meta
+			time.review-data(datetime="2024-03-12") 02.04.2022
 			p.pin-item #{arg.loc}
