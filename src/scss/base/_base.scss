@@ -191,6 +191,12 @@ input[type="submit"] {
 .mb-20 {
 	margin-bottom: 20px;
 }
+.mb-60{
+	margin-bottom: 60px!important;
+	@media (max-width: 767px) {
+		margin-bottom: 40px!important;
+	}
+}
 .mt-auto{margin-top: auto;}
 .pt-100{ 
 	padding-top: 100px;
