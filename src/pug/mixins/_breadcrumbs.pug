@@ -1,0 +1,5 @@
+mixin brcr(...items)
+	ul.breadcrumb
+		each item in items
+			li
+				a(href="#!") #{item}

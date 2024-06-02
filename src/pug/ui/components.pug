@@ -25,21 +25,9 @@ html(lang="ru")
 					ul.ui-components
 						li.dark-bg
 							h4 Хлебные крошки
-							ul.breadcrumb
-
-								li
-									a(href="/") Главная
-
-								li
-									a Информация
+							+brcr('Главная', 'Информация')
 						pre.
-							ul.breadcrumb
-
-								li
-									a(href="/") Главная
-
-								li
-									a Информация
+							+brcr('Главная', 'Информация')
 						
 						hr
 						li
@@ -53,6 +41,14 @@ html(lang="ru")
 									img(src=".../img/flags/uk.svg", width="24"  height="16" alt="icon")
 									span Великобритания
 						
+						li
+							a(href="#!").back-link	
+								span.chevron-back
+								p Назад
+							pre.
+								a(href="#!").back-link	
+									span.chevron-back
+									p Назад
 						br
 						li
 							h4 Элемент Контакт
