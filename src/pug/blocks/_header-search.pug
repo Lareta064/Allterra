@@ -1,0 +1,16 @@
+//- блок добавляется в миксин шапки ====
+.header-search-popup.flex-center-x#search-popup
+	.header-search-wrapper
+		form.header-search.flex-center-y
+			.form_field
+				input(type="text" name="search-input" placeholder="Поиск по сайту")
+				
+				//===== clean input button =====
+				button(type="reset").btn-icon
+					svg.svg-cross
+						use( href='./img/spriteSvg.svg#svg-cross')
+			
+			//======FORM BUTTON=====		
+			.form__btn
+				button(type="submit").btn-accent Найти
+	

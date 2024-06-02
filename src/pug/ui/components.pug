@@ -24,6 +24,7 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li.dark-bg
+							h4 Хлебные крошки
 							ul.breadcrumb
 
 								li
@@ -31,7 +32,18 @@ html(lang="ru")
 
 								li
 									a Информация
+						pre.
+							ul.breadcrumb
+
+								li
+									a(href="/") Главная
+
+								li
+									a Информация
+						
+						hr
 						li
+							h4 Страна
 							a(href="#!").flex-item
 								img(src="../img/flags/uk.svg", width="24"  height="16" alt="icon")
 								span Великобритания
@@ -41,24 +53,47 @@ html(lang="ru")
 									img(src=".../img/flags/uk.svg", width="24"  height="16" alt="icon")
 									span Великобритания
 						
-						
+						br
 						li
-							.list-block
-								ul
-									li  Находим варианты с высокими шансами на поступление
-									li  Выясняем наличие свободных мест
-									li  Уточняем вступительные требования и сроки
-									li  Согласовываем индивидуальные условия
+							h4 Элемент Контакт
+							
+							.contact-group
+								p.contact-name Телефон
+								a(href="tel:88005114993") 8(800) 511-4993
 							pre.
-								.list-block
-									ul
-										li  Находим варианты с высокими шансами на поступление
-										li  Выясняем наличие свободных мест
-										li  Уточняем вступительные требования и сроки
-										li  Согласовываем индивидуальные условия
+								.contact-group
+									p.contact-name Телефон
+									a(href="tel:88005114993") 8(800) 511-4993
+						hr
+						li
+							h4 Элемент АДРЕС
+							address.contact-group
+								p
+									strong Москва
+									| #[br] ул. Тверская, д. 7  #[br]
+									a(href="#!").accent-link На карте
+							pre.
+								address.contact-group
+									p
+										strong Москва
+										| #[br] ул. Тверская, д. 7  #[br]
+										a(href="#!").accent-link На карте
+					
+						br
+						li
+							h3 Соц сети - блок
+							.social
+								a(href="#!").social-item
+									img(src="../img/icons/skype.svg", alt="icon")
+								a(href="#!").social-item
+									img(src="../img/icons/vk.svg", alt="icon")
+									
+							pre.
+								.social
+									a(href="#!").social-item
+										img(src="./img/icons/skype.svg", alt="icon")
+									a(href="#!").social-item
+										img(src="./img/icons/vk.svg", alt="icon")
+
 
 						li
-							.list-check
-								ul
-									li Лучшие, рейтинговые средние школы и частные школы-пансионы Великобритании, США, Швейцарии и Германии
-									li Сильнейшие технические вузы мира
