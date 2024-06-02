@@ -1,6 +1,18 @@
+.why-us{
+	@media (max-width: 767px) {
+		.section-title{br{display: none;}}
+		
+		
+	}
+}
 .why-us__subtitle{
 	margin-bottom: 80px;
 	&>*+*{margin-top: 20px;}
+	@media (max-width: 767px) {
+		.h4 {line-height: 1.56;}
+		.txt-18{line-height: 1.75;}
+	}
+	
 }
 .guarantees-block{
 	padding: 40px;
@@ -8,6 +20,16 @@
 		line-height: 1.25;
 		margin-bottom: 20px;
 		letter-spacing: -0.03em;
+	}
+	@media (max-width: 1279px) {
+		padding: 40px 20px;
+		.title-32{margin-bottom: 32px;}
+	}
+	@media (max-width: 767px) {
+		margin-left: -16px;
+		margin-right: -16px;
+		.title-32{margin-bottom: 20px;}
+		
 	}
 }
 .guarant-card{
@@ -21,9 +43,20 @@
 	&__txt{
 		position: relative;z-index: 2;
 		&>*+*{margin-top: 10px;}
+		font-size: 16px;line-height: 1.75;
+		@media (max-width: 767px) {
+			font-size: 14px;
+			line-height: 1.71;
+		}
 	}
-	p{line-height: 1.75;}
-	.h5{letter-spacing: -0.03em;}
+	
+	.h5{
+		letter-spacing: -0.03em;
+		font-size: 18px;
+		@media (max-width: 767px) {
+		line-height: 1.56;
+		}
+	}
 	span{
 		font-weight: 800;
 		font-size: 100px;
@@ -35,11 +68,22 @@
 		top: 5px;
 		left: 20px;
 	}
+	@media (max-width: 1279px) {
+		padding-inline: 20px;
+	}
+	@media (max-width: 767px) {
+	padding: 24px 16px;
+	}
 }
 .guarant-card:has( .btn){
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	.btn{width: fit-content; margin-top: 40px;}
+	.btn{
+		width: fit-content; margin-top: 40px;
+		@media (max-width: 767px) {
+		width: 100%;
+		}
+	}
 	.guarant-card__txt{flex-shrink:0 ;}
 }

@@ -13,6 +13,10 @@
 		@media (max-width: 1279px) {
 		 margin-bottom: 0;
 		}
+		@media (max-width: 767px) {
+		transform: translateY(-50%);
+		left: 16px;
+		}
 	}
 	.container{
 		position: relative;
