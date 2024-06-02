@@ -132,6 +132,8 @@
 	opacity: 0.8;
 	&>*{opacity:1;}
 }
+.txt-center{text-align: center;}
+.txt-upper{text-transform: uppercase;}
 .accent-border{
 	border-bottom: 5px solid $main-accent;
 }

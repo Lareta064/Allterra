@@ -10,6 +10,10 @@
 	}
 	&-cards{
 		flex-grow: 1;
+		@media(min-width:1440px){
+			.flex-row{justify-content: flex-end;}
+			
+		}
 	}
 	&-content{
 		align-items: stretch;

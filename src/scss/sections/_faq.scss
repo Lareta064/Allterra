@@ -4,7 +4,7 @@
 		.h2{
 			color: rgba(16, 23, 36, 0.4);
 			max-width: 15ch;
-			text-transform: capitalize;
+			text-transform: uppercase;
 		}
 		.h2::first-letter, h2 span::first-letter { color: rgba(16, 23, 36, 1);}
 		span{display: inline-block;}
