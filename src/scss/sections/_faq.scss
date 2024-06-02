@@ -10,7 +10,7 @@
 		span{display: inline-block;}
 		.faq-contacts{
 			display: block;
-			.txt-18{font-weight: 600;}
+			
 			@media (max-width: 899px) {
 			display: none;
 			}
@@ -40,11 +40,12 @@
 		background: #f0f3f9;
 		&>*+*{margin-top: 32px;}
 		margin-top: 80px;
+		
 		@media (max-width: 767px) {
 			max-width: 328px;;
 			padding: 24px 16px;
 			&>*+* {margin-top: 12px;}
-			.txt-18{
+			.h5{
 				line-height: 1.71;
 				font-size: 14px;;
 			}

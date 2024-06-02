@@ -1,8 +1,13 @@
 .h1,
-.h3,
+.h3,.section-title,
 .title,
 .txt-20 {
 	font-weight: 600;
+}
+.section-title{
+	font-size: 48px;
+	line-height: 1.30;
+	letter-spacing: -0.02em;
 }
 
 .h1,
@@ -81,18 +86,23 @@
 .txt-20 {
 	color: $text-dark;
 }
-
-.txt-18{
-	font-weight: 500;
+.h4{
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.33;
+	letter-spacing: -0.03em;
+}
+.h5{
+	font-weight: 600;
 	font-size: 18px;
 	line-height: 1.6;
-
+	letter-spacing: -0.01em;
 	@media (max-width: 767px) {
 	   font-size: 16px;
 	}
 }
 
-
+.txt-18,
 .txt-16,.txt-14{
 	font-size: 16px;
 	line-height: 1.6;
@@ -101,6 +111,7 @@
 		font-size: 14px;
 	}
 }
+.txt-18{font-size: 18px;}
 .txt-14 {
 	font-size: 14px;
 	@media (max-width: 767px) {
