@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	+hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании')
+	//=============MAIN===========
+	main.main-content
+		include ../sections/_why-us
+		include ../sections/_statistics
+		include ../sections/_faq
+		include ../sections/_section-review
+		include ../sections/_accredit
+		include ../sections/_contacts
+	include ../sections/_footer
+
+
+	
+
+
+
+
+
+	include ../blocks/_mobile-fixed-buttons.pug
+block variables
+	-var title = "Главная";
