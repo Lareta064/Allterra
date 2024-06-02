@@ -197,6 +197,13 @@ input[type="submit"] {
 		margin-bottom: 40px!important;
 	}
 }
+.mt-60 {
+	margin-top: 60px !important;
+
+	@media (max-width: 767px) {
+		margin-top: 40px !important;
+	}
+}
 .mt-auto{margin-top: auto;}
 .pt-100{ 
 	padding-top: 100px;

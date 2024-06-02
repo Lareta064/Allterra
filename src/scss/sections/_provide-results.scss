@@ -14,5 +14,18 @@
 		p{
 			line-height: 1.75;
 		}
+		@media (max-width: 1279px) {
+			padding: 30px 20px;
+			min-height: 248px;
+		}
+		@media (max-width: 767px) {
+			padding: 24px 16px;
+			min-height: unset;
+			p{line-height: 1.71;}
+		}
+	}
+	@media (max-width: 767px) {
+	.btns-group .btn{width: min(360px, 100%)}
+		&-title{text-align: left;}
 	}
 }
