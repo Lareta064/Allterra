@@ -2,15 +2,17 @@ extends ../layouts/layout.pug
 
 block content
 	include ../sections/_header.pug
-	include ../sections/_edu-info.pug
-	include ../sections/_edu-stages.pug
-	include ../sections/_statistics
-	include ../sections/_faq
-	include ../sections/_feedback
-	include ../sections/_section-review
-	include ../sections/_section-blog
-	include ../sections/_accredit
-	include ../sections/_contacts
+	//=============MAIN===========
+	main.main-content
+		include ../sections/_edu-info.pug
+		include ../sections/_edu-stages.pug
+		include ../sections/_statistics
+		include ../sections/_faq
+		include ../sections/_feedback
+		include ../sections/_section-review
+		include ../sections/_section-blog
+		include ../sections/_accredit
+		include ../sections/_contacts
 	include ../sections/_footer
 
 
