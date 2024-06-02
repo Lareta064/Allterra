@@ -1,0 +1,31 @@
+.guarantees-block{
+	padding: 40px;
+	.title-32{
+		line-height: 1.25;
+		margin-bottom: 20px;
+		letter-spacing: -0.03em;
+	}
+}
+.guarant-card{
+	position: relative;
+	background-color: #fff;
+	padding: 30px;
+	&__txt{position: relative;z-index: 2;}
+	p{
+		padding-top: 10px;
+		line-height: 1.75;
+	}
+	.h5{letter-spacing: -0.03em;}
+	span{
+		font-weight: 800;
+		font-size: 100px;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		color: #f0f3f9;
+		position: absolute;
+		z-index: 1;
+		top: 5px;
+		left: 20px;
+	}
+	
+}

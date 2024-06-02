@@ -270,3 +270,14 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding: 0 5px;
 	color: #fff;
 }
+.two-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
+
+	@media (max-width: 767px) {
+		display: grid;
+		grid-template-columns: 1fr;
+		column-gap: 16px;
+	}
+}
