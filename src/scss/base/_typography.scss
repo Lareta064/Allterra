@@ -8,6 +8,10 @@
 	font-size: 48px;
 	line-height: 1.30;
 	letter-spacing: -0.02em;
+	margin-bottom: 48px;
+	@media (max-width: 767px) {
+	margin-bottom: 40px;
+	}
 }
 
 .h1,
@@ -67,7 +71,7 @@
 	line-height: 1.30;
 	letter-spacing: -0.02em;
 	
-	@media (max-width: 767px) {font-size: 24px;}
+	@media (max-width: 767px) {font-size: 24px; }
 }
 .dark-bg .h1, .dark-bg .h2{
 	color: $white;
@@ -188,7 +192,7 @@
 	li {
 		position: relative;
 		display: flex;
-		align-items: center;
+		
 		column-gap: 10px;
 		line-height: 1.6;
 
@@ -205,6 +209,8 @@
 			height: 10px;
 			border-radius: 50%;
 			border: 2px solid $main-accent;
+			position: relative;
+			top:8px;
 		}
 	}
 

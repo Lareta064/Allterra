@@ -5,11 +5,11 @@
 	display: flex;
 	
 	 .title{
-		margin-bottom:20px;
+		
 		position: absolute;
-		left: 0;
+		left: 20px;
 		top: 50%;
-		transform: translateY(-50%);
+		transform: translateY(-60%);
 		@media (max-width: 1279px) {
 		 margin-bottom: 0;
 		}

@@ -1,3 +1,7 @@
+.why-us__subtitle{
+	margin-bottom: 80px;
+	&>*+*{margin-top: 20px;}
+}
 .guarantees-block{
 	padding: 40px;
 	.title-32{
@@ -10,11 +14,15 @@
 	position: relative;
 	background-color: #fff;
 	padding: 30px;
-	&__txt{position: relative;z-index: 2;}
-	p{
-		padding-top: 10px;
+	.list-block li{
 		line-height: 1.75;
+		&+li{margin-top: 12px;}
 	}
+	&__txt{
+		position: relative;z-index: 2;
+		&>*+*{margin-top: 10px;}
+	}
+	p{line-height: 1.75;}
 	.h5{letter-spacing: -0.03em;}
 	span{
 		font-weight: 800;
@@ -27,5 +35,11 @@
 		top: 5px;
 		left: 20px;
 	}
-	
+}
+.guarant-card:has( .btn){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.btn{width: fit-content; margin-top: 40px;}
+	.guarant-card__txt{flex-shrink:0 ;}
 }
