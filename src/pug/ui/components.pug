@@ -23,15 +23,15 @@ html(lang="ru")
 
 				.container-dashboard__content
 					ul.ui-components
+						h4 #[strong Хлебные крошки]
 						li.dark-bg
-							h4 Хлебные крошки
 							+brcr('Главная', 'Информация')
 						pre.
 							+brcr('Главная', 'Информация')
 						
 						hr
 						li
-							h4 Страна
+							h4 #[strong Страна]
 							a(href="#!").flex-item
 								img(src="../img/flags/uk.svg", width="24"  height="16" alt="icon")
 								span Великобритания
@@ -41,17 +41,32 @@ html(lang="ru")
 									img(src=".../img/flags/uk.svg", width="24"  height="16" alt="icon")
 									span Великобритания
 						
+						hr
 						li
-							a(href="#!").back-link	
+							h4 #[strong Компонент, где стрелка -  фоновая картинка акцентного цвета]
+							a(href="#!").back-link
 								span.chevron-back
 								span Назад
 							pre.
-								a(href="#!").back-link	
+								a(href="#!").back-link
 									span.chevron-back
 									span Назад
-						br
+						hr
 						li
-							h4 Элемент Контакт
+							h4 #[strong Компонент, где стрелка -svg-спрайт, можно менять цвет через color]
+							a(href="#!").back-link
+								svg.svg-chevron
+									use(href="../img/spriteSvg.svg#svg-chevron")
+								span Назад
+							pre.
+								a(href="#!").back-link
+									svg.svg-chevron
+										use(href="../img/spriteSvg.svg#svg-chevron")
+									span Назад
+
+						hr
+						li
+							h4 #[strong Элемент Контакт]
 							
 							.contact-group
 								p.contact-name Телефон
@@ -62,7 +77,7 @@ html(lang="ru")
 									a(href="tel:88005114993") 8(800) 511-4993
 						hr
 						li
-							h4 Элемент АДРЕС
+							h4 #[strong Элемент АДРЕС]
 							address.contact-group
 								p
 									strong Москва
@@ -75,9 +90,9 @@ html(lang="ru")
 										| #[br] ул. Тверская, д. 7  #[br]
 										a(href="#!").accent-link На карте
 					
-						br
+						hr
 						li
-							h3 Соц сети - блок
+							h3 #[strong Соц сети - блок]
 							.social
 								a(href="#!").social-item
 									img(src="../img/icons/skype.svg", alt="icon")
@@ -90,6 +105,3 @@ html(lang="ru")
 										img(src="./img/icons/skype.svg", alt="icon")
 									a(href="#!").social-item
 										img(src="./img/icons/vk.svg", alt="icon")
-
-
-						li

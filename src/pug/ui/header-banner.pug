@@ -2,13 +2,15 @@ extends ../layouts/layout-ui.pug
 
 block content
 	.container-dashboard
-		section.hero
+		section.hero(style="background-image: url('../img/about/header-bg.webp')")
 			.container
 				.hero-content
 					+brcr('Главная', 'Информация')
 					.hero-title
-						h1.h1 О компании
+						h1.title О компании
 					.hero-link
 						a(href="#!").back-link
-							span.chevron-back
+							svg.svg-chevron
+								use(href="../img/spriteSvg.svg#svg-chevron")
+
 							span Назад

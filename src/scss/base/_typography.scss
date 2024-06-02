@@ -1,6 +1,6 @@
 .h1,
-
 .h3,
+.title,
 .txt-20 {
 	font-weight: 600;
 }
@@ -26,7 +26,13 @@
 		font-weight: 800;
 	}
 }
-
+.title{
+	
+	font-size: 64px;
+	line-height: 1.2;
+	letter-spacing: -0.03em;
+	color: $white;
+}
 .h2 {
 
 	font-size: 48px;

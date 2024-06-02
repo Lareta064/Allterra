@@ -68,6 +68,7 @@
 	font-size: 18px;
 	line-height: 1.11;
 	color: $text-dark;
+	transition: .3s; 
 
 	& > * {
 		pointer-events: none;

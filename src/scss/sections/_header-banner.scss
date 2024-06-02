@@ -1,0 +1,27 @@
+.hero{
+	min-height: 455px;
+	position: relative;
+	padding-block: 24px 32px;
+	.breadcrumb{margin-bottom: 128px;}
+	.title{margin-bottom: 148px;}
+	.container{
+		position: relative;
+		z-index: 1;
+	}
+	&:after{
+		content:'';
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+	.back-link{
+		color: $white;
+		font-size: 14px;
+		font-weight: 400;
+		svg{color: $white;}
+		span{border-bottom: 1px solid currentColor;}
+		&:hover{
+			opacity:.6;
+		}
+	}
+}
