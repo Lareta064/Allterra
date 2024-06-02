@@ -6,6 +6,10 @@
 	
 	 .title{
 		margin-bottom:20px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
 		@media (max-width: 1279px) {
 		 margin-bottom: 0;
 		}

@@ -9,7 +9,7 @@ mixin hero-section(bgImg, links, name, backLink)
 				.hero-title
 					h1.title !{name}
 				
-				if backLink
+				if backLink == 'back-link'
 					.hero-link
 						a(href="#!").back-link
 							svg.svg-chevron
