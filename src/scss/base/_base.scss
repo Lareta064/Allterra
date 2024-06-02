@@ -224,13 +224,16 @@ address{font-style: normal;}
 	background-color: #f0f3f9;
 	padding-block: 100px;
 }
-
-section + section{padding-top: 100px;}
+main.inner-page{
+	padding-top: 100px;
+}
+section + section, main.inner-page{padding-top: 100px;}
 section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding-bottom: 100px;
 }
+
 @media (max-width: 767px) {
-section+section {
+	section+section ,main.inner-page{
 		padding-top: 80px;
 	}
 

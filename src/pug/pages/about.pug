@@ -1,9 +1,10 @@
 extends ../layouts/layout.pug
 
 block content
+	include ../sections/_header
 	+hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании')
 	//=============MAIN===========
-	main.main-content
+	main.inner-page
 		include ../sections/_why-us
 		include ../sections/_statistics
 		include ../sections/_faq
