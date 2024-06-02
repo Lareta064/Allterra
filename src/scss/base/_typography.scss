@@ -84,11 +84,11 @@
 	letter-spacing: -0.01em;
 	color: $bg-black;
 	@media (max-width: 1023px) {
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 1.3;
 	}
 }
-.h3{text-transform: uppercase;}
+
 .txt-20 {
 	color: $text-dark;
 }
@@ -231,10 +231,11 @@
 		line-height: 1.75;
 		align-items: flex-start;
 		&+li {
-				margin-top: 14px;
+				margin-top: 12px;
 			}
 		&:before {
 			content: '';
+			top: 0;
 			
 			display: inline-block;
 			flex-shrink: 0;
@@ -250,9 +251,7 @@
 		@media (max-width: 767px) {
 			font-size: 14px;
 			line-height: 1.71;
-			&+li{
-				margin-top: 12px;
-			}
+			
 		}
 	}
 }

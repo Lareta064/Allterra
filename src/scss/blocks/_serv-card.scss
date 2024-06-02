@@ -8,6 +8,10 @@
 		width: 100%;
 		aspect-ratio: 295 / 212;
 		flex-shrink: 0;
+		@media(max-width: 479px){
+			height: 218px;
+			img{height: 218px;}
+		}
 	}
 	&__text{
 		padding: 20px;
@@ -17,9 +21,15 @@
 		display: flex;
 		flex-direction: column;
 		row-gap:12px;
-		p{padding-bottom: 4px; line-height: 1.75;}
+		p{
+			padding-bottom: 4px; line-height: 1.75; 
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 4;
+			overflow: hidden;
+		}
 		.round-arrow{margin-top: auto;}
-		.h3{transition: .3s; }
+		.h3{transition: .3s; line-height: 1.2;}
 		.h3:hover{color: $main-accent;}
 		@media (max-width: 767px) {
 			p {

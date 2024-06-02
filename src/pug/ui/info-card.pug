@@ -12,10 +12,10 @@ block content
 				span.round-arrow
 					svg.svg-arrow
 						use(href="../img/spriteSvg.svg#svg-arrow")
-
+		
 		.serv-card
 			.serv-card__img
-				img.wh-100.lazy(src="../img/main-page/edu1.webp", alt=" img")
+				img.wh-100.lazy(src="../img/main-page/edu1.webp", width="482" alt=" img")
 			.serv-card__text
 				a(href="#!").h3 Каникулы с изучением языков
 				p Построение образовательного маршрута, выбор школы, подготовка, поступление и курирование в процессе учебы 
@@ -23,3 +23,5 @@ block content
 				a(href="#!").round-arrow
 					svg.svg-arrow
 						use(href="../img/spriteSvg.svg#svg-arrow")
+			pre.
+				+serv-card('main-page/edu1', 'Каникулы с изучением языков',' Построение образовательного маршрута, выбор школы, подготовка, поступление и курирование в процессе учебы ')

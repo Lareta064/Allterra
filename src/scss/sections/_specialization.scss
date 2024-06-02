@@ -1,0 +1,55 @@
+.specialization{
+	.two-columns{
+		column-gap: 32px;
+		@media (max-width: 1279px) {
+			column-gap: 20px;
+		}
+	}
+	.section-title{
+		margin-bottom: 60px;
+		@media (max-width: 767px) {
+		margin-bottom: 40px;
+		}
+	}
+	.txt-italic{
+		font-style: italic;
+		line-height: 1.75;
+		font-size: 24px;
+		line-height: 1.42;
+		letter-spacing: -0.03em;
+		
+		strong{
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+		}
+		@media (max-width: 767px) {
+			font-size: 18px;
+			line-height: 1.56;
+			
+		}
+	}
+	
+	&-text {
+		&>*+*{margin-top: 32px;}
+		line-height: 1.75;
+		@media (max-width: 767px) {
+		&>*+* {margin-top: 24px;}
+				line-height: 1.71;
+		}
+	}
+	.specialization-list .h3{
+		margin-bottom: 13px;
+		line-height: 170%;
+		letter-spacing: -0.03em;
+	}
+	@media (max-width: 1023px) {
+		&-image{display: none;}
+	}
+
+}
+.service-cards{
+	padding-top: 120px;
+	@media (max-width: 767px) {
+	padding-top: 60px;
+	}
+}
