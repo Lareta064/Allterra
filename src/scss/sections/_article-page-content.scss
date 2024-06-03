@@ -4,10 +4,23 @@
 		margin-bottom: 12px;
 	}
 	*+p{margin-top: 1em}
-	.txt-img{margin-top: 48px;
-	img{margin-top: 48px;}
+	.txt-img{
+		margin-top: 48px;
+	img{margin-top: 0;
+	}
 		p>img{margin-top:0;}
 	}
 	img{margin-top: 48px;}
-	// p>img{margin-block: 0}
+	.anchor{
+		scroll-margin-top: 48px;
+	}
+	
+}
+.article {
+
+	.column-grid__col{
+		position:sticky;
+		top:20px;
+		padding-right: 24px;
+	}
 }

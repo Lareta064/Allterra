@@ -4,17 +4,7 @@
 .txt-20 {
 	font-weight: 600;
 }
-.section-title{
-	font-size: 48px;
-	line-height: 1.30;
-	letter-spacing: -0.02em;
-	margin-bottom: 48px;
-	@media (max-width: 767px) {
-		margin-bottom: 40px;
-		font-size: 32px;
-		letter-spacing: -0.01em;
-	}
-}
+
 .h1,
 .h2 {
 	font-size: 80px;
@@ -51,6 +41,18 @@
 		
 	}
 }
+.section-title {
+	font-size: 48px;
+	line-height: 1.30;
+	letter-spacing: -0.02em;
+	margin-bottom: 48px;
+
+	@media (max-width: 767px) {
+		margin-bottom: 40px;
+		font-size: 32px;
+		letter-spacing: -0.01em;
+	}
+}
 .h2 {
 	font-size: 48px;
 	line-height: 1.30;
@@ -73,7 +75,7 @@
 	
 	@media (max-width: 767px) {font-size: 24px; line-height: 1.25;}
 }
-.dark-bg .h1, .dark-bg .h2{
+.dark-bg .h1, .dark-bg .h2, .dark-bg .section-title, .dark-bg .title{
 	color: $white;
 }
 .h3,.txt-20 {

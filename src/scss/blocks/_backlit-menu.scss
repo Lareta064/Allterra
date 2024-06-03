@@ -1,0 +1,42 @@
+.backlit-menu{
+	position: relative;
+	&:before{
+		content: '';
+		width: 2px;
+		background: #F3F5F9;
+		
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;		
+	}
+	a{
+		display: block;
+		width: fit-content;
+		margin-top: 10px;
+		padding-top: 3px;
+		font-weight: 500;
+		padding-bottom: 3px;
+		font-size: 14px;
+		line-height: 1.43;
+		padding-left: 14px;
+		position: relative;
+		transition: .3s; 
+		&:before{
+			content: '';
+			width: 2px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 0;
+			transition: .3s; 
+			background-color: $main-accent;
+		}
+	}
+	a.active{
+		color: $main-accent;
+		&::before{
+			height: 100%;
+		}
+	}
+}

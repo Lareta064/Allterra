@@ -331,7 +331,9 @@ blockquote{
 	display: grid;
 	grid-template-columns: 290px 1fr;
 	column-gap: 20px;
+	align-items: flex-start;
 	@media (max-width: 1279px) {
 	 grid-template-columns:  1fr;
 	}
 }
+.backlit-menu a.active{color: green}

@@ -253,18 +253,31 @@ document.addEventListener("DOMContentLoaded", function (){
       },
     });
 
-	// /*********toggle-group toggle class active************* */
-	// const toggleGroup = document.querySelectorAll('.toggle-group');
-	// if(toggleGroup.length > 0){
-	// 	for(let group of toggleGroup){
-	// 		const toggleGroupChilds = group.querySelectorAll('.group-item');
-	// 		for(let item of toggleGroupChilds){
-	// 			item.addEventListener('click', ()=>{
-	// 				const toggleGroupChildsActive = group.querySelector('.active');
-	// 				toggleGroupChildsActive?.classList.remove('active');
-	// 				item.classList.add('active');
-	// 			})
-	// 		}
-	// 	}
-	// }
+
+	/* подсветка активного меню при скролле страницы */
+	const backlitMenu = document.querySelector('.backlit-menu');
+	if(backlitMenu){
+		const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				
+				backlitMenu.querySelectorAll('a').forEach((link) => {
+					
+				let id = link.getAttribute('href').replace('#', '');
+				if (id === entry.target.id) {
+					
+					link.classList.add('active');
+				} else {
+				link.classList.remove('active');
+				}
+			});
+			}
+		});
+		}, {
+		threshold: 0.5
+		});
+	
+		document.querySelectorAll('.anchor').forEach(section => { observer.observe(section)} );
+	}
+
 });
