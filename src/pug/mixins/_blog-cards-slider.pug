@@ -1,0 +1,56 @@
+mixin blogCardsSlider(title, titleSpan)
+	//======== BLOG CARDS ========
+	section.blog.light-bg
+		.container
+			//======= SECTION TOP ROW=======
+			.flex-header
+				h2.h2 #{title} <br> #[span.accent-border #{titleSpan}]
+				
+				.btns-group
+					a(href="#!").btn--slim.btn-white Все новости
+					a(href="#!").btn--slim.btn Все статьи
+
+			//======= SECTION SLIDER =======
+			.slider-wrapper
+				//======== slider-content =======
+				.blog-cards-slider.swiper
+					.swiper-wrapper
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(2, 'Новость', 'Экономическое образование в США')
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(3, 'Статья', 'Техническое образование в Германии')
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(4, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(2, 'Новость', 'Экономическое образование в США')
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(3, 'Статья', 'Техническое образование в Германии')
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(4, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+
+			
+				//===== swiper navigation========
+				.slider-nav
+					.swiper-button-next
+					.swiper-button-prev
+				
+				//========VISIBLE MOBILE =======
+				.btns-group
+					a(href="#!").btn--slim.btn-white Все новости
+					a(href="#!").btn--slim.btn Все статьи
