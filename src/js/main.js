@@ -108,26 +108,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			ths.find('.custom-tab').hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass('active');
 	});
-  	/*animated statistics numbers */
-	let show = true;
-    let countbox = ".statistics-content";
-    $(window).on("scroll load resize", function () {
-        if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-        let w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-        let e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-        let w_height = $(window).height(); // Высота окна браузера
-        let d_height = $(document).height(); // Высота всего документа
-        let e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-        if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-            $('.num').css('opacity', '1');
-            $('.num').spincrement({
-                thousandSeparator: "",
-                duration: 2000
-            });
 
-            show = false;
-        }
-    }); 
 	/*============== ACORDION ========== */
 	;(function ($, window, document, undefined) {
 		"use strict";
