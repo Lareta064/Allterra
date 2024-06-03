@@ -6,7 +6,7 @@
 	background-color: $white;
 	&__img{
 		width: 100%;
-		aspect-ratio: 295 / 212;
+		aspect-ratio: 295 / 195;
 		flex-shrink: 0;
 		@media(max-width: 479px){
 			height: 218px;

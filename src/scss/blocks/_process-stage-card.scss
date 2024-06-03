@@ -1,5 +1,7 @@
 .process-stage{
 	padding: 30px;
+	min-height: 220px;
+	
 	.flex-row{
 		column-gap:16px;
 		margin-bottom: 16px;
@@ -13,6 +15,7 @@
 			line-height: 36px;
 			letter-spacing: -0.01em;
 			color: $white;
+			flex-shrink: 0;
 		}
 	}
 

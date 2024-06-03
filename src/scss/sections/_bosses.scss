@@ -1,8 +1,10 @@
 .bosses{
 	.section-title{
+		text-align: center;
 		@media (max-width: 767px) {
 		line-height: 1.25;
 		letter-spacing: -0.03em;
+		text-align: left;
 		}
 	}
 	@media (max-width: 767px) {

@@ -1,35 +1,68 @@
-.boss-card{
+.person-card{
 	padding: 30px;
 	background-color: #fff;
-	display: flex;
-	gap:20px;
-	font-size: 16px;
-	line-height: 1.6;
 	width: min(605px, 100%);
 	flex-shrink: 0;
+	.person{
+		gap:30px;
+		&__img {
+			width: 150px;
+			height: 200px;
 	
-	&__img{
+			@media (max-width: 767px) {
+				height: 150px;
+			}
+		}
+
+		&__name {
+			font-size: 20px;
+			line-height: 1.6
+		}
+	}
+	@media (max-width: 767px) {
+	  padding: 20px 16px;
+		.person{
+		 	flex-direction: column;
+			align-items: flex-start;
+			gap:20px
+	  		
+		}
+	}
+}
+.person{
+	gap: 40px;
+	font-size: 16px;
+	line-height: 1.6;
+	&__name {
+		font-size: 16px;
+		line-height: 1.5;
+		font-weight: 600;
+	}
+	&__img {
 		width: 150px;
 		height: 200px;
 		flex-shrink: 0;
 		background-color: #f0f0f0;
 		overflow: hidden;
-		img{
+
+		img {
 			width: 100%;
-			min-height:100%;
-			
+			min-height: 100%;
+
 		}
-		@media (max-width: 767px) {height: 150px;}
+
+		@media (max-width: 767px) {
+			height: 150px;
+		}
 	}
-	.flex-col{
+
+	.flex-col {
 		row-gap: 20px;
 	}
-	@media (max-width: 767px) {
-	  padding: 20px 16px;
-	  flex-direction: column;
-	  .txt-20{font-size: 20px; line-height:1.6}
-	 
+	@media (max-width: 1279px) {
+		gap: 20px;
 	}
+	
 }
 .bosses-cards{
 	column-gap: 20px;

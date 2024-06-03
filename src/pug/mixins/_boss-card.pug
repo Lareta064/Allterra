@@ -1,8 +1,19 @@
-mixin boss-card(img, name)
-	.boss-card
-		.boss-card__img
+mixin person-card(img, name)
+	.person-card
+		.person.flex-center-y
+			.person__img
+				img(src="../img/boss/boss"+ img+".webp", width="150" height="200" alt="photo")
+			.flex-col
+				p.person__name #{name}
+				p Генеральный директор <br>Опыт работы 27 лет
+				a(href="mailto:grechko@allterra.ru").accent-link grechko@allterra.ru
+
+
+mixin person-info(img, name)
+	.person.flex-col
+		.person__img
 			img(src="../img/boss/boss"+ img+".webp", width="150" height="200" alt="photo")
 		.flex-col
-			p.txt-20 #{name}
+			p.person__name #{name}
 			p Генеральный директор <br>Опыт работы 27 лет
 			a(href="mailto:grechko@allterra.ru").accent-link grechko@allterra.ru
