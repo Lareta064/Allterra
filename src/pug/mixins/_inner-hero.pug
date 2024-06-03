@@ -16,7 +16,7 @@ mixin hero-section(bgImg, links, name, backLink)
 								use(href="../img/spriteSvg.svg#svg-chevron")
 							span Назад
 
-mixin hero-section-center(bgImg, links, name, bottomText)
+mixin hero-section-center(bgImg, links, name, bottomText, titleClass)
 	section.hero.hero--center(style="background-image: url('../img/"+ bgImg +"')")
 		.container
 			.hero-content
@@ -25,7 +25,7 @@ mixin hero-section-center(bgImg, links, name, bottomText)
 						li
 							a(href="#!") #{item}
 				.hero-title
-					h1.h2 !{name}
-				if bottomText
+					h1.h2(class=(titleClass != ''? ''+ titleClass : '')) !{name}
+				if bottomText != ''
 					.hero-bottom
 						p #{bottomText}

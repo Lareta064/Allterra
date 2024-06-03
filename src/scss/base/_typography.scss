@@ -52,7 +52,6 @@
 	}
 }
 .h2 {
-
 	font-size: 48px;
 	line-height: 1.30;
 	letter-spacing: -0.02em;
@@ -133,6 +132,7 @@
 }
 .txt-center{text-align: center;}
 .txt-upper{text-transform: uppercase;}
+.tt-none{text-transform: none;}
 .accent-border{
 	border-bottom: 5px solid $main-accent;
 }
