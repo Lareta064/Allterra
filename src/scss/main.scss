@@ -46,7 +46,10 @@
 @import "sections/provide-results.scss";
 
  //======greeting page =====
- @import "sections/_greeting-section.scss";
+@import "sections/_greeting-section.scss";
 
+ //============article-page====
+
+@import "sections/_article-page-content.scss";
 //ui
 @import "ui/_ui-navigation";

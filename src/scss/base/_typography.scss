@@ -110,12 +110,18 @@
 }
 
 .txt-18,
-.txt-16,.txt-14{
+.txt-16,.txt-14, .txt-body, .txt-body p{
 	font-size: 16px;
 	line-height: 1.6;
 	font-weight: 400;
 	@media (max-width: 767px) {
 		font-size: 14px;
+	}
+}
+.txt-body, .txt-body p{
+	line-height: 1.75;
+	@media (max-width: 767px) {
+		line-height: 1.71;
 	}
 }
 .txt-18{font-size: 18px;}

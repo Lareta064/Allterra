@@ -327,3 +327,11 @@ blockquote{
 		gap: 40px;
 	}
 }
+.column-grid{
+	display: grid;
+	grid-template-columns: 290px 1fr;
+	column-gap: 20px;
+	@media (max-width: 1279px) {
+	 grid-template-columns:  1fr;
+	}
+}

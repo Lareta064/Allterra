@@ -1,12 +1,12 @@
 .greeting{
 	.aside-grid__content{
 		.h4{margin-bottom: 28px;}
-		p{line-height: 1.78;}
+		
 		p + p {margin-top: 28px;}
 		@media (max-width: 767px) {
 		.h4 {margin-bottom: 32px;}
 		p+p {margin-top: 32px;}
-		p{font-size: 14px; line-height: 1.71;}	
+		
 			
 		}
 		
