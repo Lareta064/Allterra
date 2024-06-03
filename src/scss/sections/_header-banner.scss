@@ -4,11 +4,14 @@
 	padding-block: 24px 32px;
 	display: flex;
 	
-	 .title{
-		
+	 &-title{
+		max-width: 1030px;
+		width: 100%;
 		position: absolute;
 		left: 20px;
 		top: 50%;
+		*{color: $white}
+		
 		transform: translateY(-60%);
 		@media (max-width: 1279px) {
 		 margin-bottom: 0;
@@ -41,5 +44,17 @@
 		&:hover{
 			opacity:.6;
 		}
+	}
+}
+.hero.hero--center{
+	.hero-title{
+		left: 50%;
+		transform: translate(-50%, -60%);
+		text-align: center;
+		
+		
+	}
+	.hero-bottom{
+		text-align: center;
 	}
 }

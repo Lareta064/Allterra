@@ -10,8 +10,22 @@ mixin hero-section(bgImg, links, name, backLink)
 					h1.title !{name}
 				
 				if backLink == 'back-link'
-					.hero-link
+					.hero-bottom
 						a(href="#!").back-link
 							svg.svg-chevron
 								use(href="../img/spriteSvg.svg#svg-chevron")
 							span Назад
+
+mixin hero-section-center(bgImg, links, name, bottomText)
+	section.hero.hero--center(style="background-image: url('../img/"+ bgImg +"')")
+		.container
+			.hero-content
+				ul.breadcrumb
+					each item in links
+						li
+							a(href="#!") #{item}
+				.hero-title
+					h1.h2 !{name}
+				if bottomText
+					.hero-bottom
+						p #{bottomText}
