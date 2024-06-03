@@ -39,7 +39,7 @@
 		}
 	}
 
-	.h3 {
+	.txt-20 {
 		max-width: 275px;
 		text-transform: uppercase;
 		font-size: 20px;
@@ -78,8 +78,8 @@
 		row-gap:12px;
 		p{padding-bottom: 4px; line-height: 1.75;}
 		.round-arrow{margin-top: auto;}
-		.h3{transition: .3s; text-transform: uppercase;}
-		.h3:hover{color: $main-accent;}
+		.txt-20{transition: .3s; text-transform: uppercase;}
+		.txt-20:hover{color: $main-accent;}
 		@media (max-width: 767px) {
 			p {
 				padding-bottom: 8px;

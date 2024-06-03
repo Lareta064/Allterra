@@ -3,7 +3,7 @@
 	.contacts-form{
 		width: min(610px, 100%);
 		margin: 0 auto;
-		.title-32{
+		.h3{
 			text-align: center;
 			margin-bottom: 30px;
 			text-transform: uppercase;
@@ -12,7 +12,7 @@
 			width: min(520px, 100%);
 		}
 		@media (max-width: 767px) {
-			.title-32{margin-bottom: 24px;}
+			.h3{margin-bottom: 24px;}
 		}
 	}
 	@media (max-width: 767px) {
