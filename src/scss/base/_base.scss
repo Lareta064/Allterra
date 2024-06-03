@@ -243,7 +243,9 @@ section + section{padding-top: 100px;}
 section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding-bottom: 100px;
 }
-
+blockquote{
+	margin: 0;
+}
 @media (max-width: 767px) {
 	section+section {
 		padding-top: 80px;
@@ -316,7 +318,12 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 	display: grid;
 	grid-template-columns: 315px 1fr;
 	column-gap: 40px;
+	@media (max-width: 1279px) {
+		grid-template-columns: 240px 1fr;
+		column-gap: 32px;
+	}
 	@media (max-width: 767px) {
 		grid-template-columns: 1fr;
+		gap: 40px;
 	}
 }

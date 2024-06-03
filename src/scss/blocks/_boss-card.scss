@@ -8,7 +8,10 @@
 		&__img {
 			width: 150px;
 			height: 200px;
-	
+			@media (max-width: 1279px) {
+				width: 150px;
+				height: 200px;
+			}
 			@media (max-width: 767px) {
 				height: 150px;
 			}
@@ -39,20 +42,18 @@
 		font-weight: 600;
 	}
 	&__img {
-		width: 150px;
-		height: 200px;
+		width: 100%;
+		aspect-ratio: 63 / 84;
 		flex-shrink: 0;
 		background-color: #f0f0f0;
 		overflow: hidden;
-
-		img {
-			width: 100%;
-			min-height: 100%;
-
+		
+		@media (max-width: 1279px) {
+			aspect-ratio: 3 / 4;
 		}
-
 		@media (max-width: 767px) {
-			height: 150px;
+			width: 156px;
+			aspect-ratio: 1;
 		}
 	}
 
@@ -63,6 +64,18 @@
 		gap: 20px;
 	}
 	
+}
+.person.flex-col {
+	p,a {font-size: 14px;}
+	.person__name {font-size: 16px;}
+	@media (max-width: 767px) {
+		flex-direction: row;
+		.person__name{font-size: 14px;}
+		p, a{font-size: 12px;}
+		.flex-col {
+			justify-content: space-between;
+		}
+	}
 }
 .bosses-cards{
 	column-gap: 20px;
