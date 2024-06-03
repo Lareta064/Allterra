@@ -1,20 +1,37 @@
 .article-content{
-	h1, h2, h3, h4, h5, .h3{
+	padding-right: 40px;
+	
+	h1, h2, h3, h4, h5, .h3, figure{
 		margin-top: 48px;
 		margin-bottom: 12px;
 	}
-	*+p{margin-top: 1em}
+	p+p{margin-top: 30px}
+	img {margin-top: 48px;}
+			
+	.two-columns>p+p{margin-top: 0;}
+	.two-columns>img{margin-top: 0;}
+	.two-columns{margin-top: 48px;}
 	.txt-img{
 		margin-top: 48px;
-	img{margin-top: 0;
+		img{margin-top: 0;}
 	}
-		p>img{margin-top:0;}
+	.order-list{
+		margin-top: 48px;
+		margin-bottom: 48px;
 	}
-	img{margin-top: 48px;}
+	figure> img, p>img{margin-top:0;}
+	
+	
 	.anchor{
 		scroll-margin-top: 48px;
 	}
-	
+	figcaption{
+		text-align: center;
+		font-size: 14px;
+		line-height: 1.71;
+		opacity: 0.5;
+		margin-top: 10px;
+	}
 }
 .article {
 
