@@ -1,0 +1,38 @@
+extends ../layouts/layout-ui.pug
+
+block content
+	.container-dashboard
+		h2 #[span от360-767px - 1 колонка //] #[span от 768-1049px - 2 колонки //] #[span 1050-desktop - 4 колонки]
+		
+		.four-columns
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+		pre.
+			.four-columns
+		hr
+		h2 #[span 360-767 - 1 column] // #[span 768px-desktop - 2 columns]
+		.two-columns
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+		pre.
+			.two-columns
+		hr
+		h2 #[span 360-1023 - 1 column] // #[span 1024-desktop - 2 columns]
+		.two-columns-1024
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+			.block(style="border:2px solid red; height: 150px")
+		pre.
+			.two-columns-1024
+
+		h2 Две колонки = aside + content
+		.aside-grid(style="text-align: center;")
+			.aside-grid__col(style="border:2px solid red; height: 300px")
+				h3 Slim column 315px;
+			.aside-grid__main(style="border:2px solid red; height: 300px")
+				h3 Large column
