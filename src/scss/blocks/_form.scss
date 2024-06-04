@@ -30,8 +30,8 @@ select:-webkit-autofill:focus {
     &::placeholder{
       color: rgba(21, 21, 21, .6);
     }
-    
   }
+
   textarea{
     padding: 20px;
     height: 200px;
@@ -47,6 +47,15 @@ select:-webkit-autofill:focus {
       padding-inline: 16px;
       height: 58px;
      }
+  }
+}
+.light-bg .form_field {
+
+  input,
+  textarea,
+  .message-field {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
   }
 }
 .form_field.error{

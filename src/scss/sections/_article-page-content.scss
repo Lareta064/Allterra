@@ -78,7 +78,7 @@ section.article{
 		&>*{margin-bottom: 0;}
 	}
 	@media (max-width: 1279px) {
-		top: 68px;
+		top: 66px;
 		z-index: 5;
 		background: #f0f3f9;
 		display: none;
@@ -94,7 +94,11 @@ section.article{
 			margin-bottom: 0;
 			margin-left: -20px;
 			padding-inline: 26px;
-			svg{display: block;}
+			cursor:pointer;
+			svg{display: block; transition: .3s; }
+			&.active svg{
+				transform: rotate(180deg);
+			}
 			@media (max-width: 767px) {
 			 width: calc(100% + 28px + 28px);
 			}

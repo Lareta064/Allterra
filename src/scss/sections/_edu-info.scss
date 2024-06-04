@@ -149,6 +149,8 @@
 	padding-inline: 16px;
 	height: 48px;
 	align-items: center;
+	justify-content: space-between;
+	min-width: 210px;
 	&:hover {background: rgba(16, 23, 36, 0.8);}
 
 	span {
@@ -166,4 +168,10 @@
 		height: 16px;
 		fill: transparent;
 	}
+	.svg-play{display: none;}
+}
+.btn-pause.active{
+	.svg-pause{display: none;}
+	.svg-play {display: block;}
+
 }

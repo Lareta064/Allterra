@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(!videoToggleBtn.classList.contains('active')){
 				videoContent.pause();
 				videoToggleBtn.classList.add('active');
+				videoToggleBtn.querySelector('span').textContent = 'Возобновить видео';
 				
 			}else{
 				videoContent.play();
 				videoToggleBtn.classList.remove('active');
+				videoToggleBtn.querySelector('span').textContent = 'Приостановить видео';
 				
 			}
 			
