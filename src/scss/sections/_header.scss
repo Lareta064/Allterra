@@ -2,7 +2,7 @@
 	position: sticky;
 	top:-48px;
 	transition: top .3s; 
-	z-index: 5;
+	z-index: 7;
 	.header-flex{
 		display: flex;
 		align-items: center;
@@ -18,7 +18,7 @@
 		height: 44px;
 	}
 	@media (max-width: 1279px) {
-	top: 0;
+	top: -1px;
 	}
 }
 header .logo{

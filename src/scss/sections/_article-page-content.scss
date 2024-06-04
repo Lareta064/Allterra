@@ -1,29 +1,51 @@
+section.article{
+	padding-top: 80px;
+	
+	@media (max-width: 767px) {
+	 padding-top: 48px;
+	}
+}
 .article-content{
 	padding-right: 40px;
-	
 	h1, h2, h3, h4, h5, .h3, figure{
 		margin-top: 48px;
 		margin-bottom: 12px;
+		@media (max-width: 767px) {
+			margin-top: 32px;
+		}
 	}
 	p+p{margin-top: 30px}
 	img {margin-top: 48px;}
 			
 	.two-columns>p+p{margin-top: 0;}
 	.two-columns>img{margin-top: 0;}
-	.two-columns{margin-top: 48px;}
+	.two-columns{
+		margin-top: 48px;
+		@media (max-width: 767px) {
+			margin-top: 32px;
+		}
+	}
 	.txt-img{
 		margin-top: 48px;
 		img{margin-top: 0;}
+		@media (max-width: 767px) {
+			margin-top: 32px;
+		}
 	}
 	.order-list{
-		margin-top: 48px;
-		margin-bottom: 48px;
+		margin-block: 48px;
+		@media (max-width: 767px) {
+		margin-block: 32px;
+		}
 	}
 	figure> img, p>img{margin-top:0;}
 	
 	
 	.anchor{
 		scroll-margin-top: 48px;
+		@media (max-width: 1279px) {
+		  scroll-margin-top: 132px;
+		}
 	}
 	figcaption{
 		text-align: center;
@@ -31,6 +53,13 @@
 		line-height: 1.71;
 		opacity: 0.5;
 		margin-top: 10px;
+	}
+	@media (max-width: 1279px) {
+		padding-right: 0;
+		
+		.column-grid__col {
+			padding-right: 0;
+		}
 	}
 }
 
@@ -56,30 +85,32 @@
 			justify-content: space-between;
 			box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.1);
 			background: #f0f3f9;
-			width: calc(100% + 64px);
+			width: calc(100% + 20px + 20px);
 			margin-bottom: 0;
 			margin-left: -20px;
 			padding-inline: 26px;
 			svg{display: block;}
+			@media (max-width: 767px) {
+			 width: calc(100% + 32px + 26px);
+			}
 		}
 		&__list{
 			max-height: 0;
 			overflow: hidden;
 			transition: .3s; 
-			&>*{margin: 24px;}
+			&>*{margin: 24px 16px;}
 			position: absolute;
 			top: 52px;
-			left: 0;
-			right: 0;
+			left: -20px;
+			right: -20px;
 			background: #f0f3f9;
 			z-index: 5;
+			@media (max-width: 767px) {
+				left: -16px;
+				right: -16px;
+			}
 		}
 	}
 	
 }
 
-@media (max-width: 1279px) {
-	.column-grid__col{
-		padding-right: 0;
-	}
-}
