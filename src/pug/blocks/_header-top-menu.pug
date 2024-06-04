@@ -1,0 +1,17 @@
+.header-top
+	.container
+		.header-flex
+			+header-nav([
+				{name:'О компании', link: '#!', dropLi: 'true', dropList:[{name:'Об Allterra Education'}, {name:'Обращение директора'},{name:'Вакансии'},{name:'Partner`s zone'},{name:'Отзывы'} ] },
+				{name:'Все услуги', link: '#!', dropLi: 'true', dropList:[{name:'Поступление в школу'}, {name:'Поступление в университет'},{name:'Каникулы за рубежом'},
+				{name:'Искусство и дизайн'}] },
+				{name:'Страны', link: '#!', dropLi: 'true', dropFlags: 'true'},
+				{name:'Справочник поступающего', link: '#!'},
+				{name:'Новости', link: '#!'},
+				{name:'Контакты', link: '#!'}
+				])
+			
+			//======RIGHT COLUMN =====
+			.header-column
+				+country-item('uk', 'UK')
+				a(href="tel:88005114993").contact-item 8 (800) 511-4993

@@ -4,3 +4,60 @@ mixin menu-list(arg)
 			each item of arg
 				li( class= (item.activeClass == "active" ? "active" : "")) 
 					a(href="#!") !{item.name}
+
+mixin country-item(img, txt)
+	a(href="#!").flex-item
+		img(src="../img/flags/"+ img +".svg", width="24"  height="16" alt="icon")
+		span #{txt}
+mixin countries-menu
+	//======== countries drop menu =========
+	.drop-menu-wrapper
+		.three-columns-grid
+			.grid-column
+				.grid-column__title
+					p Англоговорящие
+				.grid-column__list
+					+country-item('uk', 'Великобритания')
+					+country-item('usa', 'США')
+					+country-item('irl', 'Ирландия')
+					+country-item('can', 'Канада')
+					+country-item('aus', 'Австралия')
+					+country-item('malta', 'Мальта')
+				
+			.grid-column
+				.grid-column__title
+					p Европа
+				.grid-column__list
+					+country-item('swich', 'Швейцария')
+					+country-item('spain', 'Испания')
+					+country-item('de', 'Германия')
+					+country-item('fr', 'Франция')
+					+country-item('nid', 'Голландия')
+					+country-item('fin', 'Финлядия')
+			.grid-column
+				.grid-column__title
+					p Азия
+				.grid-column__list
+					+country-item('sing', 'Сингапур')
+					+country-item('oae', 'ОАЭ')
+					+country-item('tln', 'Тайланд')
+					+country-item('kor', 'Южная Корея')
+					+country-item('mls', 'Малайзия')
+					+country-item('china', 'Китай')
+		//======= bottom link =====
+		.drop-menu-footer
+			a(href="#!").accent-link Показать все страны
+
+//======//====== NAVIGATION ===== ======
+mixin header-nav(arg)
+	nav.header-nav&attributes(attributes)
+		ul
+			each item in arg
+				//======single LI====
+				li.menu-li(class=(item.dropLi == 'true') ? 'drop-menu-li' : '')
+					a(href=""+ item.link) #{item.name}
+					if item.dropList
+						//======single LI Drop-menu====
+						+menu-list(item.dropList)
+					if item.dropFlags
+						+countries-menu
