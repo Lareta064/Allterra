@@ -1,4 +1,8 @@
 .header{
+	position: sticky;
+	top:-48px;
+	transition: top .3s; 
+	z-index: 5;
 	.header-flex{
 		display: flex;
 		align-items: center;
@@ -12,6 +16,9 @@
 	.btn-accent {
 		padding-inline: 20px;
 		height: 44px;
+	}
+	@media (max-width: 1279px) {
+	top: 0;
 	}
 }
 header .logo{
@@ -112,7 +119,7 @@ header .logo{
 			padding-block: 4px;
 		}
 	}
-
+	.menu-li.active>a{color: rgba(255,255,255, .4)}
 	.menu-li>a {
 		opacity: 0.8;
 		position: relative;

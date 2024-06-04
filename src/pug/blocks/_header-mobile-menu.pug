@@ -1,0 +1,125 @@
+//=========HEADER MOBILE MENU ======
+.mobile-menu-wrapper#mobile-menu
+	.mobile-menu-content
+		nav.mobile-menu
+			ul
+				li.menu-item
+					a(href="#!") Высшее образование
+				li.menu-item
+					a(href="#!") Среднее образование
+				//=======MENU ITEM ======
+				li.menu-item.drop-menu-li
+					a(href="#!") Языковая программа
+					//========CHILD MENU ======
+					.drop-menu-wrapper
+						.drop-menu__header.flex-justify
+							a(href="#!").back-link
+								span.chevron-back
+								span Языковая программа
+						
+						.drop-menu__list
+							.two-colums-grid
+								.grid-column
+									.grid-column__title 
+										p Страны
+									.grid-column__list
+										+country-item('uk', 'Великобритания')
+										+country-item('usa', 'США')
+										+country-item('can', 'Канада')
+										+country-item('aus', 'Австралия')
+										+country-item('spain', 'Испания')
+										+country-item('de', 'Германия')
+								.grid-colum
+									.grid-column__title 
+										p Программы
+									.grid-column__list
+										a(href="#!") Язык и спорт
+										a(href="#!") Язык и творчество
+										a(href="#!") Футбольные лагеря
+										a(href="#!") Весенние каникулы
+										a(href="#!") Осенние каникулы
+										a(href="#!") Зимние каникулы
+							
+				//=======MENU ITEM ======
+				li.menu-item.drop-menu-li
+					a(href="#!") Страны
+					//========CHILD MENU ======
+					.drop-menu-wrapper
+						.drop-menu__header.flex-justify
+							a(href="#!").back-link
+								span.chevron-back
+								p Страны
+							a(href="#!").accent-link Показать все
+						
+						.drop-menu__list
+							.three-columns-grid
+								.grid-column
+									.grid-column__title
+										p Англоговорящие
+									.grid-column__list
+										+country-item('uk', 'Великобритания')
+										+country-item('usa', 'США')
+										+country-item('irl', 'Ирландия')
+										+country-item('can', 'Канада')
+										+country-item('aus', 'Австралия')
+										+country-item('malta', 'Мальта')
+									
+								.grid-column
+									.grid-column__title
+										p Европа
+									.grid-column__list
+										+country-item('swich', 'Швейцария')
+										+country-item('spain', 'Испания')
+										+country-item('de', 'Германия')
+										+country-item('fr', 'Франция')
+										+country-item('nid', 'Голландия')
+										+country-item('fin', 'Финлядия')
+								.grid-column
+									.grid-column__title
+										p Азия
+									.grid-column__list
+										+country-item('sing', 'Сингапур')
+										+country-item('oae', 'ОАЭ')
+										+country-item('tln', 'Тайланд')
+										+country-item('kor', 'Южная Корея')
+										+country-item('mls', 'Малайзия')
+										+country-item('china', 'Китай')
+				li.menu-item
+					a(href="#!") Учебные заведения
+				li.menu-item.drop-menu-li
+					a(href="#!") О компании
+					//========CHILD MENU ======
+					.drop-menu-wrapper
+						.drop-menu__header.flex-justify
+							a(href="#!").back-link
+								span.chevron-back
+								span О компании
+						
+						.drop-menu__list
+							a(href="#!") Об Allterra Education
+							a(href="#!") Обращение директора
+							a(href="#!") Сотрудничество
+							a(href="#!") Вакансии
+							a(href="#!") Partner`s zone
+							a(href="#!") Отзывы
+				li.menu-item.drop-menu-li
+					a(href="#!") Все услуги
+					//========CHILD MENU ======
+					.drop-menu-wrapper
+						.drop-menu__header.flex-justify
+							a(href="#!").back-link
+								span.chevron-back
+								span Все услуги
+						
+						.drop-menu__list
+							a(href="#!") Поступление в школу
+							a(href="#!") Поступление в университет
+							a(href="#!") Каникулы за рубежом
+							a(href="#!") Искусство и дизайн
+							
+				li.menu-item
+					a(href="#!") Справочник поступающего
+				li.menu-item
+					a(href="#!") Новости
+				li.menu-item
+					a(href="#!") Контакты
