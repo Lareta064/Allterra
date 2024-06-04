@@ -6,9 +6,12 @@ block content
 	main.inner-page
 		+hero-section-center('about/header-bg.webp',['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'tt-none')
 		include ../sections/_article-page-content
-		include ../sections/_feedback
+		
+		+feedback-section('подобрать университет')(class="light-bg")
+		
 		+blogCardsSlider('Другие новости', 'об образовании')
-		include ../sections/_accredit
+		include ../sections/_image-banner
+		
 		include ../sections/_contacts
 	include ../sections/_footer
 

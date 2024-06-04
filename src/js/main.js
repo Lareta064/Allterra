@@ -299,11 +299,13 @@ document.addEventListener("DOMContentLoaded", function (){
 			dynamicMenuBtn.classList.remove('active');
 		});
 		window.addEventListener('scroll', ()=>{
-			if(window.scrollY > 550){
-				dynamicMenu.classList.add('active');
-			}else{
-				dynamicMenu.classList.remove('active');
+			if(window.innerWidth <= 1280){
+				if(window.scrollY > 550){
+					dynamicMenu.classList.add('active');
+				}else{
+					dynamicMenu.classList.remove('active');
+				}
 			}
-		})
+		});
    }
 });
