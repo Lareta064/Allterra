@@ -3,14 +3,13 @@
 	overflow: hidden;
 	
 	&-content{
-		display: grid;
-		grid-template-columns:  1fr 1fr;
+		
 		gap:40px;
 		@media (max-width: 1279px) {
 			gap: 28px;
 		}
 		@media (max-width: 767px) {
-			grid-template-columns: 1fr;
+			
 			row-gap:80px;
 		}
 
