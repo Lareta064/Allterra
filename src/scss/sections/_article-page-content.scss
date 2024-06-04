@@ -34,7 +34,7 @@
 	}
 }
 
-.dinamyc-menu{
+.dynamic-menu{
 	position:sticky;
 	top:100px;
 	padding-right: 24px;
@@ -61,6 +61,7 @@
 			svg{display: block;}
 		}
 		.backlit-menu {display: none;}
+		.backlit-menu.active {display: block;}
 	}
 	
 }

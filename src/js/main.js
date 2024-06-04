@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	const bodyEl = document.body;
 	/*========Lazy Load============ */
 	$('.lazy').Lazy();
-	/*========Lazy Load============ */
-	$('.lazy').Lazy();
+
 	/*========HEADER VIDEO============ */
 	const videoBox = document.querySelector('#video-box');
 	if(videoBox){
@@ -253,8 +252,7 @@ document.addEventListener("DOMContentLoaded", function (){
       },
     });
 
-
-	/* подсветка активного меню при скролле страницы */
+	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
 	if(backlitMenu){
 		const observer = new IntersectionObserver((entries) => {
@@ -279,5 +277,24 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 		document.querySelectorAll('.anchor').forEach(section => { observer.observe(section)} );
 	}
-
+   const dynamicMenu = document.querySelector('.dynamic-menu');
+  
+   if(dynamicMenu){
+	   dynamicMenuBtn = dynamicMenu.querySelector('.dynamic-menu__header');
+	   dynamicMenuList = dynamicMenu.querySelector('nav');
+	  
+	    dynamicMenuBtn.addEventListener('click', ()=>{
+			
+			if(dynamicMenuList.classList.contains('active')){
+				dynamicMenuList.classList.remove('active');
+				dynamicMenuBtn.classList.remove('active');
+			}else{
+				dynamicMenuList.classList.add('active');
+				dynamicMenuBtn.classList.add('active');
+			}
+		});
+		dynamicMenuList.addEventListener('click', ()=>{
+			dynamicMenuList.classList.remove('active');
+		});
+   }
 });
