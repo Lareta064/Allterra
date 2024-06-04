@@ -1,10 +1,10 @@
-.h1,
+.h1,h1,
 .section-title,
 .title,
 .txt-20 {
 	font-weight: 600;
 }
-
+h1,h2,
 .h1,
 .h2 {
 	font-size: 80px;
@@ -13,7 +13,7 @@
 	color: $text-dark;
 }
 
-.h1 {
+h1, .h1 {
 	font-size: 80px;
 	
 	@media (max-width: 1024px) {
@@ -53,7 +53,7 @@
 		letter-spacing: -0.01em;
 	}
 }
-.h2 {
+h2, .h2 {
 	font-size: 48px;
 	line-height: 1.30;
 	letter-spacing: -0.02em;
@@ -67,7 +67,7 @@
 		font-size: 26px;
 	}
 }
-.h3{
+h3, .h3{
 	font-weight: 600;
 	font-size: 32px;
 	line-height: 1.30;
@@ -89,7 +89,7 @@
 	}
 }
 
-.h4{
+h4, .h4{
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 1.33;
@@ -98,7 +98,7 @@
 		font-size: 18px;
 	}
 }
-.h5{
+h5, .h5{
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 1.6;
@@ -109,7 +109,7 @@
 }
 
 .txt-18,
-.txt-16,.txt-14, .txt-body, .h6, .txt-body p{
+.txt-16,.txt-14, .txt-body, .h6, .txt-body p, h6{
 	font-size: 16px;
 	line-height: 1.6;
 	font-weight: 400;
@@ -123,7 +123,7 @@
 		line-height: 1.71;
 	}
 }
-.h6 {
+h6, .h6 {
 	font-weight: 600;
 	margin-bottom: 16px;
 
@@ -398,5 +398,8 @@ blockquote{
 		font-weight: 600;
 		font-size: 12px;
 		color: $white;
+	}
+	@media (max-width: 767px) {
+	  padding: 20px 16px;
 	}
 }

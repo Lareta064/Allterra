@@ -34,6 +34,7 @@ section.article{
 	}
 	.order-list{
 		margin-block: 48px;
+		&>*+*{margin-top: 12px;}
 		@media (max-width: 767px) {
 		margin-block: 32px;
 		}
