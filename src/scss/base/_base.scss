@@ -76,9 +76,10 @@ body {
 	font-size: 16px;
 	background-color: $white;
 	-webkit-font-smoothing: antialiased;
+
 }
 .lock{
-	max-height: 100vh;
+	
 	overflow: hidden;
 	@media(min-width:1280px){
 		.header-top,

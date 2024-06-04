@@ -83,7 +83,8 @@ mixin header-nav(arg)
 		ul
 			each item in arg
 				//======single LI====
-				li.menu-li(class=(item.dropLi == 'true') ? 'drop-menu-li' : '')
+				
+				li.menu-li(class=(item.dropLi == 'true') ? 'drop-menu-li' : '' class= (item.activeClass == "active" ? "active" : ""))
 					a(href=""+ item.link) #{item.name}
 					if item.dropList
 						//======single LI Drop-menu====

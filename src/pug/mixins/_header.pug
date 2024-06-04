@@ -20,9 +20,10 @@ mixin header
 						])
 					
 					//======RIGHT COLUMN =====
-					.header-column
+					.header-column.header-column--test
 						+country-item('uk', 'UK')
-						a(href="tel:88005114993").contact-item 8 (800) 511-4993
+					
+
 		
 		//======= HEADER BOTTOM ROW =======
 		.header-bottom
@@ -36,9 +37,8 @@ mixin header
 					+header-nav([
 						{name:'Высшее образование', link: '#!'},
 						{name:'Среднее образование', link: '#!'},
-						{name:'Языковая программа', link: '#!', dropLi: 'true', langsProg:'true'},
+						{name:'Языковая программа', link: '#!', activeClass:'active', dropLi: 'true', langsProg:'true'},
 						])(class="header-nav--white")
-						
 					//======== BUTTONS GROUP=========
 					.header-column
 						button.btn-icon.search-btn#search-btn
