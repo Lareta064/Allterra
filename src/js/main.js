@@ -25,17 +25,21 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
 	/*==============FOR HEADER SEARCH FORM ============= */
-	
+	const headerEl = document.querySelector('header');
 	const openSearchForm = document.querySelector('#search-btn');
 	const searchFormPopup = document.querySelector('#search-popup');
 	if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
 			bodyEl.classList.add('lock');
+			const topPosition = headerEl.getBoundingClientRect().bottom;
+			
 			if(searchFormPopup.classList.contains('active')){
 				searchFormPopup.classList.remove('active');
+				searchFormPopup.style.top = 'auto';
 				bodyEl.classList.remove('lock');
 			}else{
 				searchFormPopup.classList.add('active');
+				searchFormPopup.style.top = topPosition + 'px';
 				bodyEl.classList.add('lock');
 			}
 			
@@ -92,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	const fixedButtons = document.querySelector('#fixed-buttons');
 	if(fixedButtons){
 		window.addEventListener('scroll', ()=>{
+			
 			if(window.scrollY > 500){
 				fixedButtons.classList.add('active');
 			}else{
