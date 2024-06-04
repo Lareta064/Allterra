@@ -281,20 +281,29 @@ document.addEventListener("DOMContentLoaded", function (){
   
    if(dynamicMenu){
 	   dynamicMenuBtn = dynamicMenu.querySelector('.dynamic-menu__header');
-	   dynamicMenuList = dynamicMenu.querySelector('nav');
+	   dynamicMenuList = dynamicMenu.querySelector('.dynamic-menu__list');
 	  
 	    dynamicMenuBtn.addEventListener('click', ()=>{
 			
-			if(dynamicMenuList.classList.contains('active')){
-				dynamicMenuList.classList.remove('active');
+			if(dynamicMenuBtn.classList.contains('active')){
+				dynamicMenuList.style.maxHeight = 0;
 				dynamicMenuBtn.classList.remove('active');
+				
 			}else{
-				dynamicMenuList.classList.add('active');
+				dynamicMenuList.style.maxHeight = dynamicMenuList.scrollHeight + 'px';
 				dynamicMenuBtn.classList.add('active');
 			}
 		});
 		dynamicMenuList.addEventListener('click', ()=>{
-			dynamicMenuList.classList.remove('active');
+			dynamicMenuList.style.maxHeight = 0;
+			dynamicMenuBtn.classList.remove('active');
 		});
+		window.addEventListener('scroll', ()=>{
+			if(window.scrollY > 455){
+				dynamicMenu.classList.add('active');
+			}else{
+				dynamicMenu.classList.remove('active');
+			}
+		})
    }
 });

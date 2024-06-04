@@ -39,7 +39,6 @@
 	top:100px;
 	padding-right: 24px;
 	&__header{
-
 		margin-bottom: 24px;
 		svg{display: none;}
 		&>*{margin-bottom: 0;}
@@ -48,6 +47,8 @@
 		top: 68px;
 		z-index: 5;
 		background: #f0f3f9;
+		display: none;
+		&.active{display: block;}
 		&__header {
 			height: 52px;
 			display: flex;
@@ -56,12 +57,23 @@
 			box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.1);
 			background: #f0f3f9;
 			width: calc(100% + 64px);
+			margin-bottom: 0;
 			margin-left: -20px;
 			padding-inline: 26px;
 			svg{display: block;}
 		}
-		.backlit-menu {display: none;}
-		.backlit-menu.active {display: block;}
+		&__list{
+			max-height: 0;
+			overflow: hidden;
+			transition: .3s; 
+			&>*{margin: 24px;}
+			position: absolute;
+			top: 52px;
+			left: 0;
+			right: 0;
+			background: #f0f3f9;
+			z-index: 5;
+		}
 	}
 	
 }
