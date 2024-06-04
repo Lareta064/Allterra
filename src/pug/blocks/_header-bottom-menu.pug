@@ -1,0 +1,26 @@
+//======= HEADER BOTTOM ROW =======
+.header-bottom
+	.container
+		.header-flex
+			//=======LOGO=====
+			a(href="#!").logo
+				svg.svg-logo
+					use( href='./img/spriteSvg.svg#logo')
+			//=========nav =====
+			+header-nav([
+				{name:'Высшее образование', link: '#!'},
+				{name:'Среднее образование', link: '#!'},
+				{name:'Языковая программа', link: '#!', dropLi: 'true', langsProg:'true'},
+				])(class="header-nav--white")
+				
+			//======== BUTTONS GROUP=========
+			.header-column
+				button.btn-icon.search-btn#search-btn
+					svg.svg-search
+						use( href='./img/spriteSvg.svg#svg-search')
+					
+				a(href="#feedback").btn-accent.btn-advice Консультация
+
+				//====== menu-toggle for mobile=====
+				button(type="button").menu-toggle#menu-toggle
+					span
