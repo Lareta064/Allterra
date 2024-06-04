@@ -1,0 +1,18 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page
+		+hero-section-center('about/header-bg.webp',['Главная', 'Сотрудничество'], 'Сотрудничество с Allterra&nbsp;Education', 'Обновлено: 10.11.2023', 'tt-none')
+		include ../sections/_cooperation
+		
+		+feedback-section('подобрать университет')(class="light-bg")
+		
+		+blogCardsSlider('Другие новости', 'об образовании')
+		include ../sections/_statistics
+		include ../sections/_accredit
+	include ../sections/_footer
+
+block variables
+	-var title = "Сотрудничество";
