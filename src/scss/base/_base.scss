@@ -329,24 +329,19 @@ blockquote{
 }
 .aside-grid{
 	display: grid;
-	grid-template-columns: 315px 1fr;
-	column-gap: 40px;
-	@media (max-width: 1279px) {
-		grid-template-columns: 240px 1fr;
-		column-gap: 32px;
-	}
+	grid-template-columns: 1fr 3fr;
+	column-gap: 20px;
+	row-gap:40px;
+	align-items: flex-start;
 	@media (max-width: 767px) {
 		grid-template-columns: 1fr;
 		gap: 40px;
 	}
 }
-.column-grid{
-	display: grid;
-	grid-template-columns: 290px 1fr;
-	column-gap: 20px;
-	align-items: flex-start;
+.aside-grid.aside-grid--1280{
+	
 	@media (max-width: 1279px) {
-	 grid-template-columns:  1fr;
+	  grid-template-columns:  1fr;
 	}
 }
 .backlit-menu a.active{color: green}

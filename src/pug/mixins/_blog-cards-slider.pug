@@ -1,4 +1,4 @@
-mixin blogCardsSlider(title, titleSpan)
+mixin blogCardsSlider(title, titleSpan, whiteBtnClass = 'btn-white')
 	//======== BLOG CARDS ========
 	section.blog&attributes(attributes)
 		.container
@@ -52,5 +52,6 @@ mixin blogCardsSlider(title, titleSpan)
 				
 				//========VISIBLE MOBILE =======
 				.btns-group
-					a(href="#!").btn--slim.btn-white Все новости
+					a(href="#!" class="btn--slim" + whiteBtnClass)  Все новости
 					a(href="#!").btn--slim.btn Все статьи
+

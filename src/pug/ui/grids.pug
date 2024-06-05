@@ -30,9 +30,23 @@ block content
 		pre.
 			.two-columns-1024
 
-		h2 Две колонки = aside + content
+		h2 Две колонки = aside + content,  Одна колонка от 767px
 		.aside-grid(style="text-align: center;")
 			.aside-grid__col(style="border:2px solid red; height: 300px")
-				h3 Slim column 315px;
-			.aside-grid__main(style="border:2px solid red; height: 300px")
+				h3 Slim column 295px;
+			.aside-grid__content(style="border:2px solid red; height: 300px")
 				h3 Large column
+		
+		pre.
+			.aside-grid(style="text-align: center;")
+				.aside-grid__col
+					h3 Slim column 295px;
+				.aside-grid__content
+					h3 Large column
+		
+		h2 Две колонки = aside + content,  Одна колонка от 1279px
+			.aside-grid.aside-grid--1280
+				.aside-grid__col(style="border:2px solid red; height: 300px")
+					h3 Slim column 295px;
+				.aside-grid__content(style="border:2px solid red; height: 300px")
+					h3 Large column
