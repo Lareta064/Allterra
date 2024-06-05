@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function (){
     /*===============MOBILE MENU ==================*/
 	const menuToggle = document.querySelector('#menu-toggle');
 	const mobileMenu = document.querySelector('#mobile-menu');
-	
+	const fixedButtons = document.querySelector('#fixed-buttons');
 
 	if (menuToggle) {
 		const  mobMenuDropItem = mobileMenu.querySelectorAll('.drop-menu-li');
@@ -68,12 +68,18 @@ document.addEventListener("DOMContentLoaded", function (){
 				menuToggle.classList.remove('active');
 				mobileMenu.classList.remove('active');
 				bodyEl.classList.remove('lock');
+				if(window.scrollY > 500){
+					fixedButtons.classList.add('active');
+				}
 				
 			
 			} else {
 				menuToggle.classList.add('active');
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
+				if(window.scrollY > 500){
+					fixedButtons.classList.remove('active');
+				}
 			}
 		});
 
@@ -82,28 +88,34 @@ document.addEventListener("DOMContentLoaded", function (){
 		for(let item of mobMenuDropItem){
 			item.addEventListener('click', function(e){
 				item.querySelector('.drop-menu-wrapper').classList.add('active');
+				if(window.scrollY > 500){
+					fixedButtons.classList.remove('active');
+				}
 			});
 			item.querySelector('.back-link').addEventListener(
 				'click', 
 				(e) => {
 					e.stopPropagation();
 					e.target.closest('.drop-menu-wrapper').classList.remove('active');
+					if(window.scrollY > 500){
+						fixedButtons.classList.remove('active');
+					}
 				}
 			);
 		}
 	}
 	//================ FIXED BOTTOM BUTTONS============ */
-	// const fixedButtons = document.querySelector('#fixed-buttons');
-	// if(fixedButtons){
-	// 	window.addEventListener('scroll', ()=>{
+	
+	if(fixedButtons){
+		window.addEventListener('scroll', ()=>{
 			
-	// 		if(window.scrollY > 500){
-	// 			fixedButtons.classList.add('active');
-	// 		}else{
-	// 			fixedButtons.classList.remove('active');
-	// 		}
-	// 	});
-	// }
+			if(window.scrollY > 500){
+				fixedButtons.classList.add('active');
+			}else{
+				fixedButtons.classList.remove('active');
+			}
+		});
+	}
 
 	/*================ STAGES TABS============ */
 	$('.custom-tabs').each(function() {
