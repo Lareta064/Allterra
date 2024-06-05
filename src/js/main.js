@@ -92,18 +92,18 @@ document.addEventListener("DOMContentLoaded", function (){
 			);
 		}
 	}
-	/*================ FIXED BOTTOM BUTTONS============ */
-	const fixedButtons = document.querySelector('#fixed-buttons');
-	if(fixedButtons){
-		window.addEventListener('scroll', ()=>{
+	//================ FIXED BOTTOM BUTTONS============ */
+	// const fixedButtons = document.querySelector('#fixed-buttons');
+	// if(fixedButtons){
+	// 	window.addEventListener('scroll', ()=>{
 			
-			if(window.scrollY > 500){
-				fixedButtons.classList.add('active');
-			}else{
-				fixedButtons.classList.remove('active');
-			}
-		});
-	}
+	// 		if(window.scrollY > 500){
+	// 			fixedButtons.classList.add('active');
+	// 		}else{
+	// 			fixedButtons.classList.remove('active');
+	// 		}
+	// 	});
+	// }
 
 	/*================ STAGES TABS============ */
 	$('.custom-tabs').each(function() {
