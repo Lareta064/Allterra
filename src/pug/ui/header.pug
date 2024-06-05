@@ -3,6 +3,12 @@ extends ../layouts/layout-ui.pug
 block content
 	.container-dashboard
 		//========== HEADER =========
-		+header
+		+header(
+			[
+			{name:'Высшее образование', link: '#!'},
+			{name:'Среднее образование', link: '#!', activeClass:'active'},
+			{name:'Языковая программа', link: '#!', dropLi: 'true', langsProg:'true'},
+			]
+		)
 		pre.
 			+header

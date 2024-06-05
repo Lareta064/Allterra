@@ -1,0 +1,8 @@
+mixin table(arg)
+	.table
+		each item in arg
+			.table-row
+				.table-cell.table-cell--bg
+					span #{item.txt1}
+				.table-cell
+					p #{item.txt2}

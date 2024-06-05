@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page
+		+hero-section('about/header-bg.webp',['Главная', 'Вакансии'], 'Вакансии <br> <span class="accent-border"> Allterra&nbsp;Education </span>', 'back-link')
+		
+		include ../sections/_vacant
+		include ../sections/_statistics
+		include ../sections/_accredit
+	include ../sections/_footer
+
+block variables
+	-var title = "Вакансии";

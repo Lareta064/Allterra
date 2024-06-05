@@ -2,15 +2,23 @@ extends ../layouts/layout-ui.pug
 
 block content
 	.container-dashboard
-		h1 Простой список
+		h3 Простой список
 		+list-block('Находим варианты с высокими шансами на поступление', 'Выясняем наличие свободных мест', 'Уточняем вступительные требования и сроки', 'Согласовываем индивидуальные условия')
 		
 		pre.
 			+list-block('Находим варианты с высокими шансами на поступление', 'Выясняем наличие свободных мест', 'Уточняем вступительные требования и сроки', 'Согласовываем индивидуальные условия')
 		
 		br
-		h1 Список с оформлением
+		h3 Список с оформлением
 		br
 		+list-check('Лучшие, рейтинговые средние школы и частные школы-пансионы Великобритании, США, Швейцарии и Германии', 'Сильнейшие технические вузы мира')
 		pre.
 			+list-check('Лучшие, рейтинговые средние школы и частные школы-пансионы Великобритании, США, Швейцарии и Германии', 'Сильнейшие технические вузы мира')
+		h3 Список нумерованный
+		br
+		ol
+			li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.
+			li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.
+			li Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi.
+			li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.
+			li Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi.

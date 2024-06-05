@@ -1,7 +1,7 @@
 //=========HEADER MOBILE MENU ======
 .mobile-menu-wrapper#mobile-menu
 	.mobile-menu-content
-		nav.mobile-menu
+		nav.mobile-menu.flex-col.flex-justify
 			ul
 				li.menu-item
 					a(href="#!") Высшее образование
@@ -123,3 +123,10 @@
 					a(href="#!") Новости
 				li.menu-item
 					a(href="#!") Контакты
+
+			.fixed-buttons
+				a(href="#!").btn-accent Задать вопрос
+				a(href="#!").btn
+					svg.svg-phone
+						use(href="./img/spriteSvg.svg#svg-phone")
+					span Позвонить

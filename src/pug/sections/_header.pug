@@ -149,7 +149,7 @@ header.header
 
 	//=========HEADER MOBILE MENU ======
 	.mobile-menu-wrapper#mobile-menu
-		.mobile-menu-content
+		.mobile-menu-content.flex-col.flex-justify
 			nav.mobile-menu
 				ul
 					li.menu-item
@@ -272,3 +272,10 @@ header.header
 						a(href="#!") Новости
 					li.menu-item
 						a(href="#!") Контакты
+			//=====buttons=====
+			.fixed-buttons
+				a(href="#!").btn-accent Задать вопрос
+				a(href="#!").btn
+					svg.svg-phone
+						use(href="./img/spriteSvg.svg#svg-phone")
+					span Позвонить

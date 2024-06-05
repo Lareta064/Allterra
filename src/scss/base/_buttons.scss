@@ -1,5 +1,5 @@
 /***BUTTONS***/
-.btn-accent, .btn-icon, .btn,.btn-border,.btn-white{
+.btn-accent, .btn-icon, .btn,.btn-br,.btn-white, .btn-br-white{
 	padding-inline: 36px;
 	display: inline-flex;
 	column-gap:8px;
@@ -22,7 +22,7 @@
 		height: 60px;
 	}
 }
-.btn,.btn-border{
+.btn,.btn-br{
 	background-color: $bg-black;
 	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
 	&:hover{
@@ -33,10 +33,7 @@
 		background-color: #1f1f1f;
 		color: rgba(255,255,255, .7);
 		svg {color: rgba(255, 255, 255, .7);}
-				
-			
 	}
-	
 }
 .btn-accent{
 	
@@ -61,18 +58,16 @@
 		height: 36px;
 	}
 }
-.btn-border{
+.btn-br{
 	border: 1px solid rgba(255, 255, 255, 0.8);
 	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 1px 1px 0 rgba(0, 0, 0, 0.08);
-	border: 1px solid rgba(255, 255, 255, 0.8);
-	
 	font-weight: 400;
 	&:focus{
 		border: 1px solid rgba(255, 255, 255, 0.8);
 	}
-
 }
-.btn-white{
+
+.btn-white {
 	background-color: #fff;
 	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
 	color:$text-dark;
@@ -80,35 +75,14 @@
 		color:rgba(16, 23, 36, .5) ;
 	}
 }
-.fixed-buttons{
-	padding: 10px 20px;
-	column-gap:60px;
-	position: fixed;
-	z-index: 10;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display: none;
-	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
-	background-color: #fff;
-	transform: translateY(150px);
-	transition: .5s;
-	&.active{transform: translateY(0);}
-	.btn-accent, .btn{
-		height: 48px;
-		padding-inline: 20px;
-		width: 150px;
-		font-size: 14px;
-	}
-	@media (max-width: 1279px) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	@media (max-width: 413px) {
-		column-gap: 20px;
-	}
+.btn-br-white{
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+	background: $white;
+	border: 1px solid $text-dark;
+	color: $bg-black;
 }
+
+
 .btn-accent,
 .btn,
 .btn,

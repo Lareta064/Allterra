@@ -1,103 +1,132 @@
 //=====================ARTICLE CONTENT ================
 section.article
 	.container
-		.column-grid
-			.column-grid__col.article-menu
-				.h6 Содержание статьи:
-				+backlitMenu([
-					{anchor: '#anchor1', name: 'Что такое портфолио?'},
-					{anchor: '#anchor2', name: 'Что должно содержать портфолио?'},
-					{anchor: '#anchor3', name: 'Каким размером должно быть портфолио и как лучше показать свои работы?'},
-					{anchor: '#anchor4', name: 'Cколько примеров работ должно быть включено?'},
-					{anchor: '#anchor5', name: 'Alterra Education'},
-					{anchor: '#anchor6', name: 'Нужно ли включать скетчбуки?'},
-					{anchor: '#anchor7', name: 'Насколько важно мое портфолио?'},
-					{anchor: '#anchor8', name: 'Стоит ли включать в портфолио сами работы?'},
-					{anchor: '#anchor9', name: 'Подробнее о колледже моды'},
-					{anchor: '#anchor10', name: 'Каким образом оценивается портфолио?'},
-					{anchor: '#anchor10', name: 'Расписание мероприятия'}
+		.aside-grid.aside-grid--1280
+			.aside-grid__col.dynamic-menu
+				.dynamic-menu__header
+					.h6 Содержание статьи:
+					svg.svg-chevron-down
+						use(href="./img/spriteSvg.svg#svg-chevron-down")
+				.dynamic-menu__list
+					+backlitMenu([
+						{anchor: '#anchor1', name: 'Что такое портфолио?'},
+						{anchor: '#anchor2', name: 'Что должно содержать портфолио?'},
+						{anchor: '#anchor3', name: 'Каким размером должно быть портфолио и как лучше показать свои работы?'},
+						{anchor: '#anchor4', name: 'Cколько примеров работ должно быть включено?'},
+						{anchor: '#anchor5', name: 'Alterra Education'},
+						{anchor: '#anchor6', name: 'Нужно ли включать скетчбуки?'},
+						{anchor: '#anchor7', name: 'Насколько важно мое портфолио?'},
+						{anchor: '#anchor8', name: 'Стоит ли включать в портфолио сами работы?'},
+						{anchor: '#anchor9', name: 'Подробнее о колледже моды'},
+						{anchor: '#anchor10', name: 'Каким образом оценивается портфолио?'},
+						{anchor: '#anchor11', name: 'Расписание мероприятия'}
 
-					])
+						])
 				
-			.column-grid__content.txt-body.article-content
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
-				
-				//====================== #anchor1 ============
-				#anchor1.anchor.h3 Что такое портфолио?
-				p В частности, повышение уровня гражданского сознания представляет собой интересный эксперимент проверки приоретизации разума над эмоциями. А ещё сторонники тоталитаризма в науке в равной степени предоставлены сами себе. Мы вынуждены отталкиваться от того, что сложившаяся структура организации предполагает независимые способы реализации системы массового участия. Но постоянный количественный рост и сфера нашей активности требует анализа соответствующих условий активизации.
-				
-				//====================== #anchor2 ============
-				#anchor2.anchor.h3 Что должно содержать портфолио?
-				p Повседневная практика показывает, что реализация намеченных плановых заданий не оставляет шанса для экономической целесообразности принимаемых решений. Таким образом, новая модель организационной деятельности не даёт нам иного выбора, кроме определения вывода текущих активов. С другой стороны, граница обучения кадров позволяет выполнить важные задания по разработке дальнейших направлений развития. 
-				
-				p Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение вывода текущих активов. Однозначно, акционеры крупнейших компаний, вне зависимости от их уровня, должны быть указаны как претенденты на роль ключевых факторов.
-				.txt-img.two-columns
-					.txt-img__txt
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id volutpat. Id porta nibh venenatis cras sed felis eget velit. Vivamus at augue eget arcu dictum varius duis at. Dictum sit amet justo donec enim. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. 
+			.aside-grid__content
+				.custom-text
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
+					
+					//====================== #anchor1 ============
+					h3#anchor1.anchor Что такое портфолио?
+					p В частности, повышение уровня гражданского сознания представляет собой интересный эксперимент проверки приоретизации разума над эмоциями. А ещё сторонники тоталитаризма в науке в равной степени предоставлены сами себе. Мы вынуждены отталкиваться от того, что сложившаяся структура организации предполагает независимые способы реализации системы массового участия. Но постоянный количественный рост и сфера нашей активности требует анализа соответствующих условий активизации.
+					
+					//====================== #anchor2 ============
+					h3#anchor2.anchor Что должно содержать портфолио?
+					p Повседневная практика показывает, что реализация намеченных плановых заданий не оставляет шанса для экономической целесообразности принимаемых решений. Таким образом, новая модель организационной деятельности не даёт нам иного выбора, кроме определения вывода текущих активов. С другой стороны, граница обучения кадров позволяет выполнить важные задания по разработке дальнейших направлений развития. 
+					
+					p Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение вывода текущих активов. Однозначно, акционеры крупнейших компаний, вне зависимости от их уровня, должны быть указаны как претенденты на роль ключевых факторов.
+					.txt-img.two-columns
+						.txt-img__txt
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id volutpat. Id porta nibh venenatis cras sed felis eget velit. Vivamus at augue eget arcu dictum varius duis at. Dictum sit amet justo donec enim. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. 
 
-						p Ut porttitor leo a diam sollicitudin tempor id. Aliquam sem et tortor consequat id porta nibh. Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis
-					img(src="./img/article-page/img1.webp",width="610" alt="img")
+							p Ut porttitor leo a diam sollicitudin tempor id. Aliquam sem et tortor consequat id porta nibh. Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis
+						img(src="./img/article-page/img1.webp",width="610" alt="img")
 
-				//====================== #anchor3 ============
-				#anchor3.anchor.h3 Каким размером должно быть портфолио и как лучше показать свои работы?
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
-				p
-					img(src="./img/main-page/faq-img.webp", alt="img")
-				//====================== #anchor4 ============
-				#anchor4.anchor.h3 Cколько примеров работ должно быть включено?
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
-				
-				//====================== #anchor5 ============
-				#anchor5.anchor.h3 Alterra Education
-				+list-block('Небольшие классы — 10-15 человек.', 'Современное оснащение: научные лаборатории, творческие мастерские, спортивные объекты, творческие студии и т. д.', 'Сотрудничество с университетами, совместные программы по искусству, STEM и другим направлениям.', 'Большой выбор внеклассных занятий: верховая езда, гольф, цифровые медиа, астрономия, кулинария, робототехника, программирование на Python и многое другое.', 'Преподаватели имеют больше автономии, могут адаптировать программу и учебные материалы под конкретные потребности учеников.', 'Больший выбор образовательных программ: AP, IB, A-Levels и др.', 'Возможность проживать в пансионе в течение всего года. ')
-				
-				//====================== #anchor6 ============
-				#anchor6.anchor.h3 Нужно ли включать скетчбуки?
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
-				//====================== #anchor7============
-				 
-				#anchor7.anchor.h3 Нужно ли включать скетчбуки?
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
-				 
-				figure
-					img(src="./img/article-page/img2.webp", width="885" alt="img")
-					figcaption Лондонский колледж моды
-				
-				//====================== #anchor8 ============
-				#anchor8.anchor.h3 Нужно ли включать примеры дизайна одежды/макияжа/фотографий/обуви в случае, если я поступаю на одну из этих специальностей?
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu
-				.two-columns
+					//====================== #anchor3 ============
+					h3#anchor3.anchor Каким размером должно быть портфолио и как лучше показать свои работы?
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
 					p
-						img(src="./img/article-page/img3.webp", width="432" alt="img")
-					p
-						img(src="./img/article-page/img4.webp", width="432" alt="img")
+						img(src="./img/main-page/faq-img.webp", alt="img")
+					//====================== #anchor4 ============
+					#anchor4.anchor.h3 Cколько примеров работ должно быть включено?
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
+					
+					//====================== #anchor5 ============
+					h3#anchor5.anchor Alterra Education
+					+list-block('Небольшие классы — 10-15 человек.', 'Современное оснащение: научные лаборатории, творческие мастерские, спортивные объекты, творческие студии и т. д.', 'Сотрудничество с университетами, совместные программы по искусству, STEM и другим направлениям.', 'Большой выбор внеклассных занятий: верховая езда, гольф, цифровые медиа, астрономия, кулинария, робототехника, программирование на Python и многое другое.', 'Преподаватели имеют больше автономии, могут адаптировать программу и учебные материалы под конкретные потребности учеников.', 'Больший выбор образовательных программ: AP, IB, A-Levels и др.', 'Возможность проживать в пансионе в течение всего года. ')
+					
+					//====================== #anchor6 ============
+					
+					h3#anchor6.anchor Нужно ли включать скетчбуки?
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
+					
+					figure
+						img(src="./img/article-page/img2.webp", width="885" alt="img")
+						figcaption Лондонский колледж моды
+					
+					//====================== #anchor7 ============
+					h4#anchor7.anchor Нужно ли включать примеры дизайна одежды/макияжа/фотографий/обуви в случае, если я поступаю на одну из этих специальностей?
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu
+					.two-columns
+						p
+							img(src="./img/article-page/img3.webp", width="432" alt="img")
+						p
+							img(src="./img/article-page/img4.webp", width="432" alt="img")
 
-				//====================== #anchor9 ============
-				#anchor9.anchor.h3 Стоит ли включать в портфолио сами работы?
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
-				//====================== blockquote ============
-				blockquote
-					p Всегда советуйтесь по содержанию портфолио. Каждое из них очень индивидуально и отражает именно тот этап творческого пути, на котором студент находится в данный момент
+					//====================== #anchor8 ============
+					h3#anchor8.anchor Стоит ли включать в портфолио сами работы?
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
+					//====================== blockquote ============
+					blockquote
+						p Всегда советуйтесь по содержанию портфолио. Каждое из них очень индивидуально и отражает именно тот этап творческого пути, на котором студент находится в данный момент
+					
+					//====================== #anchor 9 ============
+					#anchor9.anchor.h3 Подробнее о колледже моды
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
+
+					.two-columns
+						p
+							img(src="./img/article-page/img5.webp", width="432" alt="img")
+						p
+							img(src="./img/article-page/img6.webp", width="432" alt="img")
+
+							
+					//====================== #anchor 10 ============
+					#anchor10.anchor.h3 Каким образом оценивается портфолио?
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
+
+					.order-list
+						h4 Alterra Education
+						ol
+							li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.
+							li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.
+							li Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi.
+							li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.
+							li Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi.
+
+					#anchor11.anchor.schedule-table
+						h4 Расписание мероприятия
+						+table([
+							{txt1: '14:00-18:00', txt2: 'Et malesuada fames ac turpis'},
+							{txt1: '14:00-18:00', txt2: 'Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis.'},
+							{txt1: '14:00-18:00', txt2: 'Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque.'},
+							{txt1: '14:00-18:00', txt2: 'Vulputate eu scelerisque felis imperdiet proin fermentum leo vel'}])
 				
-				//====================== #anchor 10 ============
-				#anchor10.anchor.h3 Подробнее о колледже моды
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
-
-				.two-columns
-					p
-						img(src="./img/article-page/img5.webp", width="432" alt="img")
-					p
-						img(src="./img/article-page/img6.webp", width="432" alt="img")
-
-						
-				//====================== #anchor 10 ============
-				#anchor10.anchor.h3 Каким образом оценивается портфолио?
-				p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu.
-
-				.order-list
-					ol
-						li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.
-						li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.
-						li Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi.
-						li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.
-						li Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi.
+				//===========ARTICLE FOOTER =====
+				.article-footer.txt-body
+					p #[strong Оригинал статьи на #[a(href="www.website.com").accent-link www.website.com]]
+					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu
+					.hash-tags.mt-48
+						a(href="#!").accent-link #hashtag1 
+						a(href="#!").accent-link #hashtag2 
+						a(href="#!").accent-link #hashtag3 
+						a(href="#!").accent-link #hashtag4
+					
+					.social.mt-48
+						a(href="#!").social-item
+							img(src="./img/icons/skype.svg", alt="icon")
+						a(href="#!").social-item
+							img(src="./img/icons/facebook.svg", alt="icon")
+						a(href="#!").social-item
+							img(src="./img/icons/vk.svg", alt="icon")

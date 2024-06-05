@@ -145,25 +145,39 @@
 	backdrop-filter: blur(16px);
 	background: rgba(16, 23, 36, 0.5);
 	display: inline-flex;
-	column-gap: 18px;
-	padding-inline: 16px;
+	position: relative;
+	padding-left: 16px;
+	min-width: 210px;
 	height: 48px;
-	align-items: center;
+	line-height: 48px;
 	&:hover {background: rgba(16, 23, 36, 0.8);}
 
 	span {
-		text-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+		text-shadow: 0 3px 10px  rgba(0, 0, 0, 0.1);
 		font-weight: 500;
 		font-size: 14px;
-		line-height: 1.43;
+		// line-height: 1.43;
 		letter-spacing: -0.01em;
 		color: $white;
 
 	}
 
-	.svg-pause {
-		width: 10px;
+	.icon-pause {
+		width: 16px;
 		height: 16px;
 		fill: transparent;
+		transition: .3s; 
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform: translateY(-50%)
 	}
+	.svg-play{display: none;}
+}
+.btn-pause.active{
+	.icon-pause{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools --%3e%3csvg fill='%23ffffff' height='64px' width='64px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 210 210' xml:space='preserve' stroke='%23ffffff'%3e%3cg id='SVGRepo_bgCarrier' stroke-width='0'/%3e%3cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'/%3e%3cg id='SVGRepo_iconCarrier'%3e%3cpath d='M179.07,105L30.93,210V0L179.07,105z'/%3e%3c/g%3e%3c/svg%3e");
+	}
+	
+
 }

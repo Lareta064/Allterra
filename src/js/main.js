@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	const bodyEl = document.body;
 	/*========Lazy Load============ */
 	$('.lazy').Lazy();
-	/*========Lazy Load============ */
-	$('.lazy').Lazy();
+
 	/*========HEADER VIDEO============ */
 	const videoBox = document.querySelector('#video-box');
 	if(videoBox){
@@ -14,27 +13,47 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(!videoToggleBtn.classList.contains('active')){
 				videoContent.pause();
 				videoToggleBtn.classList.add('active');
+				videoToggleBtn.querySelector('span').textContent = 'Возобновить видео';
 				
 			}else{
 				videoContent.play();
 				videoToggleBtn.classList.remove('active');
-				
+				videoToggleBtn.querySelector('span').textContent = 'Приостановить видео';
 			}
-			
+		});
+	}
+	/*========Partners'Zone  VIDEO============ */
+	const videoBlock = document.querySelector('.video');
+	if(videoBlock){
+		const videoBlockContent = videoBlock.querySelector('video');
+		videoBlock.addEventListener('click', ()=>{
+			if(videoBlock.classList.contains('active')){
+				videoBlockContent.pause();
+				videoBlock.classList.remove('active');
+				
+				
+			}else{
+				videoBlockContent.play();
+				videoBlock.classList.add('active');
+			}
 		});
 	}
 	/*==============FOR HEADER SEARCH FORM ============= */
-	
+	const headerEl = document.querySelector('header');
 	const openSearchForm = document.querySelector('#search-btn');
 	const searchFormPopup = document.querySelector('#search-popup');
 	if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
 			bodyEl.classList.add('lock');
+			const topPosition = headerEl.getBoundingClientRect().bottom;
+			
 			if(searchFormPopup.classList.contains('active')){
 				searchFormPopup.classList.remove('active');
+				searchFormPopup.style.top = 'auto';
 				bodyEl.classList.remove('lock');
 			}else{
 				searchFormPopup.classList.add('active');
+				searchFormPopup.style.top = topPosition + 'px';
 				bodyEl.classList.add('lock');
 			}
 			
@@ -50,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function (){
     /*===============MOBILE MENU ==================*/
 	const menuToggle = document.querySelector('#menu-toggle');
 	const mobileMenu = document.querySelector('#mobile-menu');
-	
+	const fixedButtons = document.querySelector('#fixed-buttons');
 
 	if (menuToggle) {
 		const  mobMenuDropItem = mobileMenu.querySelectorAll('.drop-menu-li');
@@ -63,34 +82,46 @@ document.addEventListener("DOMContentLoaded", function (){
 				menuToggle.classList.remove('active');
 				mobileMenu.classList.remove('active');
 				bodyEl.classList.remove('lock');
+				if(window.scrollY > 500){
+					fixedButtons.classList.add('active');
+				}
 				
 			
 			} else {
 				menuToggle.classList.add('active');
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
+				if(window.scrollY > 500){
+					fixedButtons.classList.remove('active');
+				}
 			}
 		});
 
        /*   клик по мобильному меню*/  
-		
 		for(let item of mobMenuDropItem){
 			item.addEventListener('click', function(e){
 				item.querySelector('.drop-menu-wrapper').classList.add('active');
+				if(window.scrollY > 500){
+					fixedButtons.classList.remove('active');
+				}
 			});
 			item.querySelector('.back-link').addEventListener(
 				'click', 
 				(e) => {
 					e.stopPropagation();
 					e.target.closest('.drop-menu-wrapper').classList.remove('active');
+					if(window.scrollY > 500){
+						fixedButtons.classList.remove('active');
+					}
 				}
 			);
 		}
 	}
-	/*================ FIXED BOTTOM BUTTONS============ */
-	const fixedButtons = document.querySelector('#fixed-buttons');
+	//================ FIXED BOTTOM BUTTONS============ */
+	
 	if(fixedButtons){
 		window.addEventListener('scroll', ()=>{
+			
 			if(window.scrollY > 500){
 				fixedButtons.classList.add('active');
 			}else{
@@ -253,8 +284,7 @@ document.addEventListener("DOMContentLoaded", function (){
       },
     });
 
-
-	/* подсветка активного меню при скролле страницы */
+	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
 	if(backlitMenu){
 		const observer = new IntersectionObserver((entries) => {
@@ -279,5 +309,40 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 		document.querySelectorAll('.anchor').forEach(section => { observer.observe(section)} );
 	}
-
+   const dynamicMenu = document.querySelector('.dynamic-menu');
+  
+   if(dynamicMenu){
+	   dynamicMenuBtn = dynamicMenu.querySelector('.dynamic-menu__header');
+	   dynamicMenuList = dynamicMenu.querySelector('.dynamic-menu__list');
+	  
+	    dynamicMenuBtn.addEventListener('click', ()=>{
+			
+			if(dynamicMenuBtn.classList.contains('active')){
+				dynamicMenuList.style.maxHeight = 0;
+				dynamicMenuBtn.classList.remove('active');
+				
+			}else{
+				dynamicMenuList.style.maxHeight = dynamicMenuList.scrollHeight + 'px';
+				dynamicMenuBtn.classList.add('active');
+			}
+		});
+		dynamicMenuList.addEventListener('click', ()=>{
+			dynamicMenuList.style.maxHeight = 0;
+			dynamicMenuBtn.classList.remove('active');
+		});
+		window.addEventListener('scroll', ()=>{
+			if(window.innerWidth <= 1280){
+				if(window.scrollY > 550){
+					dynamicMenu.classList.add('active');
+				}else{
+					dynamicMenu.classList.remove('active');
+				}
+			}
+		});
+		window.addEventListener('resize', ()=>{
+			if(window.innerWidth > 1279){
+				dynamicMenuList.style.maxHeight = 'unset';
+			}
+		});
+   }
 });

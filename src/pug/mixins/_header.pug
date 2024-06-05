@@ -1,6 +1,6 @@
 
 //=======Миксин не сделан ========
-mixin header
+mixin header(arg)
 	header.header
 		//========HEADER SEARCH FORM======
 		include ../blocks/_header-search.pug
@@ -34,11 +34,7 @@ mixin header
 						svg.svg-logo
 							use( href='./img/spriteSvg.svg#logo')
 					//=========nav =====
-					+header-nav([
-						{name:'Высшее образование', link: '#!'},
-						{name:'Среднее образование', link: '#!'},
-						{name:'Языковая программа', link: '#!', activeClass:'active', dropLi: 'true', langsProg:'true'},
-						])(class="header-nav--white")
+					+header-nav(arg)(class="header-nav--white")
 					//======== BUTTONS GROUP=========
 					.header-column
 						button.btn-icon.search-btn#search-btn

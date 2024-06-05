@@ -7,14 +7,15 @@ block content
 		include ../sections/_edu-info.pug
 		include ../sections/_edu-stages.pug
 		include ../sections/_statistics
+		include ../sections/_image-banner
 		include ../sections/_faq
 		include ../sections/_feedback
 		include ../sections/_section-review
-		include ../sections/_section-blog
+		+blogCardsSlider('Статьи об обучении', 'за рубежом')(class="light-bg")
 		include ../sections/_accredit
 		include ../sections/_contacts
 	include ../sections/_footer
-
+ 
 block variables
 	-var title = "Allterra";
 
