@@ -1,12 +1,14 @@
 .accreditation{
-	&__title{flex-shrink: 0;}	
+	&__title{
+		flex-shrink: 0;
+		row-gap:98px;
+		@media (max-width: 1023px) {
+		margin-bottom: 40px;
+		}
+	}	
 	.h2{
 		width: 13ch;
-		@media (max-width: 1279px) {
-		text-transform: capitalize;
-		width: 11ch;
-		margin-bottom: 40px
-		}
+		
 	}
 	&-cards{
 		flex-grow: 1;
@@ -18,6 +20,10 @@
 	&-content{
 		align-items: stretch;
 		column-gap: 140px;
+		@media (max-width: 1279px) {
+			column-gap: 63px;
+		}
+		
 	}
 	@media (max-width: 991px) {
 		&__img{display: none;}

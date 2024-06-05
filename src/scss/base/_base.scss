@@ -256,9 +256,28 @@ section + section{padding-top: 100px;}
 section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding-bottom: 100px;
 }
-blockquote{
-	margin: 0;
+.inner-page {
+
+	section+section {
+		padding-top: 80px;
+	}
+
+	section:has(+ .dark-bg),
+	section:has(+ .light-bg) {
+		padding-bottom: 80px;
+	}
+
+	@media (max-width: 767px) {
+		section+section {
+			padding-top: 48px;
+		}
+
+		section:has(+ .dark-bg) {
+			padding-bottom: 48px;
+		}
+	}
 }
+
 @media (max-width: 767px) {
 	section+section {
 		padding-top: 80px;
@@ -330,13 +349,18 @@ blockquote{
 .aside-grid{
 	display: grid;
 	grid-template-columns: 1fr 3fr;
-	column-gap: 20px;
+	column-gap: 40px;
 	row-gap:40px;
 	align-items: flex-start;
+	&__col{max-width: 295px;}
 	@media (max-width: 767px) {
+		&__col {max-width: unset;}
 		grid-template-columns: 1fr;
 		gap: 40px;
 	}
+}
+.aside-grid.gap-20{
+	column-gap: 20px;
 }
 .aside-grid.aside-grid--1280{
 	

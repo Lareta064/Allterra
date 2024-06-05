@@ -7,7 +7,7 @@ mixin blogCardsSlider(title, titleSpan, whiteBtnClass = 'btn-white')
 				h2.h2 #{title} <br> #[span.accent-border #{titleSpan}]
 				
 				.btns-group
-					a(href="#!").btn--slim.btn-white Все новости
+					a(href="#!" class="btn--slim " + whiteBtnClass) Все новости
 					a(href="#!").btn--slim.btn Все статьи
 
 			//======= SECTION SLIDER =======
@@ -52,6 +52,6 @@ mixin blogCardsSlider(title, titleSpan, whiteBtnClass = 'btn-white')
 				
 				//========VISIBLE MOBILE =======
 				.btns-group
-					a(href="#!" class="btn--slim" + whiteBtnClass)  Все новости
+					a(href="#!" class="btn--slim " + whiteBtnClass)  Все новости
 					a(href="#!").btn--slim.btn Все статьи
 
