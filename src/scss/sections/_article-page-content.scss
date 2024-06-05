@@ -1,14 +1,8 @@
-section.article{
-	padding-top: 80px;
-	
-	@media (max-width: 767px) {
-	 padding-top: 48px;
-	}
-}
-.article-content{
+
+.custom-text{
 	padding-right: 40px;
 	padding-bottom: 80px;
-	h1, h2, h3, h4, h5, .h3, figure{
+	h1, h2, h3, h4, h5, .h3, figure, img, .two-columns, .txt-img{
 		margin-top: 48px;
 		margin-bottom: 12px;
 		@media (max-width: 767px) {
@@ -16,35 +10,22 @@ section.article{
 		}
 	}
 	h4{margin-bottom: 24px;}
-	p+p{margin-top: 30px}
-	img {margin-top: 48px;}
-			
-	.two-columns>p+p{margin-top: 0;}
-	.two-columns>img{margin-top: 0;}
-	.two-columns{
-		margin-top: 48px;
+	p+p{
+		margin-top: 30px;
 		@media (max-width: 767px) {
-			margin-top: 32px;
+			margin-top:24px;
 		}
-	}
-	.txt-img{
-		margin-top: 48px;
-		img{margin-top: 0;}
-		@media (max-width: 767px) {
-			margin-top: 32px;
-		}
-	}
+	}	
+	.two-columns>p+p,
+	.two-columns>img, .txt-img img, figure> img, p>img,
+	.order-list > *{margin-top: 0;}
 	.order-list{
-		&>*{margin-top: 0;}
-
 		margin-block: 48px;
 		&>*+*{margin-top: 12px;}
 		@media (max-width: 767px) {
-		margin-block: 32px;
+			margin-block: 32px;
 		}
 	}
-	figure> img, p>img{margin-top:0;}
-	
 	
 	.anchor{
 		scroll-margin-top: 96px;
@@ -62,9 +43,9 @@ section.article{
 	@media (max-width: 1279px) {
 		padding-right: 0;
 		
-		.aside-grid__col {
-			padding-right: 0;
-		}
+	}
+	@media (max-width: 767px) {
+	padding-bottom: 48px;
 	}
 }
 
@@ -124,5 +105,6 @@ section.article{
 .article-footer{
 	padding-top: 24px;
 	border-top: 2px solid #f3f5f9;
+	
 	p+p{margin-top: 12px;}
 }

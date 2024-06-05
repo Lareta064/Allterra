@@ -40,3 +40,6 @@
 .mobile-menu-content{
 	.fixed-buttons{column-gap: 16px;}
 }
+@media(min-width:1280px){
+	#fixed-buttons.fixed-buttons{display: none;}
+}

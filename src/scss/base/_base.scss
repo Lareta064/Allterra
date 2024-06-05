@@ -92,7 +92,10 @@ a:hover {
 	text-decoration: none;
 	color: $bg-black;
 }
-
+a[href^="tel:"],
+a[href^="mailto:"] {
+	white-space: nowrap;
+}
 ul, ol {
 	margin: 0;
 	padding: 0;
@@ -144,7 +147,7 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
-.container {
+.container,.container-narrow {
 	width: min(1280px, 100%);
 	padding-inline: 20px;
 	margin: 0 auto;
@@ -152,6 +155,9 @@ input[type="submit"] {
 	@media (max-width: 1023px) {
 		padding-inline: 16px;
 	}
+}
+.container-narrow{
+	width: min(900px, 100%);
 }
 @mixin shadow-border{
 	box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
@@ -241,8 +247,6 @@ address{font-style: normal;}
 	background-color: $bg-black;
 	padding-block: 100px;
 	color: $white;
-	
-
 }
 .light-bg{background-color: #f0f3f9;}
 .light-bg,.dark-bg{
@@ -260,18 +264,20 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 	section+section {
 		padding-top: 80px;
 	}
-
+	
 	section:has(+ .dark-bg),
-	section:has(+ .light-bg) {
-		padding-bottom: 80px;
-	}
-
+	section:has(+ .light-bg),
+	section:last-child:not(.light-bg),
+	section:last-child:not(.dark-bg) {padding-bottom: 80px;}
 	@media (max-width: 767px) {
 		section+section {
 			padding-top: 48px;
 		}
 
-		section:has(+ .dark-bg) {
+		section:has(+ .dark-bg),
+		section:has(+ .light-bg),
+		section:last-child:not(.light-bg),
+		section:last-child:not(.dark-bg) {
 			padding-bottom: 48px;
 		}
 	}

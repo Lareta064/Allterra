@@ -109,7 +109,7 @@ h5, .h5{
 }
 
 .txt-18,
-.txt-16,.txt-14, .txt-body, .h6, .txt-body p, h6{
+.txt-16,.txt-14, .txt-body, .h6, .txt-body p, .custom-text p, h6{
 	font-size: 16px;
 	line-height: 1.6;
 	font-weight: 400;
@@ -117,7 +117,7 @@ h5, .h5{
 		font-size: 14px;
 	}
 }
-.txt-body, .txt-body p{
+.txt-body, .txt-body p, .custom-text, .custom-text p{
 	line-height: 1.75;
 	@media (max-width: 767px) {
 		line-height: 1.71;
@@ -134,7 +134,6 @@ h6, .h6 {
 	@media (max-width: 767px) {
 		font-size: 12px;
 	}
-	
 }
 .txt-opac{
 	opacity: 0.8;
