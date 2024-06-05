@@ -2,7 +2,7 @@
 .mobile-menu-wrapper{
 	position: fixed;
 	z-index: 8;
-	top: 68px;
+	top: 67px;
 	left: 0;
 	bottom: 0;
 	right: 0;
@@ -19,11 +19,12 @@
 	padding: 38px 16px;
 	width: min(360px, 100%);
 	background-color: #fff;
-	a:not(.accent-link){
+	li a{
 		font-size: 15px;
 		line-height: 1.6;
 		color: $text-dark
 	}
+
 }
 .mobile-menu{
 	li +li{margin-top: 24px;}

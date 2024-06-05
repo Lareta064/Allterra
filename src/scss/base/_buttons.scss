@@ -81,35 +81,8 @@
 	border: 1px solid $text-dark;
 	color: $bg-black;
 }
-// .fixed-buttons{
-// 	padding: 10px 20px;
-// 	column-gap:60px;
-// 	position: fixed;
-// 	z-index: 10;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-// 	display: none;
-// 	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
-// 	background-color: #fff;
-// 	transform: translateY(150px);
-// 	transition: .5s;
-// 	&.active{transform: translateY(0);}
-// 	.btn-accent, .btn{
-// 		height: 48px;
-// 		padding-inline: 20px;
-// 		width: 150px;
-// 		font-size: 14px;
-// 	}
-// 	@media (max-width: 1279px) {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 	}
-// 	@media (max-width: 413px) {
-// 		column-gap: 20px;
-// 	}
-// }
+
+
 .btn-accent,
 .btn,
 .btn,

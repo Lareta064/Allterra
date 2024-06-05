@@ -314,5 +314,10 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 			}
 		});
+		window.addEventListener('resize', ()=>{
+			if(window.innerWidth > 1279){
+				dynamicMenuList.style.maxHeight = 'unset';
+			}
+		});
    }
 });
