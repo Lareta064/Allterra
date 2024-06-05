@@ -257,7 +257,6 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding-bottom: 100px;
 }
 .inner-page {
-
 	section+section {
 		padding-top: 80px;
 	}
@@ -366,6 +365,9 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 	
 	@media (max-width: 1279px) {
 	  grid-template-columns:  1fr;
+	.aside-grid__col {max-width: unset;}
+		
+			
 	}
 }
 .backlit-menu a.active{color: green}
