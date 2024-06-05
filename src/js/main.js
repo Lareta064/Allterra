@@ -19,9 +19,23 @@ document.addEventListener("DOMContentLoaded", function (){
 				videoContent.play();
 				videoToggleBtn.classList.remove('active');
 				videoToggleBtn.querySelector('span').textContent = 'Приостановить видео';
-				
 			}
-			
+		});
+	}
+	/*========Partners'Zone  VIDEO============ */
+	const videoBlock = document.querySelector('.video');
+	if(videoBlock){
+		const videoBlockContent = videoBlock.querySelector('video');
+		videoBlock.addEventListener('click', ()=>{
+			if(videoBlock.classList.contains('active')){
+				videoBlockContent.pause();
+				videoBlock.classList.remove('active');
+				
+				
+			}else{
+				videoBlockContent.play();
+				videoBlock.classList.add('active');
+			}
 		});
 	}
 	/*==============FOR HEADER SEARCH FORM ============= */
@@ -84,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 
        /*   клик по мобильному меню*/  
-		
 		for(let item of mobMenuDropItem){
 			item.addEventListener('click', function(e){
 				item.querySelector('.drop-menu-wrapper').classList.add('active');

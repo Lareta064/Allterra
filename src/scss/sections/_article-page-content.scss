@@ -19,14 +19,20 @@
 	.two-columns>p+p,
 	.two-columns>img, .txt-img img, figure> img, p>img,
 	.order-list > *{margin-top: 0;}
-	.order-list{
+	.list-block, .order-list, 
+	.video{
 		margin-block: 48px;
 		&>*+*{margin-top: 12px;}
 		@media (max-width: 767px) {
 			margin-block: 32px;
 		}
 	}
-	
+	p + .list-block{
+		margin-block:16px;
+		@media (max-width: 767px) {
+		margin-block: 12px;
+		}
+	}
 	.anchor{
 		scroll-margin-top: 96px;
 		@media (max-width: 1279px) {

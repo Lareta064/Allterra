@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page
+		+hero-section('about/header-bg.webp',['Главная', "Partner's zone"], "Partner's zone <br> <span class='accent-border'> Allterra&nbsp;Education </span>", 'back-link')
+		
+		include ../sections/_partners
+		include ../sections/_statistics
+		include ../sections/_accredit
+	include ../sections/_footer
+
+block variables
+	-var title = "Partner's zone";
