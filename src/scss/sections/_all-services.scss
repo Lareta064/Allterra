@@ -1,0 +1,35 @@
+.all-services{
+	padding-block: 100px 120px;
+	background-color: #fff;
+	@media (max-width: 1023px) {
+		padding-block: 80px;
+	}
+}
+.services-list{
+	li +li{
+		margin-top: 65px;
+		@media (max-width: 767px) {
+		margin-top: 32px;
+		}
+	}
+	li{
+		align-items: flex-start;
+		.txt-20{
+			font-weight: 500;
+			line-height: 1.4;
+			position: relative;
+			padding-bottom: 26px;
+			&:before{
+				content: '';
+				width: 100px;
+				height: 2px;
+				border-radius: 5px;
+				background-color: $main-accent;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+		}
+		p{line-height: 1.8;}
+	}
+}
