@@ -82,16 +82,20 @@
 	.review__meta{display: none;}
 }
 .tags-list{
-	display: flex;
-	flex-wrap: wrap;
-	gap:12px;
+	// display: flex;
+	// flex-wrap: wrap;
+	// gap:12px;
+	&>*{
 	font-size: 14px;
 	line-height: 1.71;
 	color: $text-dark;
 	opacity: 0.4;
+	display: inline-block;
+	}
+	&>* + *{margin-left: 12px;}
 	@media (max-width: 767px) {
-	 column-gap: 8px;
-	 row-gap:3px;
+	//  column-gap: 8px;
+	//  row-gap:3px;
 	}
 
 }

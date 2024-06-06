@@ -43,7 +43,7 @@ mixin review-card(arg)
 					if arg.tags
 						.tags-list
 							each item of arg.tags
-								span ##{item}
+								a(href="#!") ##{item}
 					
 					.flex-justify.mt-auto
 						a(href="#!").accent-link #{arg.scool}

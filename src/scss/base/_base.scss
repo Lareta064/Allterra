@@ -160,9 +160,12 @@ input[type="submit"] {
 	width: min(900px, 100%);
 }
 @mixin shadow-border{
-	box-shadow: 0 10px 24px  rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 	background: $white;
 	
+}
+address {
+	font-style: normal;
 }
 .flex-item{
 	display: flex;
@@ -251,7 +254,7 @@ img.wh-100 {
 		transform: scale(1.1);
 	}
 }
-address{font-style: normal;}
+
 .dark-bg{
 	background-color: $bg-black;
 	padding-block: 100px;
@@ -310,110 +313,10 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 		padding-bottom: 80px;
 	}
 }
-.breadcrumb{
-	ul{
-		display: flex;
-		flex-wrap: wrap;
-	}
-	
-}
-.breadcrumb>li{
-	position: relative;
-	display: inline-block;
-	line-height: 1.71;
-	font-size: 14px;
-	white-space: nowrap;
-	a{color: $white;}
-	&:last-child>*{
-		color: rgba(255, 255, 255, 0.6);
-		pointer-events: none;
-		cursor: default;
-	}
-	&:last-child:hover>*{border:0;}
-	&:hover >*{border-bottom: 1px solid $white;}
-	
-}
 
-.breadcrumb>li+li:before {
-	content: "/\00a0";
-	padding: 0 5px;
-	color: #fff;
-}
-.two-columns,.two-columns-1024 {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 20px;
 
-	@media (max-width: 767px) {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 16px;
-	}
-}
-
-.grid-12{
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 40px;
-	@media (max-width: 1279px) {
-	 gap: 20px;
-	}
-	@media (max-width: 767px) {
-		grid-template-columns: 1fr;
-	}
-}
-.two-columns-1024{
-	@media (max-width: 1023px) {
-		
-		grid-template-columns: 1fr;
-		
-	}
-}
-.four-columns, .four-columns-767{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap:20px;
-	@media (max-width: 1279px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media (max-width: 767px) {
-		grid-template-columns: 1fr;
-		gap: 16px;
-	}
-}
-.four-columns-767{
-	@media (max-width: 1049px) {
-		grid-template-columns: repeat(4, 1fr);
-	}
-}
-.aside-grid{
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-	column-gap: 40px;
-	row-gap:40px;
-	align-items: flex-start;
-	&__col{max-width: 295px;}
-	@media (max-width: 767px) {
-		&__col {max-width: unset;}
-		grid-template-columns: 1fr;
-		gap: 40px;
-	}
-}
-.aside-grid.gap-20{
-	column-gap: 20px;
-}
-.aside-grid.aside-grid--1280{
-	
-	@media (max-width: 1279px) {
-	  grid-template-columns:  1fr;
-	.aside-grid__col {max-width: unset;}
-		
-			
-	}
-}
 .hide-mobile{
 	@media (max-width: 767px) {
 	display: none!important;
 	}
 }
-.backlit-menu a.active{color: green}

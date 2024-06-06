@@ -1,0 +1,26 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	//=============MAIN===========
+	main.inner-page
+		+hero-section(['Главная', 'Отзывы об образовании', 'Папа нашего студента о выборе школы в Англии, важности мелочей и работе с Allterra'], 'Папа нашего студента о выборе школы в Англии, важности мелочей и работе с Allterra','', 'h2 tt-none ', 'back-link')(style="background-image:url(./img/review/single-review-bg.webp)")(class="hero--center")
+		
+		include ../sections/_review-single-section
+		include ../sections/_section-review
+		
+		include ../sections/_accredit
+		include ../sections/_contacts
+	include ../sections/_footer
+
+block variables
+	-var title = "Обращение Директора";
+	
+
+
+
+
+
+	include ../blocks/_mobile-fixed-buttons.pug
+block variables
+	-var title = "Главная";

@@ -1,0 +1,14 @@
+extends ../layouts/layout-ui.pug
+
+block content
+	.container-dashboard
+		h2 Кастомные селекты
+		ul
+			li 
+				.custom-select.custom-select--lang
+					input(type="text" value="Ru")
+					//=== спислк с языками===
+					.custom-select__drop
+						.custom-select__list
+							a(href="#!") En
+							a(href="#!") Ru
