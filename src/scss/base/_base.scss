@@ -369,16 +369,21 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 		
 	}
 }
-.four-columns{
+.four-columns, .four-columns-767{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap:20px;
-	@media (max-width: 1049px) {
+	@media (max-width: 1279px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	@media (max-width: 767px) {
 		grid-template-columns: 1fr;
 		gap: 16px;
+	}
+}
+.four-columns-767{
+	@media (max-width: 1049px) {
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 .aside-grid{
