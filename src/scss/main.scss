@@ -60,5 +60,10 @@
 
 //============services-page====
 @import "sections/_all-services.scss";
+
+//============contacts-page====
+@import "blocks/_contacts-card.scss";
+@import "sections/_contacts-page.scss";
+
 //ui
 @import "ui/_ui-navigation";

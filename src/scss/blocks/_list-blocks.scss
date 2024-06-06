@@ -109,7 +109,7 @@ blockquote +*{
 }
 .order-list {
 	padding: 40px 48px 40px;
-	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+	box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
 	background: $light-blue;
 		@media (max-width: 767px) {
 			padding: 20px 16px;
