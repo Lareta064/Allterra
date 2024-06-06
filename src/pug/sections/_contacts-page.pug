@@ -1,5 +1,6 @@
 section.contacts-main
 	.container
+		//======contacts-row ====
 		.contacts-row
 			.h4 Общие контакты
 			.four-columns.mt-20
@@ -18,3 +19,9 @@ section.contacts-main
 				.contact-group
 					span.contact-name Группа в VK:
 					a(href="#!").accent-link 8(800) 511-4993
+		
+		//======contacts-row ====
+		.contacts-cards.two-columns.mt-80
+			+contact-card('Москва', '125009', 'г. Москва, ул. Тверская, д. 7, Бизнес-центр «Центральный Телеграф»', '8(800) 511-4993')
+			+contact-card('Санкт-Петербург', '190013', 'г. Санкт-Петербург, ул. Введенского канала, д.7, БЦ «Фарватер», оф. 415', '+7 (812) 425-64-25')
+			+contact-card('Москва', '125009', 'г. Москва, ул. Тверская, д. 7, Бизнес-центр «Центральный Телеграф»', '8(800) 511-4993')

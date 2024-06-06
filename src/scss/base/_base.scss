@@ -210,6 +210,12 @@ input[type="submit"] {
 		margin-bottom: 40px!important;
 	}
 }
+.mt-80{
+	margin-top: 80px;
+	@media (max-width: 767px) {
+		margin-top: 48px ;
+	}
+}
 .mt-60 {
 	margin-top: 60px !important;
 
@@ -398,6 +404,11 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 	.aside-grid__col {max-width: unset;}
 		
 			
+	}
+}
+.hide-mobile{
+	@media (max-width: 767px) {
+	display: none!important;
 	}
 }
 .backlit-menu a.active{color: green}
