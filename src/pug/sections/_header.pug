@@ -29,7 +29,7 @@ header.header
 						li.menu-li.drop-menu-li
 							a(href="#!") О компании
 							//======single LI Drop-menu====
-							+menu-list([{name:'Об Allterra Education'}, {name:'Обращение директора'},{name:'Вакансии'},{name:'Partner`s zone'},{name:'Отзывы'} ])
+							+menu-list([{link:'about.html', name:'Об Allterra Education'}, {link:'greeting.html', name:'Обращение директора'}, {link:'cooperation.html', name:'Сотрудничество'},{link:'vacant.html', name:'Вакансии'},{link:'partners.html', name:'Partner`s zone'},{link:'services.html', name:'Все услуги'}, {name:'Отзывы'} , {name:'Контакты'}])
 						
 						//======single LI====
 						li.menu-li.drop-menu-li
@@ -78,7 +78,7 @@ header.header
 
 						//======single LI====
 						li.menu-li
-							a(href="#!") Справочник поступающего
+							a(href="article.html") Справочник поступающего
 
 						//======single LI====
 						li.menu-li
@@ -104,7 +104,7 @@ header.header
 		.container
 			.header-flex
 				//=======LOGO=====
-				a(href="index.html").logo
+				a(href="main.html").logo
 					svg.svg-logo
 						use( href='./img/spriteSvg.svg#logo')
 				
@@ -253,12 +253,15 @@ header.header
 									span О компании
 							
 							.drop-menu__list
-								a(href="#!") Об Allterra Education
-								a(href="#!") Обращение директора
-								a(href="#!") Сотрудничество
-								a(href="#!") Вакансии
-								a(href="#!") Partner`s zone
+								a(href="about.html") Об Allterra Education
+								a(href="greeting.html") Обращение директора
+								a(href="cooperation.html") Сотрудничество
+								a(href="vacant.html") Вакансии
+								a(href="partners.html") Partner`s zone
+								a(href="services.html") Все услуги
 								a(href="#!") Отзывы
+								a(href="#!") Контакты
+								
 					li.menu-item.drop-menu-li
 						a(href="#!") Все услуги
 						//========CHILD MENU ======

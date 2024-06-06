@@ -4,11 +4,11 @@ mixin menu-list(arg)
 		ul
 			each item of arg
 				li( class= (item.activeClass == "active" ? "active" : "")) 
-					a(href="#!") !{item.name}
+					a(href=""+ item.link) !{item.name}
 //-====флаг + название страны =====
 mixin country-item(img, txt)
 	a(href="#!").flex-item
-		img(src="../img/flags/"+ img +".svg", width="24"  height="16" alt="icon")
+		img(src="./img/flags/"+ img +".svg", width="24"  height="16" alt="icon")
 		span #{txt}
 
 //------выпадашка страны =====
