@@ -1,0 +1,6 @@
+mixin services-list(arg)
+	ul.services-list&attributes(attributes)
+		each item in arg
+			li.grid-12
+				.txt-20 !{item.title}
+				p !{item.txt}

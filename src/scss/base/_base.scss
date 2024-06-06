@@ -332,6 +332,18 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 		gap: 16px;
 	}
 }
+
+.grid-12{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 40px;
+	@media (max-width: 1279px) {
+	 gap: 20px;
+	}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
+}
 .two-columns-1024{
 	@media (max-width: 1023px) {
 		

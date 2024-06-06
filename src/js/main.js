@@ -42,19 +42,35 @@ document.addEventListener("DOMContentLoaded", function (){
 	const headerEl = document.querySelector('header');
 	const openSearchForm = document.querySelector('#search-btn');
 	const searchFormPopup = document.querySelector('#search-popup');
+
+	const menuToggle = document.querySelector('#menu-toggle');
+	const mobileMenu = document.querySelector('#mobile-menu');
+	const fixedButtons = document.querySelector('#fixed-buttons');
+
+	function hideSerchForm(formBlock){
+		formBlock.classList.remove('active');
+		formBlock.style.top = 'auto';
+		bodyEl.classList.remove('lock');
+	}
+	function resetActiveMenu(){
+		mobileMenu.querySelector('.active')?.classList.remove('active'); 
+		mobileMenu.classList.remove('active');
+		menuToggle.classList.remove('active');
+	}
+	
 	if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
-			bodyEl.classList.add('lock');
-			const topPosition = headerEl.getBoundingClientRect().bottom;
 			
 			if(searchFormPopup.classList.contains('active')){
-				searchFormPopup.classList.remove('active');
-				searchFormPopup.style.top = 'auto';
-				bodyEl.classList.remove('lock');
+				hideSerchForm(searchFormPopup);
 			}else{
+				/*положение нижнего края меню */
+				const topPosition = headerEl.getBoundingClientRect().bottom;
+				resetActiveMenu();
 				searchFormPopup.classList.add('active');
 				searchFormPopup.style.top = topPosition + 'px';
 				bodyEl.classList.add('lock');
+				
 			}
 			
 		});
@@ -67,20 +83,16 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
     /*===============MOBILE MENU ==================*/
-	const menuToggle = document.querySelector('#menu-toggle');
-	const mobileMenu = document.querySelector('#mobile-menu');
-	const fixedButtons = document.querySelector('#fixed-buttons');
+
 
 	if (menuToggle) {
 		const  mobMenuDropItem = mobileMenu.querySelectorAll('.drop-menu-li');
 		
 		/*   клик по иконке гамбургер*/  
 		menuToggle.addEventListener('click', ()=> {
-			
+			hideSerchForm(searchFormPopup);
 			if (menuToggle.classList.contains('active')) {
-				mobileMenu.querySelector('.active')?.classList.remove('active');
-				menuToggle.classList.remove('active');
-				mobileMenu.classList.remove('active');
+				resetActiveMenu();
 				bodyEl.classList.remove('lock');
 				if(window.scrollY > 500){
 					fixedButtons.classList.add('active');

@@ -3,11 +3,12 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	//=============MAIN===========
-	main.inner-page
+	main
 		+hero-section('about/header-bg.webp',['Главная', 'Услуги'], 'Услуги <br> <span class="accent-border"> Allterra&nbsp;Education </span>', 'back-link')
 		
 		include ../sections/_services
 		include ../sections/_feedback
+		include ../sections/_all-services.pug
 		include ../sections/_statistics
 		include ../sections/_accredit
 		include ../sections/_contacts

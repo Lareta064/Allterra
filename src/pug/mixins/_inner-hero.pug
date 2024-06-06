@@ -1,5 +1,5 @@
 mixin hero-section(bgImg, links, name, backLink)
-	section.hero(style="background-image: url('../img/"+ bgImg +"')")
+	section.hero(style="background-image: url('./img/"+ bgImg +"')")
 		.container
 			.hero-content
 				ul.breadcrumb
@@ -13,11 +13,11 @@ mixin hero-section(bgImg, links, name, backLink)
 					.hero-bottom
 						a(href="#!").back-link
 							svg.svg-chevron
-								use(href="../img/spriteSvg.svg#svg-chevron")
+								use(href="./img/spriteSvg.svg#svg-chevron")
 							span Назад
 
 mixin hero-section-center(bgImg, links, name, bottomText, titleClass)
-	section.hero.hero--center(style="background-image: url('../img/"+ bgImg +"')")
+	section.hero.hero--center(style="background-image: url('./img/"+ bgImg +"')")
 		.container
 			.hero-content
 				ul.breadcrumb
