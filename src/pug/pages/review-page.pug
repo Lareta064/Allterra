@@ -3,7 +3,7 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	//=============MAIN===========
-	main.inner-page
+	main.main
 		+hero-section(['Главная', 'Отзывы'], 'Отзывы','', 'title', 'back-link')( style="background-image:url(./img/about/header-bg.webp)")
 		include ../sections/_review-page
 
@@ -11,4 +11,4 @@ block content
 	include ../sections/_footer
 
 block variables
-	-var title = "404";
+	-var title = "Отзывы";

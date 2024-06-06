@@ -13,3 +13,13 @@ section.review-content
 			+review-card({img: 1, name:'Александр Ференц', range:'Генеральный директор ГК «АК-Сервис»', tags:['среднее_образование', 'родитель'], scool:'Ringling College of Art', loc:'США', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})
 			
 			+review-card({img: 3, name:'Захар Богданов', tags:['среднее_образование', 'родитель'], scool:"Queen Ethelburga's Collegiate", loc:'США', txt: 'Два года в школе пролетели незаметно, я завел очень много друзей и смог значительно улучшить свой английский.'})
+		
+		//=====pagination =======
+		.pagination
+			a(href="#!").page-num.prev
+			a(href="#!").page-num 1
+			a(href="#!").page-num 2
+			a(href="#!").page-num.active 3
+			a(href="#!").page-num ...
+			a(href="#!").page-num 22
+			a(href="#!").page-num.next
