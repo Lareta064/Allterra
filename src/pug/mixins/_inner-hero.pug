@@ -1,23 +1,23 @@
-mixin hero-section(bgImg, links, name, backLink)
-	section.hero(style="background-image: url('./img/"+ bgImg +"')")
-		.container
-			.hero-content
-				ul.breadcrumb
-					each item in links
-						li
-							a(href="#!") #{item}
-				.hero-title
-					h1.title !{name}
+//- mixin hero-section(bgImg, links, name, backLink)
+//- 	section.hero(style="background-image: url('./img/"+ bgImg +"')")
+//- 		.container
+//- 			.hero-content
+//- 				ul.breadcrumb
+//- 					each item in links
+//- 						li
+//- 							a(href="#!") #{item}
+//- 				.hero-title
+//- 					h1.title !{name}
 				
-				if backLink == 'back-link'
-					.hero-bottom
-						a(href="#!").back-link
-							svg.svg-chevron
-								use(href="./img/spriteSvg.svg#svg-chevron")
-							span Назад
+//- 				if backLink == 'back-link'
+//- 					.hero-bottom
+//- 						a(href="#!").back-link
+//- 							svg.svg-chevron
+//- 								use(href="./img/spriteSvg.svg#svg-chevron")
+//- 							span Назад
 
-mixin hero-section-center(bgImg, links, name, bottomText, titleClass, backLink )
-	section.hero.hero--center(style="background-image: url('./img/"+ bgImg +"')")
+mixin hero-section(links, name, bottomText, titleClass, backLink )
+	section.hero&attributes(attributes)
 		.container
 			.hero-content
 				ul.breadcrumb

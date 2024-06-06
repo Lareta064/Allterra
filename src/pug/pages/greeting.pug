@@ -4,7 +4,7 @@ block content
 	include ../sections/_header.pug
 	//=============MAIN===========
 	main.inner-page
-		+hero-section('greeting/header-bg.webp',['Главная', 'Обращение директора'], 'Обращение директора', 'back-link')
+		+hero-section(['Главная', 'Обращение директора'], 'Обращение директора','', '', 'back-link')(style="background-image:url(./img/greeting/header-bg.webp)")
 		
 		include ../sections/_greeting-section
 		include ../sections/_section-review
