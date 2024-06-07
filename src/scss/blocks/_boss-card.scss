@@ -21,6 +21,7 @@
 			font-size: 20px;
 			line-height: 1.6
 		}
+		
 	}
 	@media (max-width: 767px) {
 	  padding: 20px 16px;
@@ -56,7 +57,9 @@
 			aspect-ratio: 1;
 		}
 	}
-
+	.accent-link {
+		font-weight: 500;
+	}
 	.flex-col {
 		row-gap: 20px;
 	}
