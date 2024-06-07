@@ -156,8 +156,11 @@ input[type="submit"] {
 		padding-inline: 16px;
 	}
 }
-.container-narrow{
+.container-narrow,.limit-title{
 	width: min(925px, 100%);
+}
+.limit-title{
+	margin: 60px auto 0;
 }
 @mixin shadow-border{
 	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);

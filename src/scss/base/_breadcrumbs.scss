@@ -1,10 +1,9 @@
-/*.breadcrumb*/
+/*.breadcrumbs*/
 .breadcrumb {
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 	}
-
 }
 
 .breadcrumb>li {
@@ -13,10 +12,9 @@
 	line-height: 1.71;
 	font-size: 14px;
 	white-space: nowrap;
-
-	a {
-		color: $white;
-	}
+	a {	color: $white;}
+	
+	
 
 	&:last-child>* {
 		color: rgba(255, 255, 255, 0.6);
@@ -38,4 +36,18 @@
 	content: "/\00a0";
 	padding: 0 5px;
 	color: #fff;
+}
+.hero.hero--light {
+	.breadcrumb {
+
+		li+li:before,
+		a {
+			color: $text-dark;
+		}
+
+		li:last-child>* {
+			color: rgba(16, 23, 36, 0.6);
+		}
+
+	}
 }
