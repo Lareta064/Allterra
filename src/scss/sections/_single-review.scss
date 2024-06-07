@@ -1,0 +1,14 @@
+.talk-content{
+	padding-top: 48px;
+	p, ol, ul{line-height: 1.78;}
+	p:has(strong){
+		font-size: 18px;
+	}
+	p {margin-block: 8px;}
+	&__block +.talk-content__block {margin-top: 48px;}
+	p>img, figure>img, blockquote{margin-block: 48px;}
+	ol{
+
+	}
+	
+}
