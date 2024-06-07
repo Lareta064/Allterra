@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				searchFormPopup.classList.add('active');
 				searchFormPopup.style.top = topPosition + 'px';
 				bodyEl.classList.add('lock');
+				fixedButtons.classList.remove('active');
 				
 			}
 			
@@ -96,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				bodyEl.classList.remove('lock');
 				if(window.scrollY > 500){
 					fixedButtons.classList.add('active');
+					
 				}
 				
 			
@@ -103,8 +105,11 @@ document.addEventListener("DOMContentLoaded", function (){
 				menuToggle.classList.add('active');
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
-				if(window.scrollY > 500){
+				console.log('123');
+				if(window.scrollY > 500 ){
+					console.log('345');
 					fixedButtons.classList.remove('active');
+					console.log(fixedButtons.classList);
 				}
 			}
 		});
@@ -130,11 +135,14 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	//================ FIXED BOTTOM BUTTONS============ */
-	
+
 	if(fixedButtons){
 		window.addEventListener('scroll', ()=>{
 			
-			if(window.scrollY > 500){
+			if(window.scrollY > 500 && 
+				!mobileMenu.classList.contains('active') && 
+				!searchFormPopup.classList.contains('active') 			
+			){
 				fixedButtons.classList.add('active');
 			}else{
 				fixedButtons.classList.remove('active');

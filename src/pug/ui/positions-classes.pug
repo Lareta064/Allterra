@@ -24,50 +24,52 @@ html(lang="ru")
 				.container-dashboard__content
 					ul
 						li
-							h2.txt-center Текст по центру
+							h3.txt-center Текст по центру
 							pre.
 								h2.txt-center Текст по центру
 						hr
 						li
-							h2.txt-upper Текст Uppercase
+							h3.txt-upper Текст Uppercase
 						pre.
-							h2.txt-upper Текст Uppercase
+							h3.txt-upper Текст Uppercase
 						
 						hr
-						li .flex-row,.flex-center-y, .flex-center-x, .flex-center, 	.flex-col,.flex-justify
-
-							p ФЛЕКС классы
-
-
+						p ФЛЕКС классы
+						li .flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,.flex-col,  
+						hr
+						h3 Флекс-шапка секции. Блок с кнопками скрывается на экранах < 1024px
+						.flex-header
+							h2.h2(style="margin-bottom: 0") Статьи об обучении
+							
+							.btns-group
+								a(href="#!").btn--slim.btn-white Все новости
+								a(href="#!").btn--slim.btn Все статьи
+						pre.
+							.flex-header
+								h2.h2 Статьи об обучении
+								
+								.btns-group
+									a(href="#!").btn--slim.btn-white Все новости
+									a(href="#!").btn--slim.btn Все статьи
 						hr
 						li .w-100{width:100%!important;}
 
 						hr
 						li  
-							.mb-20 Отступ сверху в 20пикселей
+							h3 Отступы
 							pre.
-								.mb-20  Отступ сверху в 20пикселей
-
-						hr
-						li 
-							.pt-100 Класс для отступа в 100 пикс сверху 
-							pre.
-								.pt-100{ 
-									padding-top: 100px;
-									@media (max-width: 767px) {
-									padding-top: 80px;
-									}
-								}
-
+								.mb-20, -40 -48 -60 -80
+								.mt-20, 40, 48, 60, 80
+								pt-100
+								mt-auto
 							
+
 						hr
 						li 
-							h3 Класс для сетки в две колонки  от 768 пикс
-							.two-columns
-								h1 Левая колонка
-								h1 Правая колонка
-
+							h3 Для изображений
 							pre.
-								.two-columns
-									h1 Левая колонка
-									h1 Правая колонка
+								img.wh-100
+								.img-zoom - ховер масштабирование
+						hr
+						li
+							h3 Обертка для кнопки по центру

@@ -204,6 +204,24 @@ address {
 	flex-direction: column;
 	&>*{width: 100%;}
 }
+.flex-header {
+	margin-bottom: 50px;
+	align-items: flex-end;
+
+	&>* {
+		margin-bottom: 0;
+	}
+
+	.flex-header .btns-group {
+		display: flex;
+	}
+
+	@media (max-width: 1023px) {
+		.btns-group {
+			display: none !important;
+		}
+	}
+}
 .w-100{
 	width: 100% !important;
 }
@@ -211,10 +229,51 @@ address {
 .mb-20 {
 	margin-bottom: 20px;
 }
-.mb-60{
-	margin-bottom: 60px!important;
+.mb-40 {
+	margin-bottom: 40px;
+}
+.mb-48 {
+	margin-bottom: 48px;
 	@media (max-width: 767px) {
-		margin-bottom: 40px!important;
+	margin-bottom: 32px;
+	}
+}
+.mb-60 {
+	margin-bottom: 60px !important;
+
+	@media (max-width: 767px) {
+		margin-bottom: 40px !important;
+	}
+}
+.mb-80 {
+	margin-bottom: 80px;
+
+	@media (max-width: 767px) {
+		margin-bottom: 48px;
+	}
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mt-40 {
+	margin-top: 40px;
+}
+
+.mt-48 {
+	margin-top: 48px;
+
+	@media (max-width: 767px) {
+		margin-top: 32px;
+	}
+}
+
+.mt-60 {
+	margin-top: 60px !important;
+
+	@media (max-width: 767px) {
+		margin-top: 40px !important;
 	}
 }
 .mt-80{
@@ -223,22 +282,7 @@ address {
 		margin-top: 48px ;
 	}
 }
-.mt-60 {
-	margin-top: 60px !important;
 
-	@media (max-width: 767px) {
-		margin-top: 40px !important;
-	}
-}
-.mt-48{
-	margin-top: 48px;
-	@media (max-width: 767px) {
-	margin-top: 32px;
-	}
-}
-.mt-20{
-	margin-top: 20px;
-}
 .mt-auto{margin-top: auto;}
 .pt-100{ 
 	padding-top: 100px;
