@@ -4,6 +4,7 @@
 	column-gap:20px;
 	color: $white;
 	align-items: stretch;
+	margin-top: 80px;
 	&__text{
 		padding: 30px 0 32px 26px;
 		width: min(449px, 100%);
@@ -35,5 +36,8 @@
 			transform: translateX(-50%);
 			z-index: 2;
 		}
+	}
+	@media (max-width: 767px) {
+		margin-top: 60px;
 	}
 }
