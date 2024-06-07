@@ -1,17 +1,13 @@
 extends ../layouts/layout-ui.pug
-
+//- person(img, name, persLink, range, exper, tags, date, loc, txt, revSlider)
 block content
 	.container-dashboard
-		h2 Карточка отзыва
-		+review-card({
-			img: 1, name:'Александр Ференц', range:'Генеральный директор ГК «АК-Сервис»', tags:['среднее_образование', 'родитель'], scool:'Ringling College of Art', loc:'США', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})
-
-		+review-card({
-			img: 1, name:'Александр Ференц', scool:'Ringling College of Art', loc:'Великобритания', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})(class=" review--short")
-		pre.
-			+review-card({
-				img: 1, name:'Александр Ференц', scool:'Ringling College of Art', loc:'Великобритания', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})(class=" review--short")
+		h2 Карточка Персоны
 		
+		+person('review/author1','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', '','date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее')
+		pre.
+			+person('review/author1','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', '','date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее')
+
 
 block variables
 	-var title = "Allterra";
