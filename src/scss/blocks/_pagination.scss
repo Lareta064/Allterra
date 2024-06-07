@@ -13,23 +13,25 @@
 		color: $text-dark;
 		transition: .3s; 
 		flex-shrink: 0;
-		&.active{
+		&:hover, &.active{
 			background-color: #fff;
 			color: $main-accent;
 		}
 	}
-	.page-num:hover{color: $main-accent}
-	
-	.page-num.prev{
+
+	.page-num.prev, .page-num.next{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='14' viewBox='0 0 7 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.5 13L1.14018 7.76822C0.769338 7.32321 0.769338 6.67679 1.14018 6.23178L5.5 1' stroke='white' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
 		background-size: 7px 14px;
 		margin-right: 24px;
-		background-color: $dark-grey;
+		background-color: $bg-black;
+		
 	}
 	.page-num.next {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='14' viewBox='0 0 7 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 13L5.85982 7.76822C6.23066 7.32321 6.23066 6.67679 5.85982 6.23178L1.5 1' stroke='white' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
-		background-size: 7px 14px;
-		margin-left: 24px;
-		background-color: $bg-black;
+		
+	}
+	.next.disabled, .prev.disabled{background-color: $dark-grey; opacity: 0.4;
+		pointer-events: none;
+		cursor: default;
 	}
 }
