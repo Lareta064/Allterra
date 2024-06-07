@@ -57,8 +57,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		mobileMenu.classList.remove('active');
 		menuToggle.classList.remove('active');
 	}
-	
-	if(openSearchForm){
+		if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
 			
 			if(searchFormPopup.classList.contains('active')){
@@ -84,8 +83,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
     /*===============MOBILE MENU ==================*/
-
-
 	if (menuToggle) {
 		const  mobMenuDropItem = mobileMenu.querySelectorAll('.drop-menu-li');
 		
@@ -134,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			);
 		}
 	}
-	//================ FIXED BOTTOM BUTTONS============ */
+	//================ FIXED BOTTOM BUTTONS======*/
 
 	if(fixedButtons){
 		window.addEventListener('scroll', ()=>{
@@ -149,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}
-
 	/*================ STAGES TABS============ */
 	$('.custom-tabs').each(function() {
 		let ths = $(this);
@@ -159,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function (){
 			ths.find('.custom-tab').hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass('active');
 	});
-
 	/*============== ACORDION ========== */
 	;(function ($, window, document, undefined) {
 		"use strict";
@@ -337,8 +332,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 		document.querySelectorAll('.anchor').forEach(section => { observer.observe(section)} );
 	}
-   const dynamicMenu = document.querySelector('.dynamic-menu');
-  
+   
+	const dynamicMenu = document.querySelector('.dynamic-menu');
+    /* меню Содержание страницы на моб версии */
    if(dynamicMenu){
 	   dynamicMenuBtn = dynamicMenu.querySelector('.dynamic-menu__header');
 	   dynamicMenuList = dynamicMenu.querySelector('.dynamic-menu__list');

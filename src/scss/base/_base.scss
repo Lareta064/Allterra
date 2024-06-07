@@ -157,7 +157,7 @@ input[type="submit"] {
 	}
 }
 .container-narrow{
-	width: min(900px, 100%);
+	width: min(925px, 100%);
 }
 @mixin shadow-border{
 	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
@@ -166,7 +166,7 @@ input[type="submit"] {
 }
 .bx-sh{
 	background-color: $white;
-	box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 address {
 	font-style: normal;

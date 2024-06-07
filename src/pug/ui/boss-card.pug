@@ -3,26 +3,10 @@ extends ../layouts/layout-ui.pug
 block content
 	.container-dashboard(style="background: #F0F3F9")
 		h2 Карточка Руководителя
-		+person-card(1, 'Гречко Владимир Ильич')
-		pre.
-			+person-card(1, 'Гречко Владимир Ильич')
-		
-		.bosses-cards.flex-row
-			//========= single card ===========
-			+person-card(1, 'Гречко Владимир Ильич')
-			
-			//========= single card ==========
-			+person-card(2, 'Бякишева Марина Леонидовна')
+		.chief-card
+			+person('boss/boss1','Гречко Владимир Ильич','grechko@allterra.ru', 'Генеральный директор', 'Опыт работы 27 лет')
 		
 		pre.
-			.bosses-cards.flex-row
-				//========= single card ===========
-				+person-card(1, 'Гречко Владимир Ильич')
-				
-				//========= single card ==========
-				+person-card(2, 'Бякишева Марина Леонидовна')
-
-		h2 Карточка Руководителя - вариант 2
-		+person-info(1, 'Гречко Владимир Ильич')
-		pre.
-			+person-info(1, 'Гречко Владимир Ильич')
+			+person(img, name, persLink, range, exper, tags, date, loc, txt, txtLink, revSlider)
+		
+		

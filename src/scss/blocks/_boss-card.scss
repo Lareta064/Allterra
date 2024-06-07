@@ -1,11 +1,12 @@
-.person-card{
+.chief-card{
+
 	padding: 30px;
 	background-color: #fff;
 	width: min(605px, 100%);
 	flex-shrink: 0;
 	.person{
-		gap:30px;
-		&__img {
+		&__info{column-gap:30px}
+		&__photo {
 			width: 150px;
 			height: 200px;
 			@media (max-width: 1279px) {
@@ -16,73 +17,39 @@
 				height: 150px;
 			}
 		}
-
 		&__name {
 			font-size: 20px;
-			line-height: 1.6
+		}
+		&__details{
+			justify-content: center;
+			gap:20px;
 		}
 		
 	}
-	@media (max-width: 767px) {
+	
+}
+.chief-card, .person-card{
+	@media (max-width: 1279px) {
+		padding: 30px 20px;
+	}
+	@media (max-width: 480px) {
 	  padding: 20px 16px;
-		.person{
+		.person__info{
 		 	flex-direction: column;
 			align-items: flex-start;
-			gap:20px
-	  		
-		}
+			gap:20px;	  		
+		 }
 	}
 }
-.person{
-	gap: 40px;
-	font-size: 16px;
-	line-height: 1.6;
-	&__name {
-		font-size: 16px;
-		line-height: 1.5;
-		font-weight: 600;
-	}
-	&__img {
-		width: 100%;
-		aspect-ratio: 63 / 84;
-		flex-shrink: 0;
-		background-color: #f0f0f0;
-		overflow: hidden;
-		
-		@media (max-width: 1279px) {
-			aspect-ratio: 3 / 4;
-		}
-		@media (max-width: 767px) {
-			width: 156px;
-			aspect-ratio: 1;
-		}
-	}
-	.accent-link {
-		font-weight: 500;
-	}
-	.flex-col {
-		row-gap: 20px;
-	}
-	@media (max-width: 1279px) {
-		gap: 20px;
-		gap: 40px;
-	}
-	
-	
-}
-.person.flex-col {
-	p,a {font-size: 14px;}
-	.person__name {font-size: 16px;}
-	@media (max-width: 767px) {
-		flex-direction: row;
-		.person__name{font-size: 14px;}
-		p, a{font-size: 12px;}
-		.flex-col {
+ .person-card{
+	.person__links{
+		@media (max-width: 480px) {
 			justify-content: space-between;
 		}
 	}
-}
-.bosses-cards{
+ }
+
+.chief-cards{
 	column-gap: 20px;
 	@media (max-width: 767px) {
 	flex-direction: column;

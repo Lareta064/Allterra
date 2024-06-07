@@ -17,7 +17,7 @@ mixin person(img, name, persLink, range, exper, tags, date, loc, txt, txtLink, r
 				if tags
 					.tags-list
 						each tag in tags
-							a(href="#!") ##{tag}
+							a(href="#!") #{tag}
 				.person__links
 					a(href="#!").accent-link #{persLink}
 					if loc

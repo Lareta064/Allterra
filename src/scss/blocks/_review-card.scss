@@ -121,6 +121,39 @@
 		} 
 	}
 }
+.person.short-card{
+	width: min(295px, 100%);
+	.person__photo{
+		aspect-ratio:59 / 75;
+	    height: auto;
+	}
+	.person__info{
+		flex-direction: column;
+		&>*{width: 100%;}
+		row-gap: 40px;
+	}
+	.person__name{font-size: 16px;}
+	.person__range, .persone__exper{opacity: .6;}
+	&>*{font-size: 14px;}
+	.person__details{row-gap:20px;}
+
+}
+.person-card, .person.short-card{
+	.person__links{
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap:12px;
+		&>*+*{margin-left: 0;}
+	}
+}
+.person-card{
+	padding: 30px;
+	.person__photo{
+		width: 198px;
+		height: auto;
+		aspect-ratio: 1;
+	}
+}
 .tags-list {
 	display: flex;
 	flex-wrap: wrap;
