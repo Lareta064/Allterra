@@ -8,24 +8,23 @@ section.review-section.dark-bg
 				.swiper-wrapper
 					//===== single slide ========
 					.swiper-slide
-						+review-card({
-							img: 1, name:'Александр Ференц',range:'true', scool:'Ringling College of Art', loc:'Великобритания', txt: 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта'})(class=" review--short")
+						.review-card.bx-sh
+							+person('review/author1','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', '','date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее', 'slider')
 
 					//=====single slide ========
 					.swiper-slide
-						+review-card({
-							img: 2, name:'София', scool:'Sidcot School', loc:'Великобритания', txt: 'Я могу рекомендовать компанию Allterra Education всем, кто планирует отправлять ребенка в Великобританию. '})(class=" review--short")
-
+						.review-card.bx-sh
+							+person('review/author2','София','Sidcot School', '', '', '','date', 'Великобритания', 'Я могу рекомендовать компанию Allterra Education всем, кто планирует отправлять ребенка в Великобританию.', 'Читать далее', 'slider')
+					
+					
 					//===== single slide ========
 					.swiper-slide
-						+review-card({
-							img: 3, name:'Захар Богданов', scool:"Queen Ethelburga's Collegiate", loc:'Австралия', txt: 'Два года в школе пролетели незаметно, я завел очень много друзей и смог значительно улучшить свой английский.'})(class=" review--short")
-
+						.review-card.bx-sh
+							+person('review/author3','Захар Богданов',"Queen Ethelburga's Collegiate", '', '', '','date', 'Австралия', 'Два года в школе пролетели незаметно, я завел очень много друзей и смог значительно улучшить свой английский.', 'Читать далее', 'slider')
 					//=====single slide ========
 					.swiper-slide
-						+review-card({
-							img: 4, name:'Иван Рябинин', scool:'Giggleswick School', loc:'Германия', txt: 'Все критерии, по которым мы выбирали школу, совпали.'})(class=" review--short")
-
+						.review-card.bx-sh
+							+person('review/author4','Иван Рябинин',"Giggleswick School", '', '', '','date', 'Германия', 'Все критерии, по которым мы выбирали школу, совпали.', 'Читать далее', 'slider')
 			//===== swiper navigation========
 			.slider-nav
 				.swiper-button-next

@@ -3,7 +3,7 @@ mixin person(img, name, persLink, range, exper, tags, date, loc, txt, txtLink, r
 		//====== top row =====
 		.person__info
 			.person__photo
-				img(src="../img/"+ img +".webp", width="295"  alt="img")
+				img.wh-100.lazy(src="../img/"+ img +".webp", width="295"  alt="img")
 			.person__details
 				.flex-center-y
 					.person__name #{name}
@@ -26,7 +26,7 @@ mixin person(img, name, persLink, range, exper, tags, date, loc, txt, txtLink, r
 			//====== text row =====
 			.person__txt
 				p !{txt}
-				a(href="#!").accent-link #{txtLink}
+				a(href="#!").accent-link.und-line #{txtLink}
 		if revSlider
 			//======= for mobile =====
 			.person__meta

@@ -236,25 +236,36 @@ h6, .h6 {
 .white-link{
 	color: $white;
 }
-*.white-link, *.accent-link, *.grey-link{
+*.white-link,
+*.accent-link,
+*.grey-link{
 	position: relative;
-	width: fit-content!important;
-	&:before{
-		content:'';
+	width: fit-content;
+	transition: .3s; 
+	&:before {
+		content: '';
 		display: block;
 		height: 1px;
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		width: 0;
+		
 		background-color: $main-accent;
-		transition: .3s; 
+		transition: .3s;
 	}
-	&:hover{color: $main-accent;}
-	&:hover:before{
-		width: 100%;
+	&:hover {
+		color: $main-accent;
+	}
+	&:not(.und-line){
+		&:before {width: 0;}
+		&:hover:before {width: 100%;}
+	}
+	&.und-line{
+		&:before {width: 100%;}
+		&:hover:before {width: 0;}
 	}
 }
+	
 *.white-link:before{
 	background-color: $white;
 	width: 100%;
