@@ -1,0 +1,30 @@
+.contact-card{
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
+	.txt-18{line-height: 1.78;}
+	address{
+		.txt-14{opacity: 0.4;}
+		.h3{margin-bottom: 20px;}
+	}
+	.cc-ind{display: block;opacity: .5;}
+	.contact-grop{
+		margin-bottom: 20px;
+		font-size: 18px;
+		.contact-name{font-size: 14px; line-height: 1.71;}
+	}
+	@media (max-width: 1279px) {
+		padding: 20px;
+	}
+	@media (max-width: 1023px) {
+		padding: 16px;
+		.txt-14 {font-size: 14px;}
+	}
+	@media (max-width: 767px) {
+		.txt-18{line-height: 1.75;font-size: 16px;}
+		.contact-grop{
+			.accent-link{font-size: 14px;}
+			
+		} 
+	}
+}

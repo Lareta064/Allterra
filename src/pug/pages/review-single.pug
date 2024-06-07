@@ -1,0 +1,21 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	//=============MAIN===========
+	main.inner-page
+
+			
+			
+		
+		include ../sections/_review-single-section
+		include ../sections/_section-review
+		
+		include ../sections/_accredit
+		include ../sections/_contacts
+	include ../sections/_footer
+
+block variables
+	-var title = "Отзыв родителя";
+	
+

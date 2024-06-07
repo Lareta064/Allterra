@@ -16,7 +16,7 @@
 
 	}
 	&:nth-child(2){
-		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.06);
+		box-shadow: 0 8px 16px  rgba(0, 0, 0, 0.06), 0 0 1px rgba(0, 0, 0, 0.06);
 		background: $white;
 	}
 	@media (max-width: 991px){width: min(500px, 100%);}
@@ -42,7 +42,7 @@
 	}
 	:nth-child(2n){
 		.accredit-card{
-			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.06);
+			box-shadow: 0 8px 16px  rgba(0, 0, 0, 0.06), 0 0 1px  rgba(0, 0, 0, 0.06);
 			background: $white;
 		}
 		.accredit-card:nth-child(2){

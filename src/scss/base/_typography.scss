@@ -4,6 +4,8 @@
 .txt-20 {
 	font-weight: 600;
 }
+h1 {text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);}
+
 h1,h2,
 .h1,
 .h2 {
@@ -67,6 +69,7 @@ h2,.section-title {
 		font-size: 26px;
 	}
 }
+h1.h2, .hero .h2{font-weight: 600;}
 h3, .h3{
 	font-weight: 600;
 	font-size: 32px;
@@ -142,6 +145,7 @@ h6, .h6 {
 .txt-center{text-align: center;}
 .txt-upper{text-transform: uppercase;}
 .tt-none{text-transform: none;}
+.txt-500{font-weight: 500;}
 .accent-border{
 	border-bottom: 5px solid $main-accent;
 }
@@ -232,25 +236,36 @@ h6, .h6 {
 .white-link{
 	color: $white;
 }
-*.white-link, *.accent-link, *.grey-link{
+*.white-link,
+*.accent-link,
+*.grey-link{
 	position: relative;
-	width: fit-content!important;
-	&:before{
-		content:'';
+	width: fit-content;
+	transition: .3s; 
+	&:before {
+		content: '';
 		display: block;
 		height: 1px;
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		width: 0;
+		
 		background-color: $main-accent;
-		transition: .3s; 
+		transition: .3s;
 	}
-	&:hover{color: $main-accent;}
-	&:hover:before{
-		width: 100%;
+	&:hover {
+		color: $main-accent;
+	}
+	&:not(.und-line){
+		&:before {width: 0;}
+		&:hover:before {width: 100%;}
+	}
+	&.und-line{
+		&:before {width: 100%;}
+		&:hover:before {width: 0;}
 	}
 }
+	
 *.white-link:before{
 	background-color: $white;
 	width: 100%;
@@ -269,17 +284,24 @@ h6, .h6 {
 *.white-link:hover{color: $white; opacity: 0.8;}
 *.white-link:hover:before{width: 0;}
 
-.contact-group{
-	font-size: 16px;
+ .contact-group {
 	line-height: 1.75;
 	color: rgba(16, 23, 36, 1);
-	display: flex;
-	flex-direction: column;
-	.contact-name{
+	.contact-name {
 		color: rgba(16, 23, 36, 0.4);
-	}
-	@media (max-width: 767px) {
 		font-size: 14px;
+		display: block;
+	}
+	a, p{font-size: 18px;}
+	@media (max-width: 767px) {
+		a,p {font-size: 16px;}
+	}
+}
+.footer .contact-group{
+	a,p,.contact-name{font-size: 16px;}
+	
+	@media (max-width: 767px) {
+		a, p, .contact-name {font-size: 14px;}
 	}
 }
 

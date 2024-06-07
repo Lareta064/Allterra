@@ -2,6 +2,8 @@
 	padding-top: 100px;
 	padding-bottom: 0!important;
 	position: relative;
+	h1, .h1 {text-shadow: none;}
+		
 	@media (max-width: 1439px) {
 			padding-top: 118px;
 		}

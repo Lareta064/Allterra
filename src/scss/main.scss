@@ -8,7 +8,11 @@
 @import "blocks/_gamburger.scss";
 @import "blocks/_mobile-fixed-buttons.scss";
 @import "blocks/_mobile-menu.scss";
+@import "base/_grids.scss";
+@import "base/_breadcrumbs.scss";
 @import "blocks/_list-blocks.scss";
+@import "blocks/_pagination.scss";
+
 
 
 
@@ -60,5 +64,14 @@
 
 //============services-page====
 @import "sections/_all-services.scss";
+
+//============contacts-page====
+@import "blocks/_contacts-card.scss";
+@import "sections/_contacts-page.scss";
+
+//============single-review====
+@import "sections/_single-review.scss";
+@import "blocks/_decore-block.scss";
+
 //ui
 @import "ui/_ui-navigation";

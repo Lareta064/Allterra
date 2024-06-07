@@ -1,0 +1,35 @@
+.pagination{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 48px;
+	.page-num{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		font-size: 16px;
+		line-height: 40px;
+		text-align: center;
+		color: $text-dark;
+		transition: .3s; 
+		flex-shrink: 0;
+		&.active{
+			background-color: #fff;
+			color: $main-accent;
+		}
+	}
+	.page-num:hover{color: $main-accent}
+	
+	.page-num.prev{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='14' viewBox='0 0 7 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.5 13L1.14018 7.76822C0.769338 7.32321 0.769338 6.67679 1.14018 6.23178L5.5 1' stroke='white' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
+		background-size: 7px 14px;
+		margin-right: 24px;
+		background-color: $dark-grey;
+	}
+	.page-num.next {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='14' viewBox='0 0 7 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 13L5.85982 7.76822C6.23066 7.32321 6.23066 6.67679 5.85982 6.23178L1.5 1' stroke='white' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
+		background-size: 7px 14px;
+		margin-left: 24px;
+		background-color: $bg-black;
+	}
+}

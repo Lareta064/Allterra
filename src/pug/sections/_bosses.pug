@@ -1,14 +1,11 @@
 //======= Руководство ========
-section.bosses.light-bg
+section.chief.light-bg
 	.container
 		h2.section-title Руководство компании
-		.bosses-cards.two-columns-1024
+		.chief-cards.two-columns-1024
 			//========= single card ===========
-			+person-card(1, 'Гречко Владимир Ильич')
+			.chief-card
+				+person('boss/boss1','Гречко Владимир Ильич','grechko@allterra.ru', 'Генеральный директор', 'Опыт работы 27 лет')
+			.chief-card
+				+person('boss/boss2','Бякишева Марина Леонидовна','grechko@allterra.ru', 'Генеральный директор', 'Опыт работы 27 лет')
 			
-			//========= single card ==========
-			+person-card(2, 'Бякишева Марина Леонидовна')
-
-
-
-		

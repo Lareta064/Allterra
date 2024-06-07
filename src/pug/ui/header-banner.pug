@@ -2,12 +2,17 @@ extends ../layouts/layout-ui.pug
 
 block content
 	.container-dashboard
-		+hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании', 'back-link')
+		//- +hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании', 'back-link')
 		
-		pre.
-			+hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании', 'back-link')
+		//- pre.
+		//- 	+hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании', 'back-link')
 		hr
-		+hero-section-center('about/header-bg.webp',['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'tt-none')
+		+hero-section(['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'tt-none')(class="hero--center" style="background-image:url(./img/about/header-bg.webp)")
 		
 		pre.
-			+hero-section-center('about/header-bg.webp',['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'tt-none')
+			+hero-section(['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'tt-none')(class="hero--center" style="background-image:url(./img/about/header-bg.webp)")
+		hr
+		+hero-section(['Главная', 'Услуги'], 'Услуги', '', '', 'back-link')
+		pre.
+			+hero-section(['Главная', 'Услуги'], 'Услуги', '', '', 'back-link')
+		

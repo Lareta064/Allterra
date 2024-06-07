@@ -24,7 +24,7 @@
 }
 .btn,.btn-br{
 	background-color: $bg-black;
-	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+	box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
 	&:hover{
 		background-color: #1f1f1f;
 		color: $white;
@@ -60,7 +60,7 @@
 }
 .btn-br{
 	border: 1px solid rgba(255, 255, 255, 0.8);
-	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 1px 1px 0 rgba(0, 0, 0, 0.08);
+	box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06), 0 6px 16px  rgba(0, 0, 0, 0.08), 0 1px 1px  rgba(0, 0, 0, 0.08);
 	font-weight: 400;
 	&:focus{
 		border: 1px solid rgba(255, 255, 255, 0.8);
@@ -76,7 +76,7 @@
 	}
 }
 .btn-br-white{
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px  rgba(0, 0, 0, 0.15);
 	background: $white;
 	border: 1px solid $text-dark;
 	color: $bg-black;
@@ -97,23 +97,12 @@
 	padding-inline:24px;
 	min-width: 137px;
 	@media (max-width: 767px) {
-		min-width: 54px;
+		min-width: 154px;
 		height: 52px!important;
 	}
 	
 }
 .btn-white.btn--slim{box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);}
-.center-button {
-	display: flex;
-	justify-content: center;
-	column-gap: 20px;
-	align-items: center;
-	margin-top: 60px;
-
-	@media (max-width: 767px) {
-		margin-top: 40px;
-	}
-}
 
 .btns-group , .social{
 	gap: 20px;
@@ -126,10 +115,7 @@
 }
 .btns-group{
 	column-gap:20px;
-	.btn-accent,
-	.btn,
-	.btn,
-	.btn-white{
+	*[class^= "btn-"]{
 	@media (max-width: 767px) {
 			width: auto;
 	

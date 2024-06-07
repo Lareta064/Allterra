@@ -1,0 +1,15 @@
+mixin contact-card(city,  ind, address,tel)
+	.contact-card
+		address.contact-group
+			span.txt-14 Россия
+			.h3 #{city}
+			
+			p.txt-18
+				span.cc-ind #{ind}
+				| #{address}
+		.mt-20
+			a(href="#!").accent-link Открыть карту
+		
+		.contact-group.mt-20
+			span.contact-name Телефон
+			a(href="tel:88005114993") #{tel}

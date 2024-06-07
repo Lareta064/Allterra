@@ -31,7 +31,7 @@
 			flex-grow: 1;
 			justify-content: flex-start;
 			border: 2px solid $main-accent;
-			box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+			box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
 	
 			span:first-child {
 				color: $main-accent;
@@ -77,7 +77,7 @@
 	&__content{
 		background-color: $white;
 		padding: 44px 74px;
-		box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+		box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
 		@media (max-width: 1439px) {
 			padding: 44px 32px;
 		}

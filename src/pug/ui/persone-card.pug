@@ -1,0 +1,17 @@
+extends ../layouts/layout-ui.pug
+//- person(img, name, persLink, range, exper, tags, date, loc, txt, revSlider)
+block content
+	.container-dashboard(style="background: #F0F3F9")
+		h2 Short card
+		
+		+person('boss/boss1','Гречко Владимир Ильич','grechko@allterra.ru', 'Генеральный директор', 'Опыт работы 27 лет')(class="short-card")
+		
+		pre.
+			+person('boss/boss1','Гречко Владимир Ильич','grechko@allterra.ru', 'Генеральный директор', 'Опыт работы 27 лет')(class="short-card")
+		
+		h2 Short card
+		.person-card.light-bg
+			+person('review/author4','Иван Рябинин','Giggleswick School', '', '', ['#среднее_образование', '#родитель'], 'date', 'США')
+		
+		pre.
+			+person('review/review4','Иван Рябинин','Giggleswick School', '', '', ['#среднее_образование', '#родитель', '', 'США'])(class="short-card")

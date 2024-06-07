@@ -1,0 +1,53 @@
+/*.breadcrumbs*/
+.breadcrumb {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.breadcrumb>li {
+	position: relative;
+	display: inline-block;
+	line-height: 1.71;
+	font-size: 14px;
+	
+	a {	color: $white;}
+	
+	
+
+	&:last-child>* {
+		color: rgba(255, 255, 255, 0.6);
+		pointer-events: none;
+		cursor: default;
+	}
+
+	&:last-child:hover>* {
+		border: 0;
+	}
+
+	&:hover>* {
+		border-bottom: 1px solid $white;
+	}
+
+}
+
+.breadcrumb>li+li:before {
+	content: "/\00a0";
+	padding: 0 5px;
+	color: #fff;
+}
+.hero.hero--light {
+	.breadcrumb {
+
+		li+li:before,
+		a {
+			color: $text-dark;
+		}
+
+		li:last-child>* {
+			color: rgba(16, 23, 36, 0.6);
+		}
+
+	}
+}

@@ -69,11 +69,11 @@ html(lang="ru")
 							h4 #[strong Элемент Контакт]
 							
 							.contact-group
-								p.contact-name Телефон
+								span.contact-name Телефон
 								a(href="tel:88005114993") 8(800) 511-4993
 							pre.
 								.contact-group
-									p.contact-name Телефон
+									span.contact-name Телефон
 									a(href="tel:88005114993") 8(800) 511-4993
 						hr
 						li
@@ -113,8 +113,7 @@ html(lang="ru")
 								p Имея многолетний опыт работы в сфере образования за рубежом и высокую квалификацию каждого сотрудника, мы гарантируем Вам доступ ко всем возможным вариантам обучения, содействие при поступлении и курирование в течение всего процесса обучения.
 							pre.
 								blockquote(cite="")
-									p Имея многолетний опыт работы в сфере образования за рубежом и высокую квалификацию каждого сотрудника, мы гарантируем Вам доступ ко всем возможным вариантам обучения, содействие при поступлении и курирование в течение всего процесса обучения.
-
+									p Имея многолетний опыт работы 
 						hr
 						li
 							+table([
@@ -128,5 +127,37 @@ html(lang="ru")
 								{txt1: '14:00-18:00', txt2: 'Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis.'},
 								{txt1: '14:00-18:00', txt2: 'Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque.'},
 								{txt1: '14:00-18:00', txt2: 'Vulputate eu scelerisque felis imperdiet proin fermentum leo vel'}])
-
+						hr
+						li(style="background-color: #f5f5f5")
+							.pagination
+								a(href="#!").page-num.prev
+								a(href="#!").page-num 1
+								a(href="#!").page-num 2
+								a(href="#!").page-num.active 3
+								a(href="#!").page-num ...
+								a(href="#!").page-num 22
+								a(href="#!").page-num.next
+						
+						pre.
+							.pagination
+								a(href="#!").page-num.prev
+								a(href="#!").page-num 1
+								a(href="#!").page-num 2
+								a(href="#!").page-num.active 3
+								a(href="#!").page-num ...
+								a(href="#!").page-num 22
+								a(href="#!").page-num.next
+						hr
+						li
+							.flex-row(style="column-gap:10px;")
+								.filter-tag
+									span Испания
+									span.icon-cross
 							
+								.filter-tag
+									span Нидерланды
+									span.icon-cross
+							pre.
+								.filter-tag
+									span Испания
+									span.icon-cross

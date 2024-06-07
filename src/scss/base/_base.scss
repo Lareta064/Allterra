@@ -156,13 +156,23 @@ input[type="submit"] {
 		padding-inline: 16px;
 	}
 }
-.container-narrow{
-	width: min(900px, 100%);
+.container-narrow,.limit-title{
+	width: min(925px, 100%);
+}
+.limit-title{
+	margin: 60px auto 0;
 }
 @mixin shadow-border{
-	box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 	background: $white;
 	
+}
+.bx-sh{
+	background-color: $white;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+address {
+	font-style: normal;
 }
 .flex-item{
 	display: flex;
@@ -197,6 +207,24 @@ input[type="submit"] {
 	flex-direction: column;
 	&>*{width: 100%;}
 }
+.flex-header {
+	margin-bottom: 50px;
+	align-items: flex-end;
+
+	&>* {
+		margin-bottom: 0;
+	}
+
+	.flex-header .btns-group {
+		display: flex;
+	}
+
+	@media (max-width: 1023px) {
+		.btns-group {
+			display: none !important;
+		}
+	}
+}
 .w-100{
 	width: 100% !important;
 }
@@ -204,12 +232,46 @@ input[type="submit"] {
 .mb-20 {
 	margin-bottom: 20px;
 }
-.mb-60{
-	margin-bottom: 60px!important;
+.mb-40 {
+	margin-bottom: 40px;
+}
+.mb-48 {
+	margin-bottom: 48px;
 	@media (max-width: 767px) {
-		margin-bottom: 40px!important;
+	margin-bottom: 32px;
 	}
 }
+.mb-60 {
+	margin-bottom: 60px !important;
+
+	@media (max-width: 767px) {
+		margin-bottom: 40px !important;
+	}
+}
+.mb-80 {
+	margin-bottom: 80px;
+
+	@media (max-width: 767px) {
+		margin-bottom: 48px;
+	}
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mt-40 {
+	margin-top: 40px;
+}
+
+.mt-48 {
+	margin-top: 48px;
+
+	@media (max-width: 767px) {
+		margin-top: 32px;
+	}
+}
+
 .mt-60 {
 	margin-top: 60px !important;
 
@@ -217,12 +279,13 @@ input[type="submit"] {
 		margin-top: 40px !important;
 	}
 }
-.mt-48{
-	margin-top: 48px;
+.mt-80{
+	margin-top: 80px;
 	@media (max-width: 767px) {
-	margin-top: 32px;
+		margin-top: 48px ;
 	}
 }
+
 .mt-auto{margin-top: auto;}
 .pt-100{ 
 	padding-top: 100px;
@@ -242,7 +305,7 @@ img.wh-100 {
 		transform: scale(1.1);
 	}
 }
-address{font-style: normal;}
+
 .dark-bg{
 	background-color: $bg-black;
 	padding-block: 100px;
@@ -259,6 +322,15 @@ address{font-style: normal;}
 section + section{padding-top: 100px;}
 section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding-bottom: 100px;
+}
+.main{
+	section:last-child:not(.light-bg),
+	section:last-child:not(.dark-bg) {
+		padding-bottom: 100px;
+		@media (max-width: 767px) {
+		padding-bottom: 80px;
+		}
+	}
 }
 .inner-page {
 	section+section {
@@ -292,100 +364,10 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 		padding-bottom: 80px;
 	}
 }
-.breadcrumb{
-	ul{
-		display: flex;
-		flex-wrap: wrap;
-	}
-	
-}
-.breadcrumb>li{
-	position: relative;
-	display: inline-block;
-	line-height: 1.71;
-	font-size: 14px;
-	white-space: nowrap;
-	a{color: $white;}
-	&:last-child>*{
-		color: rgba(255, 255, 255, 0.6);
-		pointer-events: none;
-		cursor: default;
-	}
-	&:last-child:hover>*{border:0;}
-	&:hover >*{border-bottom: 1px solid $white;}
-	
-}
 
-.breadcrumb>li+li:before {
-	content: "/\00a0";
-	padding: 0 5px;
-	color: #fff;
-}
-.two-columns,.two-columns-1024 {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 20px;
 
+.hide-mobile{
 	@media (max-width: 767px) {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 16px;
+	display: none!important;
 	}
 }
-
-.grid-12{
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 40px;
-	@media (max-width: 1279px) {
-	 gap: 20px;
-	}
-	@media (max-width: 767px) {
-		grid-template-columns: 1fr;
-	}
-}
-.two-columns-1024{
-	@media (max-width: 1023px) {
-		
-		grid-template-columns: 1fr;
-		
-	}
-}
-.four-columns{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap:20px;
-	@media (max-width: 1049px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media (max-width: 767px) {
-		grid-template-columns: 1fr;
-		gap: 16px;
-	}
-}
-.aside-grid{
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-	column-gap: 40px;
-	row-gap:40px;
-	align-items: flex-start;
-	&__col{max-width: 295px;}
-	@media (max-width: 767px) {
-		&__col {max-width: unset;}
-		grid-template-columns: 1fr;
-		gap: 40px;
-	}
-}
-.aside-grid.gap-20{
-	column-gap: 20px;
-}
-.aside-grid.aside-grid--1280{
-	
-	@media (max-width: 1279px) {
-	  grid-template-columns:  1fr;
-	.aside-grid__col {max-width: unset;}
-		
-			
-	}
-}
-.backlit-menu a.active{color: green}

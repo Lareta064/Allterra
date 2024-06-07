@@ -41,6 +41,9 @@
 		font-size: 14px;
 		font-weight: 400;
 		svg{color: $white;}
+		width: fit-content;
+		margin-right: auto;
+		
 		span{border-bottom: 1px solid currentColor;}
 		&:hover{
 			opacity:.6;
@@ -59,4 +62,10 @@
 	.hero-bottom{
 		text-align: center;
 	}
+}
+.hero.hero--light{
+	padding-bottom: 0;
+	min-height: unset;
+	&:after{display: none;}
+	h1{text-shadow: none;}
 }
