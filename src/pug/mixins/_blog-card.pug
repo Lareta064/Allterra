@@ -1,10 +1,32 @@
-mixin blog-card(img, meta, txt)
-	.blog-card.img-zoom
+mixin blog-card(img, meta, txt, desk, loc)
+	.blog-card.img-zoom&attributes(attributes)
 		.blog-card__img
 			img.vh-100.lazy(src="./img/blog/"+ img+".webp", width="295" height="194" alt="img")
 		a(href="#!").blog-card__text
-			.blog-card__meta.txt-14
-				span #{meta}
-				time(datetime="2024-03-12") 12.03.2024
+			.blog-card__info.txt-14
+				if meta!=''
+					span #{meta}
+					time(datetime="2024-03-12") 12.03.2024
+				if loc
+					span.pin-item #{loc}
 			h3.txt-16  !{txt}
+			if desk !=''
+				p #{desk}
+			span.accent-link Подробнее
+
+//-  для ui панели (что бы отображалась картинка)
+mixin blog-card-ui(img, meta, txt, desk, loc)
+	.blog-card.img-zoom
+		.blog-card__img
+			img.vh-100.lazy(src="../img/blog/"+ img+".webp", width="295" height="194" alt="img")
+		a(href="#!").blog-card__text
+			.blog-card__info.txt-14
+				if meta!=''
+					span #{meta}
+					time(datetime="2024-03-12") 12.03.2024
+				if loc
+					span.pin-item #{loc}
+			h3.txt-16  !{txt}
+			if desk !=''
+				p #{desk}
 			span.accent-link Подробнее

@@ -1,4 +1,4 @@
-mixin blogCardsSlider(title, titleSpan, whiteBtnClass = 'btn-white')
+mixin blogCardsSlider(title, titleSpan, whiteBtnClass = 'btn-white', sliderCards)
 	//======== BLOG CARDS ========
 	section.blog&attributes(attributes)
 		.container
@@ -17,7 +17,7 @@ mixin blogCardsSlider(title, titleSpan, whiteBtnClass = 'btn-white')
 					.swiper-wrapper
 						//===== single slide ========
 						.swiper-slide
-							+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+							+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')(class="blog-card--full")
 						
 						//===== single slide ========
 						.swiper-slide
@@ -55,3 +55,55 @@ mixin blogCardsSlider(title, titleSpan, whiteBtnClass = 'btn-white')
 					a(href="#!" class="btn--slim " + whiteBtnClass)  Все новости
 					a(href="#!").btn--slim.btn Все статьи
 
+mixin blogCardsSlider-inner(title)
+	//======== BLOG CARDS ========
+	section.blog&attributes(attributes)
+		.container
+			//======= SECTION TOP ROW=======
+			
+			h2.h2.tt-none.txt-center #{title} 
+			//======= SECTION SLIDER =======
+			.slider-wrapper
+				//======== slider-content =======
+				.blog-cards-slider.swiper
+					.swiper-wrapper
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(5, '', 'Varna University of Management', 'Варненский университет менеджмента', 'Великобритания')(class="blog-card--full")
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(6, '', 'Chang’an University', 'Чанъаньский университет', 'Великобритания')
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(7, '', 'University of Nicosia', 'Университет Никосии', 'Великобритания')(class="blog-card--full")
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(8, '', 'International School San Patricio Toledo','Международная школа Сан Патрисио Толедо',  'Великобритания')(class="blog-card--full")
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(5, '', 'Varna University of Management', 'Варненский университет менеджмента', 'Великобритания')(class="blog-card--full")
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(6, '', 'Chang’an University', 'Чанъаньский университет', 'Великобритания')(class="blog-card--full")
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(7, '', 'University of Nicosia', 'Университет Никосии', 'Великобритания')(class="blog-card--full")
+						
+						//===== single slide ========
+						.swiper-slide
+							+blog-card(8, '', 'International School San Patricio Toledo','Международная школа Сан Патрисио Толедо',  'Великобритания')(class="blog-card--full")
+
+				//===== swiper navigation========
+				.slider-nav
+					.swiper-button-next
+					.swiper-button-prev
+				
+				//========VISIBLE MOBILE =======
+				.btns-group
+					a(href="#!" class="btn--slim " + whiteBtnClass)  Все новости
+					a(href="#!").btn--slim.btn Все статьи
+						

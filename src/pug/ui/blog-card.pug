@@ -2,11 +2,22 @@ extends ../layouts/layout-ui.pug
 
 block content
 	.container-dashboard
-		h2 Карточка блога
+		h3 Миксин с переменными
+		pre.
+			+blog-card(img, meta, txt, desk, loc)
+
+		h3 Карточка блога - вариант 1
 		.flex-row(style="gap:40px;")
-			+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
-			+blog-card(2, 'Новость', 'Экономическое образование в США')
+			+blog-card-ui(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+			+blog-card-ui(2, 'Новость', 'Экономическое образование в США')
 
 		pre.
 			+blog-card(2, 'Новость', 'Экономическое образование в США')
+		
+		h3 Карточка блога - вариант 2
+		.flex-row(style="gap:40px;")
+			+blog-card-ui(1, '', 'Varna University of Management', 'Варненский университет менеджмента', 'Великобритания')
+		pre.
+			+blog-card(1, '', 'Varna University of Management', 'Варненский университет менеджмента', 'Великобритания')
+
 		
