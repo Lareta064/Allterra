@@ -7,16 +7,18 @@
 	margin-top: 80px;
 	&__text{
 		padding: 30px 0 32px 26px;
-		width: 60%;
+		width: 52%;
 		flex-shrink: 0;
 		p, .h3{
 			color: $white;
 			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+			max-width: 390px;
 		}
 		.h3{
 			line-height: 1.25;
 			letter-spacing: -0.03em;
 			margin-bottom: 24px;
+			max-width: 415px;
 		}
 		
 		&>*+*{margin-top: 24px;}
@@ -53,8 +55,37 @@
 		}
 			
 	}
+	@media (max-width: 1023px){
+		&__text {width:59%;}
+				
+			
+	}
 	@media (max-width: 767px) {
 		margin-top: 60px;
+		flex-direction: column;
+		&__img{
+			width: 100%;
+			max-width: 350px;
+			margin-left: auto;
+			height: 350px;
+			margin-top: -20px;
+			z-index: 0;
+			&:after{
+				width: 350px;
+				left:20px;
+
+			}
+				img{position: relative; left:195px;}
+		}
+		&__text{
+			width: 100%;
+			max-width: 288px;
+			padding: 20px;
+			padding-bottom: 0;
+			position: relative;
+			z-index: 1;
+			p{font-size: 14px;}
+		}
 		
 	}
 }
