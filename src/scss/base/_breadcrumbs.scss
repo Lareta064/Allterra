@@ -48,6 +48,24 @@
 		li:last-child>* {
 			color: rgba(16, 23, 36, 0.6);
 		}
+		
 
 	}
 }
+.links-path{
+	flex-wrap: wrap;
+	gap:4px;
+	a{
+		color: $main-accent; 
+		position: relative;
+		font-size: 14px;
+		line-height: 1.71;	
+	}
+
+}
+.links-path a+a:before,
+.sort .sort-type + .sort-type:before{
+	content: "/\00a0";
+	opacity: .4;
+	color: $bg-black;
+} 

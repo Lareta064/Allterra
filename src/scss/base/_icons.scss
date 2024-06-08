@@ -144,8 +144,10 @@
 	opacity: .3;
 	color: #101724;
 }
-.filter-tag{
+.filter-tag,.cloud-tag{
 	height: 38px;
+	font-size: 16px;
+	color: $text-dark;
 	padding-inline: 12px;
 	background: #f0f3f9;
 	display: inline-flex;
@@ -156,4 +158,13 @@
 		transition: .3s; 
 	}
 	&:hover .icon-cross{opacity: 1;}
+}
+.cloud-tag{
+	font-weight: 500;
+	line-height: 1.75;
+	color: $text-dark;
+	height: auto;
+	padding-inline: 0;
+	background-color: transparent;
+	gap: 6px;
 }

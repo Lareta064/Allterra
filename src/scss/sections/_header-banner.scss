@@ -11,7 +11,7 @@
 		position: absolute;
 		left: 20px;
 		top: 50%;
-		*{color: $white}
+		h1, p, span{color: $white}
 		
 		transform: translateY(-60%);
 		@media (max-width: 1279px) {

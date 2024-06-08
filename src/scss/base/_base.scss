@@ -132,6 +132,7 @@ button {
 	box-shadow: none;
 	cursor: pointer;
 	font-family: inherit;
+	font-size: inherit;
 }
 
 input[type="submit"] {
@@ -195,7 +196,7 @@ address {
 }
 
 .flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,
-.flex-col, .flex-gap,.flex-header, .hero-content,.hash-tags {
+.flex-col, .flex-gap,.flex-header, .hero-content,.hash-tags,.links-path {
 	display: flex;
 	align-items: flex-start;
 }
@@ -205,7 +206,7 @@ address {
 .flex-center{
 	justify-content: center;
 }
-.flex-center-y,.flex-center,.flex-justify,.hash-tags{
+.flex-center-y,.flex-center,.flex-justify,.links-path,.hash-tags{
 	align-items: center;
 }
 .hash-tags{
@@ -233,6 +234,10 @@ address {
 		.btns-group {
 			display: none !important;
 		}
+	}
+	@media (max-width: 767px) {
+	  flex-direction: column;
+	  align-items: flex-start;
 	}
 }
 .w-100{

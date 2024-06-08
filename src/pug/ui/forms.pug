@@ -20,8 +20,28 @@ html(lang="ru")
 		block content
 			.container-dashboard
 				h2 Форма
-
 				.container-dashboard__content
+					h3 Компонент сортировки
+					.sort
+						.sort__name Сортировать по:
+						.sort__btns
+							label.sort-type
+								input(type="checkbox" name="sort-item")
+								span релевантности
+							label.sort-type
+								input(type="checkbox" name="sort-item")
+								span дате
+					
+					pre.
+						.sort
+							.sort__name Сортировать по:
+							.sort__btns
+								label.sort-type
+									input(type="checkbox" name="sort-item")
+									span релевантности
+								label.sort-type
+									input(type="checkbox" name="sort-item")
+									span дате
 					form.header-search.flex-center-y
 						.form_field
 							input(type="text" name="" placeholder="Поиск по сайту")

@@ -1,0 +1,45 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page.search-page
+		
+		section.hero(style="background-image:url('./img/search-page-header.webp')")
+			.container
+				.hero-content
+					ul.breadcrumb
+						li
+							a(href="#!") Главная
+						li
+							a(href="#!") Результаты поиска
+					//======= title + form =====
+					.hero-title
+						h1.h2.tt-none.txt-center Поиск
+						//===== form ======
+						form.header-search.flex-center-y.mt-60
+							.form_field
+								input(type="text" name="" placeholder="Поиск по сайту")
+								
+								//===== clean input button =====
+								button(type="reset").btn-icon
+									svg.svg-cross
+										use( href='./img/spriteSvg.svg#svg-cross')
+							
+							//======FORM BUTTON=====		
+							.form__btn
+								button(type="submit").btn-accent Найти
+					
+					//===== bottom text =====
+					.hero-bottom
+						a(href="#!").back-link
+							svg.svg-chevron
+								use(href="./img/spriteSvg.svg#svg-chevron")
+							span Назад
+		include ../sections/_search-page
+		include ../sections/_statistics
+		include ../sections/_accredit
+	include ../sections/_footer
+
+block variables
+	-var title = "Результаты поиска";

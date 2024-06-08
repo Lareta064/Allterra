@@ -67,15 +67,7 @@ label.form-checkbox, label.form-radio {
   display: flex;
   column-gap: 16px;
 
-  input[type="checkbox"], input[type="radio"]{
-     appearance:none;
-     width: 0.01em;
-     height: 0.01em;
-     position: absolute;
-     left: 0;
-     right: 0;
-     opacity: 0;
-  }
+  
   input ~ .fake-checkbox, input~.fake-radio{
     width: 24px;
     height: 24px;
@@ -89,6 +81,19 @@ label.form-checkbox, label.form-radio {
     height: 20px;
   }
   }
+}
+label.form-checkbox,
+label.form-radio, .sort-type{
+input[type="checkbox"],
+input[type="radio"] {
+      appearance: none;
+      width: 0.01em;
+      height: 0.01em;
+      position: absolute;
+      left: 0;
+      right: 0;
+      opacity: 0;
+    }
 }
 label.form-checkbox{
   input~.fake-checkbox{
@@ -160,4 +165,25 @@ label.form-radio{
   content: attr(placeholder);
   opacity: 0.4;
   color: $white;
+}
+.sort {
+  display: flex;
+  align-items:center;
+  font-size: 16px;
+  line-height: 1.75;
+  column-gap:4px;
+  
+  &__btns {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    .sort-type{
+      position: relative;
+      color: rgba(16, 23, 36, .4);
+      cursor:pointer;
+       &:hover{color: rgba(16, 23, 36, .8);}
+       input:checked + span{color: $main-accent;}
+    }
+   
+  }
 }
