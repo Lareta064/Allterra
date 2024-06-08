@@ -177,13 +177,17 @@ label.form-radio{
     display: flex;
     align-items: center;
     column-gap: 4px;
+
     .sort-type{
-      position: relative;
-      color: rgba(16, 23, 36, .4);
-      cursor:pointer;
-       &:hover{color: rgba(16, 23, 36, .8);}
-       input:checked + span{color: $main-accent;}
-    }
-   
+        position: relative;
+        color: rgba(16, 23, 36, .4);
+        cursor:pointer;
+         &:hover{color: rgba(16, 23, 36, .8);}
+         input:checked + span{color: $main-accent;}
+         
+    }   
+  }
+  @media (max-width: 767px) {
+    font-size: 14px;
   }
 }

@@ -66,7 +66,9 @@
 	&__col {
 		max-width: 295px;
 	}
-
+	@media (max-width: 1279px) {
+		row-gap: 32px;
+	}
 	@media (max-width: 767px) {
 		&__col {
 			max-width: unset;

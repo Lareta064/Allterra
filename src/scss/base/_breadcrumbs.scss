@@ -60,6 +60,9 @@
 		position: relative;
 		font-size: 14px;
 		line-height: 1.71;	
+		@media (max-width: 767px) {
+			font-size: 12px;
+		}
 	}
 
 }

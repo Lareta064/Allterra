@@ -136,7 +136,19 @@
 	.person__range, .persone__exper{opacity: .6;}
 	&>*{font-size: 14px;}
 	.person__details{row-gap:20px;}
-
+	@media (max-width: 767px) {
+		width: 100%;
+		.person__info{flex-direction: row;}
+		.person__photo{
+			width: 156px;
+			height: 156px;;
+		}
+		.accent-link,
+		.person__range,
+		.persone__exper {
+			font-size: 12px;
+		}
+	}
 }
 .person-card, .person.short-card{
 	.person__links{

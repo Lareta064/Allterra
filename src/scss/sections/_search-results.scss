@@ -23,6 +23,10 @@
 		transition: .3s; 
 		&:hover{opacity: .6;}
 	}
+	@media (max-width: 767px) {
+		margin-bottom: 40px;
+		a{font-size: 14px;}
+	}
 }
 .search-result-item{
 	border-bottom: 1px solid rgba(21, 21, 21, 0.1);
@@ -50,8 +54,16 @@
 	p:has(strong , small){
 		margin-block: 0px;
 	}
-		.flex-center-y{
-			gap:4px;
+	.flex-center-y{
+		gap:4px;
+	}
+	@media (max-width: 767px) {
+		padding: 20px;
+		strong{
+			font-size: 16px;
 		}
+		small{font-size: 12px;}
+		p{font-size: 14px;}
+	}
 }
 .search-result-item+ .search-result-item{border-top: 0;}
