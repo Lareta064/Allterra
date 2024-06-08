@@ -1,0 +1,36 @@
+mixin review-slider(title, addCl)
+	//========REVIEW SWIPER =======
+	section.review-section.dark-bg
+		.container
+			h2(class=(addCl ? 'h2 '+ addCl : 'h2')) #{title}
+			.slider-wrapper
+				//======== slider-content =======
+				.review-slider.swiper
+					.swiper-wrapper
+						//===== single slide ========
+						.swiper-slide
+							.review-card.bx-sh
+								+person('review/author1','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', '','date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее', 'slider')
+
+						//=====single slide ========
+						.swiper-slide
+							.review-card.bx-sh
+								+person('review/author2','София','Sidcot School', '', '', '','date', 'Великобритания', 'Я могу рекомендовать компанию Allterra Education всем, кто планирует отправлять ребенка в Великобританию.', 'Читать далее', 'slider')
+						
+						
+						//===== single slide ========
+						.swiper-slide
+							.review-card.bx-sh
+								+person('review/author3','Захар Богданов',"Queen Ethelburga's Collegiate", '', '', '','date', 'Австралия', 'Два года в школе пролетели незаметно, я завел очень много друзей и смог значительно улучшить свой английский.', 'Читать далее', 'slider')
+						//=====single slide ========
+						.swiper-slide
+							.review-card.bx-sh
+								+person('review/author4','Иван Рябинин',"Giggleswick School", '', '', '','date', 'Германия', 'Все критерии, по которым мы выбирали школу, совпали.', 'Читать далее', 'slider')
+				//===== swiper navigation========
+				.slider-nav
+					.swiper-button-next
+					.swiper-button-prev
+
+			//========= section button =========
+			.review-btn.flex-center.mt-48
+				a(href="#!").btn-br Смотреть все отзывы
