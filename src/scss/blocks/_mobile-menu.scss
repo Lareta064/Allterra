@@ -27,6 +27,9 @@
 
 }
 .mobile-menu{
+	padding-bottom: 20px;
+	height: calc(100dvh - 108px);
+	overflow-y: auto;
 	li +li{margin-top: 24px;}
 
 	.menu-item.drop-menu-li{

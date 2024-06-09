@@ -1,7 +1,7 @@
 .accordion-group {
 	
-	border-top: 1px solid rgba(16, 23, 36, .1);
-	border-bottom: 1px solid rgba(16, 23, 36, .1);
+	border-top: 1px solid rgba(16, 23, 36, .4);
+	border-bottom: 1px solid rgba(16, 23, 36, .4);
 }
 
 .accordion-body {
@@ -11,6 +11,7 @@
 	padding:  0;
 	padding-bottom: 23px;
 	border-bottom: 1px solid rgba(16, 23, 36, .1);
+	
 	position: relative;
 	z-index: 2;
 	background-color: #fff;

@@ -26,7 +26,8 @@ mixin person(img, name, persLink, range, exper, tags, date, loc, txt, txtLink, r
 			//====== text row =====
 			.person__txt
 				p !{txt}
-				a(href="#!").accent-link.und-line #{txtLink}
+				if txtLink != ''
+					a(href="#!").accent-link.und-line #{txtLink}
 		if revSlider
 			//======= for mobile =====
 			.person__meta
@@ -57,7 +58,7 @@ mixin review-card(arg)
 						p.pin-item  #{arg.loc}
 			
 		//======= review text
-		.review__text  
+		.review__text
 			p #{arg.txt}
 			a(href="#!").accent-link Читать далее
 		

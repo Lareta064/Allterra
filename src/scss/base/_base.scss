@@ -147,7 +147,10 @@ input[type="submit"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
-
+input::placeholder, textarea::placeholder{
+	font-family: inherit;
+	font-size: inherit;
+}
 .container,.container-narrow {
 	width: min(1280px, 100%);
 	padding-inline: 20px;
