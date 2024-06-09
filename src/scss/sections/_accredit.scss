@@ -30,10 +30,8 @@
 		&__img{display: none;}
 		&-content{display: block;}
 		&__title{align-items: flex-start; }
-		.h2{
-			width: 100%; max-width: 390px;
-			text-transform: lowercase;
-			&::first-letter{text-transform: uppercase;}
-		}
+		
+		.h2{width: 18ch;}
 	}
+
 }

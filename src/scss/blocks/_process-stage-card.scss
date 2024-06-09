@@ -23,11 +23,12 @@
 	
 	@media (max-width: 767px) {
 		padding: 24px 16px;
+		min-height: auto;
 		.flex-row{
 			column-gap: 16px;
 			margin-bottom: 16px;
 		}
-		
+		.txt-20{letter-spacing: -0.03em;}
 	}
 }
 .process-cards{
