@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function (){
       },
     });
 	/*=================BLOG CARDS SLIDER ================== */
-    var blogCardsSliderr = new Swiper(".blog-cards-slider", {
+    var blogCardsSlider = new Swiper(".blog-cards-slider", {
 	   slidesPerView: 1.15,
 	   loop: true,
 	   speed: 1000,
@@ -306,7 +306,23 @@ document.addEventListener("DOMContentLoaded", function (){
         },
       },
     });
-
+    
+	/*=================COUNTRY FLAGS SLIDER ================== */
+    var countrySlider = new Swiper(".country-swiper", {
+	   slidesPerView: 11,
+	   loop: true,
+	   speed: 1000,
+	   autoWidth: true,
+	spaceBetween: 10,
+	   scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+      },
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+    });
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
 	if(backlitMenu){
@@ -358,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(window.innerWidth <= 1280){
 				if(window.scrollY > 550){
 					dynamicMenu.classList.add('active');
+					
 				}else{
 					dynamicMenu.classList.remove('active');
 				}
@@ -366,6 +383,8 @@ document.addEventListener("DOMContentLoaded", function (){
 		window.addEventListener('resize', ()=>{
 			if(window.innerWidth > 1279){
 				dynamicMenuList.style.maxHeight = 'unset';
+			}else{
+				dynamicMenuList.style.maxHeight = '0';
 			}
 		});
    }

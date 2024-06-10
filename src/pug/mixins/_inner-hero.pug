@@ -1,6 +1,6 @@
 
 
-mixin hero-section(links, name, bottomText, titleClass, backLink )
+mixin hero-section(links, name, bottomText, titleClass, backLink, subtitle )
 	section.hero&attributes(attributes)
 		.container
 			.hero-content
@@ -10,6 +10,8 @@ mixin hero-section(links, name, bottomText, titleClass, backLink )
 							a(href="#!") #{item}
 				.hero-title
 					h1(class=(titleClass != ''? ''+ titleClass : '')) !{name}
+					if subtitle
+						p.hero-subtitle !{subtitle}
 				//===== bottom text =====
 				.hero-bottom
 					if bottomText != ''
@@ -18,4 +20,26 @@ mixin hero-section(links, name, bottomText, titleClass, backLink )
 						a(href="#!").back-link
 							svg.svg-chevron
 								use(href="./img/spriteSvg.svg#svg-chevron")
+							span Назад
+
+mixin hero-section-ui(links, name, bottomText, titleClass, backLink, subtitle )
+	section.hero&attributes(attributes)
+		.container
+			.hero-content
+				ul.breadcrumb
+					each item in links
+						li
+							a(href="#!") #{item}
+				.hero-title
+					h1(class=(titleClass != ''? ''+ titleClass : '')) !{name}
+					if subtitle
+						p.hero-subtitle !{subtitle}
+				//===== bottom text =====
+				.hero-bottom
+					if bottomText != ''
+						p #{bottomText}
+					if (backLink != '' && backLink == 'back-link')
+						a(href="#!").back-link
+							svg.svg-chevron
+								use(href="../img/spriteSvg.svg#svg-chevron")
 							span Назад

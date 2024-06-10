@@ -1,0 +1,79 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	mixin slideFlag
+		.swiper-slide
+			.country-item
+				img(src="./img/flags/uk.svg", width="40" height="27"  alt="flag")
+				p Великоб
+	main.inner-page
+		section.hero(style="background-image:url('./img/search-page-header.webp')")
+			.container
+				.hero-content
+					ul.breadcrumb
+						li
+							a(href="#!") Главная
+						li
+							a(href="#!") Поступление в среднюю школу за рубежом
+					//======= title + form =====
+					.hero-title
+						h1.title Поступление в среднюю школу за рубежом
+						p Индивидуально подбираем зарубежную школу под задачи семьи и потребности ребёнка, помогаем подготовиться к поступлению и сопровождаем во время обучения за границей
+						a(href="#!").btn-accent Получить консультацию
+					//===== bottom text =====
+					.hero-bottom
+						a(href="#!").back-link
+							svg.svg-chevron
+								use(href="./img/spriteSvg.svg#svg-chevron")
+							span Назад		
+		
+		section.scool-content
+			.container
+				.two-columns
+					.scool-content__txt.txt-body
+						h2.h2.tt-none Как выбрать правильную школу для ребенка за рубежом?
+						p Ключевой этап, предшествующий поступлению в школу за рубежом, - определение особенностей, задач и талантов ребенка. После этого мы можем определить цель и построить дорожную карту из точки A в точку B, где точкой B может являться поступление в именитый университет или трудоустройство в компанию с большим конкурсом на место.
+						p После прохождения этих этапов можно приступить к подбору школы. Этап включает формирование первичного списка школ, анализ результатов учеников, проверку вступительных требований и коммуникацию с представителями иностранных школ.
+					.scool-content__img
+						img(src="./img/scool.webp", alt="img" width="610")
+		
+				.swiper.country-swiper
+						.swiper-wrapper
+							
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+							+slideFlag
+						.swiper-scrollbar
+						.slider-nav
+							.swiper-button-next
+							.swiper-button-prev
+		
+		section
+			.container
+				.three-columns
+					
+		include ../sections/_statistics
+		include ../sections/_accredit
+	include ../sections/_footer
+
+block variables
+	-var title = "Выбор школы";

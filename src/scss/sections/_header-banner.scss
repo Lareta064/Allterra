@@ -12,7 +12,11 @@
 		left: 20px;
 		top: 50%;
 		h1, p, span{color: $white}
-		
+		.hero-subtitle{
+			font-size: 18px;
+			line-height: 1.78;
+			margin-top: 40px;
+		}
 		transform: translateY(-60%);
 		@media (max-width: 1279px) {
 		 margin-bottom: 0;
@@ -20,6 +24,7 @@
 		@media (max-width: 767px) {
 		transform: translateY(-50%);
 		left: 16px;
+		.hero-subtitle{margin-top: 24px;}
 		}
 	}
 	.container{

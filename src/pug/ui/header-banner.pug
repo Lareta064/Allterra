@@ -2,17 +2,20 @@ extends ../layouts/layout-ui.pug
 
 block content
 	.container-dashboard
-		//- +hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании', 'back-link')
-		
-		//- pre.
-		//- 	+hero-section('about/header-bg.webp',['Главная', 'Информация'], 'О компании', 'back-link')
+		h3 Миксин секции hero
+		pre.
+			+hero-section(links, name, bottomText, titleClass, backLink, subtitle )
 		hr
-		+hero-section(['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'tt-none')(class="hero--center" style="background-image:url(./img/about/header-bg.webp)")
+		+hero-section-ui(['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'title tt-none')(class="hero--center" style="background-image:url(../img/about/header-bg.webp)")
 		
 		pre.
-			+hero-section(['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'tt-none')(class="hero--center" style="background-image:url(./img/about/header-bg.webp)")
+			+hero-section(['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', title tt-none')(class="hero--center" style="background-image:url(./img/about/header-bg.webp)")
 		hr
-		+hero-section(['Главная', 'Услуги'], 'Услуги', '', '', 'back-link')
+		+hero-section-ui(['Главная', 'Услуги'], 'Услуги', '', '', 'back-link')(class="hero--center" style="background-image:url(../img/about/header-bg.webp)")
 		pre.
-			+hero-section(['Главная', 'Услуги'], 'Услуги', '', '', 'back-link')
+			+hero-section(['Главная', 'Услуги'], 'Услуги', '', '', 'back-link')(class="hero--center" style="background-image:url(./img/about/header-bg.webp)")
+		hr
+		+hero-section-ui(['Главная', 'Услуги'], 'Услуги', '', '', 'back-link', 'Текст под заголовком')( style="background-image:url(../img/about/header-bg.webp)")
+		pre.
+			+hero-section-ui(['Главная', 'Услуги'], 'Услуги', '', '', 'back-link', 'Текст под заголовком')( style="background-image:url(../img/about/header-bg.webp)")
 		

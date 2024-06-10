@@ -9,3 +9,15 @@ mixin serv-card(img, title, txt)
 			a(href="#!").round-arrow
 				svg.svg-arrow
 					use(href="./img/spriteSvg.svg#svg-arrow")
+
+mixin serv-card-ui(img, title, txt)
+	.serv-card
+		.serv-card__img
+			img.wh-100.lazy(src="../img/"+ img +".webp", width="482" alt=" img")
+		.serv-card__text
+			a(href="#!").txt-20 #{title}
+			p #{txt}
+		
+			a(href="#!").round-arrow
+				svg.svg-arrow
+					use(href="../img/spriteSvg.svg#svg-arrow")

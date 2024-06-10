@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page
+		+hero-section(['Главная', 'Страны'], 'Страны','', 'title', '', 'Выберите страну для обучения из каталога')( style="background-image:url(./img/about/header-bg.webp)")
+		
+		include ../sections/_countries
+		include ../sections/_statistics
+		include ../sections/_accredit
+	include ../sections/_footer
+
+block variables
+	-var title = "Страны";
