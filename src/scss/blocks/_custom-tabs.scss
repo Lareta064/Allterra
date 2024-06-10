@@ -2,6 +2,7 @@
 	&__btns{
 		display: flex;
 		column-gap: 20px;
+		transition: .3s; 
 		@media (max-width: 1364px) {
 			column-gap: 10px;
 		}

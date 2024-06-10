@@ -154,7 +154,52 @@ document.addEventListener("DOMContentLoaded", function (){
 			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
 			ths.find('.custom-tab').hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass('active');
+		
 	});
+
+
+  // Функция для центрирования кнопки относительно экрана браузера
+
+  
+  function centerButtonOnScreen(button) {
+    const parent = button.parentNode;
+
+    // Вычисляем необходимые значения для центрирования
+    const viewportWidth = window.innerWidth;
+    
+    const buttonRect = button.getBoundingClientRect();
+
+    // Вычисляем необходимые значения для смещения родительского блока
+    const offsetX = (viewportWidth / 2) - (buttonRect.left + 119);
+    
+
+    // Применяем transform для смещения родительского блока
+    const currentTransform = parent.style.transform;
+    parent.style.transform = `translateX(${offsetX}px) ${currentTransform}`;
+  }
+
+  // Находим все кнопки внутри родительского элемента и добавляем обработчик события клика
+  const buttons = document.querySelectorAll('.tab-btn'); // Замените селектор, если необходимо
+  for(let i = 0; i < buttons.length; i++){
+	buttons[i].addEventListener('click', function() {
+		
+	const parent = buttons[i].parentNode;
+	const offsetLength = -((i-1) * 56 + 16);
+	if(i > 1){
+		// const lastBtnPos = window.innerWidth - buttons[buttons.length - 1].getBoundingClientRect().left;
+		
+			parent.style.transform =`translateX(${offsetLength}px)`;
+		
+	}
+	if( i == 1){
+		parent.style.transform =`translateX(0)`;
+	}
+  });
+}
+
+
+ 
+
 	/*============== ACORDION ========== */
 	;(function ($, window, document, undefined) {
 		"use strict";
@@ -313,7 +358,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	   loop: true,
 	   speed: 1000,
 	   autoWidth: true,
-	spaceBetween: 10,
+	   spaceBetween: 10,
 	   scrollbar: {
         el: ".swiper-scrollbar",
         draggable: true,
@@ -350,8 +395,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
    
 	const dynamicMenu = document.querySelector('.dynamic-menu');
-    /* меню Содержание страницы на моб версии */
-   if(dynamicMenu){
+   
+	/* меню Содержание страницы на моб версии */
+     if(dynamicMenu){
 	   dynamicMenuBtn = dynamicMenu.querySelector('.dynamic-menu__header');
 	   dynamicMenuList = dynamicMenu.querySelector('.dynamic-menu__list');
 	  

@@ -79,9 +79,13 @@ body {
 	background-color: $white;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: auto;
 
 }
-
+.header-nav--test .menu-li a{
+	font-family: 'BWHaasGroteskWeb','BWHaasGroteskWeb-fallback',Helvetica,Arial,sans-serif;
+}
 .lock{
 	
 	overflow: hidden;
