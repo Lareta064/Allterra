@@ -1,4 +1,16 @@
 //======= COUNTRIES ===========
 section.countries
 	.container
-		
+		//==== строка с меню и кнопкой ======
+		.countries-row.flex-justify
+			//=====ссылки к якорям на странице =====
+			.countries-menu.flex-center-y
+				a(href="#en-countries") Англоговорящие
+				
+				a(href="#euro-countries").form-radio Европа
+					
+				a(href="#asia-countries").form-radio Азия
+					
+			
+			//======= Получить консультацию ==========
+			a(href="#!").btn-accent Получить консультацию

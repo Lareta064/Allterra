@@ -66,7 +66,7 @@ select:-webkit-autofill:focus {
     border: 1px solid #ff0000;
   }
 }
-label.form-checkbox, label.form-radio {
+*.form-checkbox, *.form-radio {
   display: flex;
   column-gap: 16px;
 
@@ -85,8 +85,8 @@ label.form-checkbox, label.form-radio {
   }
   }
 }
-label.form-checkbox,
-label.form-radio, .sort-type{
+*.form-checkbox,
+*.form-radio, .sort-type{
 input[type="checkbox"],
 input[type="radio"] {
       appearance: none;
@@ -98,7 +98,7 @@ input[type="radio"] {
       opacity: 0;
     }
 }
-label.form-checkbox{
+*.form-checkbox{
   input~.fake-checkbox{
     background-color: $main-accent;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 1L5.0625 10L1 5.90909' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
@@ -111,7 +111,7 @@ label.form-checkbox{
   }
 
 }
-label.form-radio{
+*.form-radio{
   input~.fake-radio{
     border-radius: 50%;
     border: 1px solid $dark-grey;
