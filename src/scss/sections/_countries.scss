@@ -11,3 +11,50 @@
 	a:hover{color: $main-accent;}
 
 }
+.country-article{
+	padding-block: 60px;
+	column-gap: 48px;
+	align-items: flex-start;
+	.country-desk__header{
+		column-gap: 30px;
+	}
+	.txt-body p{
+		font-size: 18px;
+
+	}
+	.country-desk__footer{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		gap: 24px;
+		border-top: 1px solid rgba(16, 23, 36, .1);
+	}
+}
+.country-article +.country-article{
+	border-top: 1px solid rgba(16, 23, 36, .4);
+}
+.country-flags{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap:10px;
+	row-gap:20px;
+	
+}
+.country-link{
+	column-gap:16px;
+	padding: 13px 27px 17px;
+	background-color: #f0f3f9;
+	height: 90px;
+	transition: .3s;
+	p, .h5{transition: .3s; }
+	&:hover{
+		box-shadow: 0 0 10px rgba(16, 23, 36, .1);
+		.h5,
+		p{opacity: .6;}
+	}
+	img{
+		width: 60px;
+		height: 45px;
+		object-fit: cover;
+	}
+	p{font-size: 13px;}
+}

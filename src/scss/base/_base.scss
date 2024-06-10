@@ -199,7 +199,7 @@ address {
 }
 
 .flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,
-.flex-col, .flex-gap,.flex-header, .hero-content,.hash-tags,.links-path {
+.flex-col, .flex-gap,.flex-header, .hero-content,.hash-tags,.links-path, .country-link {
 	display: flex;
 	align-items: flex-start;
 }
@@ -209,7 +209,8 @@ address {
 .flex-center{
 	justify-content: center;
 }
-.flex-center-y,.flex-center,.flex-justify,.links-path,.hash-tags{
+.flex-center-y,.flex-center,.flex-justify,.links-path,.hash-tags,
+.country-link{
 	align-items: center;
 }
 .hash-tags{
@@ -250,6 +251,9 @@ address {
 
 .mb-20 {
 	margin-bottom: 20px;
+}
+.mb-30 {
+	margin-bottom: 30px;
 }
 .mb-40 {
 	margin-bottom: 40px;
