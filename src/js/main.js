@@ -184,15 +184,16 @@ document.addEventListener("DOMContentLoaded", function (){
 	buttons[i].addEventListener('click', function() {
 		
 	const parent = buttons[i].parentNode;
-	const offsetLength = -((i-1) * 56 + 16);
+	const offsetLength = -((i-1) * 56 + ((i-1) * 12) + 16);
 	if(i > 1){
 		// const lastBtnPos = window.innerWidth - buttons[buttons.length - 1].getBoundingClientRect().left;
 		
 			parent.style.transform =`translateX(${offsetLength}px)`;
+			console.log(offsetLength);
 		
 	}
 	if( i == 1){
-		parent.style.transform =`translateX(0)`;
+		parent.style.transform =`translateX(-6px)`;
 	}
   });
 }

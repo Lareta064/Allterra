@@ -4,13 +4,21 @@
 		column-gap: 20px;
 		transition: .3s; 
 		@media (max-width: 1364px) {
-			column-gap: 10px;
+			column-gap: 12px;
 		}
 		@media (max-width: 1023px) {
 			width: fit-content;
 			padding-right: 5px;
 		}
+		
 	}
+		@media (max-width: 767px) {
+			.scroll-x {
+				width: 100vw;
+				margin-left: -16px;
+				padding-left: 16px;
+			}
+		}
 	.tab-btn{
 		flex-shrink: 0;
 		width: 90px;
