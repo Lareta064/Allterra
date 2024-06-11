@@ -151,55 +151,13 @@ document.addEventListener("DOMContentLoaded", function (){
 		let ths = $(this);
 		ths.find('.custom-tab').not(':first').hide();
 		ths.find('.tab-btn').click(function() {
+			console.log(555)
 			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
 			ths.find('.custom-tab').hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass('active');
 		
 	});
 
-
-  // Функция для центрирования кнопки относительно экрана браузера
-
-  
-  function centerButtonOnScreen(button) {
-    const parent = button.parentNode;
-
-    // Вычисляем необходимые значения для центрирования
-    const viewportWidth = window.innerWidth;
-    
-    const buttonRect = button.getBoundingClientRect();
-
-    // Вычисляем необходимые значения для смещения родительского блока
-    const offsetX = (viewportWidth / 2) - (buttonRect.left + 119);
-    
-
-    // Применяем transform для смещения родительского блока
-    const currentTransform = parent.style.transform;
-    parent.style.transform = `translateX(${offsetX}px) ${currentTransform}`;
-  }
-
-  // Находим все кнопки внутри родительского элемента и добавляем обработчик события клика
-  const buttons = document.querySelectorAll('.tab-btn'); // Замените селектор, если необходимо
-  for(let i = 0; i < buttons.length; i++){
-	buttons[i].addEventListener('click', function() {
-		
-	const parent = buttons[i].parentNode;
-	const offsetLength = -((i-1) * 56 + ((i-1) * 12) + 16);
-	if(i > 1){
-		// const lastBtnPos = window.innerWidth - buttons[buttons.length - 1].getBoundingClientRect().left;
-		
-			parent.style.transform =`translateX(${offsetLength}px)`;
-			console.log(offsetLength);
-		
-	}
-	if( i == 1){
-		parent.style.transform =`translateX(-6px)`;
-	}
-  });
-}
-
-
- 
 
 	/*============== ACORDION ========== */
 	;(function ($, window, document, undefined) {
@@ -436,3 +394,34 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
    }
 });
+
+
+  // TEST
+  // Находим все кнопки внутри родительского элемента и добавляем обработчик события клика
+  const buttons = document.querySelectorAll('.tab-btn'); 
+  for(let i = 0; i < buttons.length; i++){
+	buttons[i].addEventListener('click', function() {
+		if(window.innerWidth < 583){
+		const parent = buttons[i].parentNode;
+		const offsetLength = -((i-1) * 56 + ((i-1) * 12) +10);
+		
+			const stopScrolling = buttons[buttons.length-1];
+			console.log(stopScrolling.getBoundingClientRect().right);
+		if( i == 0){
+			parent.style.marginLeft = '0';
+			parent.style.transform =`translateX(0)`;
+		}
+		else if( i == 1){
+			parent.style.marginLeft = '0';
+			parent.style.transform =`translateX(-6px)`;
+		}
+		else if( i == buttons.length - 1){
+			parent.style.marginLeft = '-16px';
+		}
+		else {
+				parent.style.marginLeft = '0';
+				parent.style.transform =`translateX(${offsetLength}px)`;
+		}
+	}
+  });
+}
