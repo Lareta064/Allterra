@@ -1,6 +1,13 @@
 mixin flag-link(flag, cnt, txt)
 	a(href="#!").country-link
-		img(src="./img/countries/"+ flag , width="60" height="45" alt="")
+		+flag(flag)
 		.country-link__txt
 			.h5 #{cnt}
 			p Учебных заведений: #{txt}
+
+mixin flag(cntr)
+	svg(class="fl-"+ cntr)
+		use( href='./img/flags-sprite.svg#fl-'+ cntr)
+mixin flag-ui(cntr)
+	svg(class="fl-"+ cntr)
+		use( href='../img/flags-sprite.svg#fl-'+ cntr)

@@ -181,3 +181,9 @@
 	background-color: transparent;
 	gap: 6px;
 }
+*[class^="fl-"]{
+	display: inline-block;
+	width: 60px;
+	height: 45px;
+	object-fit: cover;
+}
