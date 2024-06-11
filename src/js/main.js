@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		const videoContent = videoBox.querySelector('#video');
 		const videoToggleBtn = videoBox.querySelector('#video-btn');
 		
-		videoToggleBtn.addEventListener('click', ()=>{
+		videoContent.addEventListener('click', ()=>{
 			if(!videoToggleBtn.classList.contains('active')){
 				videoContent.pause();
 				videoToggleBtn.classList.add('active');
