@@ -1,0 +1,14 @@
+.inner-page--scool {
+	.hero-title{
+		margin-top: 92px;
+		.title {margin-bottom: 40px;}
+		.hero-subtitle{margin-bottom: 60px; max-width: 914px;}
+	}
+	.hero-bottom{margin-top: 120px;}
+}
+.hero-title.hero-title--rel{
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: translate(0, 0);
+}

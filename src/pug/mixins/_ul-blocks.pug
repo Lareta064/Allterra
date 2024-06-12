@@ -9,3 +9,21 @@ mixin list-check(...items)
 		ul
 			each item in items
 				li #{item}
+	
+mixin stripes-list(...items)
+	ul.stripes-list
+		each item in items
+			li
+				span.check-icon
+					svg.svg-check
+						use(href="./img/spriteSvg.svg#svg-check")
+				span !{item}
+
+mixin stripes-list-ui(...items)
+	ul.stripes-list
+		each item in items
+			li
+				span.check-icon
+					svg.svg-check
+						use(href="../img/spriteSvg.svg#svg-check")
+				span !{item}

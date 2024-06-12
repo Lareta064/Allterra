@@ -9,8 +9,8 @@ block content
 				svg(class="fl-"+ cntr width="40" height="27")
 					use( href='./img/flags-sprite.svg#fl-'+ cntr)
 				p #{txt}
-	main.inner-page
-		section.hero(style="background-image:url('./img/search-page-header.webp')")
+	main.inner-page.inner-page--scool
+		section.hero(style="background-image:url('./img/scool/header-bg.webp')")
 			.container
 				.hero-content
 					ul.breadcrumb
@@ -19,16 +19,13 @@ block content
 						li
 							a(href="#!") Поступление в среднюю школу за рубежом
 					//======= title + form =====
-					.hero-title
+					.hero-title.hero-title--rel
 						h1.title Поступление в среднюю школу за рубежом
-						p Индивидуально подбираем зарубежную школу под задачи семьи и потребности ребёнка, помогаем подготовиться к поступлению и сопровождаем во время обучения за границей
+						p.hero-subtitle Индивидуально подбираем зарубежную школу под задачи семьи и потребности ребёнка, помогаем подготовиться к поступлению и сопровождаем во время обучения за границей
 						a(href="#!").btn-accent Получить консультацию
 					//===== bottom text =====
 					.hero-bottom
-						a(href="#!").back-link
-							svg.svg-chevron
-								use(href="./img/spriteSvg.svg#svg-chevron")
-							span Назад		
+						+stripes-list('Сильнейшие технические вузы мира', 'Медицинские факультеты', 'Университеты искусств')
 		
 		section.scool-content
 			.container
@@ -82,7 +79,6 @@ block content
 						
 						//======SINCLE ARTICLE ============
 						article.scool-description.custom-tab
-
 							h2.h3 Швейцария
 							//======= text======
 							p Здесь учатся дети самых взыскательных родителей. Главная цель среднего образования в Швейцарии — индивидуальность, всестороннее развитие личности и здоровье. Выпускники швейцарских школ свободно говорят на нескольких языках, имеют друзей по всему миру и поступают в лучшие университеты.
