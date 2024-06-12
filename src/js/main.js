@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	   slidesPerView: 'auto',
 	   speed: 1000,
 	   autoWidth: true,
-	   spaceBetween: 24,
+	   spaceBetween: 0,
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",

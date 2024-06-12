@@ -1,7 +1,24 @@
 .country-swiper-block{
-	padding-left: 68px;
-	padding-right: 68px;
+	padding-inline: 68px;
+	
 	position: relative;
+	@media (max-width: 1279px) {
+	padding-inline: 24px;
+	}
+	@media (max-width: 767px) {
+		padding-inline: 26px;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 26px;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+			width: 40px;
+			z-index: 5;
+		}
+		
+	}
 }
 .scool-tabs__articles{
 	position: relative;
@@ -12,6 +29,7 @@
 .country-swiper{
 	
 	.swiper-slide{width: fit-content!important;}
+	
 }
 .country-item{
 	display: flex;
@@ -28,9 +46,34 @@
 	}
 	p{line-height: 1.78;pointer-events: none; transition: .3s; }
 	&:hover p{color: $main-accent;}
+	@media (max-width: 767px) {
+		padding-left: 8px;
+		padding-right: 8px;
+		p{
+			line-height: 1.71;
+			font-size: 14px;
+		}
+	}
 }
 .scool-tabs-wrapper{
 	padding: 30px;
+	@media (max-width: 1279px) {
+		.swiper-button-next {
+			right: -8px;
+		}
+
+		.swiper-button-prev {
+			left: -8px;
+		}
+
+		.swiper-button-next:after,
+		.swiper-button-prev:after {
+			font-size: 26px;
+		}
+	}
+	@media (max-width: 767px) {
+	 padding: 16px;
+	}
 }
 .scool-description{
 	padding-block: 48px;
