@@ -38,19 +38,32 @@
 		justify-content: space-between;
 		
 	}
-	.swiper-button-next, .swiper-button-prev{
-		color: $main-accent;
-		opacity: 1;
-		font-size: 30px;
-		transition: .3s; 
-		&:hover{
-			color: $main-accent;
-			opacity: 0.4;
-		}
-	}
+
+
 	.swiper-button-next{right:0}
 	.swiper-button-prev{left: 0}
 }
+.swiper-button-next, .swiper-button-prev{
+	color: $main-accent;
+	opacity: 1;
+	font-size: 30px;
+	transition: .3s; 
+	&:hover{
+		color: $main-accent;
+		opacity: 0.4;
+	}
+}
+.slider-nav.slider-nav--grey {
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			color: $dark-grey;
+
+			&:hover {
+				color: $text-dark
+			}
+		}
+	}
 .dark-bg .slider-wrapper{
 	.swiper-button-next,
 		.swiper-button-prev {

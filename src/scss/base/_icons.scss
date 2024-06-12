@@ -183,7 +183,9 @@
 }
 *[class^="fl-"]{
 	display: inline-block;
+	object-fit: cover;
+}
+.flag-link svg[class^="fl-"]{
 	width: 60px;
 	height: 45px;
-	object-fit: cover;
 }

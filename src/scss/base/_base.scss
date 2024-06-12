@@ -122,7 +122,8 @@ figure {
 img {
 	max-width: 100%;
 	height: auto;
-	vertical-align: middle;
+	
+	display: block;
 }
 
 input,
@@ -345,7 +346,9 @@ img.wh-100 {
 		padding-block: 80px;
 	}
 }
-
+.white-bg{
+	background-color: #fff;
+}
 section + section{padding-top: 100px;}
 section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding-bottom: 100px;
