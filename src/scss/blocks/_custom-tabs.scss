@@ -1,8 +1,10 @@
 .custom-tabs{
+	.scroll-wrapper{overflow: hidden;}
 	&__btns{
 		display: flex;
 		column-gap: 20px;
-		transition: .3s; 
+		
+		
 		@media (max-width: 1364px) {
 			column-gap: 12px;
 		}
@@ -14,9 +16,7 @@
 	}
 		@media (max-width: 767px) {
 			.scroll-x {
-				width: 100vw;
-				margin-left: -16px;
-				padding-left: 16px;
+				width: 100%;
 			}
 		}
 	.tab-btn{
@@ -34,25 +34,34 @@
 		border: 1px solid white;
 		background-color: $white;
 		padding-inline: 25px;
-		column-gap: 14px;
+		justify-content: center;
+		
 	
 		&.active {
 			flex-grow: 1;
 			justify-content: flex-start;
 			border: 2px solid $main-accent;
 			box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
-	
+			justify-content: flex-start;
+			width: 238px;
 			span:first-child {
 				color: $main-accent;
 			}
 	
 			span+span {
-				display: block;
+				// display: block;
+				width: auto;
+				overflow: hidden;
 				color: #101724;
+				animation-name: addColor;
+				animation-duration: 0.5s;
+				animation-timing-function: linear;
+				animation-fill-mode: forwards;
+				padding-left: 12px;
 			}
 	
 			@media (max-width: 1023px) {
-				width: 238px;
+				// min-width: 238px;
 				flex-shrink: 0;
 
 			}
@@ -64,12 +73,13 @@
 		}
 
 		span+span {
-			display: none;
+			width: 0;
+			overflow: hidden;
 			font-weight: 600;
 			font-size: 22px;
 			letter-spacing: -0.01em;
 			text-align: left;
-
+			opacity: 0;
 			@media (max-width: 1023px) {
 				font-size: 15px;
 			}
@@ -81,7 +91,7 @@
 			width: 56px;
 			height: 56px;
 			padding-inline: 14px;
-			column-gap: 14px;
+			// column-gap: 14px;
 			span:first-child {min-width: unset};
 			
 		}
@@ -106,4 +116,8 @@
 		&.active{display: block;}
 		
 	}
+}
+@keyframes addColor{
+	0%{ opacity:0;}
+	100%{opacity: 1;}
 }

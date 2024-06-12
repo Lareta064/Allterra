@@ -393,35 +393,76 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
    }
-});
+    /*====TAB BUTTONS WIDTH ========== */
+	const buttons = document.querySelectorAll('.tab-btn');
+	function test(){
 
-
-  // TEST
-  // Находим все кнопки внутри родительского элемента и добавляем обработчик события клика
-  const buttons = document.querySelectorAll('.tab-btn'); 
-  for(let i = 0; i < buttons.length; i++){
-	buttons[i].addEventListener('click', function() {
-		if(window.innerWidth < 583){
-		const parent = buttons[i].parentNode;
-		const offsetLength = -((i-1) * 56 + ((i-1) * 12) +10);
+	}
+	if(buttons.lengts > 0 || window.innerWidth < 583){
 		
-			const stopScrolling = buttons[buttons.length-1];
-			console.log(stopScrolling.getBoundingClientRect().right);
-		if( i == 0){
-			parent.style.marginLeft = '0';
-			parent.style.transform =`translateX(0)`;
-		}
-		else if( i == 1){
-			parent.style.marginLeft = '0';
-			parent.style.transform =`translateX(-6px)`;
-		}
-		else if( i == buttons.length - 1){
-			parent.style.marginLeft = '-16px';
-		}
-		else {
-				parent.style.marginLeft = '0';
-				parent.style.transform =`translateX(${offsetLength}px)`;
+		/*==== ширина первой кнопки по загрузке страницы ==== */
+		buttons[0].style.width = 'calc(100vw - 56px - 32px - 12px)'; 
+		/*===== обработка клика по кнопке===== */
+		for(let i = 0; i < buttons.length; i++){
+			buttons[i].addEventListener('click', function() {
+				const parent = buttons[i].parentNode;
+				/*делаем все кнопки сначала одной ширины */
+				for(btn of buttons){
+					btn.style.width = '56px';
+				}
+				/*кнопке по которой был клик, задаем динамичную ширину */
+				if( i > 0 && i < (buttons.length - 1)){buttons[i].style.width = 'calc(100vw - 168px)';	}
+				else{
+					buttons[i].style.width = 'calc(100vw - 56px - 32px - 12px)';	
+				}
+				/*вычисляем , на сколько надо сдвинуть родителя, в зависимости от номера кнопки */
+				const offsetLength = -((i-1) * 56 + ((i-1) * 12));
+				const stopScrolling = buttons[buttons.length-1];
+					
+				if( i <2 ){parent.style.transform =`translateX(0)`;}
+				else if( i == buttons.length - 1){parent.style.transform =`translateX(-272px)`;}
+				else {parent.style.transform =`translateX(${offsetLength}px)`;}
+			});
 		}
 	}
-  });
-}
+	//======== ресайз для этапов работ ======
+	window.addEventListener('resize', ()=>{
+		for(let i = 0; i < buttons.length; i++){
+			const parent = buttons[i].parentNode;
+			
+			if(buttons.lengts > 0 || window.innerWidth < 583){
+				/* cсначала все кнопки одной ширины */
+				for(btn of buttons){
+					btn.style.width = '56px';
+				}
+				/* в зависимости от номера кнопки, задаем ширину активной кнопке */
+				if(buttons[i].classList.contains('.active')){
+					
+					/* у первой и крайней кнопок - своя шириа, у внцтренних - другая */
+					if( i > 0 && i < (buttons.length - 1)){buttons[i].style.width = 'calc(100vw - 168px)';	}
+					else{
+						buttons[0].style.width = 'calc(100vw - 56px - 32px - 12px)';	
+					}
+				
+					/* в зависимости от того, какая кнопка активна, задаем смещение родителя кнопок */
+					const offsetLength = -((i-1) * 56 + ((i-1) * 12));
+					const stopScrolling = buttons[buttons.length-1];
+						
+					if( i <2 ){parent.style.transform =`translateX(0)`;}
+					else if( i == buttons.length - 1){parent.style.transform =`translateX(-272px)`;}
+					else {parent.style.transform =`translateX(${offsetLength}px)`;}
+				}
+				
+			}
+			else{
+				/*отменяем смещение, если экран больше 583пикс */
+				parent.style.transform =`translateX(0)`;
+				for(btn of buttons){
+					btn.style.width = '90px';
+					if(btn.classList.contains('active')){btn.style.width = 'auto';}
+				}
+				
+			}
+		}
+	});
+});
