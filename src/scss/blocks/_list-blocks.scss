@@ -187,5 +187,8 @@ blockquote +*{
 			line-height: 24px;
 			svg{color: $bg-black;}
 		}
+		@media (max-width: 1279px) {
+			padding: 16px;
+		}
 	}
 }
