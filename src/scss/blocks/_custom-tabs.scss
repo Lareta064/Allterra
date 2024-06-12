@@ -1,6 +1,6 @@
-.custom-tabs{
+.education-stages__tabs .custom-tabs{
 	.scroll-wrapper{overflow: hidden;}
-	&__btns{
+	.custom-tabs__btns{
 		display: flex;
 		column-gap: 20px;
 		
@@ -14,11 +14,11 @@
 		}
 		
 	}
-		@media (max-width: 767px) {
-			.scroll-x {
-				width: 100%;
-			}
+	@media (max-width: 767px) {
+		.scroll-x {
+			width: 100%;
 		}
+	}
 	.tab-btn{
 		flex-shrink: 0;
 		width: 90px;
@@ -98,7 +98,7 @@
 		
 
 	}
-	&__content{
+	.custom-tabs__content{
 		background-color: $white;
 		padding: 44px 74px;
 		box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
@@ -111,13 +111,19 @@
 		}
 		
 	}
-	.custom-tab{
-		display: none;
-		&.active{display: block;}
-		
-	}
+
 }
 @keyframes addColor{
 	0%{ opacity:0;}
 	100%{opacity: 1;}
+}
+.custom-tabs{
+	.custom-tab {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+
+	}
 }

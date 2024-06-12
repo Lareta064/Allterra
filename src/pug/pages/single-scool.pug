@@ -4,7 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	mixin slideFlag(cntr, txt)
-		.swiper-slide.ab__item
+		.swiper-slide.ab__item.tab-btn
 			.country-item
 				svg(class="fl-"+ cntr width="40" height="27")
 					use( href='./img/flags-sprite.svg#fl-'+ cntr)
@@ -39,28 +39,38 @@ block content
 						p После прохождения этих этапов можно приступить к подбору школы. Этап включает формирование первичного списка школ, анализ результатов учеников, проверку вступительных требований и коммуникацию с представителями иностранных школ.
 					.scool-content__img
 						img(src="./img/scool.webp", alt="img" width="610")
-		
-				.swiper.country-swiper.ab
-					.ab__line
-						span#ab__range
-					.swiper-wrapper
-						+slideFlag('uk', 'Великобритания')
-						+slideFlag('usa', 'США')
-						+slideFlag('ru', 'Россия')
-						+slideFlag('de', 'Германия')
-						+slideFlag('fr', 'Франция')
-						+slideFlag('can', 'Канада')
-						+slideFlag('kor', 'Корея')
-						+slideFlag('spain', 'Испания')
-						+slideFlag('turk', 'Турция')
-						+slideFlag('swet', 'Швейцария')
-						+slideFlag('aus', 'Австралия')
+
+				//======= SLIDER COUNTRY + SCOOL =======
+				.scool-tabs.custom-tabs
+
+					.swiper.country-swiper.ab
+						.ab__line
+							span#ab__range
+						.swiper-wrapper
+							+slideFlag('uk', 'Великобритания')
+							+slideFlag('usa', 'США')
+							+slideFlag('ru', 'Россия')
+							+slideFlag('de', 'Германия')
+							+slideFlag('fr', 'Франция')
+							+slideFlag('can', 'Канада')
+							+slideFlag('kor', 'Корея')
+							+slideFlag('spain', 'Испания')
+							+slideFlag('turk', 'Турция')
+							+slideFlag('swet', 'Швейцария')
+							+slideFlag('aus', 'Австралия')
+							
 						
+						.slider-nav
+							.swiper-button-next
+							.swiper-button-prev
 					
-					.slider-nav
-						.swiper-button-next
-						.swiper-button-prev
-		
+					.country-swiper__content
+						.custom-tab.active
+							h1 kkk
+						.custom-tab
+							h1 222
+						.custom-tab
+							h1 333
 		section
 			.container
 				.three-columns

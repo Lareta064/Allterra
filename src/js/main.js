@@ -313,7 +313,6 @@ document.addEventListener("DOMContentLoaded", function (){
 	/*=================COUNTRY FLAGS SLIDER ================== */
     var countrySlider = new Swiper(".country-swiper", {
 	   slidesPerView: 'auto',
-	   loop: true,
 	   speed: 1000,
 	   autoWidth: true,
 	   spaceBetween: 24,
@@ -440,4 +439,14 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
+		/*================ STAGES TABS============ */
+	$('.custom-tabs').each(function() {
+		let ths = $(this);
+		ths.find('.custom-tab').not(':first').hide();
+		ths.find('.tab-btn').click(function() {
+			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
+			ths.find('.custom-tab').hide().eq($(this).index()).fadeIn()
+		}).eq(0).addClass('active');
+		
+	});
 });
