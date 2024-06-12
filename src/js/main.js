@@ -151,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		let ths = $(this);
 		ths.find('.custom-tab').not(':first').hide();
 		ths.find('.tab-btn').click(function() {
-			console.log(555)
 			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
 			ths.find('.custom-tab').hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass('active');
@@ -395,11 +394,9 @@ document.addEventListener("DOMContentLoaded", function (){
    }
     /*====TAB BUTTONS WIDTH ========== */
 	const buttons = document.querySelectorAll('.tab-btn');
-	function test(){
 
-	}
-	if(buttons.lengts > 0 || window.innerWidth < 583){
-		
+	if(buttons.lengts > 0 || window.innerWidth < 584){
+		console.log('555');
 		/*==== ширина первой кнопки по загрузке страницы ==== */
 		buttons[0].style.width = 'calc(100vw - 56px - 32px - 12px)'; 
 		/*===== обработка клика по кнопке===== */
@@ -425,44 +422,5 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	//======== ресайз для этапов работ ======
-	window.addEventListener('resize', ()=>{
-		for(let i = 0; i < buttons.length; i++){
-			const parent = buttons[i].parentNode;
-			
-			if(buttons.lengts > 0 || window.innerWidth < 583){
-				/* cсначала все кнопки одной ширины */
-				for(btn of buttons){
-					btn.style.width = '56px';
-				}
-				/* в зависимости от номера кнопки, задаем ширину активной кнопке */
-				if(buttons[i].classList.contains('.active')){
-					
-					/* у первой и крайней кнопок - своя шириа, у внцтренних - другая */
-					if( i > 0 && i < (buttons.length - 1)){buttons[i].style.width = 'calc(100vw - 168px)';	}
-					else{
-						buttons[0].style.width = 'calc(100vw - 56px - 32px - 12px)';	
-					}
-				
-					/* в зависимости от того, какая кнопка активна, задаем смещение родителя кнопок */
-					const offsetLength = -((i-1) * 56 + ((i-1) * 12));
-					const stopScrolling = buttons[buttons.length-1];
-						
-					if( i <2 ){parent.style.transform =`translateX(0)`;}
-					else if( i == buttons.length - 1){parent.style.transform =`translateX(-272px)`;}
-					else {parent.style.transform =`translateX(${offsetLength}px)`;}
-				}
-				
-			}
-			else{
-				/*отменяем смещение, если экран больше 583пикс */
-				parent.style.transform =`translateX(0)`;
-				for(btn of buttons){
-					btn.style.width = '90px';
-					if(btn.classList.contains('active')){btn.style.width = 'auto';}
-				}
-				
-			}
-		}
-	});
+
 });
