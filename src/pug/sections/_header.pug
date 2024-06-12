@@ -1,7 +1,4 @@
-mixin country-item(img, txt)
-	a(href="#!").flex-item
-		img(src="./img/flags/"+ img +".svg", width="24"  height="16" alt="icon")
-		span #{txt}
+
 //========== HEADER =========
 header.header
 	.header-search-popup.flex-center-x#search-popup
@@ -56,11 +53,11 @@ header.header
 										.grid-column__title
 											p Европа
 										.grid-column__list
-											+country-item('swich', 'Швейцария')
+											+country-item('swet', 'Швейцария')
 											+country-item('spain', 'Испания')
 											+country-item('de', 'Германия')
 											+country-item('fr', 'Франция')
-											+country-item('nid', 'Голландия')
+											+country-item('netherl', 'Голландия')
 											+country-item('fin', 'Финлядия')
 									.grid-column
 										.grid-column__title
@@ -68,9 +65,9 @@ header.header
 										.grid-column__list
 											+country-item('sing', 'Сингапур')
 											+country-item('oae', 'ОАЭ')
-											+country-item('tln', 'Тайланд')
+											+country-item('thail', 'Тайланд')
 											+country-item('kor', 'Южная Корея')
-											+country-item('mls', 'Малайзия')
+											+country-item('malasia', 'Малайзия')
 											+country-item('china', 'Китай')
 								//======= bottom link =====
 								.drop-menu-footer
@@ -225,11 +222,11 @@ header.header
 										.grid-column__title
 											p Европа
 										.grid-column__list
-											+country-item('swich', 'Швейцария')
+											+country-item('swet', 'Швейцария')
 											+country-item('spain', 'Испания')
 											+country-item('de', 'Германия')
 											+country-item('fr', 'Франция')
-											+country-item('nid', 'Голландия')
+											+country-item('netherl', 'Голландия')
 											+country-item('fin', 'Финлядия')
 									.grid-column
 										.grid-column__title
@@ -239,7 +236,7 @@ header.header
 											+country-item('oae', 'ОАЭ')
 											+country-item('tln', 'Тайланд')
 											+country-item('kor', 'Южная Корея')
-											+country-item('mls', 'Малайзия')
+											+country-item('malasia', 'Малайзия')
 											+country-item('china', 'Китай')
 					li.menu-item
 						a(href="#!") Учебные заведения

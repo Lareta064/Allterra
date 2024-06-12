@@ -8,7 +8,7 @@ mixin menu-list(arg)
 //-====флаг + название страны =====
 mixin country-item(img, txt)
 	a(href="#!").flex-item
-		img(src="./img/flags/"+ img +".svg", width="24"  height="16" alt="icon")
+		+flag(img)
 		span #{txt}
 
 //------выпадашка страны =====

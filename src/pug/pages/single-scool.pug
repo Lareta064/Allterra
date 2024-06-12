@@ -3,11 +3,12 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	//=============MAIN===========
-	mixin slideFlag
-		.swiper-slide
+	mixin slideFlag(cntr, txt)
+		.swiper-slide.ab__item
 			.country-item
-				img(src="./img/flags/uk.svg", width="40" height="27"  alt="flag")
-				p Великоб
+				svg(class="fl-"+ cntr width="40" height="27")
+					use( href='./img/flags-sprite.svg#fl-'+ cntr)
+				p #{txt}
 	main.inner-page
 		section.hero(style="background-image:url('./img/search-page-header.webp')")
 			.container
@@ -39,33 +40,26 @@ block content
 					.scool-content__img
 						img(src="./img/scool.webp", alt="img" width="610")
 		
-				.swiper.country-swiper
-						.swiper-wrapper
-							
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-							+slideFlag
-						.swiper-scrollbar
-						.slider-nav
-							.swiper-button-next
-							.swiper-button-prev
+				.swiper.country-swiper.ab
+					.ab__line
+						span#ab__range
+					.swiper-wrapper
+						+slideFlag('uk', 'Великобритания')
+						+slideFlag('usa', 'США')
+						+slideFlag('ru', 'Россия')
+						+slideFlag('de', 'Германия')
+						+slideFlag('fr', 'Франция')
+						+slideFlag('can', 'Канада')
+						+slideFlag('kor', 'Корея')
+						+slideFlag('spain', 'Испания')
+						+slideFlag('turk', 'Турция')
+						+slideFlag('swet', 'Швейцария')
+						+slideFlag('aus', 'Австралия')
+						
+					
+					.slider-nav
+						.swiper-button-next
+						.swiper-button-prev
 		
 		section
 			.container

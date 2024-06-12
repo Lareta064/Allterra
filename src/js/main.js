@@ -312,19 +312,15 @@ document.addEventListener("DOMContentLoaded", function (){
     
 	/*=================COUNTRY FLAGS SLIDER ================== */
     var countrySlider = new Swiper(".country-swiper", {
-	   slidesPerView: 11,
+	   slidesPerView: 'auto',
 	   loop: true,
 	   speed: 1000,
 	   autoWidth: true,
-	   spaceBetween: 10,
-	   scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
-      },
-      navigation: {
-         nextEl: ".swiper-button-next",
-         prevEl: ".swiper-button-prev",
-      },
+	   spaceBetween: 24,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		}
     });
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
@@ -422,5 +418,26 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
+	/***********COUNTRIES SLIDER********* */
+	const cntrSliderItems = document.querySelectorAll('.ab__item');
+	if(cntrSliderItems.length > 0){
+		const abWrapper =  document.querySelector('.ab');
+		const abLine =  document.querySelector('#ab__range');
+		for(let item of cntrSliderItems){
+			item .addEventListener('click', ()=>{
+				const parentPosLeft = abWrapper.getBoundingClientRect().left;
 
+				const itemPosLeft = item.getBoundingClientRect().left;
+				const distLeft = (itemPosLeft - parentPosLeft)+'px';
+				const itemPosRight = item.getBoundingClientRect().right;
+				const distRight = (itemPosRight - parentPosLeft)+'px';
+				
+				const itemWidth = (itemPosRight - itemPosLeft)+'px';
+				abLine.style.left = distLeft;
+				abLine.style.width = itemWidth;
+				console.log(itemPosLeft);
+				console.log(itemWidth);
+			});
+		}
+	}
 });
