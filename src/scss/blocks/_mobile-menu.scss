@@ -16,8 +16,8 @@
 	@media(min-width:1280px){display: none;}
 }
 .mobile-menu-content{
-	padding: 38px 16px;
-	width: min(360px, 100%);
+	padding: 38px 16px 16px;
+	width: min(480px, 100%);
 	background-color: #fff;
 	li a{
 		font-size: 15px;
@@ -43,7 +43,7 @@
 		top: 0;
 		bottom: 0;
 		right: 0;
-		width: min(360px, 100%);
+		width: min(480px, 100%);
 		background-color: white;
 		z-index: 2;
 		padding: 38px 16px;

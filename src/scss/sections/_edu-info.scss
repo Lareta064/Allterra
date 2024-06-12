@@ -152,6 +152,7 @@
 	min-width: 210px;
 	height: 48px;
 	line-height: 48px;
+	pointer-events: none;
 	&:hover {background: rgba(16, 23, 36, 0.8);}
 
 	span {
@@ -168,7 +169,7 @@
 		width: 16px;
 		height: 16px;
 		fill: transparent;
-		transition: .3s; 
+		
 		position: absolute;
 		right: 16px;
 		top: 50%;

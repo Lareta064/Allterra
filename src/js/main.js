@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		const videoContent = videoBox.querySelector('#video');
 		const videoToggleBtn = videoBox.querySelector('#video-btn');
 		
-		videoToggleBtn.addEventListener('click', ()=>{
+		videoContent.addEventListener('click', ()=>{
 			if(!videoToggleBtn.classList.contains('active')){
 				videoContent.pause();
 				videoToggleBtn.classList.add('active');
@@ -154,7 +154,10 @@ document.addEventListener("DOMContentLoaded", function (){
 			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
 			ths.find('.custom-tab').hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass('active');
+		
 	});
+
+
 	/*============== ACORDION ========== */
 	;(function ($, window, document, undefined) {
 		"use strict";
@@ -313,7 +316,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	   loop: true,
 	   speed: 1000,
 	   autoWidth: true,
-	spaceBetween: 10,
+	   spaceBetween: 10,
 	   scrollbar: {
         el: ".swiper-scrollbar",
         draggable: true,
@@ -350,8 +353,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
    
 	const dynamicMenu = document.querySelector('.dynamic-menu');
-    /* меню Содержание страницы на моб версии */
-   if(dynamicMenu){
+   
+	/* меню Содержание страницы на моб версии */
+     if(dynamicMenu){
 	   dynamicMenuBtn = dynamicMenu.querySelector('.dynamic-menu__header');
 	   dynamicMenuList = dynamicMenu.querySelector('.dynamic-menu__list');
 	  
@@ -388,4 +392,35 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
    }
+    /*====TAB BUTTONS WIDTH ========== */
+	const buttons = document.querySelectorAll('.tab-btn');
+
+	if(buttons.lengts > 0 || window.innerWidth < 584){
+		console.log('555');
+		/*==== ширина первой кнопки по загрузке страницы ==== */
+		buttons[0].style.width = 'calc(100vw - 56px - 32px - 12px)'; 
+		/*===== обработка клика по кнопке===== */
+		for(let i = 0; i < buttons.length; i++){
+			buttons[i].addEventListener('click', function() {
+				const parent = buttons[i].parentNode;
+				/*делаем все кнопки сначала одной ширины */
+				for(btn of buttons){
+					btn.style.width = '56px';
+				}
+				/*кнопке по которой был клик, задаем динамичную ширину */
+				if( i > 0 && i < (buttons.length - 1)){buttons[i].style.width = 'calc(100vw - 168px)';	}
+				else{
+					buttons[i].style.width = 'calc(100vw - 56px - 32px - 12px)';	
+				}
+				/*вычисляем , на сколько надо сдвинуть родителя, в зависимости от номера кнопки */
+				const offsetLength = -((i-1) * 56 + ((i-1) * 12));
+				const stopScrolling = buttons[buttons.length-1];
+					
+				if( i <2 ){parent.style.transform =`translateX(0)`;}
+				else if( i == buttons.length - 1){parent.style.transform =`translateX(-272px)`;}
+				else {parent.style.transform =`translateX(${offsetLength}px)`;}
+			});
+		}
+	}
+
 });

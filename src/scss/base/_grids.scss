@@ -1,6 +1,6 @@
 /*GRIDS*/
 .two-columns,
-.two-columns-1024 {
+.two-columns-1024, .two-columns-1280 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
@@ -11,7 +11,18 @@
 		gap: 16px;
 	}
 }
+.two-columns-1280{
+	@media (max-width: 1279px) {
+		grid-template-columns: 1fr;
+	}
+}
+.two-columns-1024 {
+	@media (max-width: 1023px) {
 
+		grid-template-columns: 1fr;
+
+	}
+}
 .grid-12 {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
@@ -26,13 +37,6 @@
 	}
 }
 
-.two-columns-1024 {
-	@media (max-width: 1023px) {
-
-		grid-template-columns: 1fr;
-
-	}
-}
 
 .four-columns,
 .four-columns-767 {
