@@ -23,7 +23,13 @@
 			
 		}
 	}
-	
+	&-descrip {
+		margin-bottom: 120px;
+
+		@media (max-width: 767px) {
+			margin-bottom: 60px;
+		}
+	}
 	&-text {
 		&>*+*{margin-top: 32px;}
 		line-height: 1.75;
@@ -41,10 +47,4 @@
 		&-image{display: none;}
 	}
 
-}
-.service-cards{
-	padding-top: 120px;
-	@media (max-width: 767px) {
-	padding-top: 60px;
-	}
 }
