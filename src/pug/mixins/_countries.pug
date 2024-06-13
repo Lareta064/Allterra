@@ -6,7 +6,7 @@ mixin flag-link(flag, cnt, txt)
 			p Учебных заведений: #{txt}
 
 mixin flag(cntr)
-	svg(class="fl-"+ cntr width="24" height="16")
+	svg(class="fl-"+ cntr )
 		use( href='./img/flags-sprite.svg#fl-'+ cntr)
 mixin flag-ui(cntr)
 	svg(class="fl-"+ cntr)
