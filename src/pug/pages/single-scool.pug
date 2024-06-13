@@ -49,18 +49,25 @@ block content
 		+feedback-section()(class="light-bg")
 		
 		include ../sections/_faq
-		//============ CONTACTS ================
-		section.contacts.contacts--popup.dark-bg
-			.container
-				.dark-opacity.txt-center
-					p.h3.txt-upper Остались вопросы?
-					p.txt-16 Ваш менеджер Allterra Education поможет разобраться
-					
-					button(type="submit").btn-white.mt-40 Получить консультацию		
-		
+		include ../sections/_contacts-popup
+		include ../sections/_how-enroll
 		include ../sections/_scool-tabs-slider.pug
 		include ../sections/_statistics
-		include ../sections/_accredit
+		section.process-stages.light-bg
+			.container
+				h2.section-title Процесс отправки ребёнка #[span.accent-border  на учёбу за рубеж]
+				 
+				.process-cards
+					+process-card('01','Выявление интересов и предпочтений', 'Тестирование, определение приоритетов и ограничений' )
+					+process-card('02','Долгосрочное планирование', 'Проработка образовательного маршрута, подбор школы' )
+					+process-card('03','Подготовка документов, зачисление', 'Сбор и подготовка документов, получение подтверждения о зачислении' )
+					+process-card('04','Получение учебной визы', 'Проверка документов, заполнение анкеты, подготовка к интервью' )
+					+process-card('05','Подготовка к отъезду', 'Сборы, бронирование билетов и отъезд' )
+					+process-card('06','Курирование', 'Контроль успеваемости, решение бытовых и организационных вопросов' )
+		
+		include ../sections/_all-services
+		include ../sections/_section-review
+		include ../sections/_contacts
 	include ../sections/_footer
 
 block variables

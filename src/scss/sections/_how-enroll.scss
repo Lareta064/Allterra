@@ -1,0 +1,100 @@
+.how-enroll{
+	position: relative;
+	padding-top: 50px!important;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 50px;
+		background-color:  #efefef;
+		filter: blur(44px);	
+		z-index: 2;
+	}
+	.how-enroll__bg{
+		background-image: url('../img/scools/board.webp');
+		aspect-ratio: 93 / 50;
+		overflow: hidden;
+		padding-top: 7.6vw;
+		position: relative;
+		z-index: 3;
+		@media (max-width: 1279px) {
+			padding-top: 9.6vw;
+			aspect-ratio: 93 / 62;
+			background-image: url('../img/scools/board-laptop.webp');
+		}
+	}
+	.how-enroll__content{
+		margin-inline: auto;
+		width: 63vw;
+		.h3{
+			margin-bottom: 32px;
+			letter-spacing: -0.03em;
+		}
+		p, li{
+			line-height: 1.75;
+		}
+		li{
+			list-style-type:"- ";
+			margin-left: 10px;
+		}
+		ul{margin-bottom: 32px;}
+		strong{
+			font-weight: 600;
+			
+			span{
+				position: relative;
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					height: 2px;
+					bottom: -8px;
+					background-color: $main-accent;;
+				}
+			}
+		}
+		.btn-accent{margin-top: 66px; box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06)}
+		@media (max-width: 1279px) {
+			width: 82vw;
+		.btn-accent {
+				margin-top: 50px;
+			}
+		}
+	}
+    @media (max-width: 1023px) {
+		padding-top: 80px!important;
+		&:before{
+			display: none;
+		}
+		.how-enroll__bg{
+			background-image: none;
+			aspect-ratio: unset;
+			padding-top: 0;
+		}
+		.btn-accent{
+			background-color: $bg-black!important;
+		}
+		.how-enroll__content{
+			width: 100%;
+			padding-inline: 20px;
+		}
+	}
+	@media (max-width: 767px) {
+		.how-enroll__content{
+			padding-inline: 16px;
+			p, li{font-size: 14px; line-height: 1.71;}}
+	}
+	@media (max-width: 374px) {
+		.how-enroll__content {
+			padding-inline: 12px;
+			p,
+			li {
+				font-size: 13px;
+				line-height: 1.71;
+			}
+		}
+	}
+}
