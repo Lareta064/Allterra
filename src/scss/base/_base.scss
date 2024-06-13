@@ -156,6 +156,7 @@ input::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
 }
+
 .container,.container-narrow {
 	width: min(1280px, 100%);
 	padding-inline: 20px;
@@ -399,5 +400,58 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 .hide-mobile{
 	@media (max-width: 767px) {
 	display: none!important;
+	}
+}
+*.block-1024{
+	display: block;
+	@media (max-width: 1023px) {
+		display: none;
+	}
+}
+*.flex-1024 {
+	display:flex;
+
+	@media (max-width: 1023px) {
+		display: none;
+	}
+}
+*.block-1023{
+	display: none;
+	@media (max-width: 1023px) {
+		display: block ;
+	}
+}
+*.flex-1023{
+	display: none ;
+	@media (max-width: 1023px) {
+		display: flex ;
+	}
+}
+*.block-1280 {
+	display: block;
+
+	@media (max-width: 1279px) {
+		display: none;
+	}
+}
+
+*.flex-1280 {
+	display: flex;
+
+	@media (max-width: 1279px) {
+		display: none;
+	}
+}
+*.block-1279 {
+	display: none;
+	@media (max-width: 1279px) {
+		display: block;
+	}
+}
+
+*.flex-1279 {
+	display: none;
+	@media (max-width: 1279px) {
+		display: flex;
 	}
 }

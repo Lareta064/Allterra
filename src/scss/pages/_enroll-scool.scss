@@ -7,10 +7,12 @@
 		.title {margin-bottom: 40px;}
 		.hero-subtitle{margin-bottom: 60px; max-width: 914px;}
 		@media (max-width: 767px) {
-		 margin-top: 190px;
+		 	margin-top: 190px;
+		 	
 		}
 		@media (max-width: 479px) {
 			width: 100%;
+			
 		}
 	}
 	.hero{
@@ -26,6 +28,13 @@
 		@media (max-width: 1023px) {
 			display: none;
 		}
+	}
+	@media (max-width: 767px) {
+		.txt-body {
+			.section-title {font-size: 32px;}
+			p {font-size: 16px;}
+		}
+		.scool-content{.two-columns{ row-gap:40px}}
 	}
 }
 .hero-title.hero-title--rel{
