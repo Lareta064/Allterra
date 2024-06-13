@@ -1,5 +1,6 @@
 .contacts{
 	background-image: url('../img/contacts.webp');
+
 	.contacts-form{
 		width: min(610px, 100%);
 		margin: 0 auto;
@@ -16,6 +17,35 @@
 		}
 	}
 	@media (max-width: 767px) {
-	background-image: url('../img/contacts-mob.webp');
+		background-image: url('../img/contacts-mob.webp');
+	}
+
+	&.contacts--popup{
+		padding-block: 110px 100px;
+		background-image: url('../img/scools/feedback-bg.webp');
+		.dark-opacity{
+			max-width: 600px;
+			margin-inline: auto;
+		}
+		position: relative; 
+		&>*{
+			z-index: 3;
+			position: relative;
+			
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			inset: 0;
+			backdrop-filter: blur(8px);
+			background: rgba(16, 23, 36, 0.2);
+		}
+		.h3{
+			margin-bottom: 12px;
+
+		}
+		@media (max-width: 767px) {
+			background-image: url('../img/scools/feedback-bg-mob.webp');
+		}
 	}
 }

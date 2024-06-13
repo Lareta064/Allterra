@@ -356,7 +356,10 @@ img.wh-100 {
 	}
 }
 
-section + section{padding-top: 100px;}
+section + section{
+	padding-top: 100px;
+
+}
 section:has(+ .dark-bg),section:has(+ .light-bg){
 	padding-bottom: 100px;
 }
@@ -391,13 +394,13 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 }
 .inner-page {
 	section+section {
-		padding-top: 80px;
+		padding-top: 100px;
 	}
 	
 	section:has(+ .dark-bg),
 	section:has(+ .light-bg),
 	section:last-child:not(.light-bg),
-	section:last-child:not(.dark-bg) {padding-bottom: 80px;}
+	section:last-child:not(.dark-bg) {padding-bottom: 100px;}
 	@media (max-width: 767px) {
 		section+section {
 			padding-top: 48px;
