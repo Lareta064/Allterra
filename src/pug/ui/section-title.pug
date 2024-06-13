@@ -1,0 +1,28 @@
+extends ../layouts/layout-ui.pug
+
+block content
+	.container-dashboard
+		h3 Компоненты в ряд
+		.header-group
+			h2.h2 Статьи об обучении <br> #[span.accent-border за рубежом]
+			
+			.btns-group
+				a(href="#!").btn--slim.btn-white Все новости
+				a(href="#!").btn--slim.btn Все статьи
+		pre.
+			.header-group
+				h2.h2 Статьи об обучении <br> #[span.accent-border за рубежом]
+				
+				.btns-group
+					a(href="#!").btn--slim.btn-white Все новости
+					a(href="#!").btn--slim.btn Все статьи
+
+		hr
+		h3 Компоненты в колонку
+		.header-group.header-group--col
+			h2.section-title Наши услуги будут полезны, если...
+			p.header-subtitle Мы выделяем несколько основных направлений в работе со школьниками, которые обусловлены их приоритетами. Ученики частных школ-пансионов за рубежом добиваются результатов в каждом из них
+		pre.
+			.header-group.header-group--col
+				h2.section-title Наши услуги будут полезны, если...
+				p.header-subtitle Мы выделяем несколько основных направлений в работе со школьниками, которые обусловлены их приоритетами. Ученики частных школ-пансионов за рубежом добиваются результатов в каждом из них
