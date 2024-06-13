@@ -40,3 +40,12 @@
 		}
 	}
 }
+.service-cards.four-columns{
+	@media (max-width: 1279px) {
+		width: min(982px, 100%);
+		margin-inline: auto;
+	}
+	@media (max-width: 767px) {
+		width: min(482px, 100%);
+	}
+}

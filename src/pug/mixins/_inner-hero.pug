@@ -11,7 +11,7 @@ mixin hero-section(links, name, bottomText, titleClass, backLink, subtitle )
 				.hero-title
 					h1(class=(titleClass != ''? ''+ titleClass : '')) !{name}
 					if subtitle
-						p.hero-subtitle !{subtitle}
+						p.header-subtitle !{subtitle}
 				//===== bottom text =====
 				.hero-bottom
 					if bottomText != ''
@@ -33,7 +33,7 @@ mixin hero-section-ui(links, name, bottomText, titleClass, backLink, subtitle )
 				.hero-title
 					h1(class=(titleClass != ''? ''+ titleClass : '')) !{name}
 					if subtitle
-						p.hero-subtitle !{subtitle}
+						p.header-subtitle !{subtitle}
 				//===== bottom text =====
 				.hero-bottom
 					if bottomText != ''
