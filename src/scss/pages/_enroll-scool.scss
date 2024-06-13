@@ -4,6 +4,12 @@
 	margin-bottom: 60px;
 }
 .inner-page--scool {
+	.hero{
+		background-position: center -50px;
+		@media(max-width:1919px){
+			background-position: center 0;
+		}
+	}
 	.hero:after{
 		display: none;
 	}
