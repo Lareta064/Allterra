@@ -3,3 +3,12 @@ mixin enr-table-row(items)
 		tr
 			each txt in item.txts
 				td #{txt}
+
+
+mixin enr-table-mobile(arg)
+	each el in arg
+		.tb__row
+			.tb__row-title #{el.title}
+			.tb__row-content
+				p #{el.txt1}
+				p #{el.txt2}

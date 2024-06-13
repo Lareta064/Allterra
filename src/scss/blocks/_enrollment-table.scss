@@ -46,5 +46,8 @@
 		
 	th +th, td +td {border-left: 1px solid $light-grey;}
 	td:last-child {border-left: 1px solid $main-accent!important;}
+	@media (max-width: 1023px) {
+	th:first-child, td:first-child{display: none;}
+	}
 		
 }

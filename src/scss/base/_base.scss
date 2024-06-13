@@ -232,7 +232,7 @@ address {
 	margin: 0 auto;
 	margin-bottom: 50px;
 	align-items: flex-end;
-	width: min(1070px, 100%);
+	width: min(1070px, 85%);
 	&>* {
 		margin-bottom: 0!important;
 	}
@@ -240,7 +240,9 @@ address {
 	.header-group .btns-group {
 		display: flex;
 	}
-
+	@media (max-width: 1023px) {
+		width: min(1070px, 100%);
+	}
 	@media (max-width: 1023px) {
 		.btns-group {
 			display: none !important;
@@ -266,6 +268,7 @@ address {
 	align-items: flex-start;
 	}
 }
+
 .w-100{
 	width: 100% !important;
 }
