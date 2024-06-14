@@ -53,7 +53,6 @@
 @import "sections/_greeting-section.scss";
 
  //============article-page====
-
 @import "sections/_article-page-content.scss";
 @import "blocks/_backlit-menu.scss";
 
@@ -83,6 +82,7 @@
 
 //=================ALL REVIEW =====
 @import "blocks/_filters-menu.scss";
+@import "pages/_review-page.scss";
 
 //ui
 @import "ui/_ui-navigation";

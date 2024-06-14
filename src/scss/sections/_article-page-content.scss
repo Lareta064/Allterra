@@ -87,11 +87,12 @@
 	&__header{
 		svg{display: none; transition: .3s; }
 		&>*{margin-bottom: 0;}
-		margin-bottom: 24px;
+		
 		&.active svg {
 			transform: rotate(180deg);
 		}
 	}
+	
 	@media (max-width: 1279px){
 		.h4{font-size: 20px;}
 	}

@@ -3,33 +3,43 @@ extends ../layouts/layout-ui.pug
 block content
 	.container-dashboard
 		h3 Filters menu
-		.filters.dynamic-menu
-			//====== filters header ===
-			.filters-header.dynamic-menu__header
-				.h4 Выберете отзывы, интересующие вас
-				svg.svg-chevron-down
-					use(href="./img/spriteSvg.svg#svg-chevron-down")
-				
-			//====== filters content ===
-			.filters-drop.dynamic-menu__list
-				.filters-body
-					//========ВЫБРАННЫЕ ФИЛЬТРЫ =======
-					.filters__selected
-						button(type="button").filters-reset.grey-link Сбросить все
+			.aside-grid__col.filters.dynamic-menu
+				//====== filters header ===
+				.filters-header.dynamic-menu__header
+					.h4 Выберете отзывы, интересующие вас
+					svg.svg-chevron-down
+						use(href="./img/spriteSvg.svg#svg-chevron-down")
+					
+				//====== filters content ===
+				.filters-drop.dynamic-menu__list
+					.filters-body
+						//========ВЫБРАННЫЕ ФИЛЬТРЫ =======
+						.filters__selected
+							button(type="button").filters-reset.grey-link Сбросить все
+							.filters-group
+								.filters-group__title Уровень образования
+								.filters-group__label
+									p Языковые курсы
+									button(type="button").btn-remove
+							
+							.filters-group
+								.filters-group__title Страна
+								.filters-group__label
+									p Испания
+									button(type="button").btn-remove
+
+						//=========СПИСОК ГРУПП ФИЛЬТРОВ =======
+						//=====ОДНА ГРУППА ======
 						.filters-group
 							.filters-group__title Уровень образования
-							.filters-group__label
-								p Языковые курсы
-								button(type="button").btn-remove
-						
-						.filters-group
-							.filters-group__title Страна
-							.filters-group__label
-								p Испания
-								button(type="button").btn-remove
-
-					//=========СПИСОК ГРУПП ФИЛЬТРОВ =======
-					.filters__list
+							.filters-group__list
+								a(href="#!") Арт и Дизайн
+								a(href="#!") Высшее образование
+								a(href="#!") Каникулы
+								a(href="#!") Подготовка к экзаменам
+								a(href="#!") Среднее образование
+								a(href="#!") Языковые курсы
+						//=====ОДНА ГРУППА ======
 						.filters-group
 							.filters-group__title Страна
 							.filters-group__list
@@ -40,4 +50,11 @@ block content
 								a(href="#!") Испания
 								a(href="#!") Италия
 							
+							//======= показать еще =======
 							button(type="button").accent-link.btn-more Показать еще
+						//=====ОДНА ГРУППА ======
+						.filters-group
+							.filters-group__title Отзывы
+							.filters-group__list
+								a(href="#!") Родители
+								a(href="#!") Дети

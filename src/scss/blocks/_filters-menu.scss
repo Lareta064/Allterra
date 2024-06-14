@@ -16,6 +16,9 @@
 		column-gap:16px;
 		align-items: center;
 	}
+	&-body {
+		padding-top: 24px;
+	}
 	&-group__title{
 		font-size: 12px;
 		line-height: 1.67;
@@ -39,6 +42,7 @@
 			&:hover{opacity: 1;}
 		}
 	}
+	
 	&-group__list{
 		
 		a{
@@ -51,4 +55,8 @@
 		}
 	}
 	.btn-more{margin-top: 12px;}
+	@media (max-width: 767px) {
+	&-header .h4{font-size: 18px; line-height: 1.44; line-height: 144%;
+		letter-spacing: -0.01em;}
+	}
 }
