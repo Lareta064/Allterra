@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", function (){
 				videoToggleBtn.querySelector('span').textContent = 'Приостановить видео';
 			}
 		});
+		videoContent.addEventListener("ended", function () {
+			videoContent.pause();
+			videoToggleBtn.classList.add('active');
+			videoToggleBtn.querySelector('span').textContent = 'Возобновить видео';
+		});
 	}
 	/*========Partners'Zone  VIDEO============ */
 	const videoBlock = document.querySelector('.video');
@@ -30,12 +35,14 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(videoBlock.classList.contains('active')){
 				videoBlockContent.pause();
 				videoBlock.classList.remove('active');
-				
-				
 			}else{
 				videoBlockContent.play();
 				videoBlock.classList.add('active');
 			}
+		});
+		videoBlock.addEventListener("ended", function () {
+			videoBlockContent.pause();
+			videoBlock.classList.remove('active');
 		});
 	}
 	/*==============FOR HEADER SEARCH FORM ============= */
