@@ -62,16 +62,14 @@
 
 .aside-grid {
 	display: grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 295px 1fr;
 	column-gap: 40px;
 	row-gap: 40px;
 	align-items: flex-start;
 
-	&__col {
-		max-width: 295px;
-	}
 	@media (max-width: 1279px) {
 		row-gap: 32px;
+		grid-template-columns: 225px 3fr;
 	}
 	@media (max-width: 767px) {
 		&__col {
@@ -87,7 +85,7 @@
 	column-gap: 20px;
 }
 
-.aside-grid.aside-grid--1280 {
+.aside-grid.aside-grid--1279 {
 
 	@media (max-width: 1279px) {
 		grid-template-columns: 1fr;
@@ -95,7 +93,15 @@
 		.aside-grid__col {
 			max-width: unset;
 		}
+	}
+}
+.aside-grid.aside-grid--1023 {
 
+	@media (max-width: 1023px) {
+		grid-template-columns: 1fr;
 
+		.aside-grid__col {
+			max-width: unset;
+		}
 	}
 }
