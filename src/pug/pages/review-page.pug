@@ -5,7 +5,9 @@ block content
 	//=============MAIN===========
 	main.inner-page
 		+hero-section(['Главная', 'Отзывы'], 'Отзывы','', 'title', 'back-link')( style="background-image:url(./img/about/header-bg.webp)")
+		
 		include ../sections/_review-page
+		
 		+blogCardsSlider('Другие новости', 'об образовании', 'btn-br-white')
 		include ../sections/_contacts
 	include ../sections/_footer
