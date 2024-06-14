@@ -3,15 +3,15 @@ extends ../layouts/layout-ui.pug
 block content
 	.container-dashboard
 		h3 Filters menu
-		.filters
+		.filters.dynamic-menu
 			//====== filters header ===
-			.filters-header
+			.filters-header.dynamic-menu__header
 				.h4 Выберете отзывы, интересующие вас
 				svg.svg-chevron-down
 					use(href="./img/spriteSvg.svg#svg-chevron-down")
 				
 			//====== filters content ===
-			.filters-drop
+			.filters-drop.dynamic-menu__list
 				.filters-body
 					//========ВЫБРАННЫЕ ФИЛЬТРЫ =======
 					.filters__selected
