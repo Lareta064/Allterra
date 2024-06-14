@@ -320,6 +320,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		}
+
     });
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
@@ -441,4 +442,33 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 		/*================ STAGES TABS============ */
 
+
+
+// Предположим, что у первого и второго блока есть идентификаторы 'firstBlock' и 'secondBlock' соответственно
+// var firstBlock = document.getElementById('firstBlock');
+// var secondBlock = document.getElementById('secondBlock');
+
+// // Функция для перемещения второго блока
+// function moveSecondBlock() {
+//   // Получаем текущее значение transform для первого блока
+//   var firstBlockStyle = window.getComputedStyle(firstBlock);
+//   var firstBlockTransform = firstBlockStyle.transform;
+
+//   // Извлекаем значение смещения по оси X из матрицы трансформации
+//   var matrixValues = firstBlockTransform.match(/matrix.*\((.+)\)/);
+//   if (matrixValues) {
+//     var transformValues = matrixValues[1].split(', ');
+//     var translateX = transformValues[4]; // Значение смещения по оси X
+
+//     // Применяем то же смещение к второму блоку
+//     secondBlock.style.transform = 'translateX(' + translateX + 'px)';
+//   }
+// }
+// countrySlider.on('setTranslate',function(){
+// 	moveSecondBlock();
+// });
+// countrySlider.on('sliderMove',function(){
+// 	moveSecondBlock();
+// })
 });
+// Вызываем функцию moveSecondBlock при необходимости
