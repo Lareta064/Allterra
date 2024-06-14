@@ -360,7 +360,7 @@ section + section{
 	padding-top: 100px;
 
 }
-section:has(+ .dark-bg),section:has(+ .light-bg){
+section:has(+ section.dark-bg),section:has(+ section.light-bg){
 	padding-bottom: 100px;
 }
 *.dark-bg{
@@ -368,7 +368,7 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 	color: $white;
 }
 *.light-bg{background-color: #f0f3f9;}
-*.light-bg,*.dark-bg{
+section.light-bg, section.dark-bg{
 	padding-block: 100px;
 	@media (max-width: 767px) {
 		padding-block: 80px;
@@ -406,8 +406,8 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 			padding-top: 48px;
 		}
 
-		section:has(+ .dark-bg),
-		section:has(+ .light-bg),
+		section:has(+ section.dark-bg),
+		section:has(+ section.light-bg),
 		section:last-child:not(.light-bg),
 		section:last-child:not(.dark-bg) {
 			padding-bottom: 48px;
@@ -420,7 +420,7 @@ section:has(+ .dark-bg),section:has(+ .light-bg){
 		padding-top: 80px;
 	}
 
-	section:has(+ .dark-bg),section:has(+ .light-bg) {
+	section:has(+ section.dark-bg),section:has(+ section.light-bg) {
 		padding-bottom: 80px;
 	}
 }

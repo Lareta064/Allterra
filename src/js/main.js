@@ -370,7 +370,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			dynamicMenuList.style.maxHeight = 0;
 			dynamicMenuBtn.classList.remove('active');
 		});
-		const stickyDynamicMenu = document.querySelector('#sticky-menu')
+		const stickyDynamicMenu = document.querySelector('#sticky-menu');
+		const stickyFiltersList = document.querySelector('.filters-drop');
 		
 		if(stickyDynamicMenu){
 			window.addEventListener('scroll', ()=>{
@@ -385,9 +386,18 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1279){
-					stickyDynamicMenu.style.maxHeight = 'unset';
+					dynamicMenuList.style.maxHeight = 'unset';
 				}else{
-					stickyDynamicMenu.style.maxHeight = '0';
+					dynamicMenuList.style.maxHeight = '0';
+				}
+			});
+		}
+		if(stickyFiltersList){
+			window.addEventListener('resize', ()=>{
+				if(window.innerWidth > 1023){
+					stickyFiltersList.style.maxHeight = 'unset';
+				}else{
+					stickyFiltersList.style.maxHeight = '0';
 				}
 			});
 		}
