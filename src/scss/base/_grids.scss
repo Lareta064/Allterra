@@ -37,7 +37,15 @@
 	}
 }
 
-
+.three-columns{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap:20px;
+	@media (max-width: 767px) {
+		gap:16px;
+		grid-template-columns: 1fr;
+	}
+}
 .four-columns,
 .four-columns-767 {
 	display: grid;
@@ -80,7 +88,13 @@
 		gap: 40px;
 	}
 }
+.aside-grid__content.flex-col{
+	row-gap:48px;
+	@media (max-width: 767px) {
+		row-gap: 30px;
+	}
 
+}
 .aside-grid.gap-20 {
 	column-gap: 20px;
 }

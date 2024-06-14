@@ -1,0 +1,21 @@
+.news-page, .blog-page{
+	@media (max-width: 767px) {
+	.three-columns {
+			grid-template-columns: 1fr 1fr;
+		}
+		.blog-card{
+			width: min(400px, 100%);
+			margin-inline: auto;
+		}
+	}
+
+	@media (max-width: 575px) {
+		.three-columns{
+			grid-template-columns: 1fr ;
+		}
+		.blog-card {
+			width: min(295px, 100%);
+			
+		}
+	}
+}

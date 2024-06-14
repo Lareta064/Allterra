@@ -2,8 +2,12 @@
 	height: auto;
 	padding: 20px;
 	background-color: #f0f3f9;
+	line-height: 1.41;
+	font-size: 14px;
 	&-reset{
 		line-height: 1.41;
+		color: $text-dark;
+		opacity: 0.5;
 	}
 	&-header,&__selected, &-body,&-group__list{
 		display: flex;
@@ -47,7 +51,8 @@
 		
 		a{
 			width: fit-content;
-			transition: .3s; 
+			transition: .3s;
+			font-size: 14px;
 		}
 		row-gap:12px;
 		a:hover{

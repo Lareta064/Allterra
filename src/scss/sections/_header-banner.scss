@@ -60,8 +60,12 @@
 		left: 50%;
 		transform: translate(-50%, -60%);
 		text-align: center;
-		
-		
+		@media (max-width: 1279px) {
+			text-align: left;
+			.hero-bottom {
+				text-align: left;
+			}
+		}
 	}
 	.hero-bottom{
 		text-align: center;

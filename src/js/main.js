@@ -394,8 +394,10 @@ document.addEventListener("DOMContentLoaded", function (){
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1279){
 					dynamicMenuList.style.maxHeight = 'unset';
+					dynamicMenuBtn.classList.remove('active');
 				}else{
 					dynamicMenuList.style.maxHeight = '0';
+					dynamicMenuBtn.classList.remove('active');
 				}
 			});
 		}
@@ -403,8 +405,10 @@ document.addEventListener("DOMContentLoaded", function (){
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1023){
 					stickyFiltersList.style.maxHeight = 'unset';
+					dynamicMenuBtn.classList.remove('active');
 				}else{
 					stickyFiltersList.style.maxHeight = '0';
+					dynamicMenuBtn.classList.remove('active');
 				}
 			});
 		}
