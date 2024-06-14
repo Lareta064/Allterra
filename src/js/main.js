@@ -370,23 +370,27 @@ document.addEventListener("DOMContentLoaded", function (){
 			dynamicMenuList.style.maxHeight = 0;
 			dynamicMenuBtn.classList.remove('active');
 		});
-		window.addEventListener('scroll', ()=>{
-			if(window.innerWidth <= 1280){
-				if(window.scrollY > 550){
-					dynamicMenu.classList.add('active');
-					
-				}else{
-					dynamicMenu.classList.remove('active');
+		const stickyDynamicMenu = document.querySelector('#sticky-menu')
+		
+		if(stickyDynamicMenu){
+			window.addEventListener('scroll', ()=>{
+				if(window.innerWidth <= 1280){
+					if(window.scrollY > 550){
+						stickyDynamicMenu.classList.add('active');
+						
+					}else{
+						stickyDynamicMenu.classList.remove('active');
+					}
 				}
-			}
-		});
-		window.addEventListener('resize', ()=>{
-			if(window.innerWidth > 1279){
-				dynamicMenuList.style.maxHeight = 'unset';
-			}else{
-				dynamicMenuList.style.maxHeight = '0';
-			}
-		});
+			});
+			window.addEventListener('resize', ()=>{
+				if(window.innerWidth > 1279){
+					stickyDynamicMenu.style.maxHeight = 'unset';
+				}else{
+					stickyDynamicMenu.style.maxHeight = '0';
+				}
+			});
+		}
    }
     /*====TAB BUTTONS WIDTH ========== */
 	const buttons = document.querySelectorAll('.tab-btn');
