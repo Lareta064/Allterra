@@ -234,7 +234,7 @@ h6, .h6 {
 .accent-txt, .accent-link{
 	color: $main-accent;
 }
-.white-link{
+.white-txt, .white-link{
 	color: $white;
 }
 *.white-link,
@@ -250,7 +250,6 @@ h6, .h6 {
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		
 		background-color: $main-accent;
 		transition: .3s;
 	}
@@ -277,10 +276,10 @@ h6, .h6 {
 	line-height: 1.71;
 	&:before{
 		background-color:  rgba(16, 23, 36, 0.4);
-		width: 100%;
+		width: 100%!important;
 	}
 	&:hover{color: rgba(16, 23, 36, 0.4);}
-	&:hover:before{width: 0;}
+	&:hover:before{width: 0!important;}
 }
 *.white-link:hover{color: $white; opacity: 0.8;}
 *.white-link:hover:before{width: 0;}

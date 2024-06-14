@@ -435,8 +435,8 @@ document.addEventListener("DOMContentLoaded", function (){
 				const itemWidth = (itemPosRight - itemPosLeft)+'px';
 				abLine.style.left = distLeft;
 				abLine.style.width = itemWidth;
-				console.log(itemPosLeft);
-				console.log(itemWidth);
+				// console.log(itemPosLeft);
+				// console.log(itemWidth);
 			});
 		}
 	}
@@ -445,30 +445,32 @@ document.addEventListener("DOMContentLoaded", function (){
 
 
 // Предположим, что у первого и второго блока есть идентификаторы 'firstBlock' и 'secondBlock' соответственно
-// var firstBlock = document.getElementById('firstBlock');
-// var secondBlock = document.getElementById('secondBlock');
+var firstBlock = document.getElementById('firstBlock');
+var secondBlock = document.getElementById('secondBlock');
 
-// // Функция для перемещения второго блока
-// function moveSecondBlock() {
-//   // Получаем текущее значение transform для первого блока
-//   var firstBlockStyle = window.getComputedStyle(firstBlock);
-//   var firstBlockTransform = firstBlockStyle.transform;
+// Функция для перемещения второго блока
+function moveSecondBlock() {
+  // Получаем текущее значение transform для первого блока
+  var firstBlockStyle = window.getComputedStyle(firstBlock);
+  var firstBlockTransform = firstBlockStyle.transform;
 
-//   // Извлекаем значение смещения по оси X из матрицы трансформации
-//   var matrixValues = firstBlockTransform.match(/matrix.*\((.+)\)/);
-//   if (matrixValues) {
-//     var transformValues = matrixValues[1].split(', ');
-//     var translateX = transformValues[4]; // Значение смещения по оси X
+  // Извлекаем значение смещения по оси X из матрицы трансформации
+  var matrixValues = firstBlockTransform.match(/matrix.*\((.+)\)/);
+  if (matrixValues) {
+    var transformValues = matrixValues[1].split(', ');
+    var translateX = transformValues[4]; // Значение смещения по оси X
 
-//     // Применяем то же смещение к второму блоку
-//     secondBlock.style.transform = 'translateX(' + translateX + 'px)';
-//   }
-// }
-// countrySlider.on('setTranslate',function(){
-// 	moveSecondBlock();
-// });
-// countrySlider.on('sliderMove',function(){
+    // Применяем то же смещение к второму блоку
+    secondBlock.style.transform = 'translateX(' + translateX + 'px)';
+  }
+}
+countrySlider.on('setTranslate',function(){
+	moveSecondBlock();
+});
+// countrySlider.on('previousTranslate',function(s){
+// 	console.log( s);
 // 	moveSecondBlock();
 // })
+
 });
 // Вызываем функцию moveSecondBlock при необходимости

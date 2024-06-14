@@ -1,0 +1,50 @@
+.filters{
+	&-reset{
+		line-height: 1.41;
+	}
+	&-header,&__selected, &-body,&-group__list{
+		display: flex;
+		flex-direction: column;
+		row-gap:24px;
+	}
+	&-header{
+		flex-direction: row;
+		justify-content: space-between;
+		column-gap:16px;
+	}
+	&-group__title{
+		font-size: 12px;
+		line-height: 1.67;
+		text-transform: uppercase;
+		color: $dark-grey;
+		opacity: 0.5;
+		margin-bottom: 8px;
+	}
+	&-group__label{
+		min-height: 40px;
+		padding: 12px;
+		background-color: $main-accent;
+		display: flex;
+		column-gap: 12px;
+		justify-content: space-between;
+		color: $white;
+		font-size: 14px;
+		line-height: 1.41;
+		.btn-remove{
+			opacity: .8;
+			&:hover{opacity: 1;}
+		}
+	}
+	&-group__list{
+		
+		a{
+			width: fit-content;
+			transition: .3s; 
+		}
+		row-gap:12px;
+		a:hover{
+			color: $main-accent;
+		}
+	}
+	.btn-more{margin-top: 12px;}
+}
