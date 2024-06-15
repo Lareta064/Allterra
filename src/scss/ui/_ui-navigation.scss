@@ -126,13 +126,14 @@
 	&__cards {
 		display: flex;
 		flex-wrap: wrap;
+		column-gap: 16px;
+			row-gap: 16px;
 
 	}
 
 	a {
-		width: 30%;
-		margin-left: 20px;
-		margin-right: 20px;
+		width: calc((100% - 32px)/3);
+		
 		height: 150px;
 		display: flex;
 		flex-direction: column;
@@ -141,8 +142,14 @@
 		font-size: 20px;
 		text-transform: uppercase;
 		font-weight: 700;
-		box-shadow: 0 0 20px rgba(0, 0, 0, .25);
-		margin-bottom: 24px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+		
+		@media (max-width: 1023px) {
+		width: calc((100% - 16px) / 2);
+		}
+		@media (max-width: 767px) {
+		   width: 100%;
+		}
 
 		span {
 			display: block;

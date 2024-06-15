@@ -402,11 +402,11 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
    }
-    /*====TAB BUTTONS WIDTH ========== */
+    /*====main page ETAPS TAB BUTTONS WIDTH ========== */
 	const buttons = document.querySelectorAll('.tab-btn');
 
-	if(buttons.lengts > 0 || window.innerWidth < 584){
-		console.log('555');
+	if(buttons.lengts > 0 && window.innerWidth < 584){
+		
 		/*==== ширина первой кнопки по загрузке страницы ==== */
 		buttons[0].style.width = 'calc(100vw - 56px - 32px - 12px)'; 
 		/*===== обработка клика по кнопке===== */
@@ -438,12 +438,17 @@ document.addEventListener("DOMContentLoaded", function (){
 	   slidesPerView: 'auto',
 	   speed: 1000,
 	   autoWidth: true,
-	   spaceBetween: 16,
-		navigation: {
+	   spaceBetween: 6,
+	   navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+			
+			spaceBetween: 10,
+			},
 		}
-
     });
 	// Флаг для отслеживания перетаскивания
 	var isDragging = false;

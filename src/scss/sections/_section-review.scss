@@ -47,7 +47,8 @@
 	color: $main-accent;
 	opacity: 1;
 	font-size: 30px;
-	transition: .3s; 
+	transition: .3s;
+	z-index: 5;
 	&:hover{
 		color: $main-accent;
 		opacity: 0.4;

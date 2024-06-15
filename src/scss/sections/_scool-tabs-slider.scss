@@ -1,17 +1,17 @@
 .country-swiper-block{
-	padding-inline: 68px;
+	padding-inline: 50px;
 	position: relative;
 	@media (max-width: 1279px) {
 	padding-inline: 24px;
 	}
 	@media (max-width: 767px) {
-		padding-inline: 26px;
+		padding-inline: 16px;
 		&:before{
 			content: '';
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			right: 26px;
+			right: 10px;
 			background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
 			width: 40px;
 			z-index: 5;
@@ -82,7 +82,11 @@
 .scool-tabs__articles{
 	min-height: 440px;
 	position: relative;
-	margin-top: 48px;
+	margin-top: 38px;
+	@media (max-width: 767px) {
+		margin-top: 22px;
+		
+	}
 	
 }
 .scool-description{
@@ -90,7 +94,6 @@
 	grid-template-columns: 1fr 1fr;
 	gap:30px;
 	min-height: 370px;
-	
 	line-height: 1.75;
 	display: none;
 	&.active{display: grid;}
@@ -115,9 +118,10 @@
 		
 	}
 	@media (max-width: 767px) {
-		padding-block: 32px;
 		grid-template-columns: 1fr;
 		row-gap:44px;
+		min-height: unset;
+		.text-group{min-height: unset;}
 	}
 }
 

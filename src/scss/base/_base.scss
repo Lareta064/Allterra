@@ -439,7 +439,7 @@ section.light-bg, section.dark-bg{
 *.block-1024{
 	display: block;
 	@media (max-width: 1023px) {
-		display: none;
+		display: none!important;
 	}
 }
 *.flex-1024 {
