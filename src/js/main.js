@@ -450,117 +450,102 @@ document.addEventListener("DOMContentLoaded", function (){
 			},
 		}
     });
-	// Флаг для отслеживания перетаскивания
-	var isDragging = false;
+	if(mySwiper){
+		// Флаг для отслеживания перетаскивания
+		var isDragging = false;
 
-	mySwiper.on('sliderMove', function() {
-		isDragging = true;
-	});
-
-	mySwiper.on('touchEnd', function() {
-	setTimeout(function() { // Небольшая задержка для обработки быстрого тапа
-		isDragging = false;
-	}, 100);
-	});
-
-	// Создаем блок один раз и добавляем его в первый слайд
-	var block = document.createElement('div');
-	block.className = 'new-block';
-	// block.textContent = 'Перемещаемый блок';
-	mySwiper.slides[0].appendChild(block);
-
-	// Функция для перемещения блока и обновления его ширины
-	function moveBlockToClickedSlide(slide) {
-	if (!isDragging && !slide.classList.contains('active')) {
-		// Удаляем класс active со всех слайдов
-		mySwiper.slides.forEach(function(el) {
-		el.classList.remove('active');
+		mySwiper.on('sliderMove', function() {
+			isDragging = true;
 		});
 
-		// Добавляем класс active к выбранному слайду
-		slide.classList.add('active');
-
-		// Рассчитываем смещение для блока
-		var offset = slide.offsetLeft - mySwiper.wrapperEl.offsetLeft;
-		
-		// Обновляем позицию и ширину блока
-		block.style.left = offset + 'px';
-		block.style.width = slide.offsetWidth + 'px'; // Ширина блока равна ширине активного слайда
-	}
-	}
-
-	// Добавляем обработчик клика, который перемещает блок, но не слайдер
-	mySwiper.slides.forEach(function(slide) {
-		slide.addEventListener('click', function() {
-			moveBlockToClickedSlide(this);
+		mySwiper.on('touchEnd', function() {
+		setTimeout(function() { // Небольшая задержка для обработки быстрого тапа
+			isDragging = false;
+		}, 100);
 		});
-	});
 
-	// Перемещаем блок в первый слайд при загрузке страницы
-	
-	moveBlockToClickedSlide(mySwiper.slides[0]);
-	
-	// Изменение стилей для new-block
-	block.style.height = '2px'; // Высота блока
-	block.style.width = mySwiper.slides[0].offsetWidth + 'px'; // Ширина блока равна ширине активного слайда
-	block.textContent = ''; // Удаление текста из блока
+		// Создаем блок один раз и добавляем его в первый слайд
+		var block = document.createElement('div');
+		block.className = 'new-block';
+		// block.textContent = 'Перемещаемый блок';
+		mySwiper.slides[0].appendChild(block);
 
-	// Обработчик события resize для обновления ширины new-block
-	window.addEventListener('resize', function() {
-	var activeSlide = document.querySelector('.swiper-slide.active');
-	if (activeSlide) {
-		block.style.width = activeSlide.offsetWidth + 'px'; // Обновление ширины блока
-		// Обновление позиции блока
-		block.style.left = activeSlide.offsetLeft - mySwiper.wrapperEl.offsetLeft + 'px';
-	}
-	});
-
-	// Добавляем обработчик события на изменение слайда
-	mySwiper.on('slideChangeTransitionEnd', function() {
-	// Получаем индекс активного слайда
-	var activeIndex = mySwiper.activeIndex;
-
-	// Удаляем класс active со всех элементов .custom-tab
-	document.querySelectorAll('.scool-description').forEach(function(content) {
-		content.classList.remove('active');
-	});
-
-	// Добавляем класс active к элементу tb-content с соответствующим индексом
-	var activeContent = document.querySelectorAll('.scool-description')[activeIndex];
-	activeContent.classList.add('active');
-	});
-
-	// Добавляем обработчик клика по слайду
-	mySwiper.slides.forEach(function(slide, index) {
-		slide.addEventListener('click', function() {
-			// Удаляем класс active со всех элементов tb-content
-			document.querySelectorAll('.scool-description').forEach(function(content) {
-			content.classList.remove('active');
+		// Функция для перемещения блока и обновления его ширины
+		function moveBlockToClickedSlide(slide) {
+		if (!isDragging && !slide.classList.contains('active')) {
+			// Удаляем класс active со всех слайдов
+			mySwiper.slides.forEach(function(el) {
+			el.classList.remove('active');
 			});
 
-			// Добавляем класс active к элементу tb-content с соответствующим индексом
-			var activeContent = document.querySelectorAll('.scool-description')[index];
-			activeContent.classList.add('active');
+			// Добавляем класс active к выбранному слайду
+			slide.classList.add('active');
+
+			// Рассчитываем смещение для блока
+			var offset = slide.offsetLeft - mySwiper.wrapperEl.offsetLeft;
+			
+			// Обновляем позицию и ширину блока
+			block.style.left = offset + 'px';
+			block.style.width = slide.offsetWidth + 'px'; // Ширина блока равна ширине активного слайда
+		}
+		}
+
+		// Добавляем обработчик клика, который перемещает блок, но не слайдер
+		mySwiper.slides.forEach(function(slide) {
+			slide.addEventListener('click', function() {
+				moveBlockToClickedSlide(this);
+			});
 		});
-	});
-	mySwiper.off('slideChangeTransitionEnd');
-	// Вызов обработчика события resize при инициализации для установки начальных значений
-	window.dispatchEvent(new Event('resize'));
 
+		// Перемещаем блок в первый слайд при загрузке страницы
+		
+		moveBlockToClickedSlide(mySwiper.slides[0]);
+		
+		// Изменение стилей для new-block
+		block.style.height = '2px'; // Высота блока
+		block.style.width = mySwiper.slides[0].offsetWidth + 'px'; // Ширина блока равна ширине активного слайда
+		block.textContent = ''; // Удаление текста из блока
+
+		// Обработчик события resize для обновления ширины new-block
+		window.addEventListener('resize', function() {
+		var activeSlide = document.querySelector('.swiper-slide.active');
+		if (activeSlide) {
+			block.style.width = activeSlide.offsetWidth + 'px'; // Обновление ширины блока
+			// Обновление позиции блока
+			block.style.left = activeSlide.offsetLeft - mySwiper.wrapperEl.offsetLeft + 'px';
+		}
+		});
+
+		// Добавляем обработчик события на изменение слайда
+		mySwiper.on('slideChangeTransitionEnd', function() {
+		// Получаем индекс активного слайда
+		var activeIndex = mySwiper.activeIndex;
+
+		// Удаляем класс active со всех элементов .custom-tab
+		document.querySelectorAll('.scool-description').forEach(function(content) {
+			content.classList.remove('active');
+		});
+
+		// Добавляем класс active к элементу tb-content с соответствующим индексом
+		var activeContent = document.querySelectorAll('.scool-description')[activeIndex];
+		activeContent.classList.add('active');
+		});
+
+		// Добавляем обработчик клика по слайду
+		mySwiper.slides.forEach(function(slide, index) {
+			slide.addEventListener('click', function() {
+				// Удаляем класс active со всех элементов tb-content
+				document.querySelectorAll('.scool-description').forEach(function(content) {
+				content.classList.remove('active');
+				});
+
+				// Добавляем класс active к элементу tb-content с соответствующим индексом
+				var activeContent = document.querySelectorAll('.scool-description')[index];
+				activeContent.classList.add('active');
+			});
+		});
+		mySwiper.off('slideChangeTransitionEnd');
+		// Вызов обработчика события resize при инициализации для установки начальных значений
+		window.dispatchEvent(new Event('resize'));
+	}	
 });
-// Добавляем обработчик клика по каждому слайду
-// mySwiper.slides.forEach(function(slide, index) {
-//   slide.addEventListener('click', function() {
-//     // Сначала удаляем класс active со всех элементов tb-content
-//     document.querySelectorAll('.tb-content').forEach(function(content) {
-//       content.classList.remove('active');
-//     });
-
-//     // Затем добавляем класс active к элементу tb-content с индексом кликнутого слайда
-//     var activeContent = document.querySelectorAll('.tb-content')[index];
-//     activeContent.classList.add('active');
-//   });
-// });
-
-// Убираем предыдущую логику удаления класса active при смене слайдов
-// mySwiper.off('slideChangeTransitionEnd');
