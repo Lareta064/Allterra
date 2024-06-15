@@ -317,18 +317,7 @@ document.addEventListener("DOMContentLoaded", function (){
       },
     });
     
-	/*=================COUNTRY FLAGS SLIDER ================== */
-    var mySwiper  = new Swiper(".country-swiper", {
-	   slidesPerView: 'auto',
-	   speed: 1000,
-	   autoWidth: true,
-	   spaceBetween: 0,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		}
 
-    });
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
 	if(backlitMenu){
@@ -444,7 +433,18 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	/***********COUNTRIES SLIDER********* */
+	/*=================COUNTRY FLAGS SLIDER ================== */
+    var mySwiper  = new Swiper(".country-swiper", {
+	   slidesPerView: 'auto',
+	   speed: 1000,
+	   autoWidth: true,
+	   spaceBetween: 16,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		}
 
+    });
 	// Флаг для отслеживания перетаскивания
 	var isDragging = false;
 
@@ -516,29 +516,46 @@ document.addEventListener("DOMContentLoaded", function (){
 	var activeIndex = mySwiper.activeIndex;
 
 	// Удаляем класс active со всех элементов .custom-tab
-	document.querySelectorAll('.custom-tab').forEach(function(content) {
+	document.querySelectorAll('.scool-description').forEach(function(content) {
 		content.classList.remove('active');
 	});
 
 	// Добавляем класс active к элементу tb-content с соответствующим индексом
-	var activeContent = document.querySelectorAll('.custom-tab')[activeIndex];
+	var activeContent = document.querySelectorAll('.scool-description')[activeIndex];
 	activeContent.classList.add('active');
 	});
 
 	// Добавляем обработчик клика по слайду
 	mySwiper.slides.forEach(function(slide, index) {
-	slide.addEventListener('click', function() {
-		// Удаляем класс active со всех элементов tb-content
-		document.querySelectorAll('.custom-tab').forEach(function(content) {
-		content.classList.remove('active');
-		});
+		slide.addEventListener('click', function() {
+			// Удаляем класс active со всех элементов tb-content
+			document.querySelectorAll('.scool-description').forEach(function(content) {
+			content.classList.remove('active');
+			});
 
-		// Добавляем класс active к элементу tb-content с соответствующим индексом
-		var activeContent = document.querySelectorAll('.custom-tab')[index];
-		activeContent.classList.add('active');
+			// Добавляем класс active к элементу tb-content с соответствующим индексом
+			var activeContent = document.querySelectorAll('.scool-description')[index];
+			activeContent.classList.add('active');
+		});
 	});
-	});
+	mySwiper.off('slideChangeTransitionEnd');
 	// Вызов обработчика события resize при инициализации для установки начальных значений
 	window.dispatchEvent(new Event('resize'));
 
 });
+// Добавляем обработчик клика по каждому слайду
+// mySwiper.slides.forEach(function(slide, index) {
+//   slide.addEventListener('click', function() {
+//     // Сначала удаляем класс active со всех элементов tb-content
+//     document.querySelectorAll('.tb-content').forEach(function(content) {
+//       content.classList.remove('active');
+//     });
+
+//     // Затем добавляем класс active к элементу tb-content с индексом кликнутого слайда
+//     var activeContent = document.querySelectorAll('.tb-content')[index];
+//     activeContent.classList.add('active');
+//   });
+// });
+
+// Убираем предыдущую логику удаления класса active при смене слайдов
+// mySwiper.off('slideChangeTransitionEnd');
