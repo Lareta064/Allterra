@@ -37,7 +37,7 @@
 	padding-left: 12px;
 	padding-right: 12px;
 	cursor:pointer;
-	pointer-events: none;
+	// pointer-events: none;
 	svg{
 		width: 32px;
 		height: 24px;
@@ -107,44 +107,12 @@
 		row-gap:44px;
 	}
 }
-.ab{
-	position: relative;
-	padding-bottom: 10px;
-	padding-inline: 10px;;
-	&__line{
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		right: 0;
-		height: 1px;
-		background-color: $light-grey;
-		border-radius: 10px;
-	}
-	span{
-		position: absolute;
-		border-radius: 10px;
-		top: -1px;
-		bottom: -1px;
-		left: 0;
-		width: 100px;
-		background-color: $main-accent;
-		z-index: 2;
-	}
-	#ab__range{transition: .3s; }
-}
 
-.swiper-container .swiper-slide{
-	border: 10px solid red;
-	height: 100px;
-	width: 100%;
-}
 .new-block {
 	position: absolute;
-	left: 0; 
-	width: 100%;
-	height: 5px;
-	background-color: rgb(68, 255, 0);
+	height: 2px;
+	background-color: $main-accent;
 	bottom: 0;
 	font-size: 0;
-	transition: left 0.5s ease-in-out; 
+	transition: 0.5s ; 
 }
