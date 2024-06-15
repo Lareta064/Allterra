@@ -23,6 +23,32 @@
 	&-form-wrapper{
 		max-width: 550px;
 		margin-top: -10px;
+		.b24-form-wrapper.b24-form-shadow{
+			box-shadow: none;
+			border-bottom: 0;
+		}
+		.b24-form-header{display: none;}
+		.b24-form-padding-side{padding: 0;}
+		.b24-form-control-icon-after .b24-form-control{
+			height: 70px;
+			border-radius:0;
+			background-color: #f0f3f9;
+			border: 1px solid #f0f3f9;
+			padding-inline:20px;
+			@media (max-width: 767px) {
+				height: 58px;
+			}
+		}
+		.b24-form-control-label{
+			padding-left: 20px;
+			font-size: 18px;
+			color: #151515;
+		}
+		.b24-form-sign{display: none;}
+		.b24-form-btn{
+			text-align: center;
+			width: 280px;
+		}
 		@media (max-width: 1279px) {
 			margin-top: 0;
 		}

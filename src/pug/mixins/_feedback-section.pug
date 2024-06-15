@@ -11,17 +11,19 @@ mixin feedback-section(title="Получить консультацию")
 				//===== FORM BLOCK ====
 				.feedback-form-wrapper#feedback
 					h2.h2.border-left #{title}
-					form.feedback-form
-						.form_field
-							input(type="text" name="name" placeholder="Ваше имя*")
-						.form_field
-							input(type="text" name="phone" placeholder="Ваш телефон")
-						.form_field
-							input(type="text" name="email" placeholder="Ваш email")
-						.form-confirm
-							label.form-checkbox
-								input(type="checkbox" name="name_chk")
-								span.fake-checkbox
-								span.form-confirm__text Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
-						.form__btn
-							button(type="submit").btn Получить консультацию
+					script(data-b24-form="inline/28/58eg9a" data-skip-moving="true").
+						(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b6231411/crm/form/loader_28.js');
+					//- form.feedback-form
+					//- 	.form_field
+					//- 		input(type="text" name="name" placeholder="Ваше имя*")
+					//- 	.form_field
+					//- 		input(type="text" name="phone" placeholder="Ваш телефон")
+					//- 	.form_field
+					//- 		input(type="text" name="email" placeholder="Ваш email")
+					//- 	.form-confirm
+					//- 		label.form-checkbox
+					//- 			input(type="checkbox" name="name_chk")
+					//- 			span.fake-checkbox
+					//- 			span.form-confirm__text Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+					//- 	.form__btn
+					//- 		button(type="submit").btn Получить консультацию
