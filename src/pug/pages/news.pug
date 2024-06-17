@@ -3,8 +3,12 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	//=============MAIN===========
-	main.inner-page
-		+hero-section(['Главная', 'Статьи об образовании за рубежом'], 'Актуальные и интересные статьи об образовании за рубежом','', 'title', 'back-link')( class="hero--center"  style="background-image:url(./img/blog/header-bg.webp)")
+	main.inner-page.inner-page--news
+		section.hero.hero--light
+			.container
+				+brcr('Главная', 'Новости об образовании за рубежом')
+				.limit-title
+					h1.h2.tt-none Самые интересные новости об образовании за рубежом
 		
 		include ../sections/_news-page
 		

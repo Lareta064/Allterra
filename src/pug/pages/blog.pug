@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page
+		+hero-section(['Главная', 'Статьи об образовании за рубежом'], 'Актуальные и интересные статьи об образовании за рубежом','', 'title', 'back-link')( class="hero--center"  style="background-image:url(./img/blog/header-bg.webp)")
+		
+		include ../sections/_blog-page
+		
+		include ../sections/_contacts
+	include ../sections/_footer
+
+block variables
+	-var title = "Новости по фильтрам";
