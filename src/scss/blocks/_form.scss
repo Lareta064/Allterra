@@ -61,6 +61,15 @@ select:-webkit-autofill:focus {
     border: 1px solid #ffffff;
   }
 }
+.light-bg .feedback-form-wrapper {
+    .b24-form-content{background-color: #f0f3f9;}
+    .b24-form-control-icon-after .b24-form-control {
+
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+
+  }
+}
 .form_field.error{
   input,textarea{
     border: 1px solid #ff0000;
@@ -160,6 +169,8 @@ input[type="radio"] {
 .message-field[contentEditable=true]{
   padding-top: 18px;
   padding-bottom: 18px;
+  height: auto;
+  min-height: 70px;
 }
 .message-field[contentEditable=true]:empty:before {
   content: attr(placeholder);

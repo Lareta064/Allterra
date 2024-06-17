@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		mobileMenu.classList.remove('active');
 		menuToggle.classList.remove('active');
 	}
-		if(openSearchForm){
+	if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
 			
 			if(searchFormPopup.classList.contains('active')){
@@ -109,11 +109,11 @@ document.addEventListener("DOMContentLoaded", function (){
 				menuToggle.classList.add('active');
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
-				console.log('123');
+				
 				if(window.scrollY > 500 ){
-					console.log('345');
+					
 					fixedButtons.classList.remove('active');
-					console.log(fixedButtons.classList);
+					
 				}
 			}
 		});
@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function (){
     /*====main page ETAPS TAB BUTTONS WIDTH ========== */
 	const buttons = document.querySelectorAll('.tab-btn');
 
-	if(buttons.lengts > 0 && window.innerWidth < 584){
+	if(buttons.length > 0 && window.innerWidth < 584){
 		
 		/*==== ширина первой кнопки по загрузке страницы ==== */
 		buttons[0].style.width = 'calc(100vw - 56px - 32px - 12px)'; 

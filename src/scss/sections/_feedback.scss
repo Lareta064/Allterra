@@ -35,6 +35,10 @@
 			background-color: #f0f3f9;
 			border: 1px solid #f0f3f9;
 			padding-inline:20px;
+			&:focus{
+				border: 0; outline: none;
+				background-color: #f0f3f9;
+			}
 			@media (max-width: 767px) {
 				height: 58px;
 			}
