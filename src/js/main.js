@@ -441,16 +441,10 @@ document.addEventListener("DOMContentLoaded", function (){
 		slidesPerView: 'auto',
 		speed: 1000,
 		autoWidth: true,
-		spaceBetween: 6,
+		
 		navigation: {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
-			},
-			breakpoints: {
-				768: {
-				
-				spaceBetween: 10,
-				},
 			}
 		});
 	
