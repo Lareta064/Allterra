@@ -44,33 +44,17 @@ section.news-page
 								a(href="#!") Дети
 											
 			//==== right column ====
-			.aside-grid__content.flex-col
-				.news-cards.three-columns
-					+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
-					+blog-card(2, 'Статья', 'Экономическое образование в США')
-					+blog-card(9, 'Новость', 'Техническое образование в Германии')
-					+blog-card(10, 'Новость', 'Обучение на промышленного дизайнера за границей')
-					+blog-card(11, 'Новость', 'В какой стране лучшее образование?')
-					+blog-card(12, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+			.aside-grid__content.three-columns
+				//===============группа из 6 карточек ===============
+				+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+				+blog-card(2, 'Статья', 'Экономическое образование в США')
+				+blog-card(9, 'Новость', 'Техническое образование в Германии')
+				+blog-card(10, 'Новость', 'Обучение на промышленного дизайнера за границей')
+				+blog-card(11, 'Новость', 'В какой стране лучшее образование?')
+				+blog-card(12, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
 				
 				//===============BANNER ==============
-				a(href="#!")
-					picture.img-banner__picture
-						source(srcset="./img/main-page/faq-img-mob.webp", media="(max-width: 576px)")
-						source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 1023px)")
-						source(srcset="./img/main-page/faq-img.webp", media="(max-width: 1439px)")
-						
-						img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
-				//==============CARDS BLOCK ==============
-				.news-cards.three-columns
-					+blog-card(13, 'Статья', 'MBA в США: особенности обучения, преимущества и недостатки, подготовка')
-					+blog-card(14, 'Статья', 'PSHE, CAS и другие: необычные предметы в зарубежных школах')
-					+blog-card(15, 'Новость', 'Система высшего образования в Англии')
-					+blog-card(16, 'Новость', 'ОТехническое образование в Германии')
-					+blog-card(2, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
-					+blog-card(1, 'Новость', 'Как написать мотивационное письмо в университет?')
-				//===============BANNER ==============
-				a(href="#!")
+				a(href="#!").img-banner
 					picture.img-banner__picture
 						source(srcset="./img/main-page/faq-img-mob.webp", media="(max-width: 576px)")
 						source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 1023px)")
@@ -78,14 +62,29 @@ section.news-page
 						
 						img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
 				
-				//==============CARDS BLOCK ==============
-				.news-cards.three-columns
-					+blog-card(13, 'Статья', 'MBA в США: особенности обучения, преимущества и недостатки, подготовка')
-					+blog-card(14, 'Статья', 'PSHE, CAS и другие: необычные предметы в зарубежных школах')
-					+blog-card(15, 'Новость', 'Система высшего образования в Англии')
-					+blog-card(16, 'Новость', 'ОТехническое образование в Германии')
-					+blog-card(5, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
-					+blog-card(1, 'Новость', 'Как написать мотивационное письмо в университет?')
+				//===============группа из 6 карточек ===============
+				+blog-card(13, 'Статья', 'MBA в США: особенности обучения, преимущества и недостатки, подготовка')
+				+blog-card(14, 'Статья', 'PSHE, CAS и другие: необычные предметы в зарубежных школах')
+				+blog-card(15, 'Новость', 'Система высшего образования в Англии')
+				+blog-card(16, 'Новость', 'ОТехническое образование в Германии')
+				+blog-card(2, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+				+blog-card(1, 'Новость', 'Как написать мотивационное письмо в университет?')
+				//===============BANNER ==============
+				a(href="#!").img-banner
+					picture.img-banner__picture
+						source(srcset="./img/main-page/faq-img-mob.webp", media="(max-width: 576px)")
+						source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 1023px)")
+						source(srcset="./img/main-page/faq-img.webp", media="(max-width: 1439px)")
+						
+						img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
+				
+				//===============группа из 6 карточек ===============
+				+blog-card(13, 'Статья', 'MBA в США: особенности обучения, преимущества и недостатки, подготовка')
+				+blog-card(14, 'Статья', 'PSHE, CAS и другие: необычные предметы в зарубежных школах')
+				+blog-card(15, 'Новость', 'Система высшего образования в Англии')
+				+blog-card(16, 'Новость', 'ОТехническое образование в Германии')
+				+blog-card(5, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+				+blog-card(1, 'Новость', 'Как написать мотивационное письмо в университет?')
 				
 				
 				//=====pagination =======
