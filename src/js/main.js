@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", function (){
    }
     /*====main page ETAPS TAB BUTTONS WIDTH ========== */
 	const buttons = document.querySelectorAll('.tab-btn');
-
+  
 	if(buttons.length > 0 && window.innerWidth < 584){
 		
 		/*==== ширина первой кнопки по загрузке страницы ==== */
