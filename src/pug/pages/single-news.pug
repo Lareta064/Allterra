@@ -3,8 +3,14 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	//=============MAIN===========
-	main.inner-page
-		+hero-section(['Главная', 'Информация'], 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)', 'Обновлено: 10.11.2023', 'h2 tt-none')(class="hero--center" style="background-image:url(./img/about/header-bg.webp)")
+	main.inner-page.inner-page--news
+		section.hero.hero--light
+			.container
+				+brcr('Главная', 'Новости об образовании за рубежом')
+				.limit-title
+					h1.h2.tt-none Самые интересные новости об образовании за рубежом
+	
+
 		include ../sections/_news-page-content
 		
 		+feedback-section('подобрать университет')(class="light-bg")
@@ -16,4 +22,4 @@ block content
 	include ../sections/_footer
 
 block variables
-	-var title = "Article page";
+	-var title = "Одна новость";

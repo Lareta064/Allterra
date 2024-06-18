@@ -3,17 +3,12 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	//=============MAIN===========
-	main.inner-page.inner-page--news
-		section.hero.hero--light
-			.container
-				+brcr('Главная', 'Новости об образовании за рубежом')
-				.limit-title
-					h1.h2.tt-none Самые интересные новости об образовании за рубежом
-		
+	main.inner-page
+		+hero-section(['Главная', 'Новости'], 'Новости', '', 'h2 tt-none', 'back-link')(style="background-image:url(./img/about/header-bg.webp)")
 		include ../sections/_news-page
 		
 		include ../sections/_contacts
 	include ../sections/_footer
 
 block variables
-	-var title = "Новости по фильтрам";
+	-var title = "Новости";
