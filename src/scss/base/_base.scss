@@ -208,7 +208,7 @@ address {
 }
 
 .flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,
-.flex-col, .flex-gap,.header-group,.flex-item, .hero-content,.hash-tags,.links-path, .country-link {
+.flex-col, .flex-gap,.header-group,.flex-item, .hero-content,.hash-tags,.links-path, .country-link{
 	display: flex;
 	align-items: flex-start;
 }
@@ -218,6 +218,7 @@ address {
 .flex-center{
 	justify-content: center;
 }
+
 .flex-center-y,.flex-center,.flex-justify,.links-path,.hash-tags,
 .country-link,.flex-item{
 	align-items: center;
@@ -243,8 +244,10 @@ address {
 	.header-group .btns-group {
 		display: flex;
 	}
+	
 	@media (max-width: 1023px) {
 		width: min(1070px, 100%);
+		margin-left: 0;
 	}
 	@media (max-width: 1023px) {
 		.btns-group {
@@ -267,7 +270,7 @@ address {
 	flex-direction: column;
 	align-items: center;
 	row-gap: 16px;
-	@media (max-width: 767px) {
+	@media (max-width:1023px) {
 	align-items: flex-start;
 	}
 }
@@ -337,10 +340,23 @@ address {
 }
 
 .mt-auto{margin-top: auto;}
-.pt-100{ 
+.pt-100, .p-block-100{ 
 	padding-top: 100px;
 	@media (max-width: 767px) {
 	padding-top: 80px;
+	}
+}
+.pb-100, .p-block-100{
+	padding-bottom: 100px;
+	
+	@media (max-width: 767px) {
+		padding-bottom: 80px;
+	}
+}
+.m-block-100{
+	margin-block: 100px;
+	@media (max-width: 767px) {
+	margin-block: 80px;
 	}
 }
 img.wh-100 {

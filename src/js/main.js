@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		mobileMenu.classList.remove('active');
 		menuToggle.classList.remove('active');
 	}
-		if(openSearchForm){
+	if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
 			
 			if(searchFormPopup.classList.contains('active')){
@@ -109,11 +109,11 @@ document.addEventListener("DOMContentLoaded", function (){
 				menuToggle.classList.add('active');
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
-				console.log('123');
+				
 				if(window.scrollY > 500 ){
-					console.log('345');
+					
 					fixedButtons.classList.remove('active');
-					console.log(fixedButtons.classList);
+					
 				}
 			}
 		});
@@ -404,8 +404,8 @@ document.addEventListener("DOMContentLoaded", function (){
    }
     /*====main page ETAPS TAB BUTTONS WIDTH ========== */
 	const buttons = document.querySelectorAll('.tab-btn');
-
-	if(buttons.lengts > 0 && window.innerWidth < 584){
+  
+	if(buttons.length > 0 && window.innerWidth < 584){
 		
 		/*==== ширина первой кнопки по загрузке страницы ==== */
 		buttons[0].style.width = 'calc(100vw - 56px - 32px - 12px)'; 
@@ -434,23 +434,20 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	/***********COUNTRIES SLIDER********* */
 	/*=================COUNTRY FLAGS SLIDER ================== */
-    var mySwiper  = new Swiper(".country-swiper", {
-	   slidesPerView: 'auto',
-	   speed: 1000,
-	   autoWidth: true,
-	   spaceBetween: 6,
-	   navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		breakpoints: {
-			768: {
-			
-			spaceBetween: 10,
-			},
-		}
-    });
-	if(mySwiper){
+	const swiperRoot = document.querySelector('.country-swiper');
+	if(swiperRoot){
+
+		var mySwiper  = new Swiper(".country-swiper", {
+		slidesPerView: 'auto',
+		speed: 1000,
+		autoWidth: true,
+		
+		navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			}
+		});
+	
 		// Флаг для отслеживания перетаскивания
 		var isDragging = false;
 
@@ -459,7 +456,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 
 		mySwiper.on('touchEnd', function() {
-		setTimeout(function() { // Небольшая задержка для обработки быстрого тапа
+		setTimeout(function() { 
 			isDragging = false;
 		}, 100);
 		});
@@ -467,27 +464,26 @@ document.addEventListener("DOMContentLoaded", function (){
 		// Создаем блок один раз и добавляем его в первый слайд
 		var block = document.createElement('div');
 		block.className = 'new-block';
-		// block.textContent = 'Перемещаемый блок';
 		mySwiper.slides[0].appendChild(block);
 
 		// Функция для перемещения блока и обновления его ширины
 		function moveBlockToClickedSlide(slide) {
-		if (!isDragging && !slide.classList.contains('active')) {
-			// Удаляем класс active со всех слайдов
-			mySwiper.slides.forEach(function(el) {
-			el.classList.remove('active');
-			});
+			if (!isDragging && !slide.classList.contains('active')) {
+				// Удаляем класс active со всех слайдов
+				mySwiper.slides.forEach(function(el) {
+				el.classList.remove('active');
+				});
 
-			// Добавляем класс active к выбранному слайду
-			slide.classList.add('active');
+				// Добавляем класс active к выбранному слайду
+				slide.classList.add('active');
 
-			// Рассчитываем смещение для блока
-			var offset = slide.offsetLeft - mySwiper.wrapperEl.offsetLeft;
-			
-			// Обновляем позицию и ширину блока
-			block.style.left = offset + 'px';
-			block.style.width = slide.offsetWidth + 'px'; // Ширина блока равна ширине активного слайда
-		}
+				// Рассчитываем смещение для блока
+				var offset = slide.offsetLeft - mySwiper.wrapperEl.offsetLeft;
+				
+				// Обновляем позицию и ширину блока
+				block.style.left = offset + 'px';
+				block.style.width = slide.offsetWidth + 'px'; 
+			}
 		}
 
 		// Добавляем обработчик клика, который перемещает блок, но не слайдер
@@ -498,35 +494,30 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 
 		// Перемещаем блок в первый слайд при загрузке страницы
-		
 		moveBlockToClickedSlide(mySwiper.slides[0]);
 		
 		// Изменение стилей для new-block
 		block.style.height = '2px'; // Высота блока
-		block.style.width = mySwiper.slides[0].offsetWidth + 'px'; // Ширина блока равна ширине активного слайда
+		block.style.width = mySwiper.slides[0].offsetWidth + 'px'; 
 		block.textContent = ''; // Удаление текста из блока
 
 		// Обработчик события resize для обновления ширины new-block
 		window.addEventListener('resize', function() {
 		var activeSlide = document.querySelector('.swiper-slide.active');
 		if (activeSlide) {
-			block.style.width = activeSlide.offsetWidth + 'px'; // Обновление ширины блока
-			// Обновление позиции блока
+			block.style.width = activeSlide.offsetWidth + 'px'; 
 			block.style.left = activeSlide.offsetLeft - mySwiper.wrapperEl.offsetLeft + 'px';
 		}
 		});
 
 		// Добавляем обработчик события на изменение слайда
 		mySwiper.on('slideChangeTransitionEnd', function() {
-		// Получаем индекс активного слайда
+		
 		var activeIndex = mySwiper.activeIndex;
-
-		// Удаляем класс active со всех элементов .custom-tab
 		document.querySelectorAll('.scool-description').forEach(function(content) {
 			content.classList.remove('active');
 		});
 
-		// Добавляем класс active к элементу tb-content с соответствующим индексом
 		var activeContent = document.querySelectorAll('.scool-description')[activeIndex];
 		activeContent.classList.add('active');
 		});
@@ -534,18 +525,16 @@ document.addEventListener("DOMContentLoaded", function (){
 		// Добавляем обработчик клика по слайду
 		mySwiper.slides.forEach(function(slide, index) {
 			slide.addEventListener('click', function() {
-				// Удаляем класс active со всех элементов tb-content
+				
 				document.querySelectorAll('.scool-description').forEach(function(content) {
 				content.classList.remove('active');
 				});
 
-				// Добавляем класс active к элементу tb-content с соответствующим индексом
 				var activeContent = document.querySelectorAll('.scool-description')[index];
 				activeContent.classList.add('active');
 			});
 		});
 		mySwiper.off('slideChangeTransitionEnd');
-		// Вызов обработчика события resize при инициализации для установки начальных значений
 		window.dispatchEvent(new Event('resize'));
 	}	
 });

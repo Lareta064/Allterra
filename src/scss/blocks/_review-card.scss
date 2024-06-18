@@ -113,12 +113,14 @@
 	}
 	@media (max-width: 767px) {
 		&__name{font-size: 16px;}
-		&__txt{font-size: 14px;}
-			
-		
-		&__txt{
+		&__txt{font-size: 14px;
 			p{-webkit-line-clamp: 6;}
 		} 
+		.accent-link,
+		.person__range,
+		.persone__exper, .pin-item, .person__date {
+			font-size: 12px;
+		}
 	}
 }
 .person.short-card{
@@ -145,7 +147,7 @@
 		}
 		.accent-link,
 		.person__range,
-		.persone__exper {
+		.persone__exper, .pin-item{
 			font-size: 12px;
 		}
 	}
@@ -157,6 +159,9 @@
 		row-gap:12px;
 		&>*+*{margin-left: 0;}
 	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
 }
 .person-card{
 	padding: 30px;
@@ -165,6 +170,13 @@
 		height: auto;
 		aspect-ratio: 1;
 	}
+	@media (max-width: 767px) {
+		.person__details{
+			&>*+*{margin-top: 6px;}
+		}
+		.person__date{display: none;}
+		.person__links{flex-direction: row;}
+	}
 }
 .tags-list {
 	display: flex;
@@ -172,9 +184,12 @@
 	gap: 12px;
 	row-gap: 3px;
 	opacity: .4;
-
+	@media (max-width: 1023px) {
+		font-size: 14px;
+		}
 	@media (max-width: 767px) {
 		column-gap: 8px;
+		font-size: 12px;
 
 	}
 }

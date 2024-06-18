@@ -1,0 +1,25 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page.inner-page--news
+		section.hero.hero--light
+			.container
+				+brcr('Главная', 'Новости об образовании за рубежом')
+				.limit-title
+					h1.h2.tt-none Самые интересные новости об образовании за рубежом
+	
+
+		include ../sections/_news-page-content
+		
+		+feedback-section('подобрать университет')(class="light-bg")
+		
+		+blogCardsSlider('Другие новости', 'об образовании', 'btn-br-white')
+		include ../sections/_image-banner
+		
+		include ../sections/_contacts
+	include ../sections/_footer
+
+block variables
+	-var title = "Одна новость";

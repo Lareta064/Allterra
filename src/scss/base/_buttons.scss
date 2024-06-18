@@ -1,5 +1,5 @@
 /***BUTTONS***/
-.btn-accent, .btn-icon, .btn,.btn-br,.btn-white, .btn-br-white{
+.btn-accent, .btn-icon, .btn,.btn-br,.btn-white, .btn-br-white,.feedback-form-wrapper .b24-form-btn{
 	padding-inline: 36px;
 	display: inline-flex;
 	column-gap:8px;
@@ -22,7 +22,7 @@
 		height: 60px;
 	}
 }
-.btn,.btn-br{
+.btn,.btn-br, .feedback-form-wrapper .b24-form-btn{
 	background-color: $bg-black;
 	box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
 	&:hover{

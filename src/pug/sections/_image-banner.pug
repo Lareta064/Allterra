@@ -1,9 +1,8 @@
 //========image banner ========
-section.img-banner
-	.container
-		picture.img-banner__picture
-			source(srcset="./img/main-page/faq-img-mob.webp", media="(max-width: 576px)")
-			source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 1023px)")
-			source(srcset="./img/main-page/faq-img.webp", media="(max-width: 1439px)")
-			
-			img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
+a(href="#!").img-banner.p-block-100
+	picture.img-banner__picture
+		source(srcset="./img/main-page/faq-img-mob.webp", media="(max-width: 576px)")
+		source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 1023px)")
+		source(srcset="./img/main-page/faq-img.webp", media="(max-width: 1439px)")
+		
+		img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
