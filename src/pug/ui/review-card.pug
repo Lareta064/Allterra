@@ -4,17 +4,17 @@ block content
 	.container-dashboard(style="background-color:#f5f5f5; padding: 30px;")
 		h2 Карточка Отзыва
 
-		.review-card.bx-sh
+		.review-card
 			+person-ui('review/author1','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', '','date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее', 'slider')
 		pre.
-			.review-card.bx-sh
-				+person('review/author1','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', '','date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее', 'slider')			
+			.review-card
+				+person-review('review/author1','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', '','date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее', 'slider')			
 			+person(img, name, persLink, range, exper, tags, date, loc, txt, revSlider)
 
-		.review-card.bx-sh
+		.review-card
 			+person-ui('review/author2','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', ['#среднее_образование', '#родитель'],'date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее', 'slider')
 		pre.
-			.review-card.bx-sh
-				+person(img, name, persLink, range, exper, tags, date, loc, txt, revSlider)
+			.review-card
+				+person-review(img, name, persLink, range, exper, tags, date, loc, txt, revSlider)
 block variables
 	-var title = "Allterra";

@@ -251,10 +251,10 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	/*=================REVIEW SLIDER ================== */
     var reviewSlider = new Swiper(".review-slider", {
-	   slidesPerView: 1.15,
+	   slidesPerView: 1.07,
 	   loop: true,
 	   speed: 1000,
-	    spaceBetween: 20,
+	    spaceBetween: 10,
        navigation: {
          nextEl: ".swiper-button-next",
          prevEl: ".swiper-button-prev",
