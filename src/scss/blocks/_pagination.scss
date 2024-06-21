@@ -36,4 +36,9 @@
 		pointer-events: none;
 		cursor: default;
 	}
+	@media (max-width: 359px) {
+	.page-num.prev{margin-right: 10px;}
+	.page-num.next{margin-left: 10px;}
+		.page-num{width: 36px; height: 36px;line-height: 36px;}
+	}
 }

@@ -10,17 +10,44 @@ html(lang="ru")
 		//=======убрать перевод цифр в номер телефона на ios  и safari ======
 		meta(name="format-detection" content="telephone=no")
 		
-		link(rel="stylesheet", href="./fonts/fonts.css")
-		
 		//========= swiper slider ==============
 		link(rel="stylesheet", href="./libs/swiper/swiper.min.css")
 		//========= custom styles ========
 		
 		link(rel="stylesheet", href="./css/main.css")
 		title !{title}
-		
+		//======= подключаем шрифты в head для ускорения загрузки страницы ==
+		style.
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Regular.woff2) format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Medium.woff2) format("woff2");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Bold.woff2) format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
 	body(class=(bodyCl !=="" ? bodyCl : ''))
-		#overlay
+		
 		block content
 		
 		

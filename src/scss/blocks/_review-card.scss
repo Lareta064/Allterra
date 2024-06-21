@@ -5,7 +5,51 @@
 		height: 130px;
 		flex-shrink: 0;
 	}
-	
+	.person__details{
+		justify-content: flex-start;
+	}
+	.person__name{
+		font-size: 20px;
+		line-height: 1.4;
+		font-weight: 600;
+		margin-bottom: 4px;	
+		@media (max-width: 767px) {
+		font-size: 16px;
+		}
+	}
+	.person__links{
+		justify-content: flex-start;
+		column-gap:12px;
+		row-gap:4px;
+		flex-wrap: wrap;
+		.pin-item{margin-left: 0;}
+		@media (max-width: 767px) {
+		column-gap: 8px;
+		}
+		
+	}
+	.person__range{margin-bottom: 8px;}
+	.person__info	.tags-list{
+		margin-top: auto;
+		@media (max-width: 767px) {
+		display: none;
+		}
+	}
+	.person__txt{margin-top: 16px;}
+	.person__txt .tags-list{display: none; margin-bottom: 4px;}
+	.person__info{
+		flex-shrink: 0;
+		
+		.pin-item,.accent-link,.person__date,
+		.person__range, .tags-list{
+			font-size: 14px;
+			line-height: 1.71;
+			@media (max-width: 767px) {
+			font-size: 12px;
+			}
+		}
+	}
+
 	@media (max-width: 1023px) {
 		.person{
 			display: flex;
@@ -13,18 +57,13 @@
 			&>*{width: 100%;}
 						
 		}
-	.person__info{flex-shrink: 0;}
 	.person__txt{flex-grow: 1;}
-	.person__date,
-		.pin-item {
+	 .person__date{
 			display: none;
 		}
 
 		.person__meta {
-			display: flex;
-
-			.person__date,
-			.pin-item {
+			.person__date {
 				display: block;
 			}
 		}
@@ -39,7 +78,11 @@
 			font-size: 12px;
 		}
 		.person__txt{font-size: 14px; margin-top: 16px;}
-		
+		.person__txt .tags-list {
+			display: flex;
+		}
+		.person__details .person__date{display: none;}
+		.person__txt	.person__date {display: block;}
 	} 
 }
 
@@ -100,9 +143,9 @@
 	.accent-link{font-weight: 500;}
 
 	&__meta{
-		display: none;
-		padding-top: 16px;
-		.person__date, .pin-item{margin-left: 0;}
+		
+		padding-top: 4px;
+		.person__date{ display: none; margin-left: 0;}
 	}
 	@media (max-width: 1023px) {
 		&__txt {

@@ -1,5 +1,10 @@
 
 <svg style="width:0; height:0; visibility: hidden;" xmlns="http://www.w3.org/2000/svg">
+	<defs id="clip0_878_12271">
+		<clipPath>
+			<rect width="21" height="15" rx="3" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-aus" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_12271)">
@@ -17,13 +22,15 @@
 					d="M5 5H2V4H5V2H6V4H9V5H6V7H5V5ZM7.5 6V7H9V6H7.5ZM7.5 2V3H9V2H7.5ZM2 6V7H3.5V6H2ZM2 2V3H3.5V2H2Z"
 					fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_12271">
-					<rect width="21" height="15" rx="3" fill="white" />
-				</clipPath>
-			</defs>
+
+			<use href="#clip0_878_12271"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_12001">
+		<clipPath>
+			<rect width="21" height="15" rx="3" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-fin" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_12001)">
@@ -31,11 +38,8 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M6 9H0V6H6V0H9V6H21V9H9V15H6V9Z"
 					fill="#1A47B8" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_12001">
-					<rect width="21" height="15" rx="3" fill="white" />
-				</clipPath>
-			</defs>
+
+			<use href="#clip0_878_12001"></use>
 		</g>
 	</symbol>
 	<!-- Кипр -->
@@ -51,6 +55,11 @@
 	
 	</symbol>
 	<!-- Китай -->
+	<defs id="clip0_878_11184">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-china" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11184)">
@@ -62,11 +71,7 @@
 					d="M5.49812 7.23L4.02812 8.003L4.30812 6.366L3.12012 5.206L4.76312 4.969L5.49812 3.479L6.23212 4.969L7.87512 5.206L6.68512 6.366L6.96712 8.002L5.49812 7.23ZM9.00012 3H10.0001V4H9.00012V3ZM10.0001 5H11.0001V6H10.0001V5ZM10.0001 7H11.0001V8H10.0001V7ZM9.00012 9H10.0001V10H9.00012V9Z"
 					fill="#FFDA2C" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11184">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11184"></use>
 		</g>
 	</symbol>
 	<symbol id="fl-swet" viewBox="0 0 21 15">
@@ -76,6 +81,11 @@
 				fill="white" />
 		</g>
 	</symbol>
+	<defs id="clip0_878_10576">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-spain" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10576)">
@@ -100,13 +110,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M6 6L5 5H8L7 6H6Z" fill="#AF010D" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M6 4H7V5H6V4Z" fill="#D4AF2C" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10576">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10576"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_11284">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-belg" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11284)">
@@ -116,13 +127,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H7V15H0V0Z" fill="#151515" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M14 0H21V15H14V0Z" fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11284">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11284"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_10484">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-usa" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10484)">
@@ -135,13 +147,14 @@
 					d="M1 1V2H2V1H1ZM3 1V2H4V1H3ZM5 1V2H6V1H5ZM7 1V2H8V1H7ZM6 2V3H7V2H6ZM4 2V3H5V2H4ZM2 2V3H3V2H2ZM1 3V4H2V3H1ZM3 3V4H4V3H3ZM5 3V4H6V3H5ZM7 3V4H8V3H7ZM1 5V6H2V5H1ZM3 5V6H4V5H3ZM5 5V6H6V5H5ZM7 5V6H8V5H7ZM6 4V5H7V4H6ZM4 4V5H5V4H4ZM2 4V5H3V4H2Z"
 					fill="white" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10484">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10484"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_10684">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-ru" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10684)">
@@ -149,13 +162,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10H21V15H0V10Z" fill="#F93939" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H21V5H0V0Z" fill="white" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10684">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10684"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_10488">
+		<clipPath >
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-uk" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10488)">
@@ -174,13 +188,14 @@
 					d="M8.8421 0H12.1579V5.76923H21V9.23077H12.1579V15H8.8421V9.23077H0V5.76923H8.8421V0Z"
 					fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10488">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10488"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_11055">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-fr" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11055)">
@@ -188,13 +203,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H7V15H0V0Z" fill="#1A47B8" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M14 0H21V15H14V0Z" fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11055">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11055"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_11208">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-can" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11208)">
@@ -205,13 +221,14 @@
 				<rect x="16" width="5" height="15" fill="#F93939" />
 				<rect width="5" height="15" fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11208">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11208"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_11312">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-austria" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11312)">
@@ -221,13 +238,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10H21V15H0V10ZM0 0H21V5H0V0Z"
 					fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11312">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11312"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_11231">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-bulg" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11231)">
@@ -237,13 +255,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10H21V15H0V10Z" fill="#F93939" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H21V5H0V0Z" fill="white" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11231">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11231"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_10983">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-hun" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10983)">
@@ -251,13 +270,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10H21V15H0V10Z" fill="#249F58" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H21V5H0V0Z" fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10983">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10983"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_10955">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-ital" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10955)">
@@ -265,13 +285,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H7V15H0V0Z" fill="#249F58" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M14 0H21V15H14V0Z" fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10955">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10955"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_10960">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-irl" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10960)">
@@ -281,13 +302,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H7V15H0V0Z" fill="#249F58" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M14 0H21V15H14V0Z" fill="#FF6C2D" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10960">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10960"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_11041">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-de" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11041)">
@@ -295,11 +317,7 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10H21V15H0V10Z" fill="#FFDA2C" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H21V5H0V0Z" fill="#151515" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11041">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11041"></use>
 		</g>
 	</symbol>
 	<symbol id="fl-kor" viewBox="0 0 21 15">
@@ -316,6 +334,11 @@
 				fill="#151515" />
 		</g>
 	</symbol>
+	<defs id="clip0_878_10911">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-latv" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10911)">
@@ -323,13 +346,14 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 9H21V15H0V9ZM0 0H21V6H0V0Z"
 					fill="#AF010D" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10911">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10911"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_10781">
+		<clipPath>
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-netherl" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10781)">
@@ -337,11 +361,7 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10H21V15H0V10Z" fill="#1E448D" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H21V5H0V0Z" fill="#B01923" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10781">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10781"></use>
 		</g>
 	</symbol>
 	<symbol id="fl-malasia" viewBox="0 0 21 15">
@@ -370,6 +390,11 @@
 				fill="white" />
 		</g>
 	</symbol>
+	<defs id="clip0_878_11559">
+		<clipPath >
+			<rect width="21" height="15" rx="3" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-slov" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11559)">
@@ -386,13 +411,14 @@
 					d="M6.5 12C6.5 12 9 11.105 9 10C9 8.89501 8 9.00001 6.5 10C5 9.00001 4 8.89501 4 10C4 11.105 6.5 12 6.5 12Z"
 					fill="#1A47B8" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11559">
-					<rect width="21" height="15" rx="3" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11559"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_11582">
+		<clipPath >
+			<rect width="21" height="15" rx="3" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-serb" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11582)">
@@ -411,11 +437,7 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M6 3L5 4L6 5L7 4L6 3Z"
 					fill="#A75835" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11582">
-					<rect width="21" height="15" rx="3" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11582"></use>
 		</g>
 	</symbol>
 	<symbol id="fl-port" viewBox="0 0 21 15">
@@ -451,6 +473,11 @@
 				fill="white" />
 		</g>
 	</symbol>
+	<defs id="clip0_878_11479">
+		<clipPath >
+			<rect width="21" height="15" rx="3" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-thail" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11479)">
@@ -459,14 +486,14 @@
 					fill="#F93939" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5H21V10H0V5Z" fill="#232C80" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11479">
-					<rect width="21" height="15" rx="3" fill="white" />
-				</clipPath>
-			</defs>
-
+			<use href="#clip0_878_11479"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_10703">
+		<clipPath >
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-phil" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10703)">
@@ -487,13 +514,14 @@
 					d="M2.5 11C2.77614 11 3 10.7761 3 10.5C3 10.2239 2.77614 10 2.5 10C2.22386 10 2 10.2239 2 10.5C2 10.7761 2.22386 11 2.5 11Z"
 					fill="#FFDA2C" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10703">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10703"></use>
 		</g>
 	</symbol>
+	<defs id="clip0_878_11144">
+		<clipPath >
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-czech" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_11144)">
@@ -501,14 +529,15 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H21V7H0V0Z" fill="white" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L10 7.5L0 15V0Z" fill="#1A47B8" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_11144">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_11144"></use>
 		</g>
 	</symbol>
 
+	<defs id="clip0_878_10495">
+		<clipPath >
+			<rect width="21" height="15" fill="white" />
+		</clipPath>
+	</defs>
 	<symbol id="fl-oae" viewBox="0 0 21 15">
 		<g>
 			<g clip-path="url(#clip0_878_10495)">
@@ -519,16 +548,8 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H21V5H0V0Z" fill="#249F58" />
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V15H6V0H0Z" fill="#F93939" />
 			</g>
-			<defs>
-				<clipPath id="clip0_878_10495">
-					<rect width="21" height="15" fill="white" />
-				</clipPath>
-			</defs>
+			<use href="#clip0_878_10495"></use>
 		</g>
 	</symbol>
-	<symbol id="fl-" viewBox="0 0 21 15">
-		<g>
-
-		</g>
-	</symbol>
+	
 </svg>

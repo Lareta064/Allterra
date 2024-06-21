@@ -70,64 +70,43 @@ mixin person-ui(img, name, persLink, range, exper, tags, date, loc, txt, txtLink
 				.person__date 02.02.2024
 				a(href="#!").pin-item #{loc}
 
-mixin review-card(arg)
-	.review&attributes(attributes)
-		.review__row
-			//======= author info =====
-			.author
-				.author__photo
-					img(src="./img/review/author"+ arg.img +".webp", width="130" height="130" alt=" img")
-				.author__info
-					.flex-justify
-						p.author__name !{arg.name}
-						time.review-data(datetime="2024-03-12") 02.04.2022
-					if arg.range
-						p.author__range Генеральный директор ГК «АК-Сервис»
-					if arg.tags
-						.tags-list
-							each item of arg.tags
-								a(href="#!") ##{item}
+mixin person-review(img, name, persLink, range, exper, tags, date, loc, txt, txtLink, revSlider)
+	.person&attributes(attributes)
+		//====== top row =====
+		.person__info
+			.person__photo
+				img.wh-100.lazy(src="./img/"+ img +".webp", width="295"  alt="img")
+			.person__details
+				.flex-center-y
+					.person__name #{name}
+					if date
+						.person__date 02.02.2024
+				if range
+					.person__range
+						p #{range}
+						if exper
+							p #{exper}
+				.person__links
+					if loc
+						a(href="#!").pin-item #{loc}
+					a(href="#!").accent-link #{persLink}
+				if tags
+					//====== теги для десктоп версии ======
+					.tags-list
+						each tag in tags
+							a(href="#!") #{tag}
+		if txt
+			//====== text row =====
+			.person__txt
+				if tags
+					//====== теги для моб версии ======
+					.tags-list
+						each tag in tags
+							a(href="#!") #{tag}
+				p !{txt}
+				
+				.person__meta
+					if txtLink != ''
+						a(href="#!").accent-link.und-line #{txtLink}
 					
-					.flex-justify.mt-auto
-						a(href="#!").accent-link #{arg.scool}
-						p.pin-item  #{arg.loc}
-			
-		//======= review text
-		.review__text
-			p #{arg.txt}
-			a(href="#!").accent-link Читать далее
-		
-		.review__meta
-			time.review-data(datetime="2024-03-12") 02.04.2022
-			p.pin-item #{arg.loc}
-
-mixin review-card-ui(arg)
-	.review&attributes(attributes)
-		.review__row
-			//======= author info =====
-			.author
-				.author__photo
-					img(src="../img/review/author"+ arg.img +".webp", width="130" height="130" alt=" img")
-				.author__info
-					.flex-justify
-						p.author__name !{arg.name}
-						time.review-data(datetime="2024-03-12") 02.04.2022
-					if arg.range
-						p.author__range Генеральный директор ГК «АК-Сервис»
-					if arg.tags
-						.tags-list
-							each item of arg.tags
-								a(href="#!") ##{item}
-					
-					.flex-justify.mt-auto
-						a(href="#!").accent-link #{arg.scool}
-						p.pin-item  #{arg.loc}
-			
-		//======= review text
-		.review__text
-			p #{arg.txt}
-			a(href="#!").accent-link Читать далее
-		
-		.review__meta
-			time.review-data(datetime="2024-03-12") 02.04.2022
-			p.pin-item #{arg.loc}
+					.person__date 02.02.2024
