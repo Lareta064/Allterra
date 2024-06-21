@@ -19,19 +19,19 @@ header.header
 	.header-top
 		.container
 			.header-flex
-				//======//====== NAVIGATION ===== ======
+				//====== NAVIGATION =====
 				nav.header-nav
 					ul
 						//======single LI====
 						li.menu-li.drop-menu-li
 							a(href="#!") О компании
 							//======single LI Drop-menu====
-							+menu-list([{link:'about.html', name:'Об Allterra Education'}, {link:'greeting.html', name:'Обращение директора'}, {link:'cooperation.html', name:'Сотрудничество'},{link:'vacant.html', name:'Вакансии'},{link:'partners.html', name:'Partner`s zone'},{link:'services.html', name:'Все услуги'}, {name:'Отзывы'} , {name:'Контакты'}])
+							+menu-list([{link:'about.html', name:'Об Allterra Education'}, {link:'greeting.html', name:'Обращение директора'}, {link:'cooperation.html', name:'Сотрудничество'},{link:'vacant.html', name:'Вакансии'},{link:'partners.html', name:'Partner`s zone'},{link:'services.html', name:'Все услуги'}, {link:'#!',name:'Отзывы'} , {link:'#!',name:'Контакты'}])
 						
 						//======single LI====
 						li.menu-li.drop-menu-li
 							a(href="#!") Все услуги
-							+menu-list([{name:'Поступление в школу'}, {name:'Поступление в университет'},{name:'Каникулы за рубежом'},{name:'Искусство и дизайн'}])
+							+menu-list([{link:'#!',name:'Поступление в школу'}, {link:'#!',name:'Поступление в университет'},{link:'#!',name:'Каникулы за рубежом'},{link:'#!',name:'Искусство и дизайн'}])
 						
 						//======single LI====
 						li.menu-li.drop-menu-li
