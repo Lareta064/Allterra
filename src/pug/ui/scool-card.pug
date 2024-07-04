@@ -1,10 +1,10 @@
 extends ../layouts/layout-ui.pug
-//- person(img, name, persLink, range, exper, tags, date, loc, txt, revSlider)
+
 block content
 	.container-dashboard(style="background-color:#f5f5f5; padding: 30px;")
 		h2 Карточка Заведения
-		.scool
-			//====верхний ряд карточки =====
+		.scool-card
+			//====верхний ряд, видимый =====
 			.scool-info
 				//===== картинка =====
 				.scool-picture
@@ -38,7 +38,8 @@ block content
 						.scool-row__group
 							.price-block.price-block--16 от #[span 2000 &dollar;]/неделя
 							button.show-scool-programs
-								span Программы (4)
+								span Программы 
+									span(4)
 								i.changing-icon
 						//=== ссылка Перейти ===
 						.scool-row__link
@@ -46,7 +47,47 @@ block content
 								span Перейти 
 								span к учебному заведению
 
-									
+			//==== программы-выпадающая таблица====
+			.scool-drop
+				table.scool-table
+					thead
+						tr
+							th.cell-name Программы
+							th.cell-age Возраст
+							th.cell-price Стоимость #[span.accent-txt €] | ₽
+					tbody
+						//===== single row ====
+						tr
+							td.cell-name INTO International Graduate Diploma
+							td.cell-age 14-15
+							//=====price cell =====
+							td.cell-price
+								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
+								//=====price cell drop=====
+								.cell-price__drop
+
+						//====== single row ====
+						tr
+							td.cell-name GCSE
+							td.cell-age 16-17
+							td.cell-price
+								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
+								.cell-price__drop
+
+						//====== single row ====
+						tr
+							td.cell-name A-Level
+							td.cell-age 14-15
+							td.cell-price
+								a(href="#!").cell-price__btn #[span 36 315€]/месяц
+								.cell-price__drop
+						//====== single row ====
+						tr
+							td.cell-name IB
+							td.cell-age 18-21
+							td.cell-price
+								a(href="#!").cell-price__btn #[span 36 315€]/1год
+								.cell-price__drop
 
 block variables
 	-var title = "Allterra";

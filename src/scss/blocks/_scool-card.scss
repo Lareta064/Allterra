@@ -1,8 +1,8 @@
-.scool{
+.scool-card{
 	box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
 	background-color: $white;
 	padding: 20px;
-	&-picture{
+	.scool-picture{
 		position: relative;
 		width: 324px;
 		flex-shrink: 0;
@@ -21,19 +21,22 @@
 		top: 16px;
 		left: 16px;
 	}
-	&-info{
+	.scool-info{
 		display: flex;
 		column-gap: 20px;
 	}
-	&-descrip{
+	.scool-descrip{
 		flex-grow: 1;
-		&>*+*{margin-top: 15px;}
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 	
-	&__list{
+	.scool__list{
 		font-size: 14px;
 		line-height: 1.43;
 		color: var(--dark-grey);
+		padding-block: 15px;
 		li+li{margin-top: 8px;}
 		li{
 			display: flex;
@@ -52,11 +55,11 @@
 		}
 		
 	}
-	&-row__group{
+	.scool-row__group{
 		flex-shrink: 0;
 		.price-block{margin-bottom: 4px;}
 	}
-	&-row__link .btn{
+	.scool-row__link .btn{
 		height: 48px;
 		padding-left: 20px;
 		padding-right: 20px;
@@ -95,10 +98,60 @@
 	display: flex;
 	align-items: center;
 	column-gap:8px;
-	&.active{
-	
-		text-decoration: underline;
-		text-decoration-skip-ink: none;
-		color: var(--dark-grey);
+	border-bottom: 1px solid transparent;
+}
+.active .show-scool-programs{
+	border-bottom: 1px solid var(--dark-grey);
+	color: var(--dark-grey);
+}
+.scool-drop{
+	transition: .3s; 
+	.scool-table{
+		width: 100%;
+		td, th{
+			padding-top: 8px;
+			padding-bottom: 8px;
+			text-align: left;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1.43;
+		}
+		th{color: rgba(89, 100, 100, 0.5);}
+		
+		tr td{
+			border-top: 1px solid #F4F4F4;
+		}
 	}
+	.cell-name{
+		width: 40%;
+		padding-right: 16px;
+	}
+	.cell-age {
+		width: 25%;
+		padding-right: 16px;
+		color: $dark-grey;
+	}
+	.cell-price {
+		width: 35%;
+		.cell-price__btn>span{font-weight: 600;}
+	}
+	.cell-price__btn{
+		position: relative;
+		width: fit-content;
+		&:after{
+			content: '';
+			display: inline-block;
+			width: 10px;
+			height: 8px;
+			margin-left: 6px;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.33594 2.47412L4.46447 5.31824C4.7696 5.59563 5.23561 5.59564 5.54074 5.31824L8.66927 2.47412' stroke='%232DBFCA' stroke-linecap='round' /%3e%3c/svg%3e");
+		}
+	}
+}
+.scool-drop{
+	overflow: hidden;
+	max-height: 0;
+}
+.scool.active{
+
 }

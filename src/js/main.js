@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	/***********COUNTRIES SLIDER********* */
+	
 	/*=================COUNTRY FLAGS SLIDER ================== */
 	const swiperRoot = document.querySelector('.country-swiper');
 	if(swiperRoot){
@@ -536,5 +536,25 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		mySwiper.off('slideChangeTransitionEnd');
 		window.dispatchEvent(new Event('resize'));
-	}	
+	}
+
+	/**********scool card programms************/
+	const scoolCards = document.querySelectorAll('.scool-card');
+	
+	if(scoolCards.length > 0){
+		for(let item of scoolCards){
+			const btnShowProgramms = item.querySelector('.show-scool-programs');
+			const cardprogrammsTable =  item.querySelector('.scool-drop');
+			btnShowProgramms.addEventListener('click', ()=>{
+				if(item.classList.contains('active')){
+					cardprogrammsTable.style.maxHeight = 0;
+					item.classList.remove('active');
+				}
+				else{
+					cardprogrammsTable.style.maxHeight = cardprogrammsTable.scrollHeight + 'px';
+					item.classList.add('active');
+				}
+			})
+		}
+	}
 });
