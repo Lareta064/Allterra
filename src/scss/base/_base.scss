@@ -208,12 +208,13 @@ address {
 }
 
 .flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,
-.flex-col, .flex-gap,.header-group,.flex-item, .hero-content,.hash-tags,.links-path, .country-link{
+.flex-col, .flex-gap,.header-group,.flex-item, .hero-content,.hash-tags,.links-path, .country-link,.scool-row{
 	display: flex;
 	align-items: flex-start;
 }
 
-.flex-justify, .header-group{justify-content: space-between;}
+.flex-justify, .header-group,
+.scool-row{justify-content: space-between;}
 .flex-center-x,
 .flex-center{
 	justify-content: center;

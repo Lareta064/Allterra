@@ -4,10 +4,49 @@ block content
 	.container-dashboard(style="background-color:#f5f5f5; padding: 30px;")
 		h2 Карточка Заведения
 		.scool
+			//====верхний ряд карточки =====
 			.scool-info
+				//===== картинка =====
 				.scool-picture
-					img(src="./img/scools/scool-picture.webp", width="324"  height="212" alt="img")
+					img(src="../img/scools/scool-picture.webp", width="324"  height="212" alt="img")
+					.rating-label 9.6
+				//===== описание =====
+				.scool-descrip
+					.h5 Wildau Studienkolleg, Technical University of Applied Sciences Wildau
+					//=== list ====
+					ul.scool__list
+						li
+							i
+								svg.svg-cap
+									use( href='../img/spriteSvg.svg#svg-cap')
+							span Частная школа совместного обучения
+							
+						li
+							i
+								svg.svg-pin
+									use( href='../img/spriteSvg.svg#svg-pin')
+							span Великобритания, Кроуторн
 
+						li
+							i
+								svg.svg-globus
+									use( href='../img/spriteSvg.svg#svg-globus')
+							span Языки обучения: Английский
+					//===price + buttons ===
+					.scool-row
+						//==== цена + программы ====
+						.scool-row__group
+							.price-block.price-block--16 от #[span 2000 &dollar;]/неделя
+							button.show-scool-programs
+								span Программы (4)
+								i.changing-icon
+						//=== ссылка Перейти ===
+						.scool-row__link
+							a(href="#!").btn.flex-row 
+								span Перейти 
+								span к учебному заведению
+
+									
 
 block variables
 	-var title = "Allterra";

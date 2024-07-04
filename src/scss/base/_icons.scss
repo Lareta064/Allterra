@@ -190,3 +190,45 @@
 	width: 60px;
 	height: 45px;
 }
+.icon-star{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.35712 1.6001L10.4446 5.81293L15.1127 6.49263L11.7349 9.77002L12.5321 14.4001L8.35712 12.2129L4.18218 14.4001L4.97934 9.77002L1.60156 6.49263L6.26965 5.81293L8.35712 1.6001Z' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+}
+.rating-label{
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 20px;
+	padding-inline: 8px;
+	height: 24px;
+	color: $white;
+	font-size: 14px;
+	font-weight: 500;
+	background: rgba(16, 23, 36, 0.5);
+	z-index: 2;
+	&:before{
+		content: '';
+		width: 16px;
+		height: 16px;
+		margin-right: 7px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.35712 1.6001L10.4446 5.81293L15.1127 6.49263L11.7349 9.77002L12.5321 14.4001L8.35712 12.2129L4.18218 14.4001L4.97934 9.77002L1.60156 6.49263L6.26965 5.81293L8.35712 1.6001Z' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+	}
+}
+.svg-cap,.svg-pin, .svg-globus{
+	width: 21px;
+	height: 18px;
+	color: $dark-grey;
+}
+.svg-pin{
+	width: 14px;
+	height: 17px;
+}
+.svg-globus{
+	width: 18px;
+	height: 17px;
+	fill: transparent;
+}

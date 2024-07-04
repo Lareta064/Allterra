@@ -1,0 +1,104 @@
+.scool{
+	box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
+	background-color: $white;
+	padding: 20px;
+	&-picture{
+		position: relative;
+		width: 324px;
+		flex-shrink: 0;
+		img{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	.h5{
+		letter-spacing: normal;
+		line-height: 1.56;
+	}
+	.rating-label{
+		position: absolute;
+		top: 16px;
+		left: 16px;
+	}
+	&-info{
+		display: flex;
+		column-gap: 20px;
+	}
+	&-descrip{
+		flex-grow: 1;
+		&>*+*{margin-top: 15px;}
+	}
+	
+	&__list{
+		font-size: 14px;
+		line-height: 1.43;
+		color: var(--dark-grey);
+		li+li{margin-top: 8px;}
+		li{
+			display: flex;
+			align-items: center;
+			column-gap:10px ;
+			color: $dark-grey;
+			i{
+				width: 20px;
+				height: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+				opacity: .5;
+			}
+		}
+		
+	}
+	&-row__group{
+		flex-shrink: 0;
+		.price-block{margin-bottom: 4px;}
+	}
+	&-row__link .btn{
+		height: 48px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.price-block{
+	font-size: 14px;
+	span{
+		font-weight: 600;
+		line-height: 1.5;
+		color: $text-dark;
+	}
+}
+.price-block.price-block--16{
+	font-size: 16px;
+}
+.changing-icon{
+	width: 14px;
+	height: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 3.71094L6.19279 7.97711C6.6505 8.39321 7.3495 8.39321 7.80721 7.97711L12.5 3.71094' stroke='%232DBFCA' stroke-width='1.2' stroke-linecap='round' /%3e%3c/svg%3e");
+	background-size: 14px 12px ;
+	transition: .3s; 
+}
+.active .changing-icon{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 1.5L10.5 10.5M1.50002 10.5L6.00002 6L10.5 1.5' stroke='%23596464' stroke-width='1.2' stroke-linecap='round' /%3e%3c/svg%3e");
+	background-size: 12px 12px;
+}
+.show-scool-programs{
+	font-size: 15px;
+	font-family: $second-family;
+	color: $main-accent;
+	line-height: 1.33;
+	display: flex;
+	align-items: center;
+	column-gap:8px;
+	&.active{
+	
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: var(--dark-grey);
+	}
+}
