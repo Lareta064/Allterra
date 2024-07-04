@@ -152,6 +152,31 @@
 	overflow: hidden;
 	max-height: 0;
 }
-.scool.active{
-
+@media (max-width: 1919px) {
+	.scool-card{
+		padding: 0;
+		.scool-picture{
+			width: 100%;
+		}
+		.scool-info{
+			flex-direction: column;
+		}
+		.scool-descrip{
+			width: 100%;
+			padding: 16px;
+		}
+		.scool-row{
+			flex-direction: row-reverse;
+			position: relative;
+			align-items: center;
+			padding-top: 40px;
+			.price-block{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.scool-row__link .btn span + span{display: none;}
+		}
+	}
+		
 }
