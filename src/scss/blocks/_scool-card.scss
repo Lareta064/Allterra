@@ -115,6 +115,10 @@
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 1.43;
+			white-space: nowrap;
+			@media (max-width: 767px) {
+				font-size: 13px;
+			}
 		}
 		th{color: rgba(89, 100, 100, 0.5);}
 		
@@ -125,15 +129,31 @@
 	.cell-name{
 		width: 40%;
 		padding-right: 16px;
+		P{
+		overflow: hidden;
+		text-overflow: ellipsis;
+			
+		}
+		
+		@media (max-width: 767px) {
+			width: 30%;
+			// p{width: 146px;}
+		}
 	}
 	.cell-age {
 		width: 25%;
 		padding-right: 16px;
 		color: $dark-grey;
+		@media (max-width: 767px) {
+		  width: 68px;
+		}
 	}
 	.cell-price {
 		width: 35%;
 		.cell-price__btn>span{font-weight: 600;}
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.cell-price__btn{
 		position: relative;
@@ -152,9 +172,12 @@
 	overflow: hidden;
 	max-height: 0;
 }
-@media (max-width: 1919px) {
+@media (max-width: 767px) {
 	.scool-card{
 		padding: 0;
+		height: 480px;
+		overflow: hidden;
+		overflow-y: auto;
 		.scool-picture{
 			width: 100%;
 		}
@@ -178,5 +201,4 @@
 			.scool-row__link .btn span + span{display: none;}
 		}
 	}
-		
 }
