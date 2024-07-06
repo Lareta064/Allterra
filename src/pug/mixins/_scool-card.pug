@@ -1,11 +1,12 @@
 mixin scool-card
 	.scool-card
+		//===== картинка =====
+		.scool-picture
+			img(src="../img/scools/scool-picture.webp", width="324"  height="212" alt="img")
+			.rating-label 9.6
+		
 		//====верхний ряд, видимый =====
 		.scool-info
-			//===== картинка =====
-			.scool-picture
-				img(src="../img/scools/scool-picture.webp", width="324"  height="212" alt="img")
-				.rating-label 9.6
 			//===== описание =====
 			.scool-descrip
 				.h5 Wildau Studienkolleg, Technical University of Applied Sciences Wildau
@@ -43,48 +44,48 @@ mixin scool-card
 							span Перейти 
 							span к учебному заведению
 
-		//==== программы-выпадающая таблица====
-		.scool-drop
-			table.scool-table
-				thead
-					tr
-						th.cell-name Программы
-						th.cell-age Возраст
-						th.cell-price Стоимость #[span.accent-txt €] | ₽
-				tbody
-					//===== single row ====
-					tr
-						td.cell-name 
-							p INTO International Graduate Diploma
-						td.cell-age 14-15
-						//=====price cell =====
-						td.cell-price
-							a(href="#!").cell-price__btn #[span 36 315€]/2 недели
-							//=====price cell drop=====
-							.cell-price__drop
+			//==== программы-выпадающая таблица====
+			.scool-drop
+				table.scool-table
+					thead
+						tr
+							th.cell-name Программы
+							th.cell-age Возраст
+							th.cell-price Стоимость #[span.accent-txt €] | ₽
+					tbody
+						//===== single row ====
+						tr
+							td.cell-name 
+								p INTO International Graduate Diploma
+							td.cell-age 14-15
+							//=====price cell =====
+							td.cell-price
+								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
+								//=====price cell drop=====
+								.cell-price__drop
 
-					//====== single row ====
-					tr
-						td.cell-name 
-							p GCSE
-						td.cell-age 16-17
-						td.cell-price
-							a(href="#!").cell-price__btn #[span 36 315€]/2 недели
-							.cell-price__drop
+						//====== single row ====
+						tr
+							td.cell-name 
+								p GCSE
+							td.cell-age 16-17
+							td.cell-price
+								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
+								.cell-price__drop
 
-					//====== single row ====
-					tr
-						td.cell-name 
-							p A-Level
-						td.cell-age 14-15
-						td.cell-price
-							a(href="#!").cell-price__btn #[span 36 315€]/месяц
-							.cell-price__drop
-					//====== single row ====
-					tr
-						td.cell-name
-							p IB
-						td.cell-age 18-21
-						td.cell-price
-							a(href="#!").cell-price__btn #[span 36 315€]/1год
-							.cell-price__drop
+						//====== single row ====
+						tr
+							td.cell-name 
+								p A-Level
+							td.cell-age 14-15
+							td.cell-price
+								a(href="#!").cell-price__btn #[span 36 315€]/месяц
+								.cell-price__drop
+						//====== single row ====
+						tr
+							td.cell-name
+								p IB
+							td.cell-age 18-21
+							td.cell-price
+								a(href="#!").cell-price__btn #[span 36 315€]/1год
+								.cell-price__drop

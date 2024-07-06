@@ -541,20 +541,27 @@ document.addEventListener("DOMContentLoaded", function (){
 	/**********scool card programms************/
 	const scoolCards = document.querySelectorAll('.scool-card');
 	
-	if(scoolCards.length > 0){
+	if(scoolCards.length > 0 ){
+		
 		for(let item of scoolCards){
 			const btnShowProgramms = item.querySelector('.show-scool-programs');
 			const cardprogrammsTable =  item.querySelector('.scool-drop');
 			btnShowProgramms.addEventListener('click', ()=>{
+			
 				if(item.classList.contains('active')){
-					cardprogrammsTable.style.maxHeight = 0;
 					item.classList.remove('active');
+					if(window.innerWidth > 767){
+						cardprogrammsTable.style.maxHeight = 0;
+					}
 				}
 				else{
-					cardprogrammsTable.style.maxHeight = cardprogrammsTable.scrollHeight + 'px';
 					item.classList.add('active');
+					if(window.innerWidth > 767){
+						cardprogrammsTable.style.maxHeight = cardprogrammsTable.scrollHeight + 'px';
+					}
+					
 				}
-			})
+			});
 		}
 	}
 });
