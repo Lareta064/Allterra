@@ -1,6 +1,9 @@
 .inner-menu{
 	border: 1px solid $light-grey;
 	padding: 20px;
+	@media (max-width: 767px) {
+		padding: 20px 16px;
+	}
 	a{
 		display: block;
 		position: relative;
@@ -29,6 +32,10 @@
 			width: 16px;
 			margin-right: 10px;
 			background-color: $main-accent;
+			flex-shrink: 0;
+			@media (max-width: 767px) {
+			width: 12px;
+			}
 		}
 		&:hover{color: $dark-grey; }
 		&:hover:after{

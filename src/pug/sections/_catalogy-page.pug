@@ -3,7 +3,7 @@ section.catalogy-page
 		.aside-grid.aside-grid--1023.gap-20
 			//=====left column ====
 			.aside-grid__col.filters.dynamic-menu
-				include _aside-filters
+				+aside-filters('Выберите интересующие вас <br> учебные заведения:')
 			
 			//==== right column ====
 			.aside-grid__content
@@ -21,5 +21,7 @@ section.catalogy-page
 								svg.svg-table
 									use(href='./img/spriteSvg.svg#svg-table')
 					+scool-card
+					+scool-card2
 					+scool-card
+					+scool-card2
 					+scool-card

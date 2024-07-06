@@ -1,6 +1,6 @@
 .scool-card{
-	// box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
-	// background-color: $white;
+	box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
+	background-color: $white;
 	// padding: 20px;
 	margin-top: 24px;
 	position: relative;
@@ -37,7 +37,7 @@
 		left: 16px;
 	}
 	.scool-info{
-		box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
+		// box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
 		background-color: $white;
 
 		@media (max-width: 767px) {
@@ -259,7 +259,7 @@
 		padding: 0;
 		height: 480px;
 		overflow: hidden;
-		max-width: 328px;
+		max-width: 335px;
 		.scool-picture{
 			width: 100%;
 			height: 216px;
@@ -276,7 +276,7 @@
 		.scool-info{
 			position: absolute;
 			top: 215px;
-			transition: 3s;
+			transition: .3s;
 			height: 450px;
 			z-index: 5;
 			.scool-drop{
