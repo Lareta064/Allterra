@@ -3,6 +3,8 @@
 	background-color: $white;
 	padding: 20px;
 	margin-top: 24px;
+	position: relative;
+	
 	.scool-picture{
 		position: relative;
 		width: 324px;
@@ -16,6 +18,10 @@
 	.h5{
 		letter-spacing: normal;
 		line-height: 1.56;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
 	}
 	.rating-label{
 		position: absolute;
@@ -124,6 +130,7 @@
 }
 .scool-drop{
 	transition: .3s; 
+	background-color: #fff;
 	.scool-table{
 		width: 100%;
 		padding-top: 12px;
@@ -191,12 +198,19 @@
 	overflow: hidden;
 	max-height: 0;
 }
+@media (max-width: 1279px) {
+	.scool-card{
+		.scool-row__link .btn{height: 40px;}
+		.scool-row__link .btn span + span{display: none;}
+	}
+}
 @media (max-width: 767px) {
 	.scool-card{
 		padding: 0;
 		height: 480px;
 		overflow: hidden;
 		overflow-y: auto;
+		max-width: 330px;
 		.scool-picture{
 			width: 100%;
 		}
@@ -216,8 +230,20 @@
 				position: absolute;
 				top: 0;
 				left: 0;
+				margin-bottom: 0;
 			}
-			.scool-row__link .btn span + span{display: none;}
+			.btn{padding-inline: 40px;}
+		}
+		.scool__list{
+			padding-top: 11px;
+			padding-bottom: 14px;
+		}
+		.scool-drop{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 3;
 		}
 	}
 }
