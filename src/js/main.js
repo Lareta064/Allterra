@@ -562,6 +562,14 @@ document.addEventListener("DOMContentLoaded", function (){
 					
 				}
 			});
+			window.addEventListener('resize', ()=>{
+				if(item.classList.contains('active')){
+					item.classList.remove('active');
+					if(window.innerWidth > 767){
+						cardprogrammsTable.style.maxHeight = 0;
+					}
+				}
+			});
 		}
 	}
 });
