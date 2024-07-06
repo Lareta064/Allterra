@@ -232,3 +232,10 @@
 	height: 17px;
 	fill: transparent;
 }
+.svg-bar, .svg-table{
+	width: 24px;
+	height: 24px;
+	color: $bg-black;
+	
+}
+.active > {.svg-bar,.svg-table{opacity: .3;}}

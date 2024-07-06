@@ -2,6 +2,7 @@
 	box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
 	background-color: $white;
 	padding: 20px;
+	margin-top: 24px;
 	.scool-picture{
 		position: relative;
 		width: 324px;
@@ -100,14 +101,32 @@
 	column-gap:8px;
 	border-bottom: 1px solid transparent;
 }
-.active .show-scool-programs{
+.scool-card.active .show-scool-programs{
 	border-bottom: 1px solid var(--dark-grey);
 	color: var(--dark-grey);
+}
+.scool-card.active .scool-row__link .btn {
+	background-color: $main-accent;
+	color: #fff;
+	&:hover {
+		background: #19abb6;
+		color: $white;
+	}
+
+	&:focus {
+		background: #19abb6;
+		color: rgba(255, 255, 255, .7);
+
+		svg {
+			color: rgba(255, 255, 255, .7)
+		}
+	}
 }
 .scool-drop{
 	transition: .3s; 
 	.scool-table{
 		width: 100%;
+		padding-top: 12px;
 		td, th{
 			padding-top: 8px;
 			padding-bottom: 8px;

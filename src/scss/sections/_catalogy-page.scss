@@ -1,0 +1,11 @@
+section.catalogy-page{
+	padding-top: 48px;
+	.header-group{
+		width: 100%;
+		margin-inline: 0;
+		.btn-bars, .btn-table{
+			&:hover{opacity: .3;}
+		}
+	}
+	
+}

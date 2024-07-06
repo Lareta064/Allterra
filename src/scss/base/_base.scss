@@ -235,7 +235,7 @@ address {
 }
 .header-group {
 	margin: 0 auto;
-	margin-bottom: 50px;
+	margin-bottom: 48px;
 	align-items: flex-end;
 	width: min(1070px, 85%);
 	&>* {
@@ -341,6 +341,9 @@ address {
 }
 
 .mt-auto{margin-top: auto;}
+.pt-40{
+	padding-top: 40px;
+}
 .pt-100, .p-block-100{ 
 	padding-top: 100px;
 	@media (max-width: 767px) {

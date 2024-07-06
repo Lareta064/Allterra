@@ -8,3 +8,18 @@ section.catalogy-page
 			//==== right column ====
 			.aside-grid__content
 				include ../blocks/_inner-menu
+				
+				.scool-cards-wrapper.pt-40
+					.header-group
+						.h3 Учебные заведения
+						//===== toggles =====
+						.btns-group
+							a(href="#!").btn-bars
+								svg.svg-bar
+									use(href='./img/spriteSvg.svg#svg-bar')
+							a(href="#!").btn-table.active
+								svg.svg-table
+									use(href='./img/spriteSvg.svg#svg-table')
+					+scool-card
+					+scool-card
+					+scool-card

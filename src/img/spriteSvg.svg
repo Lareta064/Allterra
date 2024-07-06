@@ -187,4 +187,20 @@
 			
 		</g>
 	</symbol>
+	<symbol id="svg-bar"  viewBox="0 0 24 24">
+		<g>
+			<rect width="24" height="3.75" fill="currentColor" />
+			<rect y="6.75" width="24" height="3.75" fill="currentColor" />
+			<rect y="13.5" width="24" height="3.75" fill="currentColor" />
+			<rect y="20.25" width="24" height="3.75" fill="currentColor" />
+		</g>
+	</symbol>
+	<symbol id="svg-table" viewBox="0 0 24 24">
+		<g>
+			<rect width="10" height="10" fill="currentColor" />
+			<rect x="14" width="10" height="10" fill="currentColor" />
+			<rect y="14" width="10" height="10" fill="currentColor" />
+			<rect x="14" y="14" width="10" height="10" fill="currentColor" />
+		</g>
+	</symbol>
 </svg>
