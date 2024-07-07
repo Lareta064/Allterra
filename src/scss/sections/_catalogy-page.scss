@@ -11,6 +11,16 @@
 		&>*+*{margin-top: 48px;}
 		.h3{text-transform:unset;}
 	}
+	article + article{
+		margin-top: 48px;
+	}
+	article .h3{
+		margin-bottom: 12px;
+	}
+	article picture{
+		display: block;
+		margin-block: 40px;
+	}
 }
 .catalogy-lists{
 	display: grid;
