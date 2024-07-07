@@ -403,12 +403,7 @@ section.light-bg, section.dark-bg{
 *.white-bg{
 	background-color: #fff;
 }
-*.dark-opacity{
-	backdrop-filter: blur(40px);
-	background: rgba(16, 23, 36, 0.3);
-	padding: 40px 64px 48px;
-	color: $white;
-}
+
 .main{
 	section:last-child:not(.light-bg),
 	section:last-child:not(.dark-bg) {

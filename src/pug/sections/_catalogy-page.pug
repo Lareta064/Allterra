@@ -148,3 +148,23 @@
 				
 				//======= feedback form =====
 				article.feedback-article#get-consultation
+					form.consultation-form
+						p.h3 Нужна консультация?
+						//=====строка с двумя инпутами ====
+						.two-columns
+							.form_field
+								input(type="text" name="name" placeholder="Ваше имя*")
+							.form_field
+								input(type="text" name="phone" placeholder="Ваш телефон*")
+						.form_field
+							input(type="text" name="email" placeholder="Ваш email")
+						
+						//=====строка с двумя компонентами ====
+						.flex-row
+							.form-confirm
+								label.form-checkbox
+									input(type="checkbox" name="name_chk")
+									span.fake-checkbox
+									span.form-confirm__text Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+							
+							button(type="submit").btn-white Получить консультацию
