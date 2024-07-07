@@ -1,4 +1,4 @@
-.catalogy-page
+section.catalogy-page
 	.container
 		.aside-grid.aside-grid--1023.gap-20
 			//=====left column ====
@@ -332,3 +332,60 @@
 						.h6 Где получить бизнес-образование за рубежом?
 						p Ut morbi tincidunt augue interdum velit. Sapien et ligula ullamcorper malesuada proin. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor
 						a(href="#!").accent-link Подробнее
+
+		//======== BLOG CARDS ========
+//======= news cards slider =======
+section.blog.light-bg
+	.container
+		//======= SECTION TOP ROW=======
+		.header-group.w-100
+			h2.h2.accent-border Новости и Статьи
+			
+			.btns-group
+				a(href="#!" class="btn--slim btn-white") Все новости
+				a(href="#!").btn--slim.btn Все статьи
+
+		//======= SECTION SLIDER =======
+		.slider-wrapper
+			//======== slider-content =======
+			.blog-cards-slider.swiper
+				.swiper-wrapper
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')(class="blog-card--full")
+					
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(2, 'Новость', 'Экономическое образование в США')
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(3, 'Статья', 'Техническое образование в Германии')
+					
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(4, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+					
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(2, 'Новость', 'Экономическое образование в США')
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(3, 'Статья', 'Техническое образование в Германии')
+					
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(4, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+
+		
+			//===== swiper navigation========
+			.slider-nav
+				.swiper-button-next
+				.swiper-button-prev
+			
+			//========VISIBLE MOBILE =======
+			.btns-group
+				a(href="#!" class="btn--slim btn-white")  Все новости
+				a(href="#!").btn--slim.btn Все статьи
