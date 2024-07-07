@@ -558,12 +558,14 @@ document.addEventListener("DOMContentLoaded", function (){
 			const btnShowProgramms = item.querySelector('.show-scool-programs');
 			const cardprogrammsTable =  item.querySelector('.scool-drop');
 			const cardPrices =  item.querySelectorAll('.cell-price');
-			const activePrice = item.querySelector('.cell-price__drop.active');
+			function closeActivePrice(){
+				const activePrice = item.querySelector('.cell-price__drop.active');
+				if(activePrice) activePrice.classList.remove('active');
+			}
 			
 			btnShowProgramms.addEventListener('click', ()=>{
 				if(item.classList.contains('active')){
-					
-					if(activePrice) activePrice.classList.remove('active');
+					closeActivePrice();
 					item.classList.remove('active');
 					if(window.innerWidth > 767){
 						cardprogrammsTable.style.maxHeight = 0;
@@ -583,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				if( priceCellBtn){
 					
 					priceCellBtn.addEventListener('click', ()=>{
-						// const activePrice = item.querySelector('.cell-price__drop.active');
+						const activePrice = item.querySelector('.cell-price__drop.active');
 						if(activePrice && activePrice !== priceCellDrop){
 							activePrice.classList.remove('active');
 						}
@@ -595,8 +597,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 			window.addEventListener('resize', ()=>{
 				if(item.classList.contains('active')){
-					// const activePrice = item.querySelector('.cell-price__drop.active');
-					if(activePrice) activePrice.classList.remove('active');
+					closeActivePrice();
 					item.classList.remove('active');
 					if(window.innerWidth > 767){
 						cardprogrammsTable.style.maxHeight = 0;
