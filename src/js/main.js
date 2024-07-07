@@ -540,15 +540,30 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	/**********scool card programms************/
 	const scoolCards = document.querySelectorAll('.scool-card');
-	
+	  // Функция для проверки позиций элементов
+	function checkBounds(parent, child) {
+		const parentRect = parent.getBoundingClientRect();
+		const childRect = child.getBoundingClientRect();
+
+		// Проверяем, не выходит ли нижний край дочернего элемента за родительский
+		if (childRect.bottom > parentRect.bottom) {
+		// Если выходит, добавляем дополнительный класс
+		child.classList.add('offset-top');
+		}
+	}
+  
 	if(scoolCards.length > 0 ){
 		
 		for(let item of scoolCards){
 			const btnShowProgramms = item.querySelector('.show-scool-programs');
 			const cardprogrammsTable =  item.querySelector('.scool-drop');
-			btnShowProgramms.addEventListener('click', ()=>{
+			const cardPrices =  item.querySelectorAll('.cell-price');
+			const activePrice = item.querySelector('.cell-price__drop.active');
 			
+			btnShowProgramms.addEventListener('click', ()=>{
 				if(item.classList.contains('active')){
+					
+					if(activePrice) activePrice.classList.remove('active');
 					item.classList.remove('active');
 					if(window.innerWidth > 767){
 						cardprogrammsTable.style.maxHeight = 0;
@@ -559,11 +574,29 @@ document.addEventListener("DOMContentLoaded", function (){
 					if(window.innerWidth > 767){
 						cardprogrammsTable.style.maxHeight = cardprogrammsTable.scrollHeight + 'px';
 					}
-					
 				}
 			});
+
+			for(let priceCell of cardPrices){
+				const priceCellBtn = priceCell.querySelector('.cell-price__btn');
+				const priceCellDrop = priceCell.querySelector('.cell-price__drop');
+				if( priceCellBtn){
+					
+					priceCellBtn.addEventListener('click', ()=>{
+						// const activePrice = item.querySelector('.cell-price__drop.active');
+						if(activePrice && activePrice !== priceCellDrop){
+							activePrice.classList.remove('active');
+						}
+						priceCellDrop.classList.toggle('active');
+						 checkBounds(item, priceCellDrop);
+						
+					});
+				}
+			}
 			window.addEventListener('resize', ()=>{
 				if(item.classList.contains('active')){
+					// const activePrice = item.querySelector('.cell-price__drop.active');
+					if(activePrice) activePrice.classList.remove('active');
 					item.classList.remove('active');
 					if(window.innerWidth > 767){
 						cardprogrammsTable.style.maxHeight = 0;

@@ -1,3 +1,11 @@
+mixin price-drop
+	.cell-price__drop
+		ul
+			li.active 36 315€/2 недели
+			li 72 315€/4 недели
+			li 96 315€/6 месяцев
+			li 105 315€/1 год
+			
 mixin scool-card
 	.scool-card
 		//===== картинка =====
@@ -63,6 +71,11 @@ mixin scool-card
 								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
 								//=====price cell drop=====
 								.cell-price__drop
+									ul
+										li.active 36 315€/2 недели
+										li 72 315€/4 недели
+										li 96 315€/6 месяцев
+										li 105 315€/1 год
 
 						//====== single row ====
 						tr
@@ -71,7 +84,7 @@ mixin scool-card
 							td.cell-age 16-17
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
-								.cell-price__drop
+								+price-drop
 
 						//====== single row ====
 						tr
@@ -80,7 +93,7 @@ mixin scool-card
 							td.cell-age 14-15
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/месяц
-								.cell-price__drop
+								+price-drop
 						//====== single row ====
 						tr
 							td.cell-name
@@ -88,7 +101,7 @@ mixin scool-card
 							td.cell-age 18-21
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/1год
-								.cell-price__drop
+								+price-drop
 
 mixin scool-card2
 	.scool-card
@@ -154,7 +167,8 @@ mixin scool-card2
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
 								//=====price cell drop=====
-								.cell-price__drop
+								+price-drop
+								
 
 						//====== single row ====
 						tr
@@ -163,7 +177,7 @@ mixin scool-card2
 							td.cell-age 16-17
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
-								.cell-price__drop
+								+price-drop
 
 						//====== single row ====
 						tr
@@ -172,7 +186,7 @@ mixin scool-card2
 							td.cell-age 14-15
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/месяц
-								.cell-price__drop
+								+price-drop
 						//====== single row ====
 						tr
 							td.cell-name
@@ -180,7 +194,7 @@ mixin scool-card2
 							td.cell-age 18-21
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/1год
-								.cell-price__drop
+								+price-drop
 						//===== single row ====
 						tr
 							td.cell-name 
@@ -190,7 +204,7 @@ mixin scool-card2
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
 								//=====price cell drop=====
-								.cell-price__drop
+								+price-drop
 
 						//====== single row ====
 						tr
@@ -199,7 +213,7 @@ mixin scool-card2
 							td.cell-age 16-17
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/2 недели
-								.cell-price__drop
+								+price-drop
 
 						//====== single row ====
 						tr
@@ -208,7 +222,7 @@ mixin scool-card2
 							td.cell-age 14-15
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/месяц
-								.cell-price__drop
+								+price-drop
 						//====== single row ====
 						tr
 							td.cell-name
@@ -216,4 +230,4 @@ mixin scool-card2
 							td.cell-age 18-21
 							td.cell-price
 								a(href="#!").cell-price__btn #[span 36 315€]/1год
-								.cell-price__drop
+								+price-drop
