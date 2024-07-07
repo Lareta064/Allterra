@@ -321,15 +321,13 @@ address {
 	margin-top: 20px;
 }
 
-.mt-40 {
-	margin-top: 40px;
-}
+
 
 .mt-48 {
-	margin-top: 48px;
+	margin-top: 48px!important;
 
 	@media (max-width: 767px) {
-		margin-top: 32px;
+		margin-top: 32px!important;
 	}
 }
 
