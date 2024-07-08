@@ -26,11 +26,12 @@
 }
 .grid-12 {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 400px 1fr;
 	gap: 40px;
 
 	@media (max-width: 1279px) {
 		gap: 20px;
+		grid-template-columns: 1fr 2fr;
 	}
 
 	@media (max-width: 767px) {
