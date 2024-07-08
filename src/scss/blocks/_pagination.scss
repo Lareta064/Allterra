@@ -24,13 +24,18 @@
 		background-size: 7px 14px;
 		margin-right: 24px;
 		background-color: $bg-black;
+		@media (max-width: 767px) {margin-right: 12px;}
+			
+		
 		
 	}
 	.page-num.next {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='14' viewBox='0 0 7 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 13L5.85982 7.76822C6.23066 7.32321 6.23066 6.67679 5.85982 6.23178L1.5 1' stroke='white' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
-		margin-right: 0;
+		margin-right: 0!important;
 		margin-left: 24px;
-		
+		@media (max-width: 767px) {margin-left: 12px;}
+				
+			
 	}
 	.next.disable, .prev.disable{background-color: $dark-grey; opacity: 0.4;
 		pointer-events: none;

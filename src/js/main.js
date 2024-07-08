@@ -354,21 +354,25 @@ document.addEventListener("DOMContentLoaded", function (){
 	    dynamicMenuBtn.addEventListener('click', ()=>{
 			
 			if(dynamicMenuBtn.classList.contains('active')){
+				console.log('1-active');
 				dynamicMenuList.style.maxHeight = 0;
 				dynamicMenuBtn.classList.remove('active');
 				
 			}else{
+				console.log('1-else');
 				dynamicMenuList.style.maxHeight = dynamicMenuList.scrollHeight + 'px';
 				dynamicMenuBtn.classList.add('active');
 			}
 		});
 		dynamicMenuList.addEventListener('click', ()=>{
+			console.log('2');
 			dynamicMenuList.style.maxHeight = 0;
 			dynamicMenuBtn.classList.remove('active');
 		});
 		const stickyDynamicMenu = document.querySelector('#sticky-menu');
 		const stickyFiltersList = document.querySelector('.filters-drop');
 		
+
 		if(stickyDynamicMenu){
 			window.addEventListener('scroll', ()=>{
 				if(window.innerWidth <= 1280){
@@ -384,20 +388,25 @@ document.addEventListener("DOMContentLoaded", function (){
 				if(window.innerWidth > 1279){
 					dynamicMenuList.style.maxHeight = 'unset';
 					dynamicMenuBtn.classList.remove('active');
+					
+					
 				}else{
 					dynamicMenuList.style.maxHeight = '0';
 					dynamicMenuBtn.classList.remove('active');
 				}
 			});
 		}
+		
 		if(stickyFiltersList){
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1023){
 					stickyFiltersList.style.maxHeight = 'unset';
 					dynamicMenuBtn.classList.remove('active');
 				}else{
-					stickyFiltersList.style.maxHeight = '0';
-					dynamicMenuBtn.classList.remove('active');
+					 if (window.innerWidth !== windowWidth){
+						stickyFiltersList.style.maxHeight = '0';
+						dynamicMenuBtn.classList.remove('active');
+					 }
 				}
 			});
 		}
