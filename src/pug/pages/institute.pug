@@ -4,7 +4,9 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page.inner-page--institute
-		+brcr('Главная','Каталог', 'ОАЭ', '360 Institute of Management' )
+		.hero.hero--light
+			.container
+				+brcr('Главная','Каталог', 'ОАЭ', '360 Institute of Management' )
 		include ../sections/_institute-content.pug
 		
 		+feedback-section('подобрать университет')(class="light-bg")

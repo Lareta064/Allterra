@@ -316,7 +316,16 @@ document.addEventListener("DOMContentLoaded", function (){
         },
       },
     });
-    
+    /*=================INSTITUTE SLIDER ================== */
+	var instituteSlider = new Swiper(".institute-slider", {
+	   slidesPerView: 1,
+	   speed: 1000,
+	   loop: true,
+	   spaceBetween: 20,
+        pagination: {
+        	el: ".swiper-pagination",
+      	},
+    });
 
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
@@ -443,6 +452,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	
 	/*=================COUNTRY FLAGS SLIDER ================== */
+	
 	const swiperRoot = document.querySelector('.country-swiper');
 	if(swiperRoot){
 

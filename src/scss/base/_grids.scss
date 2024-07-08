@@ -75,9 +75,7 @@
 	@media (max-width: 1279px) {
 		row-gap: 32px;
 		grid-template-columns: 225px 3fr;
-		// .four-columns{
-		// 	grid-template-columns: repeat(2, 1fr);
-		// }
+		
 	}
 	@media (max-width: 767px) {
 		&__col {
@@ -86,9 +84,7 @@
 
 		grid-template-columns: 1fr;
 		gap: 40px;
-		// .four-columns{
-		// 	grid-template-columns: 1fr;
-		// }
+		
 	}
 }
 .aside-grid__content.flex-col{
