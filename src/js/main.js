@@ -599,16 +599,16 @@ document.addEventListener("DOMContentLoaded", function (){
 					});
 				}
 			}
-			window.addEventListener('resize', ()=>{
-				if(item.classList.contains('active')){
-					closeActivePrice();
-					item.classList.remove('active');
-					if(window.innerWidth > 767){
-						cardprogrammsTable.style.maxHeight = 0;
-						cardprogrammsTable.style.overflow = 'hidden';
-					}
-				}
-			});
+			// window.addEventListener('resize', ()=>{
+			// 	if(item.classList.contains('active')){
+			// 		closeActivePrice();
+			// 		item.classList.remove('active');
+			// 		if(window.innerWidth > 767){
+			// 			cardprogrammsTable.style.maxHeight = 0;
+			// 			cardprogrammsTable.style.overflow = 'hidden';
+			// 		}
+			// 	}
+			// });
 		}
 	}
 });
