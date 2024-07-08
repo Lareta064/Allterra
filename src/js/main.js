@@ -569,12 +569,14 @@ document.addEventListener("DOMContentLoaded", function (){
 					item.classList.remove('active');
 					if(window.innerWidth > 767){
 						cardprogrammsTable.style.maxHeight = 0;
+						cardprogrammsTable.style.overflow = 'hidden';
 					}
 				}
 				else{
 					item.classList.add('active');
 					if(window.innerWidth > 767){
 						cardprogrammsTable.style.maxHeight = cardprogrammsTable.scrollHeight + 'px';
+						cardprogrammsTable.style.overflow = 'visible';
 					}
 				}
 			});
@@ -584,12 +586,14 @@ document.addEventListener("DOMContentLoaded", function (){
 				const priceCellDrop = priceCell.querySelector('.cell-price__drop');
 				if( priceCellBtn){
 					
-					priceCellBtn.addEventListener('click', ()=>{
+					priceCellBtn.addEventListener('click', (e)=>{
+						e.preventDefault();
 						const activePrice = item.querySelector('.cell-price__drop.active');
 						if(activePrice && activePrice !== priceCellDrop){
 							activePrice.classList.remove('active');
 						}
 						priceCellDrop.classList.toggle('active');
+						
 						 checkBounds(item, priceCellDrop);
 						
 					});
@@ -601,6 +605,7 @@ document.addEventListener("DOMContentLoaded", function (){
 					item.classList.remove('active');
 					if(window.innerWidth > 767){
 						cardprogrammsTable.style.maxHeight = 0;
+						cardprogrammsTable.style.overflow = 'hidden';
 					}
 				}
 			});
