@@ -140,6 +140,13 @@ h6, .h6 {
 		font-size: 12px;
 	}
 }
+.upper-14{
+	text-transform: uppercase;
+	color: $text-dark;
+	opacity: .5;
+	line-height: 1.71;
+	margin-bottom: 12px;
+}
 .txt-opac{
 	opacity: 0.8;
 	&>*{opacity:1;}
