@@ -677,4 +677,22 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		}
 	});
+     /* toggle active class for childs */
+	function toggleActiveClass(parentClass, childClass) {
+		// Получаем родительский элемент
+		const parent = document.querySelector('.' + parentClass);
+		// Добавляем обработчик событий на клик для всех дочерних элементов
+		parent.addEventListener('click', function(e) {
+			// Проверяем, что клик был совершён именно по дочернему элементу
+			if (e.target.classList.contains(childClass)) {
+				// Удаляем класс 'active' у всех дочерних элементов
+				parent.querySelectorAll('.' + childClass).forEach(child => {
+					child.classList.remove('active');
+				});
+				// Добавляем класс 'active' элементу, по которому был клик
+				e.target.classList.add('active');
+			}
+		});
+	}
+  toggleActiveClass('cell-price', 'pay-cur');
 });

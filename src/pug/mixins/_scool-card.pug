@@ -59,7 +59,8 @@ mixin scool-card
 						tr
 							th.cell-name Программы
 							th.cell-age Возраст
-							th.cell-price Стоимость&nbsp;#[span.accent-txt €] | ₽
+							//==== класс active  переключается у выбранной валюты оплаты ====
+							th.cell-price Стоимость #[span.pay-cur.active €]|#[span.pay-cur ₽]
 					tbody
 						//===== single row ====
 						tr
@@ -168,7 +169,7 @@ mixin scool-card2
 						tr
 							th.cell-name Программы
 							th.cell-age Возраст
-							th.cell-price Стоимость&nbsp;#[span.accent-txt €] | ₽
+							th.cell-price Стоимость #[span.pay-cur.active €]|#[span.pay-cur ₽]
 					tbody
 						//===== single row ====
 						tr

@@ -302,6 +302,12 @@
 	}
 }
 .cell-price svg{transition: .3s; }
+ .pay-cur{
+	display: inline-block;
+	padding-inline: 5px;
+	cursor: pointer;
+	&.active{font-weight: 600; color: $main-accent; }
+ }
 .scool-drop{
 	overflow: hidden;
 	max-height: 0;
