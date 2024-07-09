@@ -4,7 +4,7 @@
 .inner-page--institute{
 	h1{text-shadow: none; line-height: 1.29;}
 	.aside-grid{column-gap: 20px;}
-	.breadcrumb{margin-bottom: 48px;}
+	// .breadcrumb{margin-bottom: 48px;}
 		
 }
 .dynamic-menu.flex-col{
@@ -35,4 +35,10 @@
 			object-fit: cover;
 			
 		}
+	@media (max-width: 1279px) {
+		width: calc(100vw - 20px - 280px);
+	}
+	@media (max-width: 1023px) {
+		width: calc(100vw - 32px);
+	}
 }
