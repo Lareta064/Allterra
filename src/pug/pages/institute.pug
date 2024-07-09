@@ -1,0 +1,21 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page.inner-page--institute
+		.hero.hero--light
+			.container
+				+brcr('Главная','Каталог', 'ОАЭ', '360 Institute of Management' )
+		include ../sections/_institute-content.pug
+		
+		+feedback-section('подобрать университет')(class="light-bg")
+		
+		+blogCardsSlider('Другие новости', 'об образовании', 'btn-br-white')
+		include ../sections/_image-banner
+		
+		include ../sections/_contacts
+	include ../sections/_footer
+
+block variables
+	-var title = "Институт";

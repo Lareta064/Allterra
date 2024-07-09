@@ -1,0 +1,47 @@
+//=====================ARTICLE CONTENT ================
+section.institute-article
+	.container
+		.aside-grid
+			.aside-grid__col.dynamic-menu.flex-col
+				.dynamic-menu__header.light-bg
+					.h4 360 Institute of Management
+					svg.svg-chevron-down
+						use(href="./img/spriteSvg.svg#svg-chevron-down")
+				.dynamic-menu__list
+					+backlitMenu([
+						{anchor: '#anchor1', name: 'Описание'},
+						{anchor: '#anchor2', name: 'Программы'},
+						{anchor: '#anchor3', name: 'Расположение'},
+						{anchor: '#anchor4', name: 'Оснащение'},
+						{anchor: '#anchor5', name: 'Проживание'},
+						{anchor: '#anchor6', name: 'Виртуальный тур'},
+						{anchor: '#anchor7', name: 'Дополнительно'},
+						{anchor: '#anchor8', name: 'Как поступить'}
+						])
+				
+				.dynamic-menu__banner.block-1024
+					img(src="./img/institute/institute-logo.webp", width="295" height="295" alt="logo")
+			
+			.aside-grid__content
+				h1.section-title 360 Institute of Management | Институт менеджмента 360
+				//====== institute slider====
+				.institute-slider.swiper
+					.swiper-wrapper
+						//====== slider =======
+						.swiper-slide
+							picture
+								source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
+								img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
+						//======slider =======
+						.swiper-slide
+							picture
+								source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
+								img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
+						//======slider =======
+						.swiper-slide
+							picture
+								source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
+								img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
+					//======slider pagination =====
+					.swiper-pagination
+		

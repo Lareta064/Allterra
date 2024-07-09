@@ -59,7 +59,17 @@
 			color: $main-accent;
 		}
 	}
-	.btn-more{margin-top: 12px;}
+	.btn-more{
+		margin-top: 12px;
+		position: relative;
+		
+		.svg-chevron{
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateX(-50%) rotate(0);
+		}
+	}
 	@media (max-width: 767px) {
 	&-header .h4{font-size: 18px; line-height: 1.44; line-height: 144%;
 		letter-spacing: -0.01em;}

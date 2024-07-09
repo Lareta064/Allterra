@@ -22,6 +22,12 @@
 		height: 60px;
 	}
 }
+.h-40{
+	height: 40px!important;
+	padding-inline: 24px;
+	font-size: 14px;
+	line-height: 38px;
+}
 .btn,.btn-br, .feedback-form-wrapper .b24-form-btn{
 	background-color: $bg-black;
 	box-shadow: 0 6px 16px  rgba(0, 0, 0, 0.06);
@@ -84,9 +90,7 @@
 
 
 .btn-accent,
-.btn,
-.btn,
-.btn-white{
+.btn,.btn-white{
 @media (max-width: 767px) {
 		width: min(360px, 100%);
 

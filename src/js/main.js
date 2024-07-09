@@ -316,7 +316,16 @@ document.addEventListener("DOMContentLoaded", function (){
         },
       },
     });
-    
+    /*=================INSTITUTE SLIDER ================== */
+	var instituteSlider = new Swiper(".institute-slider", {
+	   slidesPerView: 1,
+	   speed: 1000,
+	   loop: true,
+	   spaceBetween: 20,
+        pagination: {
+        	el: ".swiper-pagination",
+      	},
+    });
 
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
@@ -354,21 +363,25 @@ document.addEventListener("DOMContentLoaded", function (){
 	    dynamicMenuBtn.addEventListener('click', ()=>{
 			
 			if(dynamicMenuBtn.classList.contains('active')){
+				console.log('1-active');
 				dynamicMenuList.style.maxHeight = 0;
 				dynamicMenuBtn.classList.remove('active');
 				
 			}else{
+				console.log('1-else');
 				dynamicMenuList.style.maxHeight = dynamicMenuList.scrollHeight + 'px';
 				dynamicMenuBtn.classList.add('active');
 			}
 		});
 		dynamicMenuList.addEventListener('click', ()=>{
+			console.log('2');
 			dynamicMenuList.style.maxHeight = 0;
 			dynamicMenuBtn.classList.remove('active');
 		});
 		const stickyDynamicMenu = document.querySelector('#sticky-menu');
 		const stickyFiltersList = document.querySelector('.filters-drop');
 		
+
 		if(stickyDynamicMenu){
 			window.addEventListener('scroll', ()=>{
 				if(window.innerWidth <= 1280){
@@ -384,20 +397,25 @@ document.addEventListener("DOMContentLoaded", function (){
 				if(window.innerWidth > 1279){
 					dynamicMenuList.style.maxHeight = 'unset';
 					dynamicMenuBtn.classList.remove('active');
+					
+					
 				}else{
 					dynamicMenuList.style.maxHeight = '0';
 					dynamicMenuBtn.classList.remove('active');
 				}
 			});
 		}
+		
 		if(stickyFiltersList){
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1023){
 					stickyFiltersList.style.maxHeight = 'unset';
 					dynamicMenuBtn.classList.remove('active');
 				}else{
-					stickyFiltersList.style.maxHeight = '0';
-					dynamicMenuBtn.classList.remove('active');
+					 if (window.innerWidth !== windowWidth){
+						stickyFiltersList.style.maxHeight = '0';
+						dynamicMenuBtn.classList.remove('active');
+					 }
 				}
 			});
 		}
@@ -432,8 +450,9 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	/***********COUNTRIES SLIDER********* */
+	
 	/*=================COUNTRY FLAGS SLIDER ================== */
+	
 	const swiperRoot = document.querySelector('.country-swiper');
 	if(swiperRoot){
 
@@ -536,5 +555,79 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		mySwiper.off('slideChangeTransitionEnd');
 		window.dispatchEvent(new Event('resize'));
-	}	
+	}
+
+	/**********scool card programms************/
+	const scoolCards = document.querySelectorAll('.scool-card');
+	  // Функция для проверки позиций элементов
+	function checkBounds(parent, child) {
+		const parentRect = parent.getBoundingClientRect();
+		const childRect = child.getBoundingClientRect();
+
+		// Проверяем, не выходит ли нижний край дочернего элемента за родительский
+		if (childRect.bottom > parentRect.bottom) {
+		// Если выходит, добавляем дополнительный класс
+		child.classList.add('offset-top');
+		}
+	}
+  
+	if(scoolCards.length > 0 ){
+		
+		for(let item of scoolCards){
+			const btnShowProgramms = item.querySelector('.show-scool-programs');
+			const cardprogrammsTable =  item.querySelector('.scool-drop');
+			const cardPrices =  item.querySelectorAll('.cell-price');
+			function closeActivePrice(){
+				const activePrice = item.querySelector('.cell-price__drop.active');
+				if(activePrice) activePrice.classList.remove('active');
+			}
+			
+			btnShowProgramms.addEventListener('click', ()=>{
+				if(item.classList.contains('active')){
+					closeActivePrice();
+					item.classList.remove('active');
+					if(window.innerWidth > 767){
+						cardprogrammsTable.style.maxHeight = 0;
+						cardprogrammsTable.style.overflow = 'hidden';
+					}
+				}
+				else{
+					item.classList.add('active');
+					if(window.innerWidth > 767){
+						cardprogrammsTable.style.maxHeight = cardprogrammsTable.scrollHeight + 'px';
+						cardprogrammsTable.style.overflow = 'visible';
+					}
+				}
+			});
+
+			for(let priceCell of cardPrices){
+				const priceCellBtn = priceCell.querySelector('.cell-price__btn');
+				const priceCellDrop = priceCell.querySelector('.cell-price__drop');
+				if( priceCellBtn){
+					
+					priceCellBtn.addEventListener('click', (e)=>{
+						e.preventDefault();
+						const activePrice = item.querySelector('.cell-price__drop.active');
+						if(activePrice && activePrice !== priceCellDrop){
+							activePrice.classList.remove('active');
+						}
+						priceCellDrop.classList.toggle('active');
+						
+						 checkBounds(item, priceCellDrop);
+						
+					});
+				}
+			}
+			// window.addEventListener('resize', ()=>{
+			// 	if(item.classList.contains('active')){
+			// 		closeActivePrice();
+			// 		item.classList.remove('active');
+			// 		if(window.innerWidth > 767){
+			// 			cardprogrammsTable.style.maxHeight = 0;
+			// 			cardprogrammsTable.style.overflow = 'hidden';
+			// 		}
+			// 	}
+			// });
+		}
+	}
 });

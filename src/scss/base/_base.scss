@@ -208,20 +208,28 @@ address {
 }
 
 .flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,
-.flex-col, .flex-gap,.header-group,.flex-item, .hero-content,.hash-tags,.links-path, .country-link{
+.flex-col, .flex-gap,.header-group,.flex-item, .hero-content,.hash-tags,.links-path, .country-link,.scool-row, .justify-group{
 	display: flex;
 	align-items: flex-start;
 }
 
-.flex-justify, .header-group{justify-content: space-between;}
+.flex-justify, .header-group,.justify-group,
+.scool-row{justify-content: space-between;}
 .flex-center-x,
 .flex-center{
 	justify-content: center;
 }
 
 .flex-center-y,.flex-center,.flex-justify,.links-path,.hash-tags,
-.country-link,.flex-item{
+.country-link,.flex-item, .justify-group{
 	align-items: center;
+}
+.justify-group{
+	@media (max-width: 767px) {
+	flex-direction: column;
+	row-gap:32px;
+	justify-content: center;
+	}
 }
 .hash-tags{
 	gap:5px;
@@ -234,7 +242,7 @@ address {
 }
 .header-group {
 	margin: 0 auto;
-	margin-bottom: 50px;
+	margin-bottom: 48px;
 	align-items: flex-end;
 	width: min(1070px, 85%);
 	&>* {
@@ -313,15 +321,13 @@ address {
 	margin-top: 20px;
 }
 
-.mt-40 {
-	margin-top: 40px;
-}
+
 
 .mt-48 {
-	margin-top: 48px;
+	margin-top: 48px!important;
 
 	@media (max-width: 767px) {
-		margin-top: 32px;
+		margin-top: 32px!important;
 	}
 }
 
@@ -340,6 +346,9 @@ address {
 }
 
 .mt-auto{margin-top: auto;}
+.pt-40{
+	padding-top: 40px;
+}
 .pt-100, .p-block-100{ 
 	padding-top: 100px;
 	@media (max-width: 767px) {
@@ -394,12 +403,7 @@ section.light-bg, section.dark-bg{
 *.white-bg{
 	background-color: #fff;
 }
-*.dark-opacity{
-	backdrop-filter: blur(40px);
-	background: rgba(16, 23, 36, 0.3);
-	padding: 40px 64px 48px;
-	color: $white;
-}
+
 .main{
 	section:last-child:not(.light-bg),
 	section:last-child:not(.dark-bg) {

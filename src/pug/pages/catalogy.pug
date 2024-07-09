@@ -1,0 +1,18 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page.inner-page--catalogy
+		section.hero.hero--light
+			.container
+				+brcr('Главная', 'Каталог','ОАЭ', '360 Institute of Management')
+				
+				h1.title Каталог программ и учебных заведений Allterra Education	
+		include ../sections/_catalogy-page
+		
+		include ../sections/_contacts
+	include ../sections/_footer
+
+block variables
+	-var title = "Каталог";

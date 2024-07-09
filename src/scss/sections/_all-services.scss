@@ -6,12 +6,15 @@
 	}
 }
 .services-list{
-	li +li{
-		margin-top: 65px;
+	li{
+		padding-block: 32px;
 		@media (max-width: 767px) {
-		margin-top: 32px;
+			padding-block: 16px;
 		}
 	}
+	li:first-child{padding-top: 0;}
+	li:last-child {padding-bottom: 0;}
+	li +li{border-top:  1px solid rgba(16, 23, 36, .1);}
 	li{
 		align-items: flex-start;
 		.txt-20{

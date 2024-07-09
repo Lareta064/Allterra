@@ -1,0 +1,38 @@
+.dynamic-menu__header.light-bg{
+	padding: 20px 16px;
+}
+.inner-page--institute{
+	h1{text-shadow: none; line-height: 1.29;}
+	.aside-grid{column-gap: 20px;}
+	.breadcrumb{margin-bottom: 48px;}
+		
+}
+.dynamic-menu.flex-col{
+	row-gap: 32px;
+}
+.institute-slider{
+	width: calc(100vw - 20px - 295px);
+	max-width: 925px;
+	aspect-ratio: 185 / 114;
+	padding: 0;
+	padding-bottom: 23px;
+	
+	.swiper-pagination-bullets{bottom: 0}
+		.swiper-pagination-bullet{
+			height: 3px;
+			width: 16px;
+			background-color: $bg-black;
+			opacity: .2;
+			margin-left: 2px;
+			margin-right: 2px;
+			transition: .3s;
+			border-radius: 1px;
+		}
+		.swiper-pagination-bullet-active{opacity: 1; width: 48px;}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			
+		}
+}

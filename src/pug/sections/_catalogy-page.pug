@@ -1,0 +1,436 @@
+section.catalogy-page
+	.container
+		.aside-grid.aside-grid--1023.gap-20
+			//=====left column ====
+			.aside-grid__col.filters.dynamic-menu
+				//====== filters header ===
+				.filters-header.dynamic-menu__header
+					.h4 Выберите интересующие вас
+					svg.svg-chevron-down
+						use(href="./img/spriteSvg.svg#svg-chevron-down")
+					
+				//====== filters content ===
+				.filters-drop.dynamic-menu__list
+					.filters-body
+						//=====ОДНА ГРУППА ======
+						.filters-group
+							.filters-group__title Страна
+							.filters-group__list
+								a(href="#!") Австралия
+								a(href="#!") Великобритания
+								a(href="#!") Германия
+								a(href="#!") Ирландия
+								a(href="#!") Испания
+								a(href="#!") Италия
+								a(href="#!") Австралия
+								a(href="#!") Великобритания
+								a(href="#!") Германия
+								a(href="#!") Ирландия
+								a(href="#!") Испания
+								a(href="#!") Италия							
+							//======= показать еще =======
+							button(type="button").accent-link.btn-more Показать еще
+								svg.svg-chevron-down
+									use( href='./img/spriteSvg.svg#svg-chevron-down')
+						
+						//=====ОДНА ГРУППА ======
+						.filters-group
+							.filters-group__title Уровень образования
+							.filters-group__list
+								a(href="#!") Арт и Дизайн
+								a(href="#!") Высшее образование
+								a(href="#!") Каникулы
+								a(href="#!") Подготовка к экзаменам
+								a(href="#!") Среднее образование
+								a(href="#!") Языковые курсы
+								
+						//=====ОДНА ГРУППА ======
+						.filters-group
+							.filters-group__title Полезная информация
+							.filters-group__list
+								a(href="#!") Отзывы
+								a(href="#!") Новости
+			//==== right column ====
+			.aside-grid__content
+				include ../blocks/_inner-menu
+				//====== cards section====
+				article.scool-cards-wrapper.pt-40
+					.header-group
+						.h3 Учебные заведения
+						//===== toggles =====
+						.btns-group
+							a(href="#!").btn-bars
+								svg.svg-bar
+									use(href='./img/spriteSvg.svg#svg-bar')
+							a(href="#!").btn-table.active
+								svg.svg-table
+									use(href='./img/spriteSvg.svg#svg-table')
+					+scool-card
+					+scool-card2
+					+scool-card
+					+scool-card2
+					+scool-card
+					
+					//=====btn + pagination =====
+					.justify-group.mt-48
+						button(type="button").btn-br-white.h-40 Показать еще
+						//=====пагинация====
+						.pagination
+							a(href="#!").page-num.prev.disable
+							a(href="#!").page-num 1
+							a(href="#!").page-num 2
+							a(href="#!").page-num.active 3
+							a(href="#!").page-num ...
+							a(href="#!").page-num 22
+							a(href="#!").page-num.next
+
+				//====== section=====
+				article.catalogy-page-article
+					.catalogy-lists
+						.catalogy-list
+							.txt-20 Преимущества
+							+list-block('Всестороннее развитие личности', 'Подготовка к топовым вузам', '500+ частных школ-пансионов', 'Самые высокие результаты IB')
+						.catalogy-list
+							.txt-20 Программы обучения
+							+list-block('GCSE', 'A-Levels', 'IB', 'US High school')
+						.catalogy-list
+							.txt-20 Стоимость обучения
+							+list-block('Средняя школа: от £23 000', 'Старшая школа: от £23 000')
+				article.text-block
+					p В каталоге программ Allterra Education подробно описаны направления обучения и уровни образования за рубежом, которые пользуются популярностью и обеспечивают получение необходимых квалификаций и дипломов. Представленные здесь школы, университеты, детские лагеря и языковые курсы проверены многолетним опытом сотрудничества с нашим агентством. Благодаря постоянным контактам с руководством учебных заведений и отзывам учеников, мы всегда уверены в своих рекомендациях для новых студентов Allterra Education.
+					p Кроме рейтинговых и всемирно известных образовательных центров, мы сотрудничаем с сотнями государственных и частных зарубежных учебных заведений, которые дают качественное и востребованное образование. Поступить в такие школы и университеты за рубежом гораздо легче, чем в Итон, MIT, Кембридж или Мюнхенский технический университет, но в них так же гарантировано качественное образование и великолепные карьерные перспективы.
+				
+					//====== Перспективы=====
+				article.prospects
+					h2.h3 Перспективы
+					+services-list([
+						{title: 'Поступление в лучшие вузы', txt:'Выпускники средних школ Великобритании имеют высокие шансы на поступление не только в известные национальные университеты, но и в учебные заведения США, Европы и Азии, ведь британские дипломы признаются по всему миру. Благодаря британской программе A-Levels старшеклассники могут изучать только предметы, которые пригодятся для поступления, и лучше подготовиться к экзаменам'},
+						{title:'Трудоустройство после выпуска', txt:'Ещё во время обучения многие студенты проходят стажировки, которые находят с помощью карьерных центров в университете. После окончания вуза иностранцы могут получить специальную визу Graduate route visa и остаться в Великобритании на два-три года для поиска постоянной работы'},
+						{title:'Быстрое обучение', txt:'Британские студенты тратят значительно меньше времени на получение высшего образования. Продолжительность программ бакалавриата составляет три года, магистратуры – всего 1 год'}
+						
+						])
+					//====image====
+					.img-banner__picture
+						picture
+							source(srcset="./img/catalogy/catalogy-mobile.webp", media="(max-width: 767px)")
+							
+							img.lazy(src="./img/catalogy/catalogy.webp", width="925" height="540" alt="image")
+					
+				//========условия поступления ====
+				article.checker
+					h2.h3 Вступительные требования
+					.checker-content
+						//===single block ===
+						.checker-block
+							.txt-20 Бакалавриат
+							+list-block('Диплом A-Levels или Foundation (или 1 курс бакалавриата в России)', 'IELTS 6.5', 'Средний балл в аттестате не ниже 4.0', 'Мотивационное письмо')
+						//===single block ===
+						.checker-block
+							.txt-20 Магистратура
+							+list-block('Законченное высшее образование', 'IELTS 6.5', 'Опыт работы (опционально)', 'Рекомендации', 'Мотивационное письмо', 'Средний балл в аттестате не ниже 4.0')
+						//===single block ===
+						.checker-block
+							.txt-20 Бакалавриат
+							+list-block('Диплом A-Levels или Foundation (или 1 курс бакалавриата в России)', 'IELTS 6.5', 'Средний балл в аттестате не ниже 4.0', 'Мотивационное письмо')
+						//===single block ===
+						.checker-block
+							.txt-20 Магистратура
+							+list-block('Законченное высшее образование', 'IELTS 6.5', 'Опыт работы (опционально)', 'Рекомендации', 'Мотивационное письмо', 'Средний балл в аттестате не ниже 4.0')
+					
+					.text-block.mt-40
+						p Не знаете, с чего начать при подборе центра языковой подготовки? 	#[a.accent-link(href="#get-consultation") Свяжитесь с нашим онлайн-консультантом.] Специалист Allterra Education в индивидуальном порядке подберёт для вас удобные и выгодные варианты изучения иностранного языка в приоритетной стране.
+				
+				//====== importance-choice ====
+				article#importance-choice
+					h2.h3 Почему важно правильно подобрать учебное заведение
+					
+					p  Выбор учебного заведения за границей — важный шаг. Каждая школа Великобритании и каждый университет США имеют свои традиции и особенности обучения. Эксперты по международному образованию Allterra Education помогут вам выбирать вариант, который максимально соответствует интересам, потребностям, способностям и характеру будущего студента.
+					p Правильный выбор упрощает поступление в желаемую школу или университет, учитывая сильные стороны поступающего. Наконец, если учебное заведение за рубежом вам действительно подходит, учиться в нём будет максимально комфортно.
+					p При подборе вуза или школы за рубежом мы учитываем и позицию учебного заведения в мировых рейтингах и результаты, которые демонстрируют выпускники. Это важно для практического применения полученного образования и первых шагов в карьере молодого специалиста. <br> Поиск и анализ информации требует значительных затрат времени. В каталоге учебных заведений Allterra Education представлены школы, университеты и языковые курсы за рубежом, которые проверены многолетним сотрудничеством и отличными результатами выпускников.
+				
+				//====== importance-choice ====
+				article#feature-education
+					h2.h3 Особенности образования в разных странах
+					 
+					p  Образование за границей служит фундаментом для успешной международной карьеры, но только в том случае, если вы правильно выбрали страну обучения. Образовательные системы в Европе и США складывались веками, и каждая из них имеет свои особенности, ценности и традиции. Например, сравнивая школы США со школами Швейцарии, вы найдёте совершенно разные подходы к обучению. При этом и школы, и университеты этих стран традиционно входят в число лучших в мире.
+				
+				//====== education in Switzerland ====
+				article#education-switzerland
+					h2.h3 Обучение в Швейцарии
+					
+					p Максимальное разнообразие учебных программ лежит в основе обучения в школах Швейцарии. В зависимости от того, в каком кантоне находится школа, можно найти и немецкий Abitur, и французский бакалавриат, а также международный курс International Baccalaureate (IB), который позволяет получать высшее образование за рубежом в большинстве европейских стран. В дополнение многие швейцарские школы имеют статус международных и предлагают американские и британские программы обучения.
+					p В университетах Швейцарии наблюдается то же разнообразие. Учёба возможна на четырёх языках — английском, немецком, французском или итальянском. Наполнение учебных программ каждый из вузов Швейцарии продумывает самостоятельно, поэтому индивидуальный стиль обучения — визитная карточка всех швейцарских учебных заведений.
+					//====image====
+					.img-banner__picture
+						picture
+							source(srcset="./img/catalogy/education-mob.webp", media="(max-width: 767px)")
+							
+							img.lazy(src="./img/catalogy/education.webp", width="925" height="540" alt="image")
+
+				//====== education in usa ====
+				article#education-usa
+					h2.h3 Обучение в США
+					p редние школы США дают студенту максимальную свободу, позволяя выбирать желаемые курсы в соответствии с его склонностями и дальнейшими планами. Это не означает, что можно отказаться от обязательной математики, но, например, будущий биолог может не тратить в старшей школе время на изучение творческих дисциплин. Многие учебные заведения предлагают курсы Advanced Placement. При успешном изучении предметов с повышенным уровнем сложности абитуриенты получают дополнительные преимущества при поступлении в университеты США. Американские вузы реализуют максимально практический подход к обучению. При выборе учебного заведения за рубежом стоит обратить внимание на профиль исследований университета, поскольку студенты как бакалавриата, так и магистратуры принимают в них активное участие.
+
+				//====== education in uk ====
+				article#education-uk
+					h2.h3 Обучение в Англии
+					.two-columns
+						p Частные школы Великобритании являются старейшими в мире. Университеты Великобритании также ведут свою образовательную историю на протяжении многих веков. Британские учебные заведения выделяют в числе приоритетов не только обучение, но и воспитание студентов, развитие личностных качеств. Большинство школ Великобритании готово принимать студентов на пансион с 11 лет и предлагает максимально разнообразный учебный план, а также большое количество дополнительных опций — спорт, музыка и творчество являются неотъемлемой частью обучения.
+						//====== картинка ======
+						img.lazy(src="./img/catalogy/edu-uk.webp", width="450" alt="img")
+					.two-columns.two-columns--reverce
+						//====== картинка ======
+						img.lazy(src="./img/catalogy/edu-uk2.webp", width="450" alt="img")
+						//==== text =====
+						p Частные школы Великобритании являются старейшими в мире. Университеты Великобритании также ведут свою образовательную историю на протяжении многих веков. Британские учебные заведения выделяют в числе приоритетов не только обучение, но и воспитание студентов, развитие личностных качеств. Большинство школ Великобритании готово принимать студентов на пансион с 11 лет и предлагает максимально разнообразный учебный план, а также большое количество дополнительных опций — спорт, музыка и творчество являются неотъемлемой частью обучения.
+
+				//====== education in germany ====
+				article#education-germany
+					h2.h3 Обучение в Германии
+					p Стоимость обучения в Германии одна из наиболее доступных в Европе, что нисколько не снижает качество предлагаемого образования. Особое внимание в школах Германии уделяют иностранным языкам — помимо современных преподаются латынь и древнегреческий. Здесь активно используют не только традиционные для обучения за рубежом тесты, но и другие методы оценки знаний учеников, например, эссе и устные опросы. Обучение в средней школе длится 13 лет.
+					p Университеты Германии славятся своим технических образованием, которое является таким же брендом страны, как техника Bosch или автомобили Mercedes. Немецкие технические разработки используются по всему миру, а диплом инженера или любого другого технического специалиста открывает перед выпускником множество перспектив. В вузах Германии всё ещё сохранилось бесплатное образование для иностранцев при условии владения немецким языком.
+				
+				//======= feedback form =====
+				article#get-consultation
+					form.consultation-form
+						p.h3 Нужна консультация?
+						//=====строка с двумя инпутами ====
+						.two-columns
+							.form_field
+								input(type="text" name="name" placeholder="Ваше имя*")
+							.form_field
+								input(type="text" name="phone" placeholder="Ваш телефон*")
+						.form_field
+							input(type="text" name="email" placeholder="Ваш email")
+						
+						//=====строка с двумя компонентами ====
+						.flex-row
+							.form-confirm
+								label.form-checkbox
+									input(type="checkbox" name="name_chk")
+									span.fake-checkbox
+									span.form-confirm__text Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+							
+							button(type="submit").btn-white Получить консультацию
+				
+				//======= стоимость образования за рубежом =====
+				article#cost-edu-board
+					h2.h3 Стоимость обучения за границей
+					p Allterra Education — представитель учебных заведений, и вы всегда платите за обучение столько, сколько это стоит в самой школе или в университете.
+				
+				//======= стоимость среднего образования=====
+				article#cost-edu-secondary
+					.two-columns
+						.article-column
+							h2.h3 Стоимость среднего образования
+							p Стоимость обучения за рубежом зависит от выбранной страны, формы обучения и престижа учебного заведения. Самой дорогой учёба за рубежом будет в Швейцарии, Великобритании и США, а в качестве относительно бюджетного варианта можно рассматривать Францию и Германию.
+							p В стоимость получения среднего образования входит не только непосредственно учеба в школе. Большинству иностранных учеников необходимо размещение в резиденции (кампусе школы). Кроме того, значительную сумму к стоимости года обучения могут прибавить дополнительные занятия, такие, например, как автоспорт или конная выездка. Более традиционные дополнительные занятия, такие как плавание, футбол или музыка, обычно включены в стоимость обучения. Все эти критерии влияют на стоимость обучения за границей, и их нужно учесть до поступления.
+						
+						//====image====
+						.img-banner__picture
+							picture
+								source(srcset="./img/catalogy/education2-mob.webp", media="(max-width: 767px)")
+								
+								img.lazy(src="./img/catalogy/education2.webp", width="450"  alt="image")
+				//======= стоимость высшего образования=====
+				article#cost-edu-higher
+					h2.h3 Стоимость высшего образования в Европе и Америке
+					p На уровне высшего образования стоимость учёбы за границей может равняться нулю, например, в отдельных университетах Германии (при условии обучения на национальном языке), однако это не избавляет студента от необходимости организационных взносов, а также оплаты проживания и питания. При поступлении в университет США важно учитывать, что во многих из них студенты первых курсов обязаны жить в резиденции. При планировании расходов нужно включать в перечень книги и учебные материалы, так как студенты покупают их самостоятельно.
+					p Языковые программы в Европе и США можно найти практически для любой планируемой стоимости обучения за рубежом. Учебные заведения за границей предлагают как групповые, так и индивидуальные занятия, и последние стоят в разы выше первых. Дополнительные опции, например, подготовка к языковым экзаменам международного образца или курс бизнес-лексики, также повышают стоимость. Наконец, при выборе варианта обучения стоит обратить внимание на бытовые условия. Студентам языковых школ доступны как весьма дорогостоящие, например, отели класса люкс, так и бюджетные опции, например, проживание в принимающей семье.
+					p В каталоге учебных программ на сайте Allterra Education есть варианты курсов для любого возраста и уровня подготовки студентов с учётом планируемого бюджета обучения. Это помогает максимально точно оценить планируемые затраты при поступлении в школу или университет за рубежом.
+				
+				//======= Перспективы после образования=====
+				article#edu-prospects
+					h2.h3 Перспективы студента после обучения за рубежом
+					p Профессиональные перспективы выпускников, прошедших обучение за рубежом, существенно лучше, чем у их российских ровесников. Обучаясь за границей, студенты в совершенстве овладевают иностранным языком, приобретают глобальный взгляд на мир, знакомятся с наиболее перспективными исследованиями в будущей профессии.
+					p Стажировка является обязательной частью обучения для большинства студентов, проходящих обучение за рубежом. Часто таким образом можно найти работу по специальности ещё до получения степени. Многие страны предлагают иностранным студентам льготные условия последующего поиска работы, например, дополнительное время проживания по студенческой визе.
+					p Университеты Швейцарии тесно сотрудничают с бизнесом, поэтому талантливые выпускники не испытывают проблем с трудоустройством. Вузы США занимают лидирующие позиции в мировых образовательных рейтингах и дают выпускникам, выбравшим образование за границей, шанс сделать карьеру в любой точке мира.
+					
+					//====image====
+					.img-banner__picture
+						picture
+							source(srcset="./img/catalogy/education3-mob.webp", media="(max-width: 767px)")
+							img.lazy(src="./img/catalogy/education3.webp", width="925" height="540" alt="image")
+				
+				//======= Выбор учебного заведения=====
+				article#edu-choosing
+					h2.h3 Выбор учебного заведения с Allterra Education
+					
+					p Качественное образование — фундамент успешного будущего. Мы предлагаем вам удобный и комфортный выбор материалов, инструментов для закладки этого фундамента. Allterra Education позволяет подбирать учреждения быстро и с учётом важных для вас параметров.
+					p Наш каталог будет полезен тем, кто желает самостоятельно изучить ассортимент предложений от школ, вузов или языковых центров. Он удобен и прост в использовании, максимально информативен.
+					p Если на страницах портала вы не найдете ответов на интересующие вопросы относительно обучения за рубежом, наши специалисты всегда готовы предоставить экспертную онлайн- и телефонную консультацию. Менеджеры Allterra Education всегда на связи: для общения с экспертами вы можете использовать доступные телекоммуникационные каналы: телефон (многоканальный бесплатный номер, заказ обратного звонка), интернет (электронная почта, Skype, формы онлайн-запросов на сайте).
+				
+				//=========услуги======
+				article.catalogy-services
+					h2.h4 Специалисты Allterra Education оказывают следующие услуги:
+					+list-block('Профессиональные консультации по обучению за рубежом', 'Помощь со сдачей вступительных экзаменов', 'Сбор и оформление необходимых документов', 'Поиск вариантов проживания', 'Визовая поддержка', 'Организация отъезда', 'Курирование в течение учёбы')
+				
+				//=====ответы на вопросы =====
+				article.faq
+					h2.h3 Ответы на важные вопросы об учёбе в Великобритании
+					.faq-acordion
+						//=========acordion========
+						.accordion-group
+							//=======single item =====
+							.accordion-header В чем особенность системы образования в Великобритании?
+							.accordion-body
+								p Система обязательного школьного образования включает в себя четыре этапа – подготовку к школе (5-7 лет), начальную (7-11 лет), среднюю (11-14 лет) и старшую (14-16 лет) школу.
+								p По завершении старшей школы ученики сдают экзамены GCSE по основным предметам, после чего можно перейти к предуниверситетской подготовке (Sixth Form) или продолжить обучение в колледже или институте дополнительного образования для получения специальности.
+								p Многие вузы Великобритании предполагают довузовскую подготовку Foundation Year, где будущих студентов знакомят с особенностями высшего образования и релевантными их потенциальной программе дисциплинами.
+								p Высшее образование разделено на два уровня: Undergraduate (программы бакалавриата) и Postgraduate (магистратура и докторантура)
+							
+							//=======single item =====	
+							.accordion-header Можно ли учиться бесплатно?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header Какой уровень образования в стране?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header Сколько требуется средств для проживания и обучения в Великобритании?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header Как поступить учиться в Англию из России?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header Можно ли учиться в Великобритании без A-Levels?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header Образование по каким специальностям в Великобритании высоко ценится во всем мире?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header С какого возраста можно отправить ребенка на обучение в Великобританию?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header Нужен ли знать английский в совершенстве для обучения в Великобритании?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header Можно ли сменить специальность в магистратуре?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+							//=======single item =====	
+							.accordion-header Как выбрать учебное заведение?
+							.accordion-body
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+				//========= phone numbers===========
+				article.consultation-phones
+					h2.h4 Для записи на бесплатную консультацию звоните:
+					.three-columns
+						//=====single card =====
+						a(href="tel:+7(499)9384440").phone-card
+							p Москва
+							.txt-20 +7 (499) 938-44-40
+						//=====single card =====
+						a(href="tel:+7(812)425-64-25").phone-card
+							p Санкт-Петербург
+							.txt-20 +7 (812) 425-64-25
+						//=====single card =====
+						a(href="tel:+7(800)511-49-93").phone-card
+							p Россия | бесплатный звонок
+							.txt-20 +7 (800) 511-49-93
+
+				//============== Helpful ======
+				article.helpful
+					h2.h4.accent-border Полезные материалы:
+					//======= single item ========
+					.helpful-item
+						.h6 Как выбрать страну для образования?
+						p Tortor dignissim convallis aenean et tortor at risus viverra. Interdum velit euismod in pellentesque massa placerat duis. Nibh tortor id aliquet lectus proin.
+						a(href="#!").accent-link Подробнее
+					//======= single item ========
+					.helpful-item
+						.h6 Как сделать портфолио для поступления в университет?
+						p Fusce id velit ut tortor pretium viverra suspendisse potenti nullam. Maecenas accumsan lacus vel facilisis volutpat est velit
+						a(href="#!").accent-link Подробнее
+					//======= single item ========
+					.helpful-item
+						.h6 Как написать академическое эссе для поступления в университет?
+						p Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Eget mauris pharetra et ultrices neque ornare aenean. Lobortis scelerisque fermentum dui faucibus in ornare
+						a(href="#!").accent-link Подробнее
+					
+					//======= single item ========
+					.helpful-item
+						.h6 Как написать рекомендательное письмо для поступления в университет?
+						p Luctus venenatis lectus magna fringilla urna porttitor. Orci dapibus ultrices in iaculis nunc. Libero volutpat sed cras ornare arcu. Mi sit amet mauris commodo quis imperdiet massa tincidunt. Consectetur purus ut faucibus pulvinar elementum integer enim neque
+						a(href="#!").accent-link Подробнее
+
+					//======= single item ========
+					.helpful-item
+						.h6 Где получить бизнес-образование за рубежом?
+						p Ut morbi tincidunt augue interdum velit. Sapien et ligula ullamcorper malesuada proin. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor
+						a(href="#!").accent-link Подробнее
+
+		//======== BLOG CARDS ========
+//======= news cards slider =======
+section.blog.light-bg
+	.container
+		//======= SECTION TOP ROW=======
+		.header-group.w-100
+			h2.h2.accent-border Новости и Статьи
+			
+			.btns-group
+				a(href="#!" class="btn--slim btn-white") Все новости
+				a(href="#!").btn--slim.btn Все статьи
+
+		//======= SECTION SLIDER =======
+		.slider-wrapper
+			//======== slider-content =======
+			.blog-cards-slider.swiper
+				.swiper-wrapper
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')(class="blog-card--full")
+					
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(2, 'Новость', 'Экономическое образование в США')
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(3, 'Статья', 'Техническое образование в Германии')
+					
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(4, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+					
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(2, 'Новость', 'Экономическое образование в США')
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(3, 'Статья', 'Техническое образование в Германии')
+					
+					//===== single slide ========
+					.swiper-slide
+						+blog-card(4, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+
+		
+			//===== swiper navigation========
+			.slider-nav
+				.swiper-button-next
+				.swiper-button-prev
+			
+			//========VISIBLE MOBILE =======
+			.btns-group
+				a(href="#!" class="btn--slim btn-white")  Все новости
+				a(href="#!").btn--slim.btn Все статьи
