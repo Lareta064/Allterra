@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		window.dispatchEvent(new Event('resize'));
 	}
 
-	/**********scool card programms************/
+	/**********scool card programs************/
 	const scoolCards = document.querySelectorAll('.scool-card');
 	  // Функция для проверки позиций элементов
 	function checkBounds(parent, child) {
@@ -598,28 +598,28 @@ document.addEventListener("DOMContentLoaded", function (){
 	if(scoolCards.length > 0 ){
 		
 		for(let item of scoolCards){
-			const btnShowProgramms = item.querySelector('.show-scool-programs');
-			const cardprogrammsTable =  item.querySelector('.scool-drop');
+			const btnShowPrograms = item.querySelector('.show-scool-programs');
+			const cardprogramsTable =  item.querySelector('.scool-drop');
 			const cardPrices =  item.querySelectorAll('.cell-price');
 			function closeActivePrice(){
 				const activePrice = item.querySelector('.cell-price__drop.active');
 				if(activePrice) activePrice.classList.remove('active');
 			}
 			
-			btnShowProgramms.addEventListener('click', ()=>{
+			btnShowPrograms.addEventListener('click', ()=>{
 				if(item.classList.contains('active')){
 					closeActivePrice();
 					item.classList.remove('active');
 					if(window.innerWidth > 767){
-						cardprogrammsTable.style.maxHeight = 0;
-						cardprogrammsTable.style.overflow = 'hidden';
+						cardprogramsTable.style.maxHeight = 0;
+						cardprogramsTable.style.overflow = 'hidden';
 					}
 				}
 				else{
 					item.classList.add('active');
 					if(window.innerWidth > 767){
-						cardprogrammsTable.style.maxHeight = cardprogrammsTable.scrollHeight + 'px';
-						cardprogrammsTable.style.overflow = 'visible';
+						cardprogramsTable.style.maxHeight = cardprogramsTable.scrollHeight + 'px';
+						cardprogramsTable.style.overflow = 'visible';
 					}
 				}
 			});
@@ -647,8 +647,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			// 		closeActivePrice();
 			// 		item.classList.remove('active');
 			// 		if(window.innerWidth > 767){
-			// 			cardprogrammsTable.style.maxHeight = 0;
-			// 			cardprogrammsTable.style.overflow = 'hidden';
+			// 			cardprogramsTable.style.maxHeight = 0;
+			// 			cardprogramsTable.style.overflow = 'hidden';
 			// 		}
 			// 	}
 			// });

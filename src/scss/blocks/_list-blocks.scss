@@ -192,3 +192,8 @@ blockquote +*{
 		}
 	}
 }
+.border-block{
+	border: 1px solid $main-accent;
+	padding: 20px;
+	li+li{margin-top: 12px;}
+}
