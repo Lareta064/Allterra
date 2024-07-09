@@ -363,18 +363,17 @@ document.addEventListener("DOMContentLoaded", function (){
 	    dynamicMenuBtn.addEventListener('click', ()=>{
 			
 			if(dynamicMenuBtn.classList.contains('active')){
-				console.log('1-active');
+				
 				dynamicMenuList.style.maxHeight = 0;
 				dynamicMenuBtn.classList.remove('active');
 				
 			}else{
-				console.log('1-else');
 				dynamicMenuList.style.maxHeight = dynamicMenuList.scrollHeight + 'px';
 				dynamicMenuBtn.classList.add('active');
 			}
 		});
 		dynamicMenuList.addEventListener('click', ()=>{
-			console.log('2');
+			
 			dynamicMenuList.style.maxHeight = 0;
 			dynamicMenuBtn.classList.remove('active');
 		});
@@ -436,7 +435,7 @@ document.addEventListener("DOMContentLoaded", function (){
 					stickyFiltersList.style.maxHeight = 'unset';
 					dynamicMenuBtn.classList.remove('active');
 				}else{
-					 if (window.innerWidth !== windowWidth){
+					 if (window.innerWidth !== window.innerWidth){
 						stickyFiltersList.style.maxHeight = '0';
 						dynamicMenuBtn.classList.remove('active');
 					 }
@@ -631,27 +630,21 @@ document.addEventListener("DOMContentLoaded", function (){
 					
 					priceCellBtn.addEventListener('click', (e)=>{
 						e.preventDefault();
+						
 						const activePrice = item.querySelector('.cell-price__drop.active');
+						const cellPriceActive = item.querySelector('.cell-price.active');
 						if(activePrice && activePrice !== priceCellDrop){
 							activePrice.classList.remove('active');
+							cellPriceActive.classList.remove('active');
 						}
 						priceCellDrop.classList.toggle('active');
-						
+						priceCell.classList.toggle('active');
 						 checkBounds(item, priceCellDrop);
 						
 					});
 				}
 			}
-			// window.addEventListener('resize', ()=>{
-			// 	if(item.classList.contains('active')){
-			// 		closeActivePrice();
-			// 		item.classList.remove('active');
-			// 		if(window.innerWidth > 767){
-			// 			cardprogramsTable.style.maxHeight = 0;
-			// 			cardprogramsTable.style.overflow = 'hidden';
-			// 		}
-			// 	}
-			// });
+			
 		}
 	}
 	/**********programs-table************ */

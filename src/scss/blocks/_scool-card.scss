@@ -244,10 +244,9 @@
 	.cell-price {
 		width: auto;
 		display: flex;
-		// column-gap:6px;
 		position: relative;
 		align-items: center;
-		
+		&.active svg{transform: rotate(180deg);}
 		a{
 			overflow: hidden;
 			text-overflow: ellipsis;	
@@ -301,9 +300,8 @@
 		right: 0;
 		}
 	}
-	
-
 }
+.cell-price svg{transition: .3s; }
 .scool-drop{
 	overflow: hidden;
 	max-height: 0;
