@@ -5,10 +5,10 @@ mixin list-block(...items)
 				li #{item}
 
 mixin list-check(...items)
-	.list-check
+	.list-check&attributes(attributes)
 		ul
 			each item in items
-				li #{item}
+				li !{item}
 	
 mixin stripes-list(...items)
 	ul.stripes-list

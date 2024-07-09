@@ -42,3 +42,28 @@
 		width: calc(100vw - 32px);
 	}
 }
+.institute-benefits{
+	padding: 30px 20px;
+	@media (max-width: 767px) {
+		padding: 20px 16px;
+	}
+}
+.list-check.list-check--column{
+	ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px;
+		@media (max-width: 1279px) {
+			grid-template-columns: 1fr 1fr;
+			gap: 25px;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: 1fr;gap: 20px;
+		}
+		li{
+			flex-direction: column;
+			row-gap:10px;
+		}
+		li + li{margin-top: 0;}
+	}
+}

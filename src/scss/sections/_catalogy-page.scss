@@ -10,7 +10,6 @@
 	}
 	&-article{
 		
-		&>*+*{margin-top: 48px;}
 		.h3{text-transform:unset; }
 		@media(min-width: 1440px){margin-top: 80px!important;}
 	}
@@ -18,7 +17,7 @@
 		scroll-margin-top: 80px;
 		.h3, .h2, .h4{margin-bottom: 12px;letter-spacing: -0.03em;}
 		p{line-height: 1.75;}
-		& + article{margin-top: 48px;}
+		
 		&>*+*{margin-top: 12px;}
 		.scool-card +.scool-card{margin-top: 24px;}
 		.two-columns +.two-columns{margin-top: 20px;}
