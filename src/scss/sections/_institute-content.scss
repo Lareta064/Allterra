@@ -67,3 +67,27 @@
 		li + li{margin-top: 0;}
 	}
 }
+.info-table{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	column-gap:20px;
+	row-gap:24px;
+	line-height: 1.71;
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+		row-gap: 16px;
+	}
+	.h6{
+		margin-bottom: 0;
+		color: $text-dark;
+		line-height: 1.75;
+		@media (max-width: 767px) {
+		 font-size: 14px;
+		}
+	}
+	.txt-14{
+		text-transform: uppercase;
+		color: $text-dark;
+		opacity: .5;
+	}
+}
