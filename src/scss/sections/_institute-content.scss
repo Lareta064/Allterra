@@ -95,6 +95,23 @@
 .programs-table{
 	position: relative;
 	z-index: 2;
+	&-row.t-header-mobile{
+		display: none;
+		@media (max-width: 767px) {
+		  display: flex;
+		  column-gap:10px;
+		 
+		  padding-block: 0;
+		  padding-bottom: 24px;
+		  .cell-price{
+				justify-content: flex-start;
+				align-items: center;
+				text-align: left;
+				column-gap:10px;
+		  } 
+		 
+		}
+	}
 	&-row.t-header{
 		&>*{
 			font-size: 14px;
@@ -149,11 +166,11 @@
 		column-gap: 40px;
 		flex-shrink: 0;
 		padding-block: 12px;
-		text-align: right;
+		
 		@media (max-width: 767px) {
 			padding-block: 4px;
 			align-items: flex-start;
-			font-size: 14px!important;
+			font-size: 14px!important;text-align: right;
 			
 		}
 		
@@ -161,6 +178,7 @@
 	.cell-age{
 		width: 110px;
 		text-align: center;
+		// justify-content: center;
 		color: $dark-grey;
 	}
 	.cell-link{
