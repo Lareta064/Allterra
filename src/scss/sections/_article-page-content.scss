@@ -176,6 +176,74 @@
 		@media (max-width: 1023px) {
 			position: sticky;}
 }
+#institute-menu.dynamic-menu{
+	@media (max-width: 1023px) {
+		top: 66px;
+		z-index: 5;
+		background: #f0f3f9;
+		background: blue;
+		position: sticky;
+		margin-left: -16px;
+		margin-right: -16px;
+		// left: -16px;
+		// width: calc(100vw);
+		display: none;
+		&.active{display: block;}
+		.dynamic-menu__header {
+			height: 52px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.1);
+			background: #f0f3f9;
+			
+			width: 100%;
+			// position: relative;
+			// left: -32px;
+			
+			margin-bottom: 0;
+			margin-left: 0;
+			padding-inline: 26px;
+			cursor: pointer;
+
+			svg {
+				display: block;
+				transition: .3s;
+			}
+
+			&.active svg {
+				transform: rotate(180deg);
+			}
+
+			@media (max-width: 767px) {
+				// width: calc(100% + 28px + 28px);
+			}
+		}
+
+		.dynamic-menu__list {
+			max-height: 0;
+			overflow: hidden;
+			transition: .3s;
+
+			&>* {
+				margin: 24px 16px;
+			}
+
+			position: absolute;
+			top: 51px;
+			left: 0;
+			right: 0;
+			background: #f0f3f9;
+			z-index: 5;
+
+			@media (max-width: 767px) {
+				left: -16px;
+				right: -16px;
+			}
+		}
+	}
+	
+}
 .article-footer{
 	padding-top: 24px;
 	border-top: 2px solid #f3f5f9;

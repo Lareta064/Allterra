@@ -379,6 +379,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			dynamicMenuBtn.classList.remove('active');
 		});
 		const stickyDynamicMenu = document.querySelector('#sticky-menu');
+		const institutePageDynamicMenu = document.querySelector('#institute-menu');
+
 		const stickyFiltersList = document.querySelector('.filters-drop');
 		
 
@@ -405,7 +407,29 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 			});
 		}
-		
+		if(institutePageDynamicMenu){
+			window.addEventListener('scroll', ()=>{
+				if(window.innerWidth <= 1024){
+					if(window.scrollY > 150){
+						institutePageDynamicMenu.classList.add('active');
+						
+					}else{
+						institutePageDynamicMenu.classList.remove('active');
+					}
+				}
+			});
+			window.addEventListener('resize', ()=>{
+				if(window.innerWidth > 1023){
+					dynamicMenuList.style.maxHeight = 'unset';
+					dynamicMenuBtn.classList.remove('active');
+					
+					
+				}else{
+					dynamicMenuList.style.maxHeight = '0';
+					dynamicMenuBtn.classList.remove('active');
+				}
+			});
+		}
 		if(stickyFiltersList){
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1023){
