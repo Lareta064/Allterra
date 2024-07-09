@@ -86,7 +86,83 @@ section.institute-article
 						.info-table__col
 							.txt-14 Кол-во учеников
 							.h6 500
-
+				//======== border list ====
 				article.border-block
 					+list-block('Программы профессионального развития', 'Курсы английского языка', 'Гибкий график обучения', 'Расположение рядом с деловым районом Дубая')
+				
+				//===== institute-programs =====
 				article.institute-programs
+					.programs-table#programs-table
+						//===== ROW HEADER====
+						.programs-table-row.t-header
+							.cell-name
+								p Программа
+							.cell-age
+								p Возраст
+							.cell-price
+								p Стоимость
+							
+							.cell-link
+								
+
+						//===== ROW ====
+						.programs-table-row
+							.cell-name
+								p General English Course
+							.cell-age
+								p 9
+							.cell-price
+								.cell-price__btn
+									a(href="#!") #[span 36 315€]/2 недели
+									svg.svg-chevron-down
+										use(href='./img/spriteSvg.svg#svg-chevron-down')
+								//=====price cell drop=====
+								.cell-price__drop
+									ul
+										li.active 36 315€/2 недели
+										li 72 315€/4 недели
+										li 96 315€/6 месяцев
+										li 105 315€/1 год
+							.cell-link
+								a(href="#!").btn-accent.h-40 Смотреть
+						//===== ROW ====
+						.programs-table-row
+							.cell-name
+								p Профессиональные тренинги
+							.cell-age
+								p 16
+							.cell-price
+								.cell-price__btn
+									a(href="#!") #[span 36 315€]/2 недели
+									svg.svg-chevron-down
+										use(href='./img/spriteSvg.svg#svg-chevron-down')
+								//=====price cell drop=====
+								.cell-price__drop
+									ul
+										li.active 36 315€/2 недели
+										li 72 315€/4 недели
+										li 96 315€/6 месяцев
+										li 105 315€/1 год
+							.cell-link
+								a(href="#!").btn-accent.h-40 Смотреть
+
+						//===== ROW ====
+						.programs-table-row
+							.cell-name
+								p Professional Development Programme (Students and Working Professionals)
+							.cell-age
+								p 16
+							.cell-price
+								.cell-price__btn
+									a(href="#!") #[span 36 315€]/2 недели
+									svg.svg-chevron-down
+										use(href='./img/spriteSvg.svg#svg-chevron-down')
+								//=====price cell drop=====
+								.cell-price__drop
+									ul
+										li.active 36 315€/2 недели
+										li 72 315€/4 недели
+										li 96 315€/6 месяцев
+										li 105 315€/1 год
+							.cell-link
+								a(href="#!").btn-accent.h-40 Смотреть

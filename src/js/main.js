@@ -654,4 +654,34 @@ document.addEventListener("DOMContentLoaded", function (){
 			// });
 		}
 	}
+	/**********programs-table************ */
+	const institutePrograms = document.querySelector('#programs-table');
+	if(institutePrograms){
+		const programsPrice = institutePrograms.querySelectorAll('.cell-price');
+		
+		for(let price of programsPrice){
+			const openPriceDrop = price.querySelector('.cell-price__btn');
+			if(openPriceDrop){
+				price.addEventListener('click', (e)=>{
+					const programsPriceActive = institutePrograms.querySelector('.cell-price.active');
+					
+					e.preventDefault();
+					if(programsPriceActive){programsPriceActive.classList.remove('active');}
+					if(programsPriceActive !== price){price.classList.toggle('active');}
+					
+				})
+			}
+		}
+	}
+	/*========click out */
+	window.addEventListener('click', (e)=>{
+		if(institutePrograms || scoolCards.length > 0){
+			if(!e.target.closest('.cell-price')){
+				const openDrop = document.querySelector('.cell-price__drop.active');
+				const openDrop2 = document.querySelector('.cell-price.active');
+				if(openDrop){openDrop.classList.remove('active');}
+				if(openDrop2){openDrop2.classList.remove('active');}
+			}
+		}
+	});
 });
