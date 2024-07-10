@@ -9,6 +9,51 @@ block content
 				+brcr('Главная','Каталог', 'ОАЭ', '360 Institute of Management' )
 		include ../sections/_institute-content.pug
 		include ../sections/_section-review
+		//======= news cards slider =======
+		section.blog.light-bg
+			.container
+				//======= SECTION TOP ROW=======
+				h2.h2.accent-border Новости и Статьи
+				//======= SECTION SLIDER =======
+				.slider-wrapper
+					//======== slider-content =======
+					.blog-cards-slider.swiper
+						.swiper-wrapper
+							//===== single slide ========
+							.swiper-slide
+								+scool-card2(class="scool-card--vertical")
+							//===== single slide ========
+							.swiper-slide
+								+scool-card2(class="scool-card--vertical")
+							//===== single slide ========
+							.swiper-slide
+								+scool-card2(class="scool-card--vertical")
+							//===== single slide ========
+							.swiper-slide
+								+scool-card2(class="scool-card--vertical")
+							//===== single slide ========
+							.swiper-slide
+								+scool-card2(class="scool-card--vertical")
+							
+							//===== single slide ========
+							.swiper-slide
+								+scool-card(class="scool-card--vertical")
+							//===== single slide ========
+							.swiper-slide
+								+scool-card(class="scool-card--vertical")
+							
+							//===== single slide ========
+							.swiper-slide
+								+scool-card2(class="scool-card--vertical")
+
+				
+					//===== swiper navigation========
+					.slider-nav
+						.swiper-button-next
+						.swiper-button-prev
+					
+					
+		
 		include ../sections/_contacts
 	include ../sections/_footer
 

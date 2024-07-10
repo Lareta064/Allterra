@@ -1,7 +1,7 @@
 .scool-card{
 	box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
 	background-color: $white;
-	// padding: 20px;
+	
 	margin-top: 24px;
 	position: relative;
 	
@@ -37,7 +37,7 @@
 		left: 16px;
 	}
 	.scool-info{
-		// box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
+		
 		background-color: $white;
 
 		@media (max-width: 767px) {
@@ -331,7 +331,7 @@
 			top: 0;
 			left: 0;
 		}
-
+		.h5 {-webkit-line-clamp: 1;}
 		.scool-descrip{
 			width: 100%;
 			padding: 16px;

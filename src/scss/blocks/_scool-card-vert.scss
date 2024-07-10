@@ -1,0 +1,152 @@
+.scool-card.scool-card--vertical{
+	box-shadow:none;
+	.scool-picture{
+		width: 295px;
+		height: 208px;
+	}
+	.scool-info{ height: auto;}
+	.scool-drop {
+
+		.scool-table {
+			padding-top: 0;
+
+			td,
+			th {
+				font-size: 13px;
+				padding-top: 7px;
+				padding-bottom: 7px;
+			}
+		}
+
+		.cell-name {
+			width: 90px;
+			padding-right: 4px;
+
+			p {
+				width: 80px;
+			}
+		}
+
+		.cell-age {
+			width: 54px;
+			text-align: center !important;
+			padding-right: 0;
+		}
+
+		.cell-price {
+			width: 100px;
+
+			a {
+				width: 90px;
+			}
+		}
+
+		.cell-price__btn {
+			width: 100px;
+			gap: 2px;
+		}
+
+		.cell-price__drop {
+
+			left: auto;
+			right: 0;
+		}
+		&.active .scool-info{
+		
+			overflow: hidden;
+			overflow-y: auto;
+			max-height: 448px;
+			scrollbar-width: thin;
+			scrollbar-color: $light-grey white;
+			overflow: overlay;
+		
+			&::-webkit-scrollbar {
+				display: block;
+				width: 3px;
+				border-radius: 5px;
+			}
+		
+			&::-webkit-scrollbar-track {
+				background-color: white;
+				width: 3px;
+				border-radius: 5px;
+			}
+		
+			&::-webkit-scrollbar-thumb {
+				background-color: $light-grey;
+				width: 3px;
+			}
+		}
+	}
+}
+
+
+.scool-card.scool-card--vertical{
+	padding: 0;
+	height: 480px;
+	overflow: hidden;
+	max-width: 295px;
+	.scool-picture{
+		width: 100%;
+		height: 216px;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	.scool-descrip{
+		width: 100%;
+		padding: 16px;
+		height: 264px;
+	}
+	.scool-info{
+		position: absolute;
+		top: 215px;
+		transition: .3s;
+		height: 450px;
+		z-index: 5;
+		.scool-drop{
+			max-height: unset;
+		}
+	}
+	&.active .scool-info{
+		position: absolute;
+		top:30px;
+		left: 0;
+		right: 0;
+	}
+	&.active .scool-drop{overflow: visible;}
+	.scool-row{
+		flex-direction: row-reverse;
+		position: relative;
+		align-items: center;
+		padding-top: 40px;
+		.price-block{
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin-bottom: 0;
+		}
+		.btn{padding-inline: 40px;}
+	}
+	.scool__list{
+		padding-top: 11px;
+		padding-bottom: 14px;
+	}
+	
+	.scool-drop .scool-table{
+		padding-bottom: 0;
+		th{padding-top: 0;}
+		
+	}
+	
+		.scool-row__link .btn {
+			height: 40px;
+		}
+
+		.scool-row__link .btn span+span {
+			display: none;
+		}
+
+}
+
