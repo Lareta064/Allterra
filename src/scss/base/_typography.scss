@@ -207,7 +207,10 @@ h6, .h6 {
 		margin-top: 16px;
 	}
 }
-
+article>p{
+	line-height: 1.75;
+	p+p{margin-top: 12px;}
+}
 .text-block+.text-block {
 	margin-top: 30px;
 

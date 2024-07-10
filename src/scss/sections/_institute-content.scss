@@ -230,3 +230,25 @@
 		.cell-price__btn svg{transform: rotate(180deg);}
 	}
 }
+.map{
+	width: 100%;
+	height: 355px;
+	margin-block: 48px;
+	@media (max-width: 1279px) {
+		height: 275px;
+	}
+}
+.virtual-tour-wrapper{
+	width: 100%;
+	height: 604px;
+	iframe{
+		display: block;
+		object-fit: cover;
+	}
+	@media (max-width: 1279px) {
+		height: 418px;
+	}
+	@media (max-width: 767px) {
+		height: 192px;
+	}
+}

@@ -197,3 +197,10 @@ blockquote +*{
 	padding: 20px;
 	li+li{margin-top: 12px;}
 }
+.contacts-form.border-block{
+	padding: 40px;
+	padding-bottom: 8px;
+	@media (max-width: 767px) {
+	padding: 20px 16px 4px;
+	}
+}
