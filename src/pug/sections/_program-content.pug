@@ -27,29 +27,11 @@ section.institute-article
 				h1.section-title 360 Institute of Management | Институт менеджмента 360
 				//====== institute slider====
 				article.institute-slider-block
-					.institute-slider.swiper
-						.swiper-wrapper
-							//====== slider =======
-							.swiper-slide
-								picture
-									source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
-									img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
-							//======slider =======
-							.swiper-slide
-								picture
-									source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
-									img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
-							//======slider =======
-							.swiper-slide
-								picture
-									source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
-									img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
-					//======slider pagination =====
-					.swiper-pagination
+					.institute-slider
+						picture
+							source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
+							img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
 
-				//========= institute-benefits ========
-				article.institute-benefits.light-bg-block
-					+list-check('Программы&nbsp;профессионального развития', 'Курсы английского языка', 'Гибкий график обучения', 'Расположение рядом с&nbsp;деловым районом Дубая')(class="list-check--column")
 				
 				//========= institute-info ========
 
@@ -87,9 +69,6 @@ section.institute-article
 						.info-table__col
 							.txt-14 Кол-во учеников
 							.h6 500
-				//======== border list ====
-				article.border-block
-					+list-block('Программы профессионального развития', 'Курсы английского языка', 'Гибкий график обучения', 'Расположение рядом с деловым районом Дубая')
 				
 				//===== institute-programs =====
 				article.institute-programs.anchor#anchor1
@@ -193,6 +172,54 @@ section.institute-article
 							.upper-14 Дополнительно оплачивается:
 							+list-block('Регистрационный взнос - £250', 'Депозит (вычитается из суммы заключительного счета)', 'Индивидуальные занятия музыкой и драматическим искусством', 'Поездки и экскурсии', 'Трансфер из и в аэропорт', 'Визовый сбор', 'Страхование', 'Авиабилеты', 'Услуги Allterra Education')
 
+				article.specialisations
+					h2.h3 Специализации
+					p В 360 Institute of Management предлагаются следующие направления на программе Foundation:
+
+					.height-dynamic
+						.height-dynamic__border
+							.flex-center
+								svg.svg-chevron-down
+									use(href='./img/spriteSvg.svg#svg-chevron-down')
+						
+						.programs-table.my-40
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Искусство и дизайн
+								.cell-deskrip
+									p Немного описания специальности Немного описания специальности  
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Искусство, дизайн и медиа
+								.cell-deskrip
+									p Немного описания специальности
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Хореография
+								.cell-deskrip
+
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Математика
+								.cell-deskrip
+									p Немного описания специальности Немного описания специальности  
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Химия
+								.cell-deskrip
+									p Органика и неорганическая химия
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Юриспруденция
+								.cell-deskrip
+									p Описание специализации
+								
 				//==== description====
 				article.institute-description.anchor#anchor2
 					h2.h3 Описание 360 Institute of Management

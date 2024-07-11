@@ -152,6 +152,11 @@ h6, .h6 {
 	&>*{opacity:1;}
 }
 .txt-center{text-align: center;}
+.section-title.txt-center, .h2.txt-center{
+	@media (max-width: 767px) {
+	text-align: left;
+	}
+}
 .txt-upper{text-transform: uppercase;}
 .tt-none{text-transform: none;}
 .txt-500{font-weight: 500;}

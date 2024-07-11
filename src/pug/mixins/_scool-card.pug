@@ -1,7 +1,7 @@
 mixin price-drop
 	.cell-price__drop
 		ul
-			li.active 36 315€/2 недели
+			li 36 315€/2 недели
 			li 72 315€/4 недели
 			li 96 315€/6 месяцев
 			li 105 315€/1 год
@@ -60,7 +60,7 @@ mixin scool-card
 							th.cell-name Программы
 							th.cell-age Возраст
 							//==== класс active  переключается у выбранной валюты оплаты ====
-							th.cell-price Стоимость #[span.pay-cur.active €]|#[span.pay-cur ₽]
+							th.cell-price Выбрать #[span.pay-cur.active €]|#[span.pay-cur ₽]
 					tbody
 						//===== single row ====
 						tr
@@ -169,7 +169,7 @@ mixin scool-card2
 						tr
 							th.cell-name Программы
 							th.cell-age Возраст
-							th.cell-price Стоимость #[span.pay-cur.active €]|#[span.pay-cur ₽]
+							th.cell-price Выбрать #[span.pay-cur.active €]|#[span.pay-cur ₽]
 					tbody
 						//===== single row ====
 						tr

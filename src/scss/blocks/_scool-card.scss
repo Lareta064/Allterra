@@ -127,7 +127,7 @@
 	line-height: 1.33;
 	display: flex;
 	align-items: center;
-	column-gap:8px;
+	column-gap:3px;
 	border-bottom: 1px solid transparent;
 }
 .scool-card.active .show-scool-programs{
@@ -288,7 +288,7 @@
 		ul{
 			margin: 16px;
 			li+li{margin-top: 12px;}
-			.active{color: $main-accent;}
+			
 		}
 		&.active{display: block;}
 		&.offset-top.active{
@@ -379,3 +379,4 @@
 		} 
 	}
 }
+.swiper .scool-card{margin-top: 0;}

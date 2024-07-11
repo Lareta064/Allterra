@@ -324,16 +324,19 @@ document.addEventListener("DOMContentLoaded", function (){
 	   spaceBetween: 20,
         pagination: {
         	el: ".swiper-pagination",
+			clickable: true,
       	},
     });
 
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
 	if(backlitMenu){
+		
 		const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
+			console.log('111');
 			if (entry.isIntersecting) {
-				
+				console.log('222');
 				backlitMenu.querySelectorAll('a').forEach((link) => {
 					
 				let id = link.getAttribute('href').replace('#', '');
@@ -373,10 +376,14 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		dynamicMenuList.addEventListener('click', ()=>{
-			
-			dynamicMenuList.style.maxHeight = 0;
-			dynamicMenuBtn.classList.remove('active');
+			if(dynamicMenu.classList.contains('active')){
+
+				
+				dynamicMenuList.style.maxHeight = 0;
+				dynamicMenuBtn.classList.remove('active');
+			}
 		});
+		
 		const stickyDynamicMenu = document.querySelector('#sticky-menu');
 		const institutePageDynamicMenu = document.querySelector('#institute-menu');
 
@@ -694,7 +701,34 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		});
 	}
-  toggleActiveClass('cell-price', 'pay-cur');
- 
- 
+  	toggleActiveClass('cell-price', 'pay-cur');
+	 /* стр учебные заведения переключение карточек */
+	 const cardsWrapper = document.getElementById('scool-cards-grid');
+	 
+	 if(cardsWrapper){
+		const btnBuildRows = document.getElementById('scool-grid-rows');
+		const btnBuildCols = document.getElementById('scool-grid-cols');
+		btnBuildRows.addEventListener('click', ()=>{
+			
+			 btnBuildRows.classList.add('active');
+			 btnBuildCols.classList.remove('active');
+			 cardsWrapper.classList.remove('three-columns');
+
+		});
+		btnBuildCols.addEventListener('click', ()=>{
+			
+			 btnBuildRows.classList.remove('active');
+			 btnBuildCols.classList.add('active');
+			 cardsWrapper.classList.add('three-columns');
+
+		});
+		window.addEventListener('resize', function() {
+			if(this.window.innerWidth < 1279){
+				btnBuildRows.classList.add('active');
+			 	btnBuildCols.classList.remove('active');
+				cardsWrapper.classList.remove('three-columns');
+			}
+		});
+	 }
+	
 });

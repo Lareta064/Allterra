@@ -10,12 +10,10 @@
 .dynamic-menu.flex-col{
 	row-gap: 32px;
 }
-.institute-slider{
-	width: calc(100vw - 20px - 295px);
-	max-width: 925px;
-	aspect-ratio: 185 / 114;
-	padding: 0;
+
+.institute-slider-block{
 	padding-bottom: 23px;
+	position: relative;
 	
 	.swiper-pagination-bullets{bottom: 0}
 		.swiper-pagination-bullet{
@@ -35,6 +33,15 @@
 			object-fit: cover;
 			
 		}
+}
+.institute-slider{
+	width: calc(100vw - 20px - 295px);
+	max-width: 925px;
+	aspect-ratio: 185 / 95;
+	padding: 0;
+	
+	
+	
 	@media (max-width: 1279px) {
 		width: calc(100vw - 20px - 280px);
 	}
@@ -42,12 +49,7 @@
 		width: calc(100vw - 32px);
 	}
 }
-.institute-benefits{
-	padding: 30px 20px;
-	@media (max-width: 767px) {
-		padding: 20px 16px;
-	}
-}
+
 .list-check.list-check--column{
 	ul{
 		display: grid;

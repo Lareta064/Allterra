@@ -1,4 +1,5 @@
-.scool-card.scool-card--vertical{
+
+.scool-card.scool-card--vertical, .scool-cards-grid.three-columns .scool-card{
 	box-shadow:none;
 	.scool-picture{
 		width: 295px;
@@ -51,37 +52,37 @@
 			left: auto;
 			right: 0;
 		}
-		&.active .scool-info{
-		
-			overflow: hidden;
-			overflow-y: auto;
-			max-height: 448px;
-			scrollbar-width: thin;
-			scrollbar-color: $light-grey white;
-			overflow: overlay;
-		
-			&::-webkit-scrollbar {
-				display: block;
-				width: 3px;
-				border-radius: 5px;
-			}
-		
-			&::-webkit-scrollbar-track {
-				background-color: white;
-				width: 3px;
-				border-radius: 5px;
-			}
-		
-			&::-webkit-scrollbar-thumb {
-				background-color: $light-grey;
-				width: 3px;
-			}
+	}
+	&.active .scool-info{
+	
+		overflow: hidden;
+		overflow-y: auto;
+		max-height: 448px;
+		scrollbar-width: thin;
+		scrollbar-color: $light-grey white;
+		overflow: overlay;
+	
+		&::-webkit-scrollbar {
+			display: block;
+			width: 3px;
+			border-radius: 5px;
+		}
+	
+		&::-webkit-scrollbar-track {
+			background-color: white;
+			width: 3px;
+			border-radius: 5px;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			background-color: $light-grey;
+			width: 3px;
 		}
 	}
 }
 
 
-.scool-card.scool-card--vertical{
+.scool-card.scool-card--vertical, .scool-cards-grid.three-columns .scool-card{
 	padding: 0;
 	height: 480px;
 	overflow: hidden;
@@ -127,7 +128,7 @@
 			left: 0;
 			margin-bottom: 0;
 		}
-		.btn{padding-inline: 40px;}
+		.btn{padding-inline: 36px;}
 	}
 	.scool__list{
 		padding-top: 11px;
@@ -147,6 +148,13 @@
 		.scool-row__link .btn span+span {
 			display: none;
 		}
-
 }
 
+.scool-cards-grid.three-columns .scool-card {
+	box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
+}
+.scool-cards-grid.three-columns{
+	@media (max-width: 1199px) {
+		grid-template-columns: 330px 330px;
+	}
+}

@@ -58,18 +58,19 @@ section.catalogy-page
 					.header-group
 						.h3 Учебные заведения
 						//===== toggles =====
-						.btns-group
-							a(href="#!").btn-bars
+						.btns-group.flex-1280
+							button.btn-bars.active#scool-grid-rows
 								svg.svg-bar
 									use(href='./img/spriteSvg.svg#svg-bar')
-							a(href="#!").btn-table.active
+							button.btn-table#scool-grid-cols
 								svg.svg-table
 									use(href='./img/spriteSvg.svg#svg-table')
-					+scool-card
-					+scool-card2
-					+scool-card
-					+scool-card2
-					+scool-card
+					.scool-cards-grid#scool-cards-grid
+						+scool-card
+						+scool-card2
+						+scool-card
+						+scool-card2
+						+scool-card
 					
 					//=====btn + pagination =====
 					.justify-group.mt-48

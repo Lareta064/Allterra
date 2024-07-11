@@ -292,6 +292,9 @@ address {
 .mb-20 {
 	margin-bottom: 20px;
 }
+.my-40{
+	margin-block: 40px;
+}
 .mb-30 {
 	margin-bottom: 30px;
 }
@@ -323,7 +326,9 @@ address {
 	margin-top: 20px;
 }
 
-
+.mt-40 {
+	margin-top: 40px;
+}
 
 .mt-48 {
 	margin-top: 48px!important;
@@ -378,18 +383,21 @@ address {
 		}
 	}
 	article{
-		scroll-margin-top: 80px;
+		scroll-margin-top: 100px;
 		
-			.h3,
-			.h2,
-			.h4 {
-				margin-bottom: 12px;
-				letter-spacing: -0.03em;
-			}
-		
-			p {
-				line-height: 1.75;
-			}
+		.h3,
+		.h2,
+		.h4 {
+			margin-bottom: 12px;
+			letter-spacing: -0.03em;
+		}
+	
+		p {
+			line-height: 1.75;
+		}
+		@media (max-width: 1023px) {
+		scroll-margin-top: 140px;
+		}
 	}
 }
 img.wh-100 {
@@ -417,7 +425,14 @@ section:has(+ section.dark-bg),section:has(+ section.light-bg){
 	background-color: $bg-black;
 	color: $white;
 }
-*.light-bg{background-color: #f0f3f9;}
+*.light-bg, .light-bg-block{background-color: #f0f3f9;}
+.light-bg-block{
+	padding: 30px 20px;
+	margin-top: 16px;
+	@media (max-width: 767px) {
+		padding: 20px 16px;
+	}	
+}
 section.light-bg, section.dark-bg{
 	padding-block: 100px;
 	@media (max-width: 767px) {

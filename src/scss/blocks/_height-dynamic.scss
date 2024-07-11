@@ -1,0 +1,54 @@
+.height-dynamic{
+	position: relative;
+	padding-bottom: 20px;
+	overflow: hidden;
+	max-height: 180px;
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		right: 0;
+		height: 60px;
+		z-index: 3;
+		background: linear-gradient(to top, rgba(255, 255, 255, .7) 50%,  rgba(255, 255, 255, 0) );
+	}
+	
+	.height-dynamic__border{
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 20px;
+		background-color: #fff;
+		bottom: 0;
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 3px;
+			background-color: $main-accent;
+			top: 10px;
+		}
+		.flex-center{
+			width: 20px;
+			height: 20px;
+			background-color: #fff;
+			position: relative;
+			z-index: 3;
+			bottom: -5px;
+		}
+		.svg-chevron-down{
+			width: 20px; 
+			height:16px;
+			
+			
+			
+		}
+	}
+}

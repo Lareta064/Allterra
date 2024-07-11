@@ -103,3 +103,14 @@
 		}
 }
 .accreditation-short + *{flex-shrink: 0;}
+.accreditation-short.accreditation-short--mini{
+	justify-content: flex-start;
+	margin-block: 24px;
+	gap:16px!important;
+	.accredit-logo {
+		height: 30px!important;
+		width: auto!important;
+	}
+		
+	
+}

@@ -177,6 +177,7 @@
 			position: sticky;}
 }
 #institute-menu.dynamic-menu{
+	top:-40px;
 	@media (max-width: 1023px) {
 		top: 66px;
 		z-index: 5;
