@@ -380,3 +380,9 @@
 	}
 }
 .swiper .scool-card{margin-top: 0;}
+.programs-table.scool-programs .programs-table-row .cell-price__drop{
+	left: -10px;
+}
+.programs-table.scool-programs .active .cell-price__drop{
+	display: block;
+}

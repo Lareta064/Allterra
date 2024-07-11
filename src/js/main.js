@@ -654,26 +654,9 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 		}
 	}
-	/**********programs-table************ */
-	const institutePrograms = document.querySelector('#programs-table');
-	if(institutePrograms){
-		const programsPrice = institutePrograms.querySelectorAll('.cell-price');
-		
-		for(let price of programsPrice){
-			const openPriceDrop = price.querySelector('.cell-price__btn');
-			if(openPriceDrop){
-				price.addEventListener('click', (e)=>{
-					const programsPriceActive = institutePrograms.querySelector('.cell-price.active');
-					
-					e.preventDefault();
-					if(programsPriceActive){programsPriceActive.classList.remove('active');}
-					if(programsPriceActive !== price){price.classList.toggle('active');}
-					
-				})
-			}
-		}
-	}
+
 	/*========click out */
+
 	window.addEventListener('click', (e)=>{
 		if(institutePrograms || scoolCards.length > 0){
 			if(!e.target.closest('.cell-price')){
@@ -683,6 +666,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				if(openDrop2){openDrop2.classList.remove('active');}
 			}
 		}
+		
 	});
      /* toggle active class for childs */
 	function toggleActiveClass(parentClass, childClass) {
@@ -730,5 +714,48 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	 }
-	
+	/********** стр Программа height-dynamic********* */
+	const heightDynamic = document.querySelectorAll('.height-dynamic');
+	if(heightDynamic.length > 0){
+		for(let block of heightDynamic){
+			
+			const heightDynamicBtn = block.querySelector('.height-dynamic__btn');
+			heightDynamicBtn.addEventListener('click', ()=>{
+				block.classList.add('active');
+				block.style.maxHeight = block.scrollHeight + 'px';
+			});
+		}
+	}
+	const scoolProgramsPrice = document.querySelectorAll('.programs-table .cell-price');
+	console.log(scoolProgramsPrice);
+	if(scoolProgramsPrice.length > 0){
+		// Получаем все кнопки для открытия выпадающего списка цен
+		var priceButtons = document.querySelectorAll('.programs-table .cell-price__btn');
+
+		// Функция для удаления класса 'active' у всех элементов .cell-price
+		function removeActiveClasses() {
+			document.querySelectorAll('.programs-table .cell-price.active').forEach(function(cellPrice) {
+				cellPrice.classList.remove('active');
+			});
+		}
+		 priceButtons.forEach(function(btn) {
+			btn.addEventListener('click', function(event) {
+				
+				event.stopPropagation();
+				
+				if (this.parentElement.classList.contains('active')) {
+					
+					this.parentElement.classList.remove('active');
+				} else {
+					
+					removeActiveClasses();
+					
+					this.parentElement.classList.add('active');
+				}
+			});
+		});
+		document.addEventListener('click', function() {
+			removeActiveClasses();
+		});
+	}
 });

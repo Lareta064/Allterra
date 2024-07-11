@@ -96,7 +96,7 @@
 /****************/
 .programs-table{
 	position: relative;
-	z-index: 2;
+	// z-index: 2;
 	&-row.t-header-mobile{
 		display: none;
 		@media (max-width: 767px) {
@@ -161,7 +161,7 @@
 			width: 100%;
 		}
 	}
-	.cell-name,.cell-age, .cell-link, .cell-price{
+	.cell-name,.cell-age, .cell-link, .cell-price, .cell-deskrip{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -173,6 +173,7 @@
 			padding-block: 4px;
 			align-items: flex-start;
 			font-size: 14px!important;text-align: right;
+			.cell-title{width: 130px; text-align: left; flex-shrink: 0;}
 			
 		}
 		
@@ -231,6 +232,16 @@
 		.cell-price__drop{display: block;}
 		.cell-price__btn svg{transform: rotate(180deg);}
 	}
+	.cell-deskrip{width: 140px;justify-content: flex-end;}
+}
+.programs-table.programs-table--simple{
+	.cell-deskrip {
+			width: auto;
+			justify-content: flex-start;
+			@media (max-width: 767px) {
+			text-align: left;
+			}
+		}
 }
 .map{
 	width: 100%;

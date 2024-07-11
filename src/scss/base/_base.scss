@@ -294,6 +294,9 @@ address {
 }
 .my-40{
 	margin-block: 40px;
+	@media (max-width: 767px) {
+	margin-block: 20px;
+	}
 }
 .mb-30 {
 	margin-bottom: 30px;

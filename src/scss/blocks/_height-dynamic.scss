@@ -1,8 +1,9 @@
 .height-dynamic{
 	position: relative;
-	padding-bottom: 20px;
 	overflow: hidden;
-	max-height: 180px;
+	max-height: 205px;
+	transition: .5s;
+	margin-block:32px;
 	&:after{
 		content: '';
 		display: block;
@@ -12,10 +13,11 @@
 		right: 0;
 		height: 60px;
 		z-index: 3;
-		background: linear-gradient(to top, rgba(255, 255, 255, .7) 50%,  rgba(255, 255, 255, 0) );
+		background: linear-gradient(to top, rgba(255, 255, 255, .95) 14%,  rgba(255, 255, 255, 0) );
 	}
 	
-	.height-dynamic__border{
+	.height-dynamic__btn{
+		cursor: pointer;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -31,12 +33,12 @@
 			position: absolute;
 			left: 0;
 			right: 0;
-			height: 3px;
+			height: 2px;
 			background-color: $main-accent;
 			top: 10px;
 		}
 		.flex-center{
-			width: 20px;
+			width: 40px;
 			height: 20px;
 			background-color: #fff;
 			position: relative;
@@ -46,9 +48,19 @@
 		.svg-chevron-down{
 			width: 20px; 
 			height:16px;
-			
-			
-			
 		}
+	}
+	@media (max-width: 767px) {
+		max-height: 180px;
+	}
+}
+.height-dynamic.active{
+	&:after, .height-dynamic__btn{display: none;}
+	
+}
+.programs-table.programs-table--simple{
+	@media (max-width: 767px) {
+		.cell-deskrip{font-size: 14px;}
+		.programs-table-row{padding-block: 8px;}
 	}
 }

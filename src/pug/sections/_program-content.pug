@@ -31,10 +31,12 @@ section.institute-article
 						picture
 							source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
 							img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
-
+				//========= institute-benefits ========
+				article.institute-benefits.light-bg-block
+					+list-check('Программы&nbsp;профессионального развития', 'Курсы английского языка', 'Гибкий график обучения', 'Расположение рядом с&nbsp;деловым районом Дубая')(class="list-check--column")
 				
-				//========= institute-info ========
 
+				//========= institute-info ========
 				article.institute-info
 					.info-table
 						//=====item====
@@ -69,7 +71,55 @@ section.institute-article
 						.info-table__col
 							.txt-14 Кол-во учеников
 							.h6 500
-				
+				//========= specialisations ========
+				article.specialisations
+					h2.h3 Специализации
+					p В 360 Institute of Management предлагаются следующие направления на программе Foundation:
+
+					.height-dynamic
+						.height-dynamic__btn
+							.flex-center
+								svg.svg-chevron-down
+									use(href='./img/spriteSvg.svg#svg-chevron-down')
+						
+						.programs-table.programs-table--simple
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Искусство и дизайн
+								.cell-deskrip
+									p Немного описания специальности Немного описания специальности  
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Искусство, дизайн и медиа
+								.cell-deskrip
+									p Немного описания специальности
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Хореография
+								.cell-deskrip
+
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Математика
+								.cell-deskrip
+									p Немного описания специальности Немного описания специальности  
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Химия
+								.cell-deskrip
+									p Органика и неорганическая химия
+							//======single row====
+							.programs-table-row
+								.cell-name
+									p Юриспруденция
+								.cell-deskrip
+									p Описание специализации
+								
 				//===== institute-programs =====
 				article.institute-programs.anchor#anchor1
 					.programs-table#programs-table
@@ -177,12 +227,12 @@ section.institute-article
 					p В 360 Institute of Management предлагаются следующие направления на программе Foundation:
 
 					.height-dynamic
-						.height-dynamic__border
+						.height-dynamic__btn
 							.flex-center
 								svg.svg-chevron-down
 									use(href='./img/spriteSvg.svg#svg-chevron-down')
 						
-						.programs-table.my-40
+						.programs-table.programs-table--simple
 							//======single row====
 							.programs-table-row
 								.cell-name
@@ -219,8 +269,134 @@ section.institute-article
 									p Юриспруденция
 								.cell-deskrip
 									p Описание специализации
-								
+				
+				article.specialisations
+					h2.h3 Специализации
+					p В 360 Institute of Management предлагаются следующие направления на программе Foundation:
+
+					//========table=====
+					.programs-table.scool-programs.my-40
+						//===== ROW HEADER====
+						.programs-table-row.t-header
+							.cell-name
+								p Описание
+							.cell-price
+								p Выбрать #[span.pay-cur.active €]|#[span.pay-cur ₽]
+							.cell-deskrip
+								p Период обучения
+						//======single row====
+						.programs-table-row
+							.cell-name
+								p Искусство и дизайн
+							.cell-price
+								.cell-price__btn
+									a(href="#!") #[span 36 315€]/2 недели
+									svg.svg-chevron-down
+										use(href='./img/spriteSvg.svg#svg-chevron-down')
+								//=====price cell drop=====
+								+price-drop
+							.cell-deskrip
+								p 5 лет 
+						//======single row====
+						.programs-table-row
+							.cell-name
+								p Искусство и дизайн
+							.cell-price
+								.cell-price__btn
+									a(href="#!") #[span 36 315€]/2 недели
+									svg.svg-chevron-down
+										use(href='./img/spriteSvg.svg#svg-chevron-down')
+								//=====price cell drop=====
+								+price-drop
+							.cell-deskrip
+								p 5 лет 						
 				//==== description====
+				article
+					.programs-table
+						//===== ROW HEADER====
+						.programs-table-row.t-header
+							.cell-name
+								p Программы
+							.cell-price
+								p Стоимость
+							.cell-deskrip
+								p Период обучения
+							
+								
+						//===== TOGGLE CURRENCY FOR MOBILE ====
+						.programs-table-row.t-header-mobile
+							.cell-price
+								span.cell-title Валюта отображения
+								p #[span.pay-cur €]|#[span.pay-cur.active ₽]
+							
+						//===== ROW ====
+						.programs-table-row
+							.cell-name
+								span.cell-title Программы
+								p General English Course
+							.cell-price
+								span.cell-title Стоимость
+								.cell-price__btn
+									a(href="#!") #[span 11 702,21₽] / 1 месяц
+									svg.svg-chevron-down
+										use(href='./img/spriteSvg.svg#svg-chevron-down')
+								//=====price cell drop=====
+								.cell-price__drop
+									ul
+										li 11 702,21₽/ 1 месяц
+										li 580 839,68₽ / 3 месяца
+										li 580 839,68₽ / 6 месяцев
+										li 580 839,68₽ / 1 год
+							.cell-deskrip
+								span.cell-title Период обучения
+								p 9
+						//===== ROW ====
+						.programs-table-row
+							.cell-name
+								span.cell-title Программы
+								p Профессиональные тренинги
+
+							.cell-price
+								span.cell-title Стоимость
+								.cell-price__btn
+									a(href="#!") #[span 11 702,21₽] / 1 месяц
+									svg.svg-chevron-down
+										use(href='./img/spriteSvg.svg#svg-chevron-down')
+								//=====price cell drop=====
+								.cell-price__drop
+									ul
+										li 11 702,21₽/ 1 месяц
+										li 580 839,68₽ / 3 месяца
+										li 580 839,68₽ / 6 месяцев
+										li 580 839,68₽ / 1 год
+							.cell-deskrip
+								span.cell-title Период обучения
+								p 16
+
+						//===== ROW ====
+						.programs-table-row
+							.cell-name
+								span.cell-title Программы
+								p Professional Development Programme (Students and Working Professionals)
+
+							.cell-price
+								span.cell-title Стоимость
+								.cell-price__btn
+									a(href="#!") #[span 11 702,21₽] / 1 месяц
+									svg.svg-chevron-down
+										use(href='./img/spriteSvg.svg#svg-chevron-down')
+								//=====price cell drop=====
+								.cell-price__drop
+									ul
+										li 11 702,21₽/ 1 месяц
+										li 580 839,68₽ / 3 месяца
+										li 580 839,68₽ / 6 месяцев
+										li 580 839,68₽ / 1 год
+							.cell-deskrip
+								span.cell-title Период обучения
+								p 16
+				
+				
 				article.institute-description.anchor#anchor2
 					h2.h3 Описание 360 Institute of Management
 					.text-block
