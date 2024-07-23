@@ -28,7 +28,7 @@
 	}
 	
 }
-.chief-card, .person-card{
+ .person-card{
 	@media (max-width: 1279px) {
 		padding: 30px 20px;
 	}
@@ -41,6 +41,21 @@
 		 }
 	}
 }
+.chief-card {
+	@media (max-width: 1279px) {
+		padding: 30px 20px;
+	}
+
+	@media (max-width: 413px) {
+		padding: 20px 16px;
+
+		.person__info {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+	}
+}
  .person-card{
 	.person__links{
 		@media (max-width: 699px) {
@@ -51,7 +66,7 @@
 
 .chief-cards{
 	column-gap: 20px;
-	@media (max-width: 767px) {
+	@media (max-width: 413px) {
 	flex-direction: column;
 	row-gap:16px;
 	}

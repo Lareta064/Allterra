@@ -1,7 +1,7 @@
 .height-dynamic{
 	position: relative;
 	overflow: hidden;
-	max-height: 205px;
+	max-height: 170px;
 	transition: .5s;
 	margin-block:32px;
 	&:after{
@@ -51,7 +51,7 @@
 		}
 	}
 	@media (max-width: 767px) {
-		max-height: 180px;
+		max-height: 250px;
 	}
 }
 .height-dynamic.active{
@@ -64,3 +64,9 @@
 		.programs-table-row{padding-block: 8px;}
 	}
 }
+// .height-dynamic.noactive{
+// 	&:after,
+// 		.height-dynamic__btn {
+// 			display: none;
+// 		}
+// }

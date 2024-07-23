@@ -334,9 +334,9 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 		const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
-			console.log('111');
+			
 			if (entry.isIntersecting) {
-				console.log('222');
+				
 				backlitMenu.querySelectorAll('a').forEach((link) => {
 					
 				let id = link.getAttribute('href').replace('#', '');
@@ -371,7 +371,18 @@ document.addEventListener("DOMContentLoaded", function (){
 				dynamicMenuBtn.classList.remove('active');
 				
 			}else{
-				dynamicMenuList.style.maxHeight = dynamicMenuList.scrollHeight + 'px';
+				const maxAllowedHeight = window.innerHeight - 186 + 'px';
+				const maxHeight = dynamicMenuList.scrollHeight + 'px';
+				if (dynamicMenuList.style.maxHeight === '0px' || dynamicMenuList.style.maxHeight === '') {
+					if (dynamicMenuList.scrollHeight > window.innerHeight - 186) {
+						dynamicMenuList.style.maxHeight = maxAllowedHeight;
+						dynamicMenuList.style.overflowY = 'auto';
+					} else {
+						dynamicMenuList.style.maxHeight = maxHeight;
+						dynamicMenuList.style.overflowY = 'hidden';
+					}
+				} 
+				
 				dynamicMenuBtn.classList.add('active');
 			}
 		});
@@ -654,20 +665,6 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 		}
 	}
-
-	/*========click out */
-
-	window.addEventListener('click', (e)=>{
-		if(institutePrograms || scoolCards.length > 0){
-			if(!e.target.closest('.cell-price')){
-				const openDrop = document.querySelector('.cell-price__drop.active');
-				const openDrop2 = document.querySelector('.cell-price.active');
-				if(openDrop){openDrop.classList.remove('active');}
-				if(openDrop2){openDrop2.classList.remove('active');}
-			}
-		}
-		
-	});
      /* toggle active class for childs */
 	function toggleActiveClass(parentClass, childClass) {
 		const parents = document.querySelectorAll('.' + parentClass);
@@ -719,15 +716,24 @@ document.addEventListener("DOMContentLoaded", function (){
 	if(heightDynamic.length > 0){
 		for(let block of heightDynamic){
 			
-			const heightDynamicBtn = block.querySelector('.height-dynamic__btn');
-			heightDynamicBtn.addEventListener('click', ()=>{
+			/* если специализаций меньше двух, то не скрываем контент */
+			const blockTable = block.querySelector('.programs-table');
+			if(blockTable.offsetHeight < 107){
 				block.classList.add('active');
-				block.style.maxHeight = block.scrollHeight + 'px';
-			});
+			}else{
+
+				const heightDynamicBtn = block.querySelector('.height-dynamic__btn');
+				heightDynamicBtn.addEventListener('click', ()=>{
+					block.classList.add('active');
+					block.style.maxHeight = block.scrollHeight + 'px';
+				});
+			}
+			
 		}
 	}
+
 	const scoolProgramsPrice = document.querySelectorAll('.programs-table .cell-price');
-	console.log(scoolProgramsPrice);
+	
 	if(scoolProgramsPrice.length > 0){
 		// Получаем все кнопки для открытия выпадающего списка цен
 		var priceButtons = document.querySelectorAll('.programs-table .cell-price__btn');
@@ -758,4 +764,5 @@ document.addEventListener("DOMContentLoaded", function (){
 			removeActiveClasses();
 		});
 	}
+	
 });
