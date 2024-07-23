@@ -1,7 +1,8 @@
 mixin pic-short(img, w, h, addCl)
-	picture
+	picture&attributes(attributes)
 		source(srcset="./img/"+ img +"@2x.webp", media="(min-resolution: 192dpi)" width=""+ w height=""+ h  type="image/webp")
 		img(class=(addCl ? "lazy "+ addCl : "lazy") src="./img/"+ img +".webp", width=""+ w height=""+ h  alt="image")
+
 
 mixin pic(img, w375, h375, w, h, addCl)
 	picture
