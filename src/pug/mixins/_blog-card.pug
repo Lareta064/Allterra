@@ -1,7 +1,7 @@
 mixin blog-card(img, meta, txt, desk, loc)
 	.blog-card.img-zoom&attributes(attributes)
 		.blog-card__img
-			img.wh-100.lazy(src="./img/blog/"+ img+".webp", width="295" height="194" alt="img")
+			+pic-short-blog(img, 295, 194, 'wh-100')
 		a(href="#!").blog-card__text
 			.blog-card__info.txt-14
 				if meta!=''
@@ -18,7 +18,8 @@ mixin blog-card(img, meta, txt, desk, loc)
 mixin blog-card-ui(img, meta, txt, desk, loc)
 	.blog-card.img-zoom
 		.blog-card__img
-			img.wh-100.lazy(src="../img/blog/"+ img+".webp", width="295" height="194" alt="img")
+			+pic-short(img, 295, 194, 'wh-100')
+			//- img.wh-100.lazy(src="../img/blog/"+ img+".webp", width="295" height="194" alt="img")
 		a(href="#!").blog-card__text
 			.blog-card__info.txt-14
 				if meta!=''
