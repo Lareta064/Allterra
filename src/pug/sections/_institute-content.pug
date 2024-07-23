@@ -265,10 +265,7 @@ section.institute-article
 					.feedback-content.two-columns
 						//=====IMG BLOCK ====
 						.feedback-img
-							picture
-								source(srcset="./img/feedback2-mob.webp", media="(max-width: 767px)")
-								
-								img.lazy(src="./img/feedback2.webp", width="450"  alt="image")
+							+pic('feedback2', 450, 450, 328, 328, 'wh-100')
 							
 						.feedback-form-wrapper
 							.border-left.mb-30 
