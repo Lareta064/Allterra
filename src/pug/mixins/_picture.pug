@@ -1,0 +1,11 @@
+mixin pic-short(img, w, h, addCl)
+	picture
+		source(srcset="./img/"+ img +"@2x.webp", media="(min-resolution: 192dpi)" width=""+ w height=""+ h  type="image/webp")
+		img(class=(addCl ? "lazy "+ addCl : "lazy") src="./img/"+ img +".webp", width=""+ w height=""+ h  alt="image")
+
+mixin pic(img, w375, h375, w, h, addCl)
+	picture
+		source(srcset="./img/"+ img +"-w375.webp", media="(max-width: 767px)" width=""+ w375 height=""+ h375  type="image/webp")
+		source(srcset="./img/"+ img +"-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)"  type="image/webp" width=""+ w375 height=""+ h375)
+		source(srcset="./img/"+ img +"@2x.webp", media="(min-resolution: 192dpi)" width=""+ w height=""+ h  type="image/webp")
+		img(class=(addCl ? "lazy "+ addCl : "lazy") src="./img/"+ img +".webp", width=""+ w height=""+ h  alt="image")

@@ -13,7 +13,6 @@ section.education
 			.education-banner#video-box
 				video#video.lazy( muted autoplay playsinline)
 					source(src="./img/main-page/header-video.mp4", type="video/mp4")
-				//- img.wh-100.lazy(src="./img/main-page/header-gif.gif", width="1240" height="600" alt="image")
 				button.btn-pause#video-btn
 					span Приостановить видео
 					i.icon-pause
@@ -26,7 +25,7 @@ section.education
 					//======single card =======
 					.info-card
 						.info-card__img
-							img.wh-100.lazy(src="./img/main-page/edu1.webp", alt=" img" width="400" height="300")
+							+pic-short('main-page/edu1', 400, 300, 'wh-100')
 						a(href="#!").info-card__text
 							p.txt-20 Каникулы с изучением языков
 							span.round-arrow
@@ -36,7 +35,7 @@ section.education
 					//======single card =======
 					.info-card
 						.info-card__img
-							img.wh-100.lazy(src="./img/main-page/edu2.webp", alt=" img" width="400" height="300")
+							+pic-short('main-page/edu2', 400, 300, 'wh-100')
 						a(href="#!").info-card__text
 							p.txt-20 Поступление в среднюю школу
 							span.round-arrow
@@ -46,7 +45,7 @@ section.education
 					//======single card =======
 					.info-card
 						.info-card__img
-							img.wh-100.lazy(src="./img/main-page/edu3.webp", alt=" img" width="400" height="300")
+							+pic-short('main-page/edu3', 400, 300, 'wh-100')
 						a(href="#!").info-card__text
 							p.txt-20 Поступление в университет
 							span.round-arrow
