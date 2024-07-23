@@ -56,6 +56,47 @@ block content
 		
 		include ../sections/_contacts
 	include ../sections/_footer
+	// Функция для загрузки скрипта карты
+	script.
+		document.addEventListener("DOMContentLoaded", function (){
+			function loadMapScript() {
+			const script = document.createElement('script');
+			script.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6bc978176689faba087962d8000db1600dbb1ccebeeb99504035885ebbca41ce&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false'; 
+			script.async = true;
+			script.defer = true;
+			document.body.appendChild(script);
+			}
 
+			function loadIframe() {
+			const iframeWrapper = document.querySelector('.virtual-tour-wrapper');
+			const iframe = document.createElement('iframe');
+			iframe.src = "https://www.google.com/maps/embed?pb=!4v1555661292332!6m8!1m7!1sCAoSLEFGMVFpcE94cVozTV8taGxFcExyeWRjZUFEMTdpN1EwLXJCXzEtdkNlalVP!2m2!1d51.521975!2d-0.130462!3f140.5354761556658!4f18.14888093570754!5f0.7820865974627469";
+			iframe.width = "100%";
+			iframe.height = "100%";
+			iframe.frameBorder = "0";
+			iframe.style.border = "0";
+			iframe.allowFullscreen = true;
+			iframeWrapper.innerHTML = ''; // Очистить содержимое контейнера
+			iframeWrapper.appendChild(iframe);
+			}
+
+			// Создаем наблюдатель
+			const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+				if (entry.target.id === 'map') {
+					loadMapScript();
+				} else if (entry.target.classList.contains('virtual-tour-wrapper')) {
+					loadIframe();
+				}
+				observer.unobserve(entry.target); // Останавливаем наблюдение после загрузки
+				}
+			});
+			});
+
+			// Наблюдаем за элементами
+			observer.observe(document.getElementById('map'));
+			observer.observe(document.querySelector('.virtual-tour-wrapper'));
+		});
 block variables
 	-var title = "Программа";

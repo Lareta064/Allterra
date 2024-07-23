@@ -20,7 +20,7 @@ section.institute-article
 						])
 				
 				.dynamic-menu__banner.block-1024
-					img(src="./img/institute/institute-logo.webp", width="295" height="295" alt="logo")
+					img.lazy(src="./img/institute/institute-logo.webp", width="295" height="295" alt="logo")
 			
 			//======= right column ======
 			.aside-grid__content.offset-top-48
@@ -29,8 +29,11 @@ section.institute-article
 				article.institute-slider-block
 					.institute-slider
 						picture
-							source(srcset="./img/institute/1-mob.webp", media="(max-width: 767px)")
-							img.lazy(src="./img/institute/1.webp", width="925" height="545" alt="image")
+							source(srcset="./img/institute/img-w375.webp", media="(max-width: 767px)" width="328" height="194"  type="image/webp")
+							source(srcset="./img/institute/img-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)"  type="image/webp" width="328" height="194")
+							source(srcset="./img/institute/img@2x.webp", media="(min-resolution: 192dpi)" width="925" height="545"  type="image/webp")
+							img.lazy(src="./img/institute/img.webp", width="925" height="545" alt="image")
+				
 				//========= institute-benefits ========
 				article.institute-benefits.light-bg-block
 					+list-check('Программы&nbsp;профессионального развития', 'Курсы английского языка', 'Гибкий график обучения', 'Расположение рядом с&nbsp;деловым районом Дубая')(class="list-check--column")
@@ -386,14 +389,13 @@ section.institute-article
 							p Выбор, подготовка, поступление и курирование во время учебы
 							a(href="#!").btn.btn--slim Узнать больше
 						.decore-block__img
-							img(src="./img/review/boy.webp", width="290px" alt="img")
+							img.lazy(src="./img/review/boy.webp", width="290px" alt="img")
 					
 					//===== location====
 				article.institute-location.anchor#anchor3
 					h2.h3 Расположение 360 Institute of Management
 					p Кампус института находится в районе Al Quoz 1, где есть магазины, кафе, мечети, школы, фитнес-центры, салоны красоты, семейные парки и центры отдыха. За 15-20 минут можно добраться до пляжей Опен-Бич, Джумейра-Бич и Сансет-Бич. В соседнем районе Бизнес-Бэй расположены офисы ведущих мировых компаний, дорогие отели и рестораны, а также канал Dubai Water Canal с живописными местами для прогулок.
-					.map
-						script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6bc978176689faba087962d8000db1600dbb1ccebeeb99504035885ebbca41ce&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
+					.map#map
 				
 				//======= feedback form =====
 				article#feedback
@@ -433,7 +435,6 @@ section.institute-article
 				//===== virtual-tour ====
 				article.virtual-tour#anchor6
 					.virtual-tour-wrapper
-						iframe(src="https://www.google.com/maps/embed?pb=!4v1555661292332!6m8!1m7!1sCAoSLEFGMVFpcE94cVozTV8taGxFcExyeWRjZUFEMTdpN1EwLXJCXzEtdkNlalVP!2m2!1d51.521975!2d-0.130462!3f140.5354761556658!4f18.14888093570754!5f0.7820865974627469" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
 				
 				//===== block====
 				article.institute-description-block.anchor#anchor7
@@ -485,13 +486,13 @@ section.institute-article
 							//=======логотипы =====
 							.accreditation-short.accreditation-short--mini.flex-center-y
 								.accredit-logo
-									img(src="./img/accredit/logo1.webp", width="138" height="60" alt="img")
+									img.lazy(src="./img/accredit/logo1.webp", width="138" height="60" alt="img")
 								.accredit-logo
-									img(src="./img/accredit/logo2.webp", width="116" height="60" alt="img")
+									img.lazy(src="./img/accredit/logo2.webp", width="116" height="60" alt="img")
 								.accredit-logo
-									img(src="./img/accredit/logo3.webp",  width="60"  height="60" alt="img")
+									img.lazy(src="./img/accredit/logo3.webp",  width="60"  height="60" alt="img")
 								.accredit-logo
-									img(src="./img/accredit/logo4.webp", width="138"  height="60" alt="img")
+									img.lazy(src="./img/accredit/logo4.webp", width="138"  height="60" alt="img")
 							//====== кнопка ====
 							
 							a(href="#!").btn-accent.mt-40 Получить консультацию
