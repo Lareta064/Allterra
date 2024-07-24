@@ -6,11 +6,11 @@ mixin price-drop
 			li 96 315€/6 месяцев
 			li 105 315€/1 год
 			
-mixin scool-card
+mixin scool-card(img)
 	.scool-card&attributes(attributes)
 		//===== картинка =====
 		.scool-picture
-			img.lazy(src="./img/scools/scool-picture.webp", width="324"  height="212" alt="img")
+			+pic-short(img, w='324', h='212')
 			.rating-label 9.6
 		
 		//====верхний ряд, видимый =====
@@ -116,11 +116,12 @@ mixin scool-card
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								+price-drop
 
-mixin scool-card2
+mixin scool-card2(img)
 	.scool-card&attributes(attributes)
 		//===== картинка =====
 		.scool-picture
-			img.lazy(src="./img/scools/scool-picture.webp", width="324"  height="212" alt="img")
+			+pic-short(img, w='324', h='212')
+			
 			.rating-label 9.6
 		
 		//====верхний ряд, видимый =====

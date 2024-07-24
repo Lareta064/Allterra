@@ -291,7 +291,7 @@ section.institute-article
 							.cell-deskrip
 								p 5 лет 						
 				//==== description====
-				article
+				article.institute-programs
 					.programs-table
 						//===== ROW HEADER====
 						.programs-table-row.t-header
@@ -301,7 +301,6 @@ section.institute-article
 								p Стоимость
 							.cell-deskrip
 								p Период обучения
-							
 								
 						//===== TOGGLE CURRENCY FOR MOBILE ====
 						.programs-table-row.t-header-mobile
@@ -389,7 +388,9 @@ section.institute-article
 							p Выбор, подготовка, поступление и курирование во время учебы
 							a(href="#!").btn.btn--slim Узнать больше
 						.decore-block__img
-							img.lazy(src="./img/review/boy.webp", width="290px" alt="img")
+							picture
+								source(srcset="./img/review/boy@2x.webp", media="(min-resolution: 192dpi)"  type="image/webp" width="290")
+								img.lazy(src="./img/review/boy.webp", width="290px" alt="img")
 					
 					//===== location====
 				article.institute-location.anchor#anchor3

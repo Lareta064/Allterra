@@ -21,58 +21,66 @@ block content
 						.swiper-wrapper
 							//===== single slide ========
 							.swiper-slide
-								+scool-card2(class="scool-card--vertical")
+								+scool-card2('scools/scool-picture')(class="scool-card--vertical")
 							//===== single slide ========
 							.swiper-slide
-								+scool-card2(class="scool-card--vertical")
+								+scool-card2('scools/scool-picture2')(class="scool-card--vertical")
 							//===== single slide ========
 							.swiper-slide
-								+scool-card2(class="scool-card--vertical")
+								+scool-card2('scools/scool-picture3')(class="scool-card--vertical")
 							//===== single slide ========
 							.swiper-slide
-								+scool-card2(class="scool-card--vertical")
+								+scool-card2('scools/scool-picture4')(class="scool-card--vertical")
 							//===== single slide ========
 							.swiper-slide
-								+scool-card2(class="scool-card--vertical")
+								+scool-card2('scools/scool-picture')(class="scool-card--vertical")
 							
 							//===== single slide ========
 							.swiper-slide
-								+scool-card(class="scool-card--vertical")
+								+scool-card('scools/scool-picture3')(class="scool-card--vertical")
 							//===== single slide ========
 							.swiper-slide
-								+scool-card(class="scool-card--vertical")
+								+scool-card('scools/scool-picture2')(class="scool-card--vertical")
 							
 							//===== single slide ========
 							.swiper-slide
-								+scool-card2(class="scool-card--vertical")
+								+scool-card2('scools/scool-picture2')(class="scool-card--vertical")
 
 				
 					//===== swiper navigation========
 					.slider-nav
 						.swiper-button-next
 						.swiper-button-prev
-					
-					
-		
 		include ../sections/_contacts
 	include ../sections/_footer
-	
+	//========= добавление карты и виртуального тура ======
 	script.
-		document.addEventListener("DOMContentLoaded", function () {
-			function loadMapIframe() {
-				const mapWrapper = document.getElementById('map');
-				const iframe = document.createElement('iframe');
-				iframe.src = 'https://yandex.ru/map-widget/v1/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&source=constructor';
-				iframe.width = "100%";
-				iframe.height = "100%";
-				iframe.frameBorder = "0";
-				iframe.style.border = "0";
-				iframe.allowFullscreen = true;
-				mapWrapper.innerHTML = ''; // Очистить содержимое контейнера
-				mapWrapper.appendChild(iframe);
+		document.addEventListener('DOMContentLoaded', function () {
+			function loadMapScript() {
+				const script = document.createElement('script');
+				script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+				script.onload = initMap; // Вызов функции инициализации после загрузки скрипта
+				document.body.appendChild(script);
 			}
 
-			function loadVirtualTourIframe() {
+			function initMap() {
+				ymaps.ready(function () {
+				var myMap = new ymaps.Map('map', {
+					center: [55.76, 37.64], // Координаты центра карты
+					zoom: 10
+				});
+
+				// Добавление маркера на карту
+				var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+					hintContent: 'Содержимое всплывающей подсказки',
+					balloonContent: 'Содержимое балуна'
+				});
+
+				myMap.geoObjects.add(myPlacemark);
+				});
+			}
+
+			function loadIframe() {
 				const iframeWrapper = document.querySelector('.virtual-tour-wrapper');
 				const iframe = document.createElement('iframe');
 				iframe.src = "https://www.google.com/maps/embed?pb=!4v1555661292332!6m8!1m7!1sCAoSLEFGMVFpcE94cVozTV8taGxFcExyeWRjZUFEMTdpN1EwLXJCXzEtdkNlalVP!2m2!1d51.521975!2d-0.130462!3f140.5354761556658!4f18.14888093570754!5f0.7820865974627469";
@@ -81,40 +89,40 @@ block content
 				iframe.frameBorder = "0";
 				iframe.style.border = "0";
 				iframe.allowFullscreen = true;
-				iframeWrapper.innerHTML = ''; // Очистить содержимое контейнера
+				iframeWrapper.innerHTML = ''; 
 				iframeWrapper.appendChild(iframe);
 			}
 
 			// Создаем наблюдатель
 			const observer = new IntersectionObserver((entries, observer) => {
 				entries.forEach(entry => {
-					if (entry.isIntersecting) {
+				if (entry.isIntersecting) {
 					if (entry.target.id === 'map') {
-						loadMapIframe();
+					loadMapScript();
 					} else if (entry.target.classList.contains('virtual-tour-wrapper')) {
-						loadVirtualTourIframe();
+					loadIframe();
 					}
-					observer.unobserve(entry.target); // Останавливаем наблюдение после загрузки
-					}
-				});
+					observer.unobserve(entry.target);
+				}
 			});
-
-			// Наблюдаем за элементами
-			const mapElement = document.getElementById('map');
-			const virtualTourElement = document.querySelector('.virtual-tour-wrapper');
-			
-			if (mapElement) {
-				observer.observe(mapElement);
-			} else {
-				console.error('Element with id "map" not found.');
-			}
-
-			if (virtualTourElement) {
-				observer.observe(virtualTourElement);
-			} else {
-				console.error('Element with class "virtual-tour-wrapper" not found.');
-			}
 		});
 
+		// Наблюдаем за элементами
+		const mapElement = document.getElementById('map');
+		const virtualTourElement = document.querySelector('.virtual-tour-wrapper');
+
+		if (mapElement) {
+			observer.observe(mapElement);
+		} else {
+			console.error('Element with id "map" not found.');
+		}
+
+		if (virtualTourElement) {
+			observer.observe(virtualTourElement);
+		} else {
+			console.error('Element with class "virtual-tour-wrapper" not found.');
+		}
+		})
+	
 block variables
 	-var title = "Программа";
