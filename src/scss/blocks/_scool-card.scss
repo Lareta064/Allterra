@@ -13,10 +13,12 @@
 		width: 324px;
 		height: 212px;
 		z-index: 2;
+		picture{margin: 0;}
 		img{
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+			margin: 0;
 		}
 		@media (max-width: 1279px) {
 			width: 317px;
