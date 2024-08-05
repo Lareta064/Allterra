@@ -6992,9 +6992,10 @@ header .logo {
   width: fit-content;
   font-size: 14px;
   line-height: 1.43;
+  
 }
 .inner-menu a + a {
-  margin-top: 8px;
+  margin-top: 12px;
 }
 .inner-menu a:after {
   content: "";

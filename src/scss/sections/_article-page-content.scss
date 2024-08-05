@@ -10,12 +10,19 @@
 .custom-text{
 	padding-right: 40px;
 	padding-bottom: 80px;
+	&>*+*{margin-top: 40px;}
 	h1, h2, h3, h4, h5, .h3, figure, &>img, .two-columns, .txt-img{
 		margin-top: 48px;
 		margin-bottom: 12px;
 		@media (max-width: 767px) {
 			margin-top: 32px;
 		}
+	}
+	&>h1,&> h2,&> h3,&> h4,&>h5{
+		padding-left: 16px;
+		border-left:4px solid $main-accent;
+		margin-bottom: 20px;
+		
 	}
 	&>img{
 		width: 100%;
@@ -24,7 +31,7 @@
 	}
 	h2,h4{margin-bottom: 24px; font-weight: 500;}
 	p+p{
-		margin-top: 30px;
+		margin-top: 40px;
 		@media (max-width: 767px) {
 			margin-top:24px;
 		}
@@ -38,9 +45,13 @@
 		object-fit: cover;
 		aspect-ratio: 1/1;
 	}
+	.two-columns>img{
+		aspect-ratio: 55/74;
+		max-height: 592px;
+	}
 	.list-block, .order-list, 
 	.video{
-		margin-block: 48px;
+		margin-block: 40px;
 		&>*+*{margin-top: 12px;}
 		@media (max-width: 767px) {
 			margin-block: 32px;
@@ -83,8 +94,14 @@
 		font-size: 20px;
 		line-height: .6;
 	}
-	li +li{ margin-top: 12px;}
+	li +li{ 
+		margin-top: 16px;
+		@media (max-width: 767px) {
+		margin-top: 20px;
+		}
+	}
 }
+
 .custom-text>ol{
 	margin-block: 24px;
 }
@@ -258,4 +275,88 @@
 	border-top: 2px solid #f3f5f9;
 	
 	p+p{margin-top: 12px;}
+}
+.inner-menu.color-block {
+	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+	background: var(--white);
+
+}
+*.color-block{
+	.list-block{margin: 0;}
+	padding: 30px;
+	h2,
+		h3,
+		h3,
+		h4,
+		p {
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 133%;
+			letter-spacing: -0.03em;
+			color: black;
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-top: 0;
+			margin-bottom: 20px;
+			position: relative;
+			&+.list-block {margin: 0;}
+					
+				
+			@media (max-width: 767px) {
+					font-size: 18px;
+				}
+		}
+		@media (max-width: 767px) {
+		padding: 20px;
+		}
+}
+
+.conclusions-card{
+	background-color: $dark-blue;
+	h2, h3, h3, h4, p{
+		&:before{
+			content:'';
+			width: 17px;
+			height: 24px;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='24' viewBox='0 0 17 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.66667 23H12M8.33333 1C4.28325 1 1 4.28325 1 8.33333C1 9.81772 1.44103 11.1991 2.1992 12.3536C3.36509 14.1289 3.94752 15.016 4.02319 15.1486C4.69635 16.3279 4.5724 15.912 4.65712 17.2673C4.66664 17.4196 4.66667 17.6502 4.66667 18.1111C4.66667 18.7861 5.21387 19.3333 5.88889 19.3333L10.7778 19.3333C11.4528 19.3333 12 18.7861 12 18.1111C12 17.6502 12 17.4196 12.0095 17.2673C12.0942 15.912 11.9696 16.3279 12.6427 15.1486C12.7184 15.016 13.3018 14.1289 14.4677 12.3536C15.2259 11.1991 15.6669 9.81772 15.6669 8.33333C15.6669 4.28325 12.3834 1 8.33333 1Z' stroke='%232DBFCA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+			margin-right: 16px;
+		}
+	}
+}
+
+.cooperation-card{
+	
+	background: $light-green;
+	h2,h3,h3,h4,p {
+		&:before {
+			content: '';
+			width: 26px;
+			height: 26px;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17 10.3333L11.6667 15.6667L9 13M13 25C6.37258 25 1 19.6274 1 13C1 6.37258 6.37258 1 13 1C19.6274 1 25 6.37258 25 13C25 19.6274 19.6274 25 13 25Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+			margin-right: 16px;
+		}
+	}
+}
+.important-card,.neutral-card{
+	
+	background: $light-yellow;
+		h3,
+		h3,
+		h4,
+		p {
+			&:before {
+				content: '';
+				width: 26px;
+				height: 26px;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 8.26693V13.6003M13 25C6.37258 25 1 19.6274 1 13C1 6.37258 6.37258 1 13 1C19.6274 1 25 6.37258 25 13C25 19.6274 19.6274 25 13 25ZM13.0664 17.6003V17.7336L12.9336 17.7331V17.6003H13.0664Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+				margin-right: 16px;
+			}
+		}
+}
+.neutral-card{
+	background: $dark-blue;
+}
+.neutral-card,.important-card,.cooperation-card{
+	box-shadow: 0 8px 20px 0 rgba(16, 23, 36, 0.08), 0 0 1px 0 rgba(16, 23, 36, 0.08);
 }
