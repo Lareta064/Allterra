@@ -19,7 +19,7 @@
 			display: inline-block;
 			height: 1px;
 			position: absolute;
-			left: 26px;
+			left: 16px;
 			right: 0;
 			bottom: 0;
 			background-color: transparent;
@@ -28,14 +28,13 @@
 		&:before{
 			content: '';
 			display: inline-block;
-			height: 1px;
-			width: 16px;
+			height: 12px;
+			width: 6px;
 			margin-right: 10px;
-			background-color: $main-accent;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='12' viewBox='0 0 6 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 10.5L4.29135 6.79724C4.69549 6.34257 4.69549 5.65743 4.29135 5.20276L1 1.5' stroke='black' stroke-width='1.5' stroke-linecap='round' /%3e%3c/svg%3e");
 			flex-shrink: 0;
-			@media (max-width: 767px) {
-			width: 12px;
-			}
+
+			
 		}
 		&:hover{color: $dark-grey; }
 		&:hover:after{

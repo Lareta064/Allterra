@@ -1,32 +1,32 @@
-@font-face{
-	font-family: 'Inter';
-	src: url('../fonts/Inter-Regular.woff2') format('woff2');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Inter';
-	src: url('../fonts/Inter-Medium.woff2') format('woff2');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Inter';
-	src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
+// @font-face{
+// 	font-family: 'Inter';
+// 	src: url('../fonts/Inter-Regular.woff2') format('woff2');
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
+// @font-face {
+// 	font-family: 'Inter';
+// 	src: url('../fonts/Inter-Medium.woff2') format('woff2');
+// 	font-weight: 500;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
+// @font-face {
+// 	font-family: 'Inter';
+// 	src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
+// 	font-weight: 600;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
 
-@font-face {
-	font-family: 'Inter';
-	src: url('../fonts/Inter-Bold.woff2') format('woff2');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+// @font-face {
+// 	font-family: 'Inter';
+// 	src: url('../fonts/Inter-Bold.woff2') format('woff2');
+// 	font-weight: 700;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
 @font-face {
 	font-family: 'Inter';
 	src: url('../fonts/Inter-ExtraBold.woff2') format('woff2');
@@ -156,7 +156,7 @@ input::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
 }
-
+.d-none{display: none;}
 .container,.container-narrow {
 	width: min(1280px, 100%);
 	padding-inline: 20px;

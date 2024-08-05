@@ -52,7 +52,26 @@ section.catalogy-page
 								a(href="#!") Новости
 			//==== right column ====
 			.aside-grid__content.offset-top-48
-				include ../blocks/_inner-menu
+				//- include ../blocks/_inner-menu
+				
+				.inner-menu.has-hide
+					nav
+						a(href="#!") 17 плюсов частных школ-пансионов за рубежом
+						a(href="#!") Основные виды школ за рубежом
+						a(href="#!") Международные школы и колледжи
+						a(href="#!") Уровни образования в зарубежной школе
+						a(href="#!") Основные виды программ в школах за рубежом
+						a(href="#!") Стоимость обучения в школах за рубежом
+						a.d-none(href="#education-germany") Обучение в Германии
+						a.d-none(href="#cost-edu-board") Стоимость обучения за границей
+						a.d-none(href="#cost-edu-secondary") Стоимость среднего образования
+						a.d-none(href="#cost-edu-higher") Стоимость высшего образования в Европе и Америке
+						a.d-none(href="#edu-prospects") Перспективы студента после обучения за рубежом
+						a.d-none(href="#edu-choosing") Выбор учебного заведения с Allterra Education
+						//====btn show more ===
+						button(type="button").accent-link.btn-more Смотреть все
+							svg.svg-chevron-down
+								use( href='./img/spriteSvg.svg#svg-chevron-down')
 				//====== cards section====
 				article.scool-cards-wrapper
 					.header-group
