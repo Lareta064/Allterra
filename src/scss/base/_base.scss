@@ -208,20 +208,20 @@ address {
 }
 
 .flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,
-.flex-col, .flex-gap,.header-group,.flex-item, .hero-content,.hash-tags,.links-path, .country-link,.scool-row, .justify-group{
+.flex-col, .flex-gap,.header-group,.flex-item, .hero-content,.hash-tags,.links-path, .country-link,.scool-row, .justify-group,.tab-toggles{
 	display: flex;
 	align-items: flex-start;
 }
 
 .flex-justify, .header-group,.justify-group,
-.scool-row{justify-content: space-between;}
+.scool-row,.tab-toggles{justify-content: space-between;}
 .flex-center-x,
 .flex-center{
 	justify-content: center;
 }
 
 .flex-center-y,.flex-center,.flex-justify,.links-path,.hash-tags,
-.country-link,.flex-item, .justify-group{
+.country-link,.flex-item, .justify-group,.tab-toggles{
 	align-items: center;
 }
 .justify-group{
@@ -307,7 +307,7 @@ address {
 .mb-48 {
 	margin-bottom: 48px;
 	@media (max-width: 767px) {
-	margin-bottom: 32px;
+	margin-bottom: 40px;
 	}
 }
 .mb-60 {

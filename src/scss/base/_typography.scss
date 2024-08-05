@@ -128,17 +128,26 @@ h5, .h5{
 		line-height: 1.71;
 	}
 }
-h6, .h6 {
+h6, .h6, .demi-15 {
 	font-weight: 600;
 	margin-bottom: 16px;
 
 }
+.demi-15{font-size: 15px;
+line-height: 1.33;}
 .txt-18{font-size: 18px;}
 .txt-14 {
 	font-size: 14px;
 	@media (max-width: 767px) {
 		font-size: 12px;
 	}
+}
+.cut{
+	
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
 }
 .upper-14{
 	text-transform: uppercase;

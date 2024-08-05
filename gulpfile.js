@@ -207,7 +207,7 @@ gulp.task(
        
         gulp.parallel("clean:build"),
       
-        gulp.parallel("scss","scss2",  "pug","pugUi","copy:img", "copy:js", "copy:libs", "copy:video", "copy:fonts"),
+        gulp.parallel("scss", "pug","pugUi","copy:img", "copy:js", "copy:libs", "copy:video", "copy:fonts"),
         gulp.parallel("html:prettify"),
         gulp.parallel("server", "watch"),
         

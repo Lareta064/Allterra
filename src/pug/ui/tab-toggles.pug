@@ -1,0 +1,14 @@
+extends ../layouts/layout-ui.pug
+
+block content
+	.container-dashboard
+		h3 Миксин с переменными
+		pre.
+			+blog-card(img, meta, txt, desk, loc)
+
+		h3 Переключатели кнопки
+		
+		.tab-toggles
+			button(type="button").tab-toggle.btn-toggle Высшее образование
+			button(type="button").tab-toggle.btn-toggle Среднее образование
+			button(type="button").tab-toggle.btn-toggle Карьера

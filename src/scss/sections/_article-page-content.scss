@@ -1,3 +1,11 @@
+.blog-cards-wrapper{
+	.custom-select-wrapper{display: none;}
+	@media (max-width: 767px) {
+		.custom-select-wrapper {display:block;}
+		.tab-toggles{display: none;}
+		
+	}
+}
 
 .custom-text{
 	padding-right: 40px;

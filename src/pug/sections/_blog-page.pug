@@ -7,45 +7,96 @@ section.blog-page
 				include _aside-filters
 			//==== right column ====
 			.aside-grid__content
-				.three-columns
-					//===============группа из 6 карточек ===============
-					+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
-					+blog-card(2, 'Статья', 'Экономическое образование в США')
-					+blog-card(9, 'Новость', 'Техническое образование в Германии')
-					+blog-card(10, 'Новость', 'Обучение на промышленного дизайнера за границей')
-					+blog-card(11, 'Новость', 'В какой стране лучшее образование?')
-					+blog-card(12, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+				article.level-edu-cards.mb-48
+					.three-columns
+						a(href="#!").level-edu
+							.demi-15 Высшее образование за рубежом
+							p.txt-14.cut Включает в себя список пунктов меню
+							span.accent-txt Подробнее
+						
+						a(href="#!").level-edu
+							.demi-15 Бакалавриат
+							p.txt-14.cut Включает в себя список пунктов меню и управляется вручную. Этот блок функционирует как переключатель вкладок: при выборе определенного пункта меню на текущей странице отображается раздел со статьями, соответствующими этому пункту.
+
+							span.accent-txt Подробнее
+						
+						a(href="#!").level-edu
+							.demi-15 Магистратура
+							p.txt-14.cut Включает в себя список пунктов меню и управляется вручную.
+							span.accent-txt Подробнее
+
+						a(href="#!").level-edu
+							.demi-15 Среднее образование
+							p.txt-14.cut Включает в себя список пунктов меню и управляется вручную. 
+							span.accent-txt Подробнее
+						a(href="#!").level-edu
+							.demi-15 Изучение языков
+							p.txt-14.cut Включает в себя список пунктов меню
+							span.accent-txt Подробнее
+						a(href="#!").level-edu
+							.demi-15 Построение карьеры
+							p.txt-14.cut Включает в себя список пунктов меню и управляется вручную. Этот блок функционирует как переключатель вкладок: при выборе определенного пункта меню на текущей странице отображается раздел со статьями, соответствующими этому пункту.
+							span.accent-txt Подробнее
+				
+				article.blog-cards-wrapper
+					h2.h2 Популярные статьи справочника
+					//==== переключатели  карточек. Для них есть скрипт, который переключает у них класс active , для изменения внешнего вида кнопки. Скрипта, переключающего контент не прописано. 
+					.mb-48
+						//====== табы для десктоп версии от 768 пикс =====
+						.tab-toggles
+							button(type="button").tab-toggle.btn-toggle.active Высшее образование
+							button(type="button").tab-toggle.btn-toggle Среднее образование
+							button(type="button").tab-toggle.btn-toggle Карьера
+						
+						//====== табы на экаранах от 370 до 767 пикс =====
+						.custom-select-wrapper.tab-toggles-mobile
+							.custom-select
+								.custom-select-trigger Высшее образование
+								.custom-options.custom-options--rel
+									span.custom-option(data-value='1') Высшее образование
+									span.custom-option(data-value='2') Среднее образование
+									span.custom-option(data-value='3') Карьера
 					
-					//===============BANNER ==============
-					a(href="#!").img-banner
-						picture.img-banner__picture
-							source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 767px)" width="767" height="164"  type="image/webp")
-							source(srcset="./img/main-page/faq-img-tablet@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)"  type="image/webp" width="767" height="164")
-							source(srcset="./img/main-page/faq-img@2x.webp", media="(min-resolution: 192dpi)"  type="image/webp" width="1240" height="220")
-							img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
-					
-					//===============группа из 6 карточек ===============
-					+blog-card(13, 'Статья', 'MBA в США: особенности обучения, преимущества и недостатки, подготовка')
-					+blog-card(14, 'Статья', 'PSHE, CAS и другие: необычные предметы в зарубежных школах')
-					+blog-card(15, 'Новость', 'Система высшего образования в Англии')
-					+blog-card(16, 'Новость', 'ОТехническое образование в Германии')
-					+blog-card(2, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
-					+blog-card(1, 'Новость', 'Как написать мотивационное письмо в университет?')
-					//===============BANNER ==============
-					a(href="#!").img-banner
-						picture.img-banner__picture
-							source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 767px)" width="767" height="164"  type="image/webp")
-							source(srcset="./img/main-page/faq-img-tablet@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)"  type="image/webp" width="767" height="164")
-							source(srcset="./img/main-page/faq-img@2x.webp", media="(min-resolution: 192dpi)"  type="image/webp" width="1240" height="220")
-							img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
-					
-					//===============группа из 6 карточек ===============
-					+blog-card(13, 'Статья', 'MBA в США: особенности обучения, преимущества и недостатки, подготовка')
-					+blog-card(14, 'Статья', 'PSHE, CAS и другие: необычные предметы в зарубежных школах')
-					+blog-card(15, 'Новость', 'Система высшего образования в Англии')
-					+blog-card(16, 'Новость', 'ОТехническое образование в Германии')
-					+blog-card(5, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
-					+blog-card(1, 'Новость', 'Как написать мотивационное письмо в университет?')
+					//====== карточки =====
+					.three-columns
+						//===============группа из 6 карточек ===============
+						+blog-card(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+						+blog-card(2, 'Статья', 'Экономическое образование в США')
+						+blog-card(9, 'Новость', 'Техническое образование в Германии')
+						+blog-card(10, 'Новость', 'Обучение на промышленного дизайнера за границей')
+						+blog-card(11, 'Новость', 'В какой стране лучшее образование?')
+						+blog-card(12, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+						
+						//===============BANNER ==============
+						a(href="#!").img-banner
+							picture.img-banner__picture
+								source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 767px)" width="767" height="164"  type="image/webp")
+								source(srcset="./img/main-page/faq-img-tablet@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)"  type="image/webp" width="767" height="164")
+								source(srcset="./img/main-page/faq-img@2x.webp", media="(min-resolution: 192dpi)"  type="image/webp" width="1240" height="220")
+								img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
+						
+						//===============группа из 6 карточек ===============
+						+blog-card(13, 'Статья', 'MBA в США: особенности обучения, преимущества и недостатки, подготовка')
+						+blog-card(14, 'Статья', 'PSHE, CAS и другие: необычные предметы в зарубежных школах')
+						+blog-card(15, 'Новость', 'Система высшего образования в Англии')
+						+blog-card(16, 'Новость', 'ОТехническое образование в Германии')
+						+blog-card(2, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+						+blog-card(1, 'Новость', 'Как написать мотивационное письмо в университет?')
+						//===============BANNER ==============
+						a(href="#!").img-banner
+							picture.img-banner__picture
+								source(srcset="./img/main-page/faq-img-tablet.webp", media="(max-width: 767px)" width="767" height="164"  type="image/webp")
+								source(srcset="./img/main-page/faq-img-tablet@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)"  type="image/webp" width="767" height="164")
+								source(srcset="./img/main-page/faq-img@2x.webp", media="(min-resolution: 192dpi)"  type="image/webp" width="1240" height="220")
+								img.lazy(src="./img/main-page/faq-img.webp", width="1240" height="220" alt="image")
+						
+						//===============группа из 6 карточек ===============
+						+blog-card(13, 'Статья', 'MBA в США: особенности обучения, преимущества и недостатки, подготовка')
+						+blog-card(14, 'Статья', 'PSHE, CAS и другие: необычные предметы в зарубежных школах')
+						+blog-card(15, 'Новость', 'Система высшего образования в Англии')
+						+blog-card(16, 'Новость', 'ОТехническое образование в Германии')
+						+blog-card(5, 'Новость', 'IELTS или TOEFL: что лучше для поступления в университет')
+						+blog-card(1, 'Новость', 'Как написать мотивационное письмо в университет?')
 					
 				
 				//=====pagination =======
