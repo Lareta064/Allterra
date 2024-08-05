@@ -156,7 +156,7 @@ input::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
 }
-.d-none{display: none;}
+.hide-item, .hide-btn{display: none!important;}
 .container,.container-narrow {
 	width: min(1280px, 100%);
 	padding-inline: 20px;

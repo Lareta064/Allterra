@@ -764,5 +764,19 @@ document.addEventListener("DOMContentLoaded", function (){
 			removeActiveClasses();
 		});
 	}
-	
+	/*********btn-more click**************** */
+	const hideElemetsParent = document.querySelectorAll('.has-hide');
+	if( hideElemetsParent.length > 0){
+		for(let item of hideElemetsParent){
+			const showMoreBtn = item.querySelector('.btn-more');
+			showMoreBtn.addEventListener('click', ()=>{
+				const hideItems = item.querySelectorAll('.hide-item');
+				hideItems.forEach((el)=>{
+					el.classList.remove('hide-item');
+				});
+				showMoreBtn.classList.add('hide-btn');
+			});
+			
+		}
+	}
 });
