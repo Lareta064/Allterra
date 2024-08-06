@@ -10,7 +10,12 @@
 .custom-text{
 	padding-right: 40px;
 	padding-bottom: 80px;
-	&>*+*{margin-top: 40px;}
+	&>*+*{
+		margin-top: 40px!important;
+		@media (max-width: 767px) {
+		margin-top: 32px !important;
+		}
+	}
 	h1, h2, h3, h4, h5, .h3, figure, &>img, .two-columns, .txt-img{
 		margin-top: 48px;
 		margin-bottom: 12px;
@@ -362,15 +367,25 @@
 }
 .process-cards-columns{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(12, 1fr);
 	gap:20px;
 	padding: 20px;
 	background: $dark-blue;
+	.process-stage{
+		grid-column: span 6;
+		@media (max-width: 581px) {
+			grid-column: span 12;
+		}
+	}
 }
 .article-swiper{
 	width: 100%;
 	max-width: 905px;
 	padding-bottom: 40px;
+	.swiper-slide img{
+		aspect-ratio: 181 / 102;
+		object-fit: cover;
+	}
 	.swiper-pagination{
 		bottom: 0;
 	}
@@ -380,6 +395,9 @@
 	&-active{
 		background-color: $main-accent;
 	}
+	}
+	@media (max-width: 1023px) {
+		max-width: calc(100vw - 40px);
 	}
 }
 .article-video{
@@ -391,12 +409,35 @@
 		   height: 100%;
 		   position: absolute;
 		   inset: 0;
+		}
 	}
-		
-			
-		
+	p{color: $dark-grey-inactive;}
+	
+}
+.article-review{
+	padding: 40px 20px;
+	background-color: $dark-blue;	
+	width: 100%;
+	max-width: 905px;
+	margin-inline: auto;
+	position: relative;
+	@media (max-width: 991px) {
+	max-width: 700px;
 	}
-	p{
-		color: $dark-grey-inactive;
+	@media (max-width: 767px) {
+	max-width: calc(100vw - 40px);
 	}
+	.review-card .person__details{
+		justify-content: space-between;
+	}
+		.swiper-button-next{right: 5px;}
+		.swiper-button-prev {left: 5px;}
+					
+				
+	.swiper-slide{
+		height: auto;
+		min-height: 100%;
+		display: flex;
+	}
+	
 }

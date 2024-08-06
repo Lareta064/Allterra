@@ -125,14 +125,14 @@ section.article
 									source(srcset='./img/article-w375.webp' media='(max-width: 767px)'  type='image/webp')
 									source(srcset='./img/article-w375@2x.webp' media='(max-width: 767px) and (min-resolution: 192dpi)' type='image/webp')
 									source(srcset='./img/article@2x.webp' media='(min-resolution: 192dpi)' width='905' height='510' type='image/webp')
-									img.lazy.img-cover(src='./img/article.webp' width='905' height='510' alt='image')
+									img.lazy.wh-100(src='./img/article.webp' width='905' height='510' alt='image')
 					
 							.swiper-slide
 								picture
 									source(srcset='./img/article-poster-w375.webp' media='(max-width: 767px)'  type='image/webp')
 									source(srcset='./img/article-poster-w375.webp' media='(max-width: 767px) and (min-resolution: 192dpi)' type='image/webp')
 									source(srcset='./img/article-poster.webp' media='(min-resolution: 192dpi)' width='905' height='510' type='image/webp')
-									img.lazy.img-cover(src='./img/article-poster.webp' width='905' height='510' alt='image')
+									img.lazy.wh-100(src='./img/article-poster.webp' width='905' height='510' alt='image')
 						//====pagination=====
 						.swiper-pagination
 					
@@ -148,18 +148,70 @@ section.article
 					//===========VIDEO============
 					.article-video
 						.video.video-youtube
-							//- .video-poster
-							//- 	img(src="./img/article-poster.webp",  width="905" height="510" alt="poster")
-							//- 	.video-btn-play
 							iframe(loading="lazy" width="905" height="510" src="https://www.youtube.com/embed/JtlxOJ9Wf9U?enablejsapi=1&amp;mode=opaque&amp;wmode=transparent&amp;autoplay=0&amp;loop=1&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;mute=0&amp;playlist=JtlxOJ9Wf9U" frameborder="0" allow="autoplay")
 						
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id volutpat. Id porta nibh venenatis cras sed felis eget velit. Vivamus at augue eget arcu dictum varius duis at
 					
+					//====staticstic ===
+					.statistics-content.bg-white
+						//====single item =======
+						.statistics-item
+							span Помогаем поступить
+							p С 2008
+							span года
+						//====single item =======
+						.statistics-item
+							span Успешно зачислили
+							p >1200
+							span студентов
+						//====single item =======
+						.statistics-item
+							span Довольных клиентов
+							p >99&nbsp;%
+							span среди поступающих
+							
+						//====single item =======
+						.statistics-item
+							span Нам доверяют
+							p >100
+							span студентов ежегодно
+						
+					.article-review
+						//======== slider-content =======
+						.article-review-slider.review-slider.swiper
+							.swiper-wrapper
+								//===== single slide ========
+								.swiper-slide
+									.review-card
+										+person-review('review/author1','Александр Ференц','Ringling College of Art', 'Генеральный директор ГК «АК-Сервис»', '', '','date', 'США', 'Я работаю с командой Allterra Education на протяжении 6 лет. За это время я успел сам побывать студентом и поучить английский в Санта-Барбаре. Обе мои дочери были рады попасть в универс', 'Читать далее', 'slider')
+
+								//=====single slide ========
+								.swiper-slide
+									.review-card
+										+person-review('review/author2','София','Sidcot School', '', '', '','date', 'Великобритания', 'Я могу рекомендовать компанию Allterra Education всем, кто планирует отправлять ребенка в Великобританию.', '', 'slider')
+								
+								
+								//===== single slide ========
+								.swiper-slide
+									.review-card
+										+person-review('review/author3','Захар Богданов',"Queen Ethelburga's Collegiate", '', '', '','date', 'Австралия', 'Два года в школе пролетели незаметно, я завел очень много друзей и смог значительно улучшить свой английский.', '', 'slider')
+								//=====single slide ========
+								.swiper-slide
+									.review-card
+										+person-review('review/author4','Иван Рябинин',"Giggleswick School", '', '','','date', 'Германия', 'Все критерии, по которым мы выбирали школу, совпали.', '', 'slider')
+						//===== swiper navigation========
+						.slider-nav
+							.swiper-button-next
+							.swiper-button-prev
 					
 					//===========ARTICLE FOOTER =====
 					.article-footer.txt-body
 						p #[strong Оригинал статьи на #[a(href="www.website.com").accent-link www.website.com]]
 						p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu
+						
+						
+						
+						
 						.hash-tags.mt-48
 							a(href="#!").accent-link #hashtag1 
 							a(href="#!").accent-link #hashtag2 
@@ -173,3 +225,4 @@ section.article
 								img(src="./img/icons/facebook.svg", alt="icon")
 							a(href="#!").social-item
 								img(src="./img/icons/vk.svg", alt="icon")
+						

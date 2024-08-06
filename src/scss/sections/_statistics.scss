@@ -1,47 +1,94 @@
-.statistics{
-	&-content{
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		column-gap: 20px ;
+.statistics-content{
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 20px ;
+	@media (max-width: 1023px) {
+		grid-template-columns: 1fr 1fr;
+		row-gap: 40px;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	@media (max-width: 576px) {
+		grid-template-columns:  1fr;
+		
+	}
+}
+.statistics-item{
+	span{
+		display: block;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.6;
 		@media (max-width: 1023px) {
-			grid-template-columns: 1fr 1fr;
-			row-gap: 40px;
-			max-width: 600px;
-			margin: 0 auto;
+			br{display: none;}
 		}
-		@media (max-width: 576px) {
-			grid-template-columns:  1fr;
-		    
+		@media (max-width: 767px) {
+		font-size: 16px;
 		}
 	}
-	&-item{
-		span{
-			display: block;
-			font-size: 18px;
-			font-weight: 500;
-			line-height: 1.6;
-			@media (max-width: 1023px) {
-			 br{display: none;}
-			}
-			@media (max-width: 767px) {
-			font-size: 16px;
-			}
+	&>*+*{
+		margin-top: 12px;
+		@media (max-width: 767px) {
+			margin-top: 8px;
 		}
-		&>*+*{
-			margin-top: 12px;
-			@media (max-width: 767px) {
-			   margin-top: 8px;
-			}
-		}
-		p{
-			font-size: 56px;
-			line-height: 1.18;
-			letter-spacing: -0.01em;
-			font-weight: 600;
-			@media (max-width: 767px) {
-			   font-size: 48px;
-			}
-		}
-		p ~ span{opacity: 0.5;}
 	}
+	p{
+		font-size: 56px;
+		line-height: 1.18;
+		letter-spacing: -0.01em;
+		font-weight: 600;
+		@media (max-width: 767px) {
+			font-size: 48px;
+		}
+	}
+	p ~ span{opacity: 0.5;}
+}
+
+.statistics-content.bg-white{
+	width: 100%;
+	max-width: 100%;
+	.statistics-item{white-space: nowrap;}
+	.statistics-item span{
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 133%;
+	}
+	.statistics-item p{
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 129%;
+		letter-spacing: -0.02em;
+		margin-top: 12px;
+	}
+	.statistics-item p+span{
+		font-size: 18px;
+		line-height: 178%;
+		opacity: 0.5;
+		margin-top: 12px;
+	}
+	@media (max-width: 767px) {
+		margin-left: 0;
+		margin-right: 0;
+		grid-template-columns: 1fr 1fr;
+		gap:20px;
+		.statistics-item{
+			white-space: normal;
+		}
+		.statistics-item span{
+			font-size: 15px;
+			width: 60%;
+		}
+		.statistics-item p{
+			font-size: 32px;
+			line-height: 125%;
+			letter-spacing: -0.03em;
+		}
+		.statistics-item p+span {
+			width: 100%;
+			font-size: 14px;
+			line-height: 143%;
+		}
+	}
+
 }

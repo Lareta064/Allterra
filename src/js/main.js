@@ -283,6 +283,36 @@ document.addEventListener("DOMContentLoaded", function (){
         },
       },
     });
+	var reviewSliderArticle = new Swiper(".article-review-slider", {
+	   slidesPerView: 1.07,
+	   loop: true,
+	   speed: 1000,
+	    spaceBetween: 10,
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+	  breakpoints: {
+        640: {
+          slidesPerView: 1.2,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 1.4,
+          spaceBetween: 16,
+        },
+		1024: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+		
+	   1280: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+      },
+    });
+	
 	/*=================BLOG CARDS SLIDER ================== */
     var blogCardsSlider = new Swiper(".blog-cards-slider", {
 	   slidesPerView: 1.15,
