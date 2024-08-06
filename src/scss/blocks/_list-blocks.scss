@@ -164,32 +164,41 @@ blockquote +*{
 }
 .stripes-list{
 	display: flex;
-	align-items: center;
+	// align-items: center;
 	column-gap:20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap:20px;
 	li{
 		padding: 20px;
-		background: rgba(255, 255, 255, 0.15);
+		background: rgba(0, 0, 0, 0.6);
 		color: $white;
-		font-size: 16px;
-		line-height: 1.75;
-		font-weight: 500;
-		.check-icon{
-			margin-bottom: 12px;
+		font-size: 18px;
+		line-height: 1.33;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		column-gap:24px;
+		svg{
+			width: 30px;
+			height: 30px;
+			flex-shrink:0;
+			@media (max-width: 767px) {
 			width: 24px;
 			height: 24px;
-			border-radius: 50%;
-			background-color: #fff;
-			display: block;
-			text-align: center;
-			line-height: 24px;
-			svg{color: $bg-black;}
+			}
 		}
 		@media (max-width: 1279px) {
 			padding: 16px;
 		}
+		@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 1.54;
+		}
+	}
+	@media (max-width: 767px) {
+	grid-template-columns: 1fr;
+	row-gap: 10px;
 	}
 }
 .border-block{
