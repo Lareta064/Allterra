@@ -68,6 +68,13 @@ h2,.section-title {
 
 	@media (max-width: 767px) {
 		font-size: 26px;
+		line-height: 125%;
+		letter-spacing: -0.03em;
+	}
+}
+.hero .h2{
+	@media (max-width: 767px) {
+		font-size: 32px;
 	}
 }
 h1.h2, .hero .h2{font-weight: 600;}
