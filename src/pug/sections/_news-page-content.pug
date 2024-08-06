@@ -117,20 +117,59 @@ section.article
 							{txt1: '14:00-18:00', txt2: 'Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque.'},
 							{txt1: '14:00-18:00', txt2: 'Vulputate eu scelerisque felis imperdiet proin fermentum leo vel'}])
 				
-				//===========ARTICLE FOOTER =====
-				.article-footer.txt-body
-					p #[strong Оригинал статьи на #[a(href="www.website.com").accent-link www.website.com]]
-					p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu
-					.hash-tags.mt-48
-						a(href="#!").accent-link #hashtag1 
-						a(href="#!").accent-link #hashtag2 
-						a(href="#!").accent-link #hashtag3 
-						a(href="#!").accent-link #hashtag4
+					//========== swiper slider =======*/
+					.article-swiper.swiper
+						.swiper-wrapper
+							.swiper-slide
+								picture
+									source(srcset='./img/article-w375.webp' media='(max-width: 767px)'  type='image/webp')
+									source(srcset='./img/article-w375@2x.webp' media='(max-width: 767px) and (min-resolution: 192dpi)' type='image/webp')
+									source(srcset='./img/article@2x.webp' media='(min-resolution: 192dpi)' width='905' height='510' type='image/webp')
+									img.lazy.img-cover(src='./img/article.webp' width='905' height='510' alt='image')
 					
-					.social.mt-48
-						a(href="#!").social-item
-							img(src="./img/icons/skype.svg", alt="icon")
-						a(href="#!").social-item
-							img(src="./img/icons/facebook.svg", alt="icon")
-						a(href="#!").social-item
-							img(src="./img/icons/vk.svg", alt="icon")
+							.swiper-slide
+								picture
+									source(srcset='./img/article-poster-w375.webp' media='(max-width: 767px)'  type='image/webp')
+									source(srcset='./img/article-poster-w375.webp' media='(max-width: 767px) and (min-resolution: 192dpi)' type='image/webp')
+									source(srcset='./img/article-poster.webp' media='(min-resolution: 192dpi)' width='905' height='510' type='image/webp')
+									img.lazy.img-cover(src='./img/article-poster.webp' width='905' height='510' alt='image')
+						//====pagination=====
+						.swiper-pagination
+					
+					//==========================*/
+					.process-cards-columns
+						+process-card('01','Консультирование', 'Знакомство, определение целей, интересов и предпочтений. Первичная консультация' )
+						+process-card('02','Определение текущего положения', 'Языковое тестирование, первичная проработка вариантов, определение критериев планирования' )
+						+process-card('03','Долгосрочное планирование', 'Разработка образовательного маршрута, подбор учебного заведения' )
+						+process-card('04','Подготовка и поступлению', 'Сбор, оформление и отправка документов, согласование формальностей. Подготовка студента к поступлению' )
+						+process-card('05','Визирование', 'Заполнение визовой анкеты, подготовка сопроводительных документов, анализ рисков' )
+						+process-card('06','Курирование', 'Сопровождение в процессе учебы. Контроль успеваемости, работа с тьюторами, решение бытовых вопросов' )
+					
+					//===========VIDEO============
+					.article-video
+						.video.video-youtube
+							//- .video-poster
+							//- 	img(src="./img/article-poster.webp",  width="905" height="510" alt="poster")
+							//- 	.video-btn-play
+							iframe(loading="lazy" width="905" height="510" src="https://www.youtube.com/embed/JtlxOJ9Wf9U?enablejsapi=1&amp;mode=opaque&amp;wmode=transparent&amp;autoplay=0&amp;loop=1&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;mute=0&amp;playlist=JtlxOJ9Wf9U" frameborder="0" allow="autoplay")
+						
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id volutpat. Id porta nibh venenatis cras sed felis eget velit. Vivamus at augue eget arcu dictum varius duis at
+					
+					
+					//===========ARTICLE FOOTER =====
+					.article-footer.txt-body
+						p #[strong Оригинал статьи на #[a(href="www.website.com").accent-link www.website.com]]
+						p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu
+						.hash-tags.mt-48
+							a(href="#!").accent-link #hashtag1 
+							a(href="#!").accent-link #hashtag2 
+							a(href="#!").accent-link #hashtag3 
+							a(href="#!").accent-link #hashtag4
+						
+						.social.mt-48
+							a(href="#!").social-item
+								img(src="./img/icons/skype.svg", alt="icon")
+							a(href="#!").social-item
+								img(src="./img/icons/facebook.svg", alt="icon")
+							a(href="#!").social-item
+								img(src="./img/icons/vk.svg", alt="icon")

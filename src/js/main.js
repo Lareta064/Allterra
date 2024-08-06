@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
 	/*========Partners'Zone  VIDEO============ */
-	const videoBlock = document.querySelector('.video');
+	const videoBlock = document.querySelector('.video-local');
 	if(videoBlock){
 		const videoBlockContent = videoBlock.querySelector('video');
 		videoBlock.addEventListener('click', ()=>{
@@ -327,7 +327,19 @@ document.addEventListener("DOMContentLoaded", function (){
 			clickable: true,
       	},
     });
-
+   /******************* */
+   var articlePageSlider = new Swiper('.article-swiper', {
+	speed: 1000,
+	effect:'fade',
+	loop: true,
+	 pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	 autoplay: {
+		delay: 3000,
+	},
+   })
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
 	if(backlitMenu){
@@ -826,6 +838,6 @@ document.addEventListener("DOMContentLoaded", function (){
             }
         });
     }
-
+  	
 
 });
