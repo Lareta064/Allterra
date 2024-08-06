@@ -4,7 +4,14 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		+hero-section(['Главная', 'Новости', 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)'], 'Модный дизайн.', 'Обновлено: 10.11.2023  Просмотры: 293', 'h2 tt-none', '', 'Рассчитать стоимость ОСАГО на авто в 17 страховых на калькуляторе, купить ОСАГО на лучших условиях и оформить полис по скидке')( style="background-image:url('./img/article-page/article-bg.webp')")
+		style.
+			.hero{
+				background-image: url('./img/article-page/article-bg.webp');
+				@media(max-width: 767px){
+					background-image: url('./img/article-page/article-mob.webp');
+				}
+			}
+		+hero-section(['Главная', 'Новости', 'Модный дизайн. Совет по составлению портфолио от Лондонского колледжа моды (London College of Fashion, UAL)'], 'Модный дизайн.', ['Обновлено: 10.11.2023',  'Просмотры: 293'], 'h2 tt-none', '', 'Рассчитать стоимость ОСАГО на авто в 17 страховых на калькуляторе, купить ОСАГО на лучших условиях и оформить полис по скидке')
 		include ../sections/_article-page-content
 		
 		+feedback-section('подобрать университет')(class="light-bg")

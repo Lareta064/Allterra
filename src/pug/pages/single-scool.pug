@@ -4,7 +4,14 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page.inner-page--scool
-		section.hero(style="background-image:url('./img/scools/header-bg.webp')")
+		style.
+			.hero{
+				background-image: url('./img/scools/header-bg.webp');
+				@media(max-width: 767px){
+					background-image: url('./img/scools/header-bg-mob.webp');
+				}
+			}
+		section.hero
 			.container
 				.hero-content
 					ul.breadcrumb

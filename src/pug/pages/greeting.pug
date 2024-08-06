@@ -4,7 +4,14 @@ block content
 	include ../sections/_header.pug
 	//=============MAIN===========
 	main.inner-page
-		+hero-section(['Главная', 'Обращение директора'], 'Обращение директора','', 'title', 'back-link')(style="background-image:url(./img/greeting/header-bg.webp)")
+		style.
+			.hero{
+				background-image: url('./img/greeting/header-bg.webp');
+				@media(max-width: 767px){
+					background-image: url('./img/greeting/header-bg-mob.webp');
+				}
+			}
+		+hero-section(['Главная', 'Обращение директора'], 'Обращение директора','', 'title', 'back-link')
 		
 		include ../sections/_greeting-section
 		include ../sections/_section-review

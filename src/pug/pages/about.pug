@@ -4,7 +4,14 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		+hero-section(['Главная', 'Об Allterra Education'], 'О компании','', 'title', 'back-link')( style="background-image:url(./img/about/header-bg.webp)")
+		style.
+			.hero{
+				background-image: url('./img/about/header-bg.webp');
+				@media(max-width: 767px){
+					background-image: url('./img/about/header-bg-mob.webp');
+				}
+			}
+		+hero-section(['Главная', 'Об Allterra Education'], 'О компании','', 'title', 'back-link')
 		include ../sections/_why-us
 		include ../sections/_bosses
 		include ../sections/_statistics

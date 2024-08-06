@@ -4,8 +4,14 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page.search-page
-		
-		section.hero(style="background-image:url('./img/search-page-header.webp')")
+		style.
+			.hero{
+				background-image: url('./img/search-page-header.webp');
+				@media(max-width: 767px){
+					background-image: url('./img/search-mob.webp');
+				}
+			}
+		section.hero
 			.container
 				.hero-content
 					ul.breadcrumb

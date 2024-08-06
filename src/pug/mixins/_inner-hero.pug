@@ -15,7 +15,9 @@ mixin hero-section(links, name, bottomText, titleClass, backLink, subtitle )
 				//===== bottom text =====
 				.hero-bottom
 					if bottomText != ''
-						p #{bottomText}
+						p 
+							each item in bottomText
+								span #{item}
 					if (backLink != '' && backLink == 'back-link')
 						a(href="#!").back-link
 							svg.svg-chevron

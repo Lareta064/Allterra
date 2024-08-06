@@ -1,7 +1,7 @@
 .hero{
 	min-height: 455px;
 	position: relative;
-	padding-block: 24px 32px;
+	padding-block: 20px;
 	display: flex;
 	overflow: hidden;
 	background-color: rgba(0, 0, 0, 0.9);
@@ -58,10 +58,6 @@
 		width: fit-content;
 		margin-right: auto;
 		
-		span{border-bottom: 1px solid currentColor;}
-		&:hover{
-			opacity:.6;
-		}
 	}
 	.hero-bottom>* {
 		color: $white;
@@ -70,6 +66,16 @@
 		font-size: 14px;
 		line-height: 143%;
 	}
+		.hero-bottom p{
+			display: flex;
+			align-items: center;
+			column-gap:50px;
+			@media (max-width: 767px) {
+			flex-direction: column;
+			row-gap:5px;
+			align-items: flex-start;
+			}
+		}
 }
 .hero.hero--center{
 	.hero-title{
@@ -94,4 +100,9 @@
 	&:after{display: none;}
 	h1{text-shadow: none;}
 	.title{color: $text-dark}
+	@media (max-width: 767px) {
+	.h2{
+		text-transform: none;
+	}
+	}
 }

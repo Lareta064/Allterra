@@ -179,6 +179,18 @@ input::placeholder, textarea::placeholder{
 		padding-inline: 16px;
 	}
 }
+.container-narrow{
+	width: min(1000px, 100%);
+
+	@media (max-width: 1279px) {
+		width: 100%;
+		padding-inline: 32px;
+	}
+
+	@media (max-width: 767px) {
+		padding-inline: 16px;
+	}
+}
 .limit-title{
 	margin: 60px auto 0;
 }

@@ -4,7 +4,14 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.main
-		+hero-section(['Главная', 'Услуги'], 'Услуги <br> <span class="accent-border"> Allterra&nbsp;Education </span>','', 'title', 'back-link')( style="background-image:url(./img/about/header-bg.webp)")
+		style.
+			.hero{
+				background-image: url('./img/about/header-bg.webp');
+				@media(max-width: 767px){
+					background-image: url('./img/about/header-bg-mob.webp');
+				}
+			}
+		+hero-section(['Главная', 'Услуги'], 'Услуги <br> <span class="accent-border"> Allterra&nbsp;Education </span>','', 'title', 'back-link')
 		
 		include ../sections/_services
 		include ../sections/_feedback
