@@ -1,0 +1,29 @@
+extends ../layouts/layout-404.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-page
+		.container
+			.error404-content
+				.error404-numbers 4 #[span.accent-txt 0] 4
+				.txt-20 К сожалению, запрашиваемой страницы на сайте нет
+				form.simple-search
+					.form_field
+						label.txt-14  Попробуйте воспользоваться поиском:
+						input(type="text" name="search-input" )
+						//======FORM BUTTON=====
+						.form__btn
+							button.btn-icon(type="submit")
+								svg.svg-search
+									use(href='./img/spriteSvg.svg#svg-search')
+
+				.error404-links
+					.txt-14 или перейти на страницы:
+					.flex-center
+						a.accent-link.und-line(href="#!") Главная страница
+						a.accent-link.und-line(href="#!") Каталог учебных заведений
+	include ../sections/_footer
+
+block variables
+	-var title = "404";

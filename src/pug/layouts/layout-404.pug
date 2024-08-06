@@ -1,0 +1,80 @@
+include _mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
+		meta(name="format-detection" content="telephone=no")
+		
+		//========= swiper slider ==============
+		//- link(rel="stylesheet", href="./libs/swiper/swiper.min.css")
+		//- link(rel='preconnect' href='https://fonts.googleapis.com')
+		//- link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+		//- link(href='https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap' rel='stylesheet')
+
+		link(rel="stylesheet", href="./css/main.css")
+		title !{title}
+		//======= подключаем шрифты в head для ускорения загрузки страницы ==
+		style.
+			@font-face {
+				font-family: 'IngridDarling';
+				src: url(./fonts/IngridDarling-Regular.woff2) format("woff2");
+				unicode-range: U+30-39;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Regular.woff2) format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Medium.woff2) format("woff2");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Bold.woff2) format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+	body(class=(bodyCl !=="" ? bodyCl : ''))
+		
+		block content
+		
+		
+		//======  BOTTOM FIXED BUTTONS =======
+		.fixed-buttons#fixed-buttons
+			a(href="#!").btn-accent Задать вопрос
+			a(href="#!").btn
+				svg.svg-phone
+					use(href="./img/spriteSvg.svg#svg-phone")
+				span Позвонить
+		//=============== jquery ===================
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		
+		//=============== jquery lazy load===================
+		script(src="./libs/jquery.lazy.min.js")
+		
+		//========= swiper slider =================
+		script(src="./libs/swiper/swiper.js")
+		
+		//=============== мои скрипты ===================
+		script(src="./js/main.js")
