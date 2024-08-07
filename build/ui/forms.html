@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--====убрать синий цвет у ссылок в сафари ========-->
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <title>UI-KIT</title>
+</head>
+
+<body class="body-dashboard" style="background: #f0f0f0">
+  <div class="ui-panel">
+    <div class="ui-panel-block">
+      <div class="ui-panel-block__part">
+        <a class="back-index" href="http://localhost:3000/">На Главную</a>
+        <h3>Базовые компоненты</h3>
+        <ul>
+          <li>
+            <a href="colors.html">Цветовая схема</a>
+          </li>
+          <li>
+            <a href="grids.html">Сетки </a>
+          </li>
+          <li>
+            <a href="typography.html">Типографика</a>
+          </li>
+          <li>
+            <a href="positions-classes.html">Классы</a>
+          </li>
+          <li>
+            <a href="icons.html">Иконки</a>
+          </li>
+          <li>
+            <a href="buttons.html">Кнопки</a>
+          </li>
+          <li>
+            <a href="forms.html">Формы</a>
+          </li>
+          <li>
+            <a href="components.html">Компоненты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Карточки</h3>
+        <ul>
+          <li>
+            <a href="review-card.html">Карточка Отзыва</a>
+          </li>
+          <li>
+            <a href="boss-card.html">Карточка Руководителя </a>
+          </li>
+          <li>
+            <a href="persone-card.html">Short-Карточка Персоны </a>
+          </li>
+          <li>
+            <a href="blog-card.html">Карточка Блога</a>
+          </li>
+          <li>
+            <a href="accredit-card.html">Карточка Аккредитации</a>
+          </li>
+          <li>
+            <a href="info-card.html">Карточка Услуги</a>
+          </li>
+          <li>
+            <a href="process-stage.html">Карточка Этап работы</a>
+          </li>
+          <li>
+            <a href="contacts-card.html">Карточка Контакты</a>
+          </li>
+          <li>
+            <a href="scool-card.html">Карточка Заведения</a>
+          </li>
+          <li>
+            <a href="level-card.html">Карточка - ссылка ступень образования</a>
+          </li>
+          <li>
+            <a href="tab-toggles.html">Переключатели табов </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Блоки</h3>
+        <ul>
+          <li>
+            <a href="ul-blocks.html">Текстовые списки</a>
+          </li>
+          <li>
+            <a href="acordion.html">Аккордеон</a>
+          </li>
+          <li>
+            <a href="stage-tabs.html">Этапы работы (tabs)</a>
+          </li>
+          <li>
+            <a href="search-single-result.html">Результат поиска</a>
+          </li>
+          <li>
+            <a href="filters-menu.html">Меню с фильтрами</a>
+          </li>
+          <li>
+            <a href="section-title.html">Заголовoк + подзаголовок в секции</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Секции</h3>
+        <ul>
+          <li>
+            <a href="header.html">Шапка с навигациями </a>
+          </li>
+          <li>
+            <a href="header-banner.html">Баннер в шапке (внутренние страницы)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Страницы </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-dashboard">
+    <h2>Форма</h2>
+    <div class="container-dashboard__content">
+      <h3>Компонент сортировки</h3>
+      <div class="sort">
+        <div class="sort__name">Сортировать по:</div>
+        <div class="sort__btns">
+          <label class="sort-type">
+            <input type="checkbox" name="sort-item" />
+            <span>релевантности</span>
+          </label>
+          <label class="sort-type">
+            <input type="checkbox" name="sort-item" />
+            <span>дате</span>
+          </label>
+        </div>
+      </div>
+      <pre>.sort
+	.sort__name Сортировать по:
+	.sort__btns
+		label.sort-type
+			input(type="checkbox" name="sort-item")
+			span релевантности
+		label.sort-type
+			input(type="checkbox" name="sort-item")
+			span дате</pre>
+      <form class="header-search flex-center-y">
+        <div class="form_field">
+          <input type="text" name="" placeholder="Поиск по сайту" />
+          <!--===== clean input button =====-->
+          <button class="btn-icon" type="rezet">
+            <svg class="svg-cross">
+              <use href="../img/spriteSvg.svg#svg-cross"></use>
+            </svg>
+          </button>
+        </div>
+        <!--======FORM BUTTON=====		-->
+        <div class="form__btn">
+          <button class="btn-accent" type="submit">Найти</button>
+        </div>
+      </form>
+      <pre>//=======search form ======
+form.header-search.flex-center-y
+	.form_field
+		input(type="text" name="" placeholder="Поиск по сайту")
+		
+		//===== clean input button =====
+		button(type="rezet").btn-icon
+			svg.svg-cross
+				use( href='.../img/spriteSvg.svg#svg-cross')
+	
+	//======FORM BUTTON=====		
+	.form__btn
+		button(type="submit").btn-accent Найти					
+
+</pre>
+      <div class="form_field">
+        <input type="text" name="name" placeholder="Ваше имя*" />
+      </div>
+      <pre>.form_field
+	input(type="text" name="name" placeholder="Ваше имя*")						</pre>
+      <div class="form_field">
+        <textarea name="message" placeholder="Сообщение"></textarea>
+      </div>
+      <pre>.form_field
+	texarea(name="message" placeholder="Сообщение")				</pre>
+      <div class="form_field error">
+        <input type="text" name="name" placeholder="Ваше имя*" />
+      </div>
+      <pre>.form_field.error
+	input(type="text" name="name" placeholder="Ваше имя*")
+
+
+</pre>
+      <label class="form-checkbox">
+        <input type="checkbox" name="name_chk" />
+        <span class="fake-checkbox"></span>
+      </label>
+      <pre>label.form-checkbox
+	input(type="checkbox" name="name_chk")
+	span.fake-checkbox
+</pre>
+      <label class="form-radio">
+        <input type="radio" name="name_radio" />
+        <span class="fake-radio"></span>
+      </label>
+      <pre>label.form-radio
+	input(type="radio" name="name_radio")
+	span.fake-radio
+</pre>
+      <div class="form-confirm">
+        <label class="form-checkbox">
+          <input type="checkbox" name="name_chk" />
+          <span class="fake-checkbox"></span>
+          <span class="form-confirm__text">Ознакомился с <a class="accent-link" href="#!">политикой конфидециальности</a> и даю своё согласие на обработку персональных данных</span>
+        </label>
+      </div>
+      <pre>.form-confirm
+	label.form-checkbox
+		input(type="checkbox" name="name_chk")
+		span.fake-checkbox
+		span.form-confirm__text Ознакомился с <a class="accent-link" href="#!">политикой конфидециальности</a> и даю своё согласие на обработку персональных данных
+
+</pre>
+      <form class="dark-opacity">
+        <div class="form_field">
+          <input type="text" name="name" placeholder="Ваше имя*" />
+        </div>
+      </form>
+      <pre>form.dark-opacity
+	.form_field
+		input(type="text" name="name" placeholder="Ваше имя*")</pre>
+    </div>
+  </div>
+</body>
+
+</html>
