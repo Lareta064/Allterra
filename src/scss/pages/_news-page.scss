@@ -13,16 +13,6 @@
 		.three-columns{
 			grid-template-columns: 1fr ;
 		}
-		// .blog-card {
-		// 	width: min(295px, 100%);
-			
-		// }
-	}
-}
-.inner-page--news .h2{
-	text-align: center;
-	@media (max-width: 1023px) {
-	 text-align: left;
-	 letter-spacing: -0.03em;
+		
 	}
 }
