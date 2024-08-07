@@ -117,8 +117,24 @@
 		max-height: calc(100vh - 200px);
 		overflow: hidden;
 		overflow-y: auto;
-		scrollbar-width: none;
-		&::-webkit-scrollbar{display: none;}
+		scrollbar-width: thin;
+		scrollbar-color: #fff transparent;
+		&::-webkit-scrollbar{width: 3px;}
+		&::-webkit-scrollbar-thumb {
+			width: 3px;
+			height: 20px;
+			border-radius: 10px;
+			background-color: #fff;
+		}
+			&::-webkit-scrollbar-track {
+				width: 3px;
+				height: 20px;
+				border-radius: 10px;
+				background-color: transparent;
+			}
+			
+
+		
 	}
 	&__header{
 		svg{display: none; transition: .3s; }
