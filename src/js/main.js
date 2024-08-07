@@ -868,6 +868,13 @@ document.addEventListener("DOMContentLoaded", function (){
             }
         });
     }
-  	
-
+  //====== для формы, как на странице Статьи====	
+  const hideParentBtn = document.querySelectorAll('.hide-parent-btn');
+  if(hideParentBtn.length > 0){
+	for(let item of hideParentBtn){
+		item.addEventListener('click', ()=>{
+			item.closest('.hide-parent').style.display="none";
+		});
+	}
+  }
 });

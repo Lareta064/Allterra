@@ -442,6 +442,7 @@
 	
 }
 .article-feedback{
+	min-height: 818px;
 	padding-block: 113px;
 	width: 100%;
 	background-color: rgba(0,0,0, .5);
@@ -453,7 +454,18 @@
 		position: relative;
 		.h2{
 			margin-top: 0;
-			font-weight: 700;;
+			font-weight: 700;
+			max-width: 95%;
 		}
+		.icon-cross{
+			
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			z-index: 2;
+		}
+	}
+	@media (max-width: 1199px) {
+		min-height: 670px;
 	}
 }
