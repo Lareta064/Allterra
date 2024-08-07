@@ -4,13 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page.inner-page--scool
-		style.
-			.hero{
-				background-image: url('./img/scools/header-bg.webp');
-				@media(max-width: 767px){
-					background-image: url('./img/scools/header-bg-mob.webp');
-				}
-			}
+		
 		section.hero.hero--banner
 			.container
 				.hero-content
@@ -92,3 +86,4 @@ block content
 
 block variables
 	-var title = "Выбор школы";
+	-var customStyle = ".hero { background-image: url('./img/scools/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/scools/header-bg-mob.webp');}}"

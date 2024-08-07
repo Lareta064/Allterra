@@ -4,13 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page.search-page
-		style.
-			.hero{
-				background-image: url('./img/search-page-header.webp');
-				@media(max-width: 767px){
-					background-image: url('./img/search-mob.webp');
-				}
-			}
+		
 		section.hero
 			.container
 				.hero-content
@@ -48,3 +42,4 @@ block content
 
 block variables
 	-var title = "Результаты поиска";
+	-var customStyle = ".hero { background-image: url('./img/search-page-header.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/search-mob.webp');}}"

@@ -4,13 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		style.
-			.hero{
-				background-image: url('./img/blog/header-bg.webp');
-				@media(max-width: 767px){
-					background-image: url('./img/blog/header-mob.webp');
-				}
-			}
+		
 		+hero-section(['Главная', 'Новости'], 'Новости', '', 'h2 tt-none', 'back-link')
 		include ../sections/_news-page
 		
@@ -19,3 +13,5 @@ block content
 
 block variables
 	-var title = "Новости";
+	
+	-var customStyle = ".hero { background-image: url('./img/blog/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/blog/header-mob.webp');}}"
