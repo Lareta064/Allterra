@@ -446,5 +446,14 @@
 	width: 100%;
 	background-color: rgba(0,0,0, .5);
 	background-image: url('../img/article-feedback.webp');
-	
+	display: flex;
+	.feedback-form-wrapper{
+		padding: 20px;
+		background-color: #fff;
+		position: relative;
+		.h2{
+			margin-top: 0;
+			font-weight: 700;;
+		}
+	}
 }
