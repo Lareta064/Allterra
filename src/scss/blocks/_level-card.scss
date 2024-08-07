@@ -4,9 +4,14 @@
 	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
 	background: white;
 	padding: 16px;
+	transition: .3s;
 	.demi-15, .accent-txt{flex-shrink:0;}
 	.txt-14{flex-grow:1;}
 	.demi-15, .txt-14{margin-bottom: 8px;}
+	&:hover{
+		background: $main-accent;
+		.txt-14, .demi-15,.accent-txt{color: white;}
+	}
 }
 .level-edu-cards{
 	@media (max-width: 767px) {
@@ -20,9 +25,9 @@
 			padding: 5px;
 			.level-edu{
 				width: auto;
-				.txt-14{display: none;}
+				.txt-14{display: none; transition: .3s; }
 				.demi-15{margin-bottom: 20px; white-space: nowrap; font-size:13px; line-height: 1.53;}
-				.accent-txt{font-size: 13px;}
+				.accent-txt{font-size: 13px;transition: .3s;}
 				&:last-child{margin-right: 15px;}
 			}
 		}
