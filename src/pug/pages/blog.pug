@@ -4,7 +4,8 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		+hero-section(['Главная', 'Статьи об образовании за рубежом'], 'Актуальные и интересные статьи об образовании за рубежом','', 'title', 'back-link')( class="hero--center"  style="background-image:url(./img/blog/header-bg.webp)")
+		
+		+hero-section(['Главная', 'Статьи об образовании за рубежом'], 'Актуальные и интересные статьи об образовании за рубежом','', 'title', 'back-link')
 		
 		include ../sections/_blog-page
 		
@@ -13,3 +14,4 @@ block content
 
 block variables
 	-var title = "Статьи";
+	-var customStyle = ".hero { background-image: url('./img/blog/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/blog/header-mob.webp');}}"

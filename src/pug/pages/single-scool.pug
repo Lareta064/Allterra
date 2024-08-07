@@ -4,7 +4,8 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page.inner-page--scool
-		section.hero(style="background-image:url('./img/scools/header-bg.webp')")
+		
+		section.hero.hero--banner
 			.container
 				.hero-content
 					ul.breadcrumb
@@ -16,10 +17,24 @@ block content
 					.hero-title.hero-title--rel
 						h1.title Поступление в среднюю школу за рубежом
 						p.header-subtitle Индивидуально подбираем зарубежную школу под задачи семьи и потребности ребёнка, помогаем подготовиться к поступлению и сопровождаем во время обучения за границей
-						a(href="#!").btn-accent Получить консультацию
+						
 					//===== bottom text =====
 					.hero-bottom
-						+stripes-list('Сильнейшие технические вузы мира', 'Медицинские факультеты', 'Университеты искусств')
+						ul.stripes-list
+							li
+								svg.svg-fleur
+									use(href="./img/spriteSvg.svg#svg-fleur")
+								span Сильнейшие технические вузы мира
+							li
+								svg.svg-med
+									use(href="./img/spriteSvg.svg#svg-med")
+								span Медицинские факультеты	
+							li
+								svg.svg-art
+									use(href="./img/spriteSvg.svg#svg-art")
+								span Университеты искусств
+					a(href="#!").btn-accent.w-auto Получить консультацию
+						
 		
 		include ../sections/_scool-content
 		
@@ -71,3 +86,4 @@ block content
 
 block variables
 	-var title = "Выбор школы";
+	-var customStyle = ".hero { background-image: url('./img/scools/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/scools/header-bg-mob.webp');}}"

@@ -1,0 +1,31 @@
+.level-edu{
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+	background: white;
+	padding: 16px;
+	.demi-15, .accent-txt{flex-shrink:0;}
+	.txt-14{flex-grow:1;}
+	.demi-15, .txt-14{margin-bottom: 8px;}
+}
+.level-edu-cards{
+	@media (max-width: 767px) {
+		width: calc(100vw - 32px);
+		overflow: hidden;
+		overflow-x: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{display: none;}
+		.three-columns{
+			grid-auto-flow: column;
+			padding: 5px;
+			.level-edu{
+				width: auto;
+				.txt-14{display: none;}
+				.demi-15{margin-bottom: 20px; white-space: nowrap; font-size:13px; line-height: 1.53;}
+				.accent-txt{font-size: 13px;}
+				&:last-child{margin-right: 15px;}
+			}
+		}
+
+	}
+}

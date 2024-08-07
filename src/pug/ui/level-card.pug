@@ -1,0 +1,18 @@
+extends ../layouts/layout-ui.pug
+
+block content
+	.container-dashboard
+		h3 Миксин с переменными
+		pre.
+			+blog-card(img, meta, txt, desk, loc)
+
+		h3 Карточка-ссылка ступень образования
+		.flex-row(style="gap:40px;")
+			a(href="#!").level-edu
+				.demi-15 Высшее образование за рубежом
+				p.txt-14.cut Включает в себя список пунктов меню
+				span.accent-txt Подробнее
+		.tab-toggles
+			button(type="button").tab-toggle.btn-toggle Высшее образование
+			button(type="button").tab-toggle.btn-toggle Среднее образование
+			button(type="button").tab-toggle.btn-toggle Карьера

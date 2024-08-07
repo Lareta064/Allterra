@@ -4,7 +4,8 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		+hero-section(['Главная', 'Отзывы'], 'Отзывы','', 'title', 'back-link')( style="background-image:url(./img/review/header-bg.webp)")
+		
+		+hero-section(['Главная', 'Отзывы об образовании'], 'Отзывы об образовании','', 'title', 'back-link')
 		
 		include ../sections/_review-page
 		
@@ -13,3 +14,5 @@ block content
 
 block variables
 	-var title = "Отзывы";
+	
+	-var customStyle = ".hero { background-image: url('./img/review/review-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/review/header-bg-mob.webp');}}"

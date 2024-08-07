@@ -4,7 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		+hero-section(['Главная', 'Об Allterra Education'], 'О компании','', 'title', 'back-link')( style="background-image:url(./img/about/header-bg.webp)")
+		+hero-section(['Главная', 'Об Allterra Education'], 'О компании','', 'title', 'back-link')
 		include ../sections/_why-us
 		include ../sections/_bosses
 		include ../sections/_statistics
@@ -17,16 +17,18 @@ block content
 		include ../sections/_contacts
 	include ../sections/_footer
 
+
+	//- include ../blocks/_mobile-fixed-buttons.pug
 block variables
-	-var title = "О нас";
-
-
 	
-
-
-
-
-
-	include ../blocks/_mobile-fixed-buttons.pug
-block variables
-	-var title = "Главная";
+	-var title = "О нас";
+	
+	-var customStyle = ".hero { background-image: url('./img/about/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/about/header-bg-mob.webp');}}"
+	
+		
+	
+	
+		
+			
+		
+		

@@ -4,7 +4,8 @@ block content
 	include ../sections/_header.pug
 	//=============MAIN===========
 	main.inner-page
-		+hero-section(['Главная', 'Обращение директора'], 'Обращение директора','', 'title', 'back-link')(style="background-image:url(./img/greeting/header-bg.webp)")
+		
+		+hero-section(['Главная', 'Обращение директора'], 'Обращение директора','', 'title', 'back-link')
 		
 		include ../sections/_greeting-section
 		include ../sections/_section-review
@@ -12,15 +13,8 @@ block content
 		include ../sections/_accredit
 		include ../sections/_contacts
 	include ../sections/_footer
+	//- include ../blocks/_mobile-fixed-buttons.pug
 
 block variables
 	-var title = "Обращение Директора";
-	
-
-
-
-
-
-	include ../blocks/_mobile-fixed-buttons.pug
-block variables
-	-var title = "Главная";
+	-var customStyle = ".hero { background-image: url('./img/greeting/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/greeting/header-bg-mob.webp');}}"
