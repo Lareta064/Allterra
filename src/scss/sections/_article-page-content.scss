@@ -113,7 +113,13 @@
 .dynamic-menu{
 	position:sticky;
 	top:78px;
-	
+	&__list{
+		max-height: calc(100vh - 200px);
+		overflow: hidden;
+		overflow-y: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{display: none;}
+	}
 	&__header{
 		svg{display: none; transition: .3s; }
 		&>*{margin-bottom: 0;}
