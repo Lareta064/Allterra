@@ -4,13 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		style.
-			.hero{
-				background-image: url('./img/about/header-bg.webp');
-				@media(max-width: 767px){
-					background-image: url('./img/about/header-bg-mob.webp');
-				}
-			}
+		
 		+hero-section(['Главная', 'Страны'], 'Страны','', 'title', '', 'Выберите страну для обучения из каталога')
 		
 		include ../sections/_countries
@@ -19,4 +13,4 @@ block content
 	include ../sections/_footer
 
 block variables
-	-var title = "Страны";
+	-var customStyle = ".hero { background-image: url('./img/about/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/about/header-bg-mob.webp');}}"

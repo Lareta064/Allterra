@@ -4,13 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		style.
-			.hero{
-				background-image: url('./img/about/header-bg.webp');
-				@media(max-width: 767px){
-					background-image: url('./img/about/header-bg-mob.webp');
-				}
-			}
+		
 		+hero-section(['Главная', 'Вакансии'], 'Вакансии <br> <span class="accent-border"> Allterra&nbsp;Education </span>','', 'title', 'back-link')
 		
 		include ../sections/_vacant
@@ -20,3 +14,4 @@ block content
 
 block variables
 	-var title = "Вакансии";
+	-var customStyle = ".hero { background-image: url('./img/about/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/about/header-bg-mob.webp');}}"

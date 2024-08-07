@@ -4,13 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.inner-page
-		style.
-			.hero{
-					background-image: url('./img/contacts/header-bg.webp');
-					@media(max-width: 767px){
-						background-image: url('./img/contacts/header-bg-mob.webp');
-					}
-				}
+		
 		+hero-section(['Главная', 'Контакты'], 'Контакты Allterra Education','', 'title', 'back-link')
 		
 		include ../sections/_contacts-page.pug
@@ -20,3 +14,4 @@ block content
 
 block variables
 	-var title = "Контакты";
+	-var customStyle = ".hero { background-image: url('./img/contacts/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/contacts/header-bg-mob.webp');}}"

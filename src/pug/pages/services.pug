@@ -4,13 +4,7 @@ block content
 	include ../sections/_header
 	//=============MAIN===========
 	main.main
-		style.
-			.hero{
-				background-image: url('./img/about/header-bg.webp');
-				@media(max-width: 767px){
-					background-image: url('./img/about/header-bg-mob.webp');
-				}
-			}
+		
 		+hero-section(['Главная', 'Услуги'], 'Услуги <br> <span class="accent-border"> Allterra&nbsp;Education </span>','', 'title', 'back-link')
 		
 		include ../sections/_services
@@ -23,3 +17,4 @@ block content
 
 block variables
 	-var title = "Услуги";
+	-var customStyle = ".hero { background-image: url('./img/about/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/about/header-bg-mob.webp');}}"
