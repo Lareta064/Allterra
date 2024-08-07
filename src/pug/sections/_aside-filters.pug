@@ -19,10 +19,11 @@
 				a(href="#!") Среднее образование
 				a(href="#!") Языковые курсы
 		//=====ОДНА ГРУППА ======
-		.filters-group
+		//====внутри дива с классом .has-hide есть скрытые элементы с классом .hide-item  и кнопка .btn-more  По клику на .btn-more удаляется .hide-item и скрывается кнопка ===
+		.filters-group.has-hide
 			.filters-group__title Страна
-			//====внутри дива с классом .has-hide есть скрытые элементы с классом .hide-item  и кнопка .btn-more  По клику на .btn-more удаляется .hide-item и скрывается кнопка ===
-			.filters-group__list.has-hide
+			
+			.filters-group__list
 				a(href="#!") Австралия
 				a(href="#!") Великобритания
 				a(href="#!") Германия
@@ -34,9 +35,9 @@
 				a(href="#!").hide-item Испания
 				a(href="#!").hide-item Италия
 				//======= показать еще =======
-				button(type="button").accent-link.btn-more Показать еще
-					svg.svg-chevron-down
-						use( href='./img/spriteSvg.svg#svg-chevron-down')
+			button(type="button").accent-link.btn-more Показать еще
+				svg.svg-chevron-down
+					use( href='./img/spriteSvg.svg#svg-chevron-down')
 				
 		//=====ОДНА ГРУППА ======
 		.filters-group
