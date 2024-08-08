@@ -369,6 +369,22 @@ document.addEventListener("DOMContentLoaded", function (){
 	 autoplay: {
 		delay: 3000,
 	},
+   });
+   var listsSwiper = new Swiper('.lists-swiper', {
+	slidesPerView : 1.1,
+	spaceBetween: 20,
+	navigation:{
+		nextEl:'.lists-swiper-next',
+		prevEl:'.lists-swiper-prev'
+	},
+	breakpoints:{
+		1024:{
+			slidesPerView : 2,
+		},
+		1200:{
+			slidesPerView : 1,
+		}
+	}
    })
 	/* подсветка активного меню при скролле Article Page */
 	const backlitMenu = document.querySelector('.backlit-menu');
