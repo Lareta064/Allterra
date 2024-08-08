@@ -200,8 +200,26 @@ section.article
 							+accredit-card('logo3.webp', 'Allterra Education ', ' – член организации ICEF; наши специалисты прошли  профессиональную подготовку и получили международный статус ICEF Trained  Advisors')
 							+accredit-card('logo4.webp', 'Allterra Education ', 'успешно сотрудничает с международной ассоциацией Quality Education, в которую входят лучшие языковые школы и колледжи  планеты')
 					
+					//=======FAQ=======
+					.article-faq.faq
+						//=====content======
+						//====== LEFT COLUMN =====
+						.faq-column
+							.h2.accent-border Frequently  Asked Question
+							.faq-contacts
+								p.h5 Не нашли ответы на свои вопросы?
+								p.txt-opac Напишите нам: #[a(href="mailto:contact@allterra.ru").accent-link contact@allterra.ru]
+
+						//====== Right COLUMN =====
+						.faq-acordion
+							include ../blocks/_acordion.pug
+							.faq-contacts
+								p.h5 Не нашли ответы на свои вопросы?
+								p.txt-opac Напишите нам: #[a(href="mailto:contact@allterra.ru").accent-link contact@allterra.ru]
+
 					
-					
+					.article-boss
+						
 					//===========ARTICLE FOOTER =====
 					.article-footer.txt-body
 						p #[strong Оригинал статьи на #[a(href="www.website.com").accent-link www.website.com]]

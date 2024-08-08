@@ -533,3 +533,33 @@
 		}
 	}
 }
+.article-faq.faq{
+	.faq-column{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		column-gap:80px;
+		margin-bottom: 20px;
+		.h2{
+			color: #000;
+		}
+		
+	}
+		.faq-contacts {
+			flex-shrink: 0;
+			padding: 30px;
+			margin-top: 0;
+			p+p {
+				margin-top: 16px;
+			}
+	
+			@media (max-width: 767px) {
+				padding-top: 20px;
+				padding-bottom: 20px;
+				margin-top: 14px;
+				margin-left: auto;
+				margin-right: auto;
+				
+			}
+		}
+}
