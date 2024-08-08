@@ -66,8 +66,15 @@
 .list-mark li, .list-cross li{
 	display: flex;
 	column-gap:20px;
+	@media (max-width: 1199px) {
+	font-size: 14px;
+	line-height: 1.43;
+	}
+	@media (max-width: 767px) {
+	font-size: 13px;line-height: 1.38;
+	}
 }
-.list-mark li:before{
+.list-mark li:before,.list-cross li:before{
 	top: 5px;
 	position: relative;
 	flex-shrink:0;
@@ -227,6 +234,13 @@ blockquote +*{
 	padding-bottom: 8px;
 	@media (max-width: 767px) {
 	padding: 20px 16px 4px;
+	}
+}
+.lists-swiper{
+	.lists-swiper-next, .lists-swiper-prev{
+		@media (max-width: 1023px) {
+		display: none;
+		}
 	}
 }
 .lists-swiper .swiper-slide{

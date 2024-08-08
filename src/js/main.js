@@ -373,11 +373,15 @@ document.addEventListener("DOMContentLoaded", function (){
    var listsSwiper = new Swiper('.lists-swiper', {
 	slidesPerView : 1.1,
 	spaceBetween: 20,
+	speed: 1000,
 	navigation:{
 		nextEl:'.lists-swiper-next',
 		prevEl:'.lists-swiper-prev'
 	},
 	breakpoints:{
+		768:{
+			slidesPerView : 1.5,
+		},
 		1024:{
 			slidesPerView : 2,
 		},
