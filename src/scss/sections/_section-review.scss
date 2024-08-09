@@ -23,7 +23,7 @@
 	@media (max-width: 1023px) {
 		padding-left: 0;
 		padding-right: 0;
-		.slider-nav{display: none!important;}
+		
 	}
 	@media (max-width: 767px) {
 		width: calc(50% + 50vw);
@@ -40,8 +40,6 @@
 			left: 0;
 			right:0;
 		}
-		
-		
 	}
 
 
@@ -110,6 +108,7 @@
 	}
 	}
 	@media (max-width: 1023px) {
-		display: none;
+		.swiper-button-next,.swiper-button-prev{display: none;}
+		
 	}
 }

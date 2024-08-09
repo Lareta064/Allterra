@@ -36,11 +36,13 @@ section.article
 					
 					
 					.txt-img.two-columns
+						.txt-img__image
+							img.lazy.wh-100(src="./img/article-page/img1.webp", width="610"  alt="img")
 						.txt-img__txt
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id volutpat. Id porta nibh venenatis cras sed felis eget velit. Vivamus at augue eget arcu dictum varius duis at. Dictum sit amet justo donec enim. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. 
 
 							p Ut porttitor leo a diam sollicitudin tempor id. Aliquam sem et tortor consequat id porta nibh. Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis
-						img.lazy(src="./img/article-page/img1.webp", width="610"  alt="img")
+						
 
 					//====================== #anchor3 ============
 					include ../blocks/_article-anchor3.pug
@@ -213,12 +215,15 @@ section.article
 							.faq-contacts
 								p.h5 Не нашли ответы на свои вопросы?
 								p.txt-opac Напишите нам: #[a(href="mailto:contact@allterra.ru").accent-link contact@allterra.ru]
+					//===manager card ====
+					.manager-card
+						.manager-photo
+							img.lazy.wh-100(src="./img/boss/boss1.webp", alt="img")
+						.manager-info
+							.h3 Александр Александрович Александрийский
+							.txt-18 Менеджер по образованию в Западной Европе
 					
-					//===========ARTICLE FOOTER =====
-					.article-footer.txt-body
-						p #[strong Оригинал статьи на #[a(href="www.website.com").accent-link www.website.com]]
-						p Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Imperdiet sed euismod nisi porta lorem mollis. Eleifend donec pretium vulputate sapien nec sagittis. Imperdiet massa tincidunt nunc pulvinar sapien. Etiam non quam lacus suspendisse faucibus interdum. Vestibulum lectus mauris ultrices eros in cursus. Commodo nulla facilisi nullam vehicula ipsum a arcu
-				
+					
 				//===========ARTICLE FOOTER =====
 				.article-footer.txt-body
 					p #[strong Оригинал статьи на #[a(href="www.website.com").accent-link www.website.com]]
