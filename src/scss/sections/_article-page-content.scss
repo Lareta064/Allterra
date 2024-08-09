@@ -11,7 +11,7 @@
 	padding-right: 40px;
 	padding-bottom: 80px;
 	&>*+*{
-		margin-top: 40px!important;
+		margin-top:40px!important;
 		@media (max-width: 767px) {
 		margin-top: 32px !important;
 		}
@@ -23,12 +23,18 @@
 			margin-top: 32px;
 		}
 	}
-	&>h1,&> h2,&> h3,&> h4,&>h5{
+	h1, h2, h3, h4,h5{
 		padding-left: 16px;
 		border-left:4px solid $main-accent;
 		margin-bottom: 20px;
-		
+		 
 	}
+	.color-block {
+			h1,h2,
+				h3,
+				h4,
+				h5{border-left: 0; padding-left: 0;}
+		}
 	&>img{
 		width: 100%;
 		max-height: 492px; 
@@ -36,9 +42,9 @@
 	}
 	h2,h4{margin-bottom: 24px; font-weight: 500;}
 	p+p{
-		margin-top: 40px;
+		margin-top: 28px;
 		@media (max-width: 767px) {
-			margin-top:24px;
+			margin-top:16px;
 		}
 	}	
 	.two-columns>p+p,
@@ -386,6 +392,10 @@
 }
 .neutral-card,.important-card,.cooperation-card{
 	box-shadow: 0 8px 20px 0 rgba(16, 23, 36, 0.08), 0 0 1px 0 rgba(16, 23, 36, 0.08);
+	ul{margin-left: 40px;}
+	@media (max-width: 1199px) {
+	ul{margin-left: 0;}
+	}
 }
 .process-cards-columns{
 	display: grid;
@@ -519,6 +529,9 @@
 	&-left{flex-grow: 1;}
 	@media (max-width: 1023px) {
 	 display: block;
+	.h2 {
+			max-width: 400px;
+		}
 	}
 	@media (max-width: 767px) {
 	.h2{

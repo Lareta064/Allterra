@@ -41,6 +41,7 @@
 			right:0;
 		}
 		
+		
 	}
 
 
@@ -107,5 +108,8 @@
 		&__row, &__text{flex-shrink: 0;}
 		.review__meta.review__meta--mob{margin-top: auto;}
 	}
+	}
+	@media (max-width: 1023px) {
+		display: none;
 	}
 }
