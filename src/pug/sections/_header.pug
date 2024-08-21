@@ -86,13 +86,22 @@ header.header
 				//======RIGHT COLUMN =====
 				.header-column
 					//==== выбор языка ===
-					//- .custom-select.custom-select--lang
-					//- 	input(type="text" value="Ru")
-					//- 	//=== спислк с языками===
-					//- 	.custom-select__drop
-					//- 		.custom-select__list
-					//- 			a(href="#!") En
-					//- 			a(href="#!") Ru
+					.custom-select.custom-select--lang
+						.custom-select-trigger Ru
+						.custom-options
+							//=== список с языками===
+							.custom-select__drop
+								ul.custom-select__list
+									li.custom-option(data-value='En')
+										+country-item('uk', 'En')
+									li.custom-option(data-value='Ru')
+										+country-item('ru', 'RU')
+									li.custom-option(data-value='ESP')
+										+country-item('spain', 'ESP')
+									li.custom-option(data-value='GE')
+										+country-item('de', 'GE')
+									li.custom-option(data-value='FR')
+										+country-item('fr', 'FR')
 					
 					a(href="tel:88005114993").contact-item 8 (800) 511-4993
 	
