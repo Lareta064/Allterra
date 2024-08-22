@@ -132,13 +132,13 @@
 		overflow: hidden;
 		overflow-y: auto;
 		scrollbar-width: thin;
-		scrollbar-color: #fff transparent;
+		scrollbar-color: rgba(89,89,84,.5) transparent;
 		&::-webkit-scrollbar{width: 3px;}
 		&::-webkit-scrollbar-thumb {
 			width: 3px;
 			height: 20px;
 			border-radius: 10px;
-			background-color: #fff;
+			background-color: rgba(89, 89, 84, .5);
 		}
 			&::-webkit-scrollbar-track {
 				width: 3px;
@@ -252,8 +252,6 @@
 		position: sticky;
 		margin-left: -16px;
 		margin-right: -16px;
-		// left: -16px;
-		// width: calc(100vw);
 		display: none;
 		&.active{display: block;}
 		.dynamic-menu__header {
@@ -265,9 +263,6 @@
 			background: #f0f3f9;
 			
 			width: 100%;
-			// position: relative;
-			// left: -32px;
-			
 			margin-bottom: 0;
 			margin-left: 0;
 			padding-inline: 26px;
@@ -282,9 +277,6 @@
 				transform: rotate(180deg);
 			}
 
-			@media (max-width: 767px) {
-				// width: calc(100% + 28px + 28px);
-			}
 		}
 
 		.dynamic-menu__list {
