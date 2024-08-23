@@ -10,7 +10,9 @@
 .dynamic-menu.flex-col{
 	row-gap: 32px;
 }
-
+.institute-article{
+	padding-top: 0!important;
+}
 .institute-slider-block{
 	padding-bottom: 23px;
 	position: relative;
@@ -93,6 +95,7 @@
 		opacity: .5;
 	}
 }
+
 /****************/
 .programs-table{
 	position: relative;
