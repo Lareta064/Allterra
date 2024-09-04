@@ -1,6 +1,6 @@
 .filters{
-	height: auto;
-	padding: 20px;
+	height: max-content;
+	padding: 20px 16px;
 	background-color: #f0f3f9;
 	line-height: 1.41;
 	font-size: 14px;
@@ -22,6 +22,13 @@
 	}
 	&-body {
 		padding-top: 24px;
+	}
+	&-group{
+		padding: 20px 10px 20px 20px;
+		border: 1px solid $dark-grey-inactive;
+		border-radius: 5px;
+		max-height: 385px;
+		
 	}
 	&-group__title{
 		font-size: 12px;
@@ -48,7 +55,8 @@
 	}
 	
 	&-group__list{
-		
+		max-height: 230px;
+		margin-top: 20px;
 		a{
 			width: fit-content;
 			transition: .3s;
@@ -66,6 +74,23 @@
 	}
 	@media (max-width: 767px) {
 	  padding: 12px 16px;
+	}
+}
+.filters-group__search {
+	input{
+		width: 100%;
+		font-size: 16px;
+		color: $bg-black;
+		font-family: $font-family;
+		padding-inline: 16px;
+		height: 40px;
+		background-color: #fff;
+		border: 1px solid #f0f3f9;
+		outline: none;
+	
+		&::placeholder {
+			color: rgba(21, 21, 21, .6);
+		}
 	}
 }
 .btn-more {

@@ -14,9 +14,9 @@ section.review-content
 				.filters-drop.dynamic-menu__list
 					.filters-body
 						//=====ОДНА ГРУППА ======
-						.filters-group
+						.filters-group.scroll-y
 							.filters-group__title Уровень образования
-							.filters-group__list
+							.filters-group__list.scroll-y
 								a(href="#!") Арт и Дизайн
 								a(href="#!") Высшее образование
 								a(href="#!") Каникулы
@@ -24,9 +24,11 @@ section.review-content
 								a(href="#!") Среднее образование
 								a(href="#!") Языковые курсы
 						//=====ОДНА ГРУППА ======
-						.filters-group.has-hide
+						.filters-group.has-hide.scroll-y
 							.filters-group__title Страна
-							.filters-group__list
+							.filters-group__search
+								input(type="text" placeholder="Поиск")
+							.filters-group__list.scroll-y
 								a(href="#!") Австралия
 								a(href="#!") Великобритания
 								a(href="#!") Германия
@@ -39,9 +41,9 @@ section.review-content
 							//======= показать еще =======
 							button(type="button").accent-link.btn-more Показать еще
 						//=====ОДНА ГРУППА ======
-						.filters-group
+						.filters-group.scroll-y
 							.filters-group__title Отзывы
-							.filters-group__list
+							.filters-group__list.scroll-y
 								a(href="#!") Родители
 								a(href="#!") Дети
 											

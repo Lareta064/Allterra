@@ -124,31 +124,7 @@
 	margin-block: 24px;
 }
 .dynamic-menu{
-	position:sticky;
-	top:78px;
-	&__list{
-		max-height: calc(100vh - 200px);
-		overflow: hidden;
-		overflow-y: auto;
-		scrollbar-width: thin;
-		scrollbar-color: rgba(89,89,84,.5) transparent;
-		&::-webkit-scrollbar{width: 3px;}
-		&::-webkit-scrollbar-thumb {
-			width: 3px;
-			height: 20px;
-			border-radius: 10px;
-			background-color: rgba(89, 89, 84, .5);
-		}
-			&::-webkit-scrollbar-track {
-				width: 3px;
-				height: 20px;
-				border-radius: 10px;
-				background-color: transparent;
-			}
-			
 
-		
-	}
 	&__header{
 		svg{display: none; transition: .3s; }
 		&>*{margin-bottom: 0;}
