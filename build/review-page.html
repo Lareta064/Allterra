@@ -507,12 +507,16 @@
 										<div class="filters-group__list scroll-y"><a href="#!">Арт и Дизайн</a><a href="#!">Высшее образование</a><a href="#!">Каникулы</a><a href="#!">Подготовка к экзаменам</a><a href="#!">Среднее образование</a><a href="#!">Языковые курсы</a></div>
 									</div>
 									<!--=====ОДНА ГРУППА ======-->
+									<!--===== Если есть в группе скрытые элементы, которые отображаются по клику на кнопку Показать еще, то важно наличие классов has-hide и scroll-y у блока с классом filters-group-->
 									<div class="filters-group has-hide scroll-y">
 										<div class="filters-group__title">Страна</div>
 										<div class="filters-group__search">
 											<input type="text" placeholder="Поиск">
 										</div>
-										<div class="filters-group__list scroll-y"><a href="#!">Австралия</a><a href="#!">Великобритания</a><a href="#!">Германия</a><a href="#!">Ирландия</a><a href="#!">Испания</a><a href="#!">Италия</a><a class="hide-item" href="#!">Ирландия</a><a class="hide-item" href="#!">Испания</a><a class="hide-item" href="#!">Италия</a></div>
+										<!--==== класс scroll-y задает вертикальную прокрутку, если контента больше, чем заданный лимит по высоте -->
+										<div class="filters-group__list scroll-y"><a href="#!">Австралия</a><a href="#!">Великобритания</a><a href="#!">Германия</a><a href="#!">Ирландия</a><a href="#!">Испания</a><a href="#!">Италия</a>
+											<!--==== элементы, которые отображаются по клику на кнопку Показать еще, имеют класс hide-item, который скрывает эти элементы через css  Для их отображения, через скрипт--><a class="hide-item" href="#!">Ирландия</a><a class="hide-item" href="#!">Испания</a><a class="hide-item" href="#!">Италия</a>
+										</div>
 										<!--======= показать еще =======-->
 										<button class="accent-link btn-more" type="button">Показать еще</button>
 									</div>
@@ -521,6 +525,35 @@
 										<div class="filters-group__title">Отзывы</div>
 										<div class="filters-group__list scroll-y"><a href="#!">Родители</a><a href="#!">Дети</a></div>
 									</div>
+									<!--=====скрипт поиска ========					-->
+									<script>
+										const filterGroups = document.querySelectorAll('.filters-group');
+										
+										filterGroups.forEach((group) => {
+											const searchInput = group.querySelector('.filters-group__search input[type="text"]');
+											if (searchInput) {
+											
+											const listItems = group.querySelectorAll('.filters-group__list.scroll-y a');
+										
+											// Функция для фильтрации ссылок
+											function filterList() {
+												const searchTerm = searchInput.value.toLowerCase().normalize('NFD');
+										
+												listItems.forEach((item) => {
+												const text = item.textContent.toLowerCase().normalize('NFD'); 
+												
+												if (text.startsWith(searchTerm)) { 
+													item.style.display = '';
+												} else {
+													item.style.display = 'none'; 
+												}
+												});
+											}
+										
+											searchInput.addEventListener('input', filterList);
+											}
+										});
+									</script>
 								</div>
 							</div>
 						</div>

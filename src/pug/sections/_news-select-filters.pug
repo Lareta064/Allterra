@@ -18,16 +18,28 @@ section.news-page
 							button(type="button").filters-reset.grey-link Сбросить все
 							.filters-group
 								.filters-group__title Уровень образования
+								
 								.filters-group__label
 									p Языковые курсы
 									button(type="button").btn-remove
+								.filters-group__label
+									p Языковые курсы
+									button(type="button").btn-remove
+								.filters-group__label
+									p Языковые курсы
+									button(type="button").btn-remove
+								//===== button clear filters
+								button(type="button").filters-reset.grey-link Сбросить
+									
 							
 							.filters-group
 								.filters-group__title Страна
 								.filters-group__label
 									p Испания
 									button(type="button").btn-remove
-
+								//===== button clear filters
+								button(type="button").filters-reset.grey-link Сбросить 
+									
 						//=========СПИСОК ГРУПП ФИЛЬТРОВ =======
 						
 						//=====ОДНА ГРУППА ======
@@ -40,6 +52,11 @@ section.news-page
 								a(href="#!") Ирландия
 								a(href="#!") Испания
 								a(href="#!") Италия
+								a(href="#!").hide-item Ирландия
+								a(href="#!").hide-item Испания
+								a(href="#!").hide-item Италия
+							//======= показать еще =======
+							button(type="button").accent-link.btn-more Показать еще
 											
 			//==== right column ====
 			.aside-grid__content.flex-col

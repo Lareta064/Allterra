@@ -28,6 +28,7 @@
 		border: 1px solid $dark-grey-inactive;
 		border-radius: 5px;
 		max-height: 385px;
+
 		
 	}
 	&-group__title{
@@ -48,6 +49,7 @@
 		color: $white;
 		font-size: 14px;
 		line-height: 1.41;
+		margin-bottom: 8px;
 		.btn-remove{
 			opacity: .8;
 			&:hover{opacity: 1;}
@@ -77,6 +79,8 @@
 	}
 }
 .filters-group__search {
+	padding-right: 10px;
+	display: none;
 	input{
 		width: 100%;
 		font-size: 16px;

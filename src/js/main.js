@@ -434,10 +434,13 @@ document.addEventListener("DOMContentLoaded", function (){
 				
 			}else{
 				const maxAllowedHeight = window.innerHeight - 186 + 'px';
+				
 				const maxHeight = dynamicMenuList.scrollHeight + 'px';
 				if (dynamicMenuList.style.maxHeight === '0px' || dynamicMenuList.style.maxHeight === '') {
 					if (dynamicMenuList.scrollHeight > window.innerHeight - 186) {
 						dynamicMenuList.style.maxHeight = maxAllowedHeight;
+						dynamicMenuList.style.maxHeight = 'unset';
+
 						dynamicMenuList.style.overflowY = 'auto';
 					} else {
 						dynamicMenuList.style.maxHeight = maxHeight;
@@ -476,8 +479,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1279){
-					//- dynamicMenuList.style.maxHeight = 'unset';
-					dynamicMenuList.style.maxHeight = 'calc(100vh - 200px)';
+					dynamicMenuList.style.maxHeight = 'unset';
+					// dynamicMenuList.style.maxHeight = 'calc(100vh - 200px)';
 					dynamicMenuBtn.classList.remove('active');
 					
 					
@@ -501,7 +504,9 @@ document.addEventListener("DOMContentLoaded", function (){
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1023){
 					//-dynamicMenuList.style.maxHeight = 'unset';
-					dynamicMenuList.style.maxHeight = 'calc(100vh - 200px)';
+					// dynamicMenuList.style.maxHeight = 'calc(100vh - 200px)';
+					dynamicMenuList.style.maxHeight = 'unset';
+
 
 					dynamicMenuBtn.classList.remove('active');
 					
@@ -517,6 +522,8 @@ document.addEventListener("DOMContentLoaded", function (){
 				if(window.innerWidth > 1023){
 					//-stickyFiltersList.style.maxHeight = 'unset';
 					stickyFiltersList.style.maxHeight = 'calc(100vh - 200px)';
+					stickyFiltersList.style.maxHeight = 'max-content';
+
 					dynamicMenuBtn.classList.remove('active');
 				}else{
 					 if (window.innerWidth !== window.innerWidth){
@@ -836,12 +843,16 @@ document.addEventListener("DOMContentLoaded", function (){
 	if( hideElemetsParent.length > 0){
 		for(let item of hideElemetsParent){
 			const showMoreBtn = item.querySelector('.btn-more');
+			const searchInput = item.querySelector('.filters-group__search');
 			showMoreBtn.addEventListener('click', ()=>{
 				const hideItems = item.querySelectorAll('.hide-item');
 				hideItems.forEach((el)=>{
 					el.classList.remove('hide-item');
 				});
 				showMoreBtn.classList.add('hide-btn');
+				if(searchInput){
+					searchInput.style.display='block'
+				}
 			});
 			
 		}
@@ -901,4 +912,5 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
   }
+  
 });

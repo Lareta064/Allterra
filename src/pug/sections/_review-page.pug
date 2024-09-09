@@ -24,10 +24,13 @@ section.review-content
 								a(href="#!") Среднее образование
 								a(href="#!") Языковые курсы
 						//=====ОДНА ГРУППА ======
+						//===== Если есть в группе скрытые элементы, которые отображаются по клику на кнопку Показать еще, то важно наличие классов has-hide и scroll-y у блока с классом filters-group
 						.filters-group.has-hide.scroll-y
 							.filters-group__title Страна
 							.filters-group__search
 								input(type="text" placeholder="Поиск")
+							
+							//==== класс scroll-y задает вертикальную прокрутку, если контента больше, чем заданный лимит по высоте 
 							.filters-group__list.scroll-y
 								a(href="#!") Австралия
 								a(href="#!") Великобритания
@@ -35,6 +38,7 @@ section.review-content
 								a(href="#!") Ирландия
 								a(href="#!") Испания
 								a(href="#!") Италия
+								//==== элементы, которые отображаются по клику на кнопку Показать еще, имеют класс hide-item, который скрывает эти элементы через css  Для их отображения, через скрипт
 								a(href="#!").hide-item Ирландия
 								a(href="#!").hide-item Испания
 								a(href="#!").hide-item Италия
@@ -46,7 +50,34 @@ section.review-content
 							.filters-group__list.scroll-y
 								a(href="#!") Родители
 								a(href="#!") Дети
-											
+						//=====скрипт поиска ========					
+						script.
+							const filterGroups = document.querySelectorAll('.filters-group');
+
+							filterGroups.forEach((group) => {
+								const searchInput = group.querySelector('.filters-group__search input[type="text"]');
+								if (searchInput) {
+								
+								const listItems = group.querySelectorAll('.filters-group__list.scroll-y a');
+
+								// Функция для фильтрации ссылок
+								function filterList() {
+									const searchTerm = searchInput.value.toLowerCase().normalize('NFD');
+
+									listItems.forEach((item) => {
+									const text = item.textContent.toLowerCase().normalize('NFD'); 
+									
+									if (text.startsWith(searchTerm)) { 
+										item.style.display = '';
+									} else {
+										item.style.display = 'none'; 
+									}
+									});
+								}
+
+								searchInput.addEventListener('input', filterList);
+								}
+							});
 			//==== right column ====
 			.aside-grid__content.review-cards
 				.review-card
