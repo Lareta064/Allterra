@@ -1,6 +1,7 @@
 /*=====СПИСКИ ========*/
 .list-block,
 .list-check {
+	ul{margin-top: 12px;}
 	li {
 		position: relative;
 		display: flex;
@@ -27,7 +28,7 @@
 	}
 
 	li+li {
-		margin-top: 8px;
+		margin-top: 12px;
 	}
 
 }
