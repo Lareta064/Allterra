@@ -230,8 +230,8 @@ line-height: 1.33;}
 }
 article>p{
 	line-height: 1.75;
-	p+p{margin-top: 12px;}
 }
+article>p+p{margin-top: 12px;}
 .text-block+.text-block {
 	margin-top: 30px;
 
@@ -262,7 +262,30 @@ article>p{
 
 	}
 }
+.scroll-y{
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #a9a9a9 transparent;
 
+	&::-webkit-scrollbar {
+		width: 3px;
+		height: 20px;
+		border-radius: 5px;
+
+	}
+
+	&::-webkit-scrollbar-thumb {
+		width: 3px;
+		height: 20px;
+		border-radius: 5px;
+		background-color: #a9a9a9;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+}
 .accent-txt, .accent-link{
 	color: $main-accent;
 }

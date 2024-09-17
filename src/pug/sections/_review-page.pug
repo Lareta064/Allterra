@@ -6,7 +6,7 @@ section.review-content
 			.aside-grid__col.filters.dynamic-menu
 				//====== filters header ===
 				.filters-header.dynamic-menu__header
-					.h4 Выберите отзывы,<br> интересующие вас
+					.h4 Выберите <br> интересующие вас
 					svg.svg-chevron-down
 						use(href="./img/spriteSvg.svg#svg-chevron-down")
 					
@@ -16,23 +16,42 @@ section.review-content
 						//=====ОДНА ГРУППА ======
 						.filters-group
 							.filters-group__title Уровень образования
-							.filters-group__list
-								a(href="#!") Арт и Дизайн
-								a(href="#!") Высшее образование
-								a(href="#!") Каникулы
-								a(href="#!") Подготовка к экзаменам
-								a(href="#!") Среднее образование
-								a(href="#!") Языковые курсы
+							ul.filters-group__list
+								li
+									a(href="#!") Арт и Дизайн
+									span 45
+								li
+									a(href="#!") Высшее образование
+									span 45
+								li
+									a(href="#!") Каникулы
+									span 45
+								li
+									a(href="#!") Подготовка к экзаменам
+									span 45
+								li
+									a(href="#!") Среднее образование
+									span 45
+								li
+									a(href="#!") Языковые курсы
+									span 45
 						//=====ОДНА ГРУППА ======
+						//===== Если есть в группе скрытые элементы, которые отображаются по клику на кнопку Показать еще, то важно наличие классов has-hide  у блока с классом filters-group
+						
 						.filters-group.has-hide
 							.filters-group__title Страна
-							.filters-group__list
+							//===== если есть скрытые элементы, то добавляем filters-group__search. Эта строка поиска изначально скрыта, и отображается одновременно со скрытыми странами
+							.filters-group__search
+								input(type="text" placeholder="Поиск")
+							
+							.filters-group__list.scroll-y
 								a(href="#!") Австралия
 								a(href="#!") Великобритания
 								a(href="#!") Германия
 								a(href="#!") Ирландия
 								a(href="#!") Испания
 								a(href="#!") Италия
+								//==== элементы, которые отображаются по клику на кнопку Показать еще, имеют класс hide-item, который скрывает эти элементы через css  Для их отображения, через скрипт
 								a(href="#!").hide-item Ирландия
 								a(href="#!").hide-item Испания
 								a(href="#!").hide-item Италия
@@ -41,10 +60,206 @@ section.review-content
 						//=====ОДНА ГРУППА ======
 						.filters-group
 							.filters-group__title Отзывы
-							.filters-group__list
-								a(href="#!") Родители
-								a(href="#!") Дети
+							ul.filters-group__list
+								li
+									a(href="#!") Родители
+									span 25
+								li
+									a(href="#!") Дети
+									span 25
+						
+						//=====ОДНА ГРУППА ======
+						.filters-group
+							.filters-group__title Программы
+							ul.filters-group__list
+								li.has-filters
+									a(href="#!") Арт и Дизайн
+									span 45
+									//==== drop ====
+									.filters-group__drop
+										.filters-group__content
+											ul.scroll-y
+												li
+													a(href="") Арт и Дизайн
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Каникулы
+													span 45
+												li
+													a(href="#!") Подготовка к экзаменам
+													span 45
+												li
+													a(href="#!") Среднее образование
+													span 45
+												li
+													a(href="#!") Языковые курсы
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="") Арт и Дизайн
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Каникулы
+													span 45
+												li
+													a(href="#!") Подготовка к экзаменам
+													span 45
+												li
+													a(href="#!") Среднее образование
+													span 45
+												li
+													a(href="#!") Языковые курсы
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+								li.has-filters
+									a(href="#!") Высшее образование
+									span 20
+									//==== drop ====
+									.filters-group__drop
+										.filters-group__content
+											ul.scroll-y
+												li
+													a(href="") Арт и Дизайн
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Каникулы
+													span 45
+												li
+													a(href="#!") Подготовка к экзаменам
+													span 45
+												li
+													a(href="#!") Среднее образование
+													span 45
+												li
+													a(href="#!") Языковые курсы
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+								li.has-filters 
+									a(href="#!") Каникулы
+									span 20
+									//==== drop ====
+									.filters-group__drop
+										.filters-group__content
+											ul.scroll-y
+												li
+													a(href="") Арт и Дизайн
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Каникулы
+													span 45
+												li
+													a(href="#!") Подготовка к экзаменам
+													span 45
+												
+								li.has-filters 
+									a(href="#!") Подготовка к экзаменам
+									span 20
+									//==== drop ====
+									.filters-group__drop
+										.filters-group__content
+											ul.scroll-y
+												li
+													a(href="") Арт и Дизайн
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Каникулы
+													span 45
+												
+								li.has-filters 
+									a(href="#!") Среднее образование
+									span 20
+									//==== drop ====
+									.filters-group__drop
+										.filters-group__content
+											ul.scroll-y
+												li
+													a(href="") Арт и Дизайн
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Каникулы
+													span 45
 											
+								li.has-filters 
+									a(href="#!") Языковые курсы
+									span 20
+									//==== drop ====
+									.filters-group__drop
+										.filters-group__content
+											ul.scroll-y
+												li
+													a(href="") Арт и Дизайн
+													span 45
+												li
+													a(href="#!") Высшее образование
+													span 45
+												li
+													a(href="#!") Каникулы
+													span 45
+												li
+													a(href="#!") Подготовка к экзаменам
+													span 45
+												
+						//=====скрипт поиска ========					
+						script.
+							const filterGroups = document.querySelectorAll('.filters-group');
+
+							filterGroups.forEach((group) => {
+								const searchInput = group.querySelector('.filters-group__search input[type="text"]');
+								if (searchInput) {
+								
+								const listItems = group.querySelectorAll('.filters-group__list.scroll-y a');
+
+								// Функция для фильтрации ссылок
+								function filterList() {
+									const searchTerm = searchInput.value.toLowerCase().normalize('NFD');
+
+									listItems.forEach((item) => {
+									const text = item.textContent.toLowerCase().normalize('NFD'); 
+									
+									if (text.startsWith(searchTerm)) { 
+										item.style.display = '';
+									} else {
+										item.style.display = 'none'; 
+									}
+									});
+								}
+
+								searchInput.addEventListener('input', filterList);
+								}
+							});
 			//==== right column ====
 			.aside-grid__content.review-cards
 				.review-card

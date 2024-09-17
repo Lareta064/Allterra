@@ -493,7 +493,7 @@
 						<div class="aside-grid__col filters dynamic-menu">
 							<!--====== filters header ===-->
 							<div class="filters-header dynamic-menu__header">
-								<div class="h4">Выберите отзывы,<br> интересующие вас</div>
+								<div class="h4">Выберите <br> интересующие вас</div>
 								<svg class="svg-chevron-down">
 									<use href="./img/spriteSvg.svg#svg-chevron-down"></use>
 								</svg>
@@ -504,20 +504,164 @@
 									<!--=====ОДНА ГРУППА ======-->
 									<div class="filters-group">
 										<div class="filters-group__title">Уровень образования</div>
-										<div class="filters-group__list"><a href="#!">Арт и Дизайн</a><a href="#!">Высшее образование</a><a href="#!">Каникулы</a><a href="#!">Подготовка к экзаменам</a><a href="#!">Среднее образование</a><a href="#!">Языковые курсы</a></div>
+										<ul class="filters-group__list">
+											<li><a href="#!">Арт и Дизайн</a><span>45</span></li>
+											<li><a href="#!">Высшее образование</a><span>45</span></li>
+											<li><a href="#!">Каникулы</a><span>45</span></li>
+											<li><a href="#!">Подготовка к экзаменам</a><span>45</span></li>
+											<li><a href="#!">Среднее образование</a><span>45</span></li>
+											<li><a href="#!">Языковые курсы</a><span>45</span></li>
+										</ul>
 									</div>
 									<!--=====ОДНА ГРУППА ======-->
+									<!--===== Если есть в группе скрытые элементы, которые отображаются по клику на кнопку Показать еще, то важно наличие классов has-hide  у блока с классом filters-group-->
 									<div class="filters-group has-hide">
 										<div class="filters-group__title">Страна</div>
-										<div class="filters-group__list"><a href="#!">Австралия</a><a href="#!">Великобритания</a><a href="#!">Германия</a><a href="#!">Ирландия</a><a href="#!">Испания</a><a href="#!">Италия</a><a class="hide-item" href="#!">Ирландия</a><a class="hide-item" href="#!">Испания</a><a class="hide-item" href="#!">Италия</a></div>
+										<!--===== если есть скрытые элементы, то добавляем filters-group__search. Эта строка поиска изначально скрыта, и отображается одновременно со скрытыми странами-->
+										<div class="filters-group__search">
+											<input type="text" placeholder="Поиск">
+										</div>
+										<div class="filters-group__list scroll-y"><a href="#!">Австралия</a><a href="#!">Великобритания</a><a href="#!">Германия</a><a href="#!">Ирландия</a><a href="#!">Испания</a><a href="#!">Италия</a>
+											<!--==== элементы, которые отображаются по клику на кнопку Показать еще, имеют класс hide-item, который скрывает эти элементы через css  Для их отображения, через скрипт--><a class="hide-item" href="#!">Ирландия</a><a class="hide-item" href="#!">Испания</a><a class="hide-item" href="#!">Италия</a>
+										</div>
 										<!--======= показать еще =======-->
 										<button class="accent-link btn-more" type="button">Показать еще</button>
 									</div>
 									<!--=====ОДНА ГРУППА ======-->
 									<div class="filters-group">
 										<div class="filters-group__title">Отзывы</div>
-										<div class="filters-group__list"><a href="#!">Родители</a><a href="#!">Дети</a></div>
+										<ul class="filters-group__list">
+											<li><a href="#!">Родители</a><span>25</span></li>
+											<li><a href="#!">Дети</a><span>25</span></li>
+										</ul>
 									</div>
+									<!--=====ОДНА ГРУППА ======-->
+									<div class="filters-group">
+										<div class="filters-group__title">Программы</div>
+										<ul class="filters-group__list">
+											<li class="has-filters"><a href="#!">Арт и Дизайн</a><span>45</span>
+												<!--==== drop ====-->
+												<div class="filters-group__drop">
+													<div class="filters-group__content">
+														<ul class="scroll-y">
+															<li><a href="">Арт и Дизайн</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Каникулы</a><span>45</span></li>
+															<li><a href="#!">Подготовка к экзаменам</a><span>45</span></li>
+															<li><a href="#!">Среднее образование</a><span>45</span></li>
+															<li><a href="#!">Языковые курсы</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="">Арт и Дизайн</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Каникулы</a><span>45</span></li>
+															<li><a href="#!">Подготовка к экзаменам</a><span>45</span></li>
+															<li><a href="#!">Среднее образование</a><span>45</span></li>
+															<li><a href="#!">Языковые курсы</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="has-filters"><a href="#!">Высшее образование</a><span>20</span>
+												<!--==== drop ====-->
+												<div class="filters-group__drop">
+													<div class="filters-group__content">
+														<ul class="scroll-y">
+															<li><a href="">Арт и Дизайн</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Каникулы</a><span>45</span></li>
+															<li><a href="#!">Подготовка к экзаменам</a><span>45</span></li>
+															<li><a href="#!">Среднее образование</a><span>45</span></li>
+															<li><a href="#!">Языковые курсы</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="has-filters"> <a href="#!">Каникулы</a><span>20</span>
+												<!--==== drop ====-->
+												<div class="filters-group__drop">
+													<div class="filters-group__content">
+														<ul class="scroll-y">
+															<li><a href="">Арт и Дизайн</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Каникулы</a><span>45</span></li>
+															<li><a href="#!">Подготовка к экзаменам</a><span>45</span></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="has-filters"> <a href="#!">Подготовка к экзаменам</a><span>20</span>
+												<!--==== drop ====-->
+												<div class="filters-group__drop">
+													<div class="filters-group__content">
+														<ul class="scroll-y">
+															<li><a href="">Арт и Дизайн</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Каникулы</a><span>45</span></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="has-filters"> <a href="#!">Среднее образование</a><span>20</span>
+												<!--==== drop ====-->
+												<div class="filters-group__drop">
+													<div class="filters-group__content">
+														<ul class="scroll-y">
+															<li><a href="">Арт и Дизайн</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Каникулы</a><span>45</span></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="has-filters"> <a href="#!">Языковые курсы</a><span>20</span>
+												<!--==== drop ====-->
+												<div class="filters-group__drop">
+													<div class="filters-group__content">
+														<ul class="scroll-y">
+															<li><a href="">Арт и Дизайн</a><span>45</span></li>
+															<li><a href="#!">Высшее образование</a><span>45</span></li>
+															<li><a href="#!">Каникулы</a><span>45</span></li>
+															<li><a href="#!">Подготовка к экзаменам</a><span>45</span></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!--=====скрипт поиска ========					-->
+									<script>
+										const filterGroups = document.querySelectorAll('.filters-group');
+										
+										filterGroups.forEach((group) => {
+											const searchInput = group.querySelector('.filters-group__search input[type="text"]');
+											if (searchInput) {
+											
+											const listItems = group.querySelectorAll('.filters-group__list.scroll-y a');
+										
+											// Функция для фильтрации ссылок
+											function filterList() {
+												const searchTerm = searchInput.value.toLowerCase().normalize('NFD');
+										
+												listItems.forEach((item) => {
+												const text = item.textContent.toLowerCase().normalize('NFD'); 
+												
+												if (text.startsWith(searchTerm)) { 
+													item.style.display = '';
+												} else {
+													item.style.display = 'none'; 
+												}
+												});
+											}
+										
+											searchInput.addEventListener('input', filterList);
+											}
+										});
+									</script>
 								</div>
 							</div>
 						</div>

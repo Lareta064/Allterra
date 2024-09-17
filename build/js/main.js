@@ -434,10 +434,13 @@ document.addEventListener("DOMContentLoaded", function (){
 				
 			}else{
 				const maxAllowedHeight = window.innerHeight - 186 + 'px';
+				
 				const maxHeight = dynamicMenuList.scrollHeight + 'px';
 				if (dynamicMenuList.style.maxHeight === '0px' || dynamicMenuList.style.maxHeight === '') {
 					if (dynamicMenuList.scrollHeight > window.innerHeight - 186) {
 						dynamicMenuList.style.maxHeight = maxAllowedHeight;
+						dynamicMenuList.style.maxHeight = 'unset';
+
 						dynamicMenuList.style.overflowY = 'auto';
 					} else {
 						dynamicMenuList.style.maxHeight = maxHeight;
@@ -476,8 +479,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1279){
-					//- dynamicMenuList.style.maxHeight = 'unset';
-					dynamicMenuList.style.maxHeight = 'calc(100vh - 200px)';
+					dynamicMenuList.style.maxHeight = 'unset';
+					// dynamicMenuList.style.maxHeight = 'calc(100vh - 200px)';
 					dynamicMenuBtn.classList.remove('active');
 					
 					
@@ -501,7 +504,9 @@ document.addEventListener("DOMContentLoaded", function (){
 			window.addEventListener('resize', ()=>{
 				if(window.innerWidth > 1023){
 					//-dynamicMenuList.style.maxHeight = 'unset';
-					dynamicMenuList.style.maxHeight = 'calc(100vh - 200px)';
+					// dynamicMenuList.style.maxHeight = 'calc(100vh - 200px)';
+					dynamicMenuList.style.maxHeight = 'unset';
+
 
 					dynamicMenuBtn.classList.remove('active');
 					
@@ -517,6 +522,8 @@ document.addEventListener("DOMContentLoaded", function (){
 				if(window.innerWidth > 1023){
 					//-stickyFiltersList.style.maxHeight = 'unset';
 					stickyFiltersList.style.maxHeight = 'calc(100vh - 200px)';
+					stickyFiltersList.style.maxHeight = 'max-content';
+
 					dynamicMenuBtn.classList.remove('active');
 				}else{
 					 if (window.innerWidth !== window.innerWidth){
@@ -666,7 +673,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	/**********scool card programs************/
 	const scoolCards = document.querySelectorAll('.scool-card');
-	  // Функция для проверки позиций элементов
+	// Функция для проверки позиций элементов
 	function checkBounds(parent, child) {
 		const parentRect = parent.getBoundingClientRect();
 		const childRect = child.getBoundingClientRect();
@@ -690,9 +697,11 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 			
 			btnShowPrograms.addEventListener('click', ()=>{
+				
 				if(item.classList.contains('active')){
 					closeActivePrice();
 					item.classList.remove('active');
+					
 					if(window.innerWidth > 767){
 						cardprogramsTable.style.maxHeight = 0;
 						cardprogramsTable.style.overflow = 'hidden';
@@ -700,7 +709,9 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 				else{
 					item.classList.add('active');
+					
 					if(window.innerWidth > 767){
+						
 						cardprogramsTable.style.maxHeight = cardprogramsTable.scrollHeight + 'px';
 						cardprogramsTable.style.overflow = 'visible';
 					}
@@ -836,12 +847,16 @@ document.addEventListener("DOMContentLoaded", function (){
 	if( hideElemetsParent.length > 0){
 		for(let item of hideElemetsParent){
 			const showMoreBtn = item.querySelector('.btn-more');
+			const searchInput = item.querySelector('.filters-group__search');
 			showMoreBtn.addEventListener('click', ()=>{
 				const hideItems = item.querySelectorAll('.hide-item');
 				hideItems.forEach((el)=>{
 					el.classList.remove('hide-item');
 				});
 				showMoreBtn.classList.add('hide-btn');
+				if(searchInput){
+					searchInput.style.display='block'
+				}
 			});
 			
 		}
@@ -901,4 +916,5 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
   }
+  
 });

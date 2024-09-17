@@ -493,7 +493,7 @@
 						<div class="aside-grid__col filters dynamic-menu">
 							<!--====== filters header ===-->
 							<div class="filters-header dynamic-menu__header">
-								<div class="h4">Выберете отзывы, интересующие вас</div>
+								<div class="h4">Вы выбрали</div>
 								<svg class="svg-chevron-down">
 									<use href="./img/spriteSvg.svg#svg-chevron-down"></use>
 								</svg>
@@ -503,27 +503,41 @@
 								<div class="filters-body">
 									<!--========ВЫБРАННЫЕ ФИЛЬТРЫ =======-->
 									<div class="filters__selected">
-										<button class="filters-reset grey-link" type="button">Сбросить все</button>
 										<div class="filters-group">
-											<div class="filters-group__title">Уровень образования</div>
 											<div class="filters-group__label">
 												<p>Языковые курсы</p>
 												<button class="btn-remove" type="button"></button>
 											</div>
-										</div>
-										<div class="filters-group">
-											<div class="filters-group__title">Страна</div>
+											<div class="filters-group__label">
+												<p>Языковые курсы</p>
+												<button class="btn-remove" type="button"></button>
+											</div>
+											<div class="filters-group__label">
+												<p>Языковые курсы</p>
+												<button class="btn-remove" type="button"></button>
+											</div>
 											<div class="filters-group__label">
 												<p>Испания</p>
 												<button class="btn-remove" type="button"></button>
 											</div>
+											<!--===== button clear filters-->
+											<button class="filters-reset grey-link" type="button">Сбросить все</button>
 										</div>
 									</div>
 									<!--=========СПИСОК ГРУПП ФИЛЬТРОВ =======-->
 									<!--=====ОДНА ГРУППА ======-->
-									<div class="filters-group">
+									<div class="filters-group has-hide">
 										<div class="filters-group__title">Страна</div>
-										<div class="filters-group__list"><a href="#!">Австралия</a><a href="#!">Великобритания</a><a href="#!">Германия</a><a href="#!">Ирландия</a><a href="#!">Испания</a><a href="#!">Италия</a></div>
+										<!--===поиск-->
+										<div class="filters-group__search">
+											<input type="text" placeholder="Поиск">
+										</div>
+										<!--===список-->
+										<div class="filters-group__list scroll-y"><a href="#!">Австралия</a><a href="#!">Великобритания</a><a href="#!">Германия</a><a href="#!">Ирландия</a><a href="#!">Испания</a><a href="#!">Италия</a>
+											<!--=== скрытые страны --><a class="hide-item" href="#!">Ирландия</a><a class="hide-item" href="#!">Испания</a><a class="hide-item" href="#!">Италия</a>
+										</div>
+										<!--======= показать еще =======-->
+										<button class="accent-link btn-more" type="button">Показать еще</button>
 									</div>
 								</div>
 							</div>
