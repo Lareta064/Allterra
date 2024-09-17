@@ -118,12 +118,13 @@ section.institute-article
 							.cell-age
 								span.cell-title Возраст
 								p 9
-							.cell-price
+							//====== если есть выпадающее меню с ценами, то к классу cell-price добавляем класс cell-price--has-drop. Тогда появится стрелка
+							.cell-price.cell-price--has-drop
 								span.cell-title Стоимость
 								.cell-price__btn
-									a(href="#!") #[span 11 702,21₽] / 1 месяц
-									svg.svg-chevron-down
-										use(href='./img/spriteSvg.svg#svg-chevron-down')
+									a(href="#!") #[span 11 702,21 ₽] / 1 месяц
+									//- svg.svg-chevron-down
+									//- 	use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
 								.cell-price__drop
 									ul
@@ -145,15 +146,15 @@ section.institute-article
 								span.cell-title Стоимость
 								.cell-price__btn
 									a(href="#!") #[span 11 702,21₽] / 1 месяц
-									svg.svg-chevron-down
-										use(href='./img/spriteSvg.svg#svg-chevron-down')
+									//- svg.svg-chevron-down
+									//- 	use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
-								.cell-price__drop
-									ul
-										li 11 702,21₽/ 1 месяц
-										li 580 839,68₽ / 3 месяца
-										li 580 839,68₽ / 6 месяцев
-										li 580 839,68₽ / 1 год
+								//- .cell-price__drop
+								//- 	ul
+								//- 		li 11 702,21₽/ 1 месяц
+								//- 		li 580 839,68₽ / 3 месяца
+								//- 		li 580 839,68₽ / 6 месяцев
+								//- 		li 580 839,68₽ / 1 год
 							.cell-link
 								a(href="#!").btn-accent.h-40 Смотреть
 
@@ -165,12 +166,11 @@ section.institute-article
 							.cell-age
 								span.cell-title Возраст
 								p 16
-							.cell-price
+							.cell-price.cell-price--has-drop
 								span.cell-title Стоимость
 								.cell-price__btn
 									a(href="#!") #[span 11 702,21₽] / 1 месяц
-									svg.svg-chevron-down
-										use(href='./img/spriteSvg.svg#svg-chevron-down')
+									
 								//=====price cell drop=====
 								.cell-price__drop
 									ul

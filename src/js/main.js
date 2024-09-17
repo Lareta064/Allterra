@@ -673,7 +673,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	/**********scool card programs************/
 	const scoolCards = document.querySelectorAll('.scool-card');
-	  // Функция для проверки позиций элементов
+	// Функция для проверки позиций элементов
 	function checkBounds(parent, child) {
 		const parentRect = parent.getBoundingClientRect();
 		const childRect = child.getBoundingClientRect();
@@ -697,9 +697,11 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 			
 			btnShowPrograms.addEventListener('click', ()=>{
+				
 				if(item.classList.contains('active')){
 					closeActivePrice();
 					item.classList.remove('active');
+					
 					if(window.innerWidth > 767){
 						cardprogramsTable.style.maxHeight = 0;
 						cardprogramsTable.style.overflow = 'hidden';
@@ -707,7 +709,9 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 				else{
 					item.classList.add('active');
+					
 					if(window.innerWidth > 767){
+						
 						cardprogramsTable.style.maxHeight = cardprogramsTable.scrollHeight + 'px';
 						cardprogramsTable.style.overflow = 'visible';
 					}
