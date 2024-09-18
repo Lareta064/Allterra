@@ -916,5 +916,31 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
   }
-  
+  /*смена валюты*/
+  const toggleCurrencyWrapper = document.querySelectorAll('.toggle-currency');
+  if(toggleCurrencyWrapper.length > 0){
+	toggleCurrencyWrapper.forEach(function(item){
+		const toggleCurrencyBtn = item.querySelectorAll('.pay-cur');
+		const toggleCurrencyPrices = item.querySelectorAll('.cur-type');
+		for(let element of toggleCurrencyBtn){
+			element.addEventListener('click', function(){
+				if(element.classList.contains('pay-cur--second')){
+					item.querySelectorAll('.cur-first').forEach(function(cur){
+						cur.classList.add('hide-item');
+					});
+					item.querySelectorAll('.cur-second').forEach(function(cur){
+						cur.classList.remove('hide-item');
+					});
+				}else{
+					item.querySelectorAll('.cur-first').forEach(function(cur){
+						cur.classList.remove('hide-item');
+					});
+					item.querySelectorAll('.cur-second').forEach(function(cur){
+						cur.classList.add('hide-item');
+					});
+				}
+			});
+		}
+	});
+  }
 });
