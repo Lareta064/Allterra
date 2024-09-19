@@ -1,10 +1,10 @@
 mixin price-drop
 	.cell-price__drop
 		ul
-			li 36 315€/2 недели
-			li 72 315€/4 недели
-			li 96 315€/6 месяцев
-			li 105 315€/1 год
+			li #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/2 недели
+			li #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/4 недели
+			li #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/6 месяцев
+			li #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/1 год
 			
 mixin scool-card(img)
 	.scool-card&attributes(attributes)
@@ -122,7 +122,7 @@ mixin scool-card2(img)
 		.scool-picture
 			+pic-short(img, w='324', h='212')
 			
-			.rating-label 9.6
+			.rating-label 9.65
 		
 		//====верхний ряд, видимый =====
 		.scool-info
@@ -165,12 +165,12 @@ mixin scool-card2(img)
 
 			//==== программы-выпадающая таблица====
 			.scool-drop
-				table.scool-table
+				table.scool-table.toggle-currency
 					thead
 						tr
 							th.cell-name Программы
 							th.cell-age Возраст
-							th.cell-price Выбрать #[span.pay-cur.active €]|#[span.pay-cur ₽]
+							th.cell-price Выбрать #[span.pay-cur.pay-cur--first.active €]|#[span.pay-cur.pay-cur--second ₽]
 					tbody
 						//===== single row ====
 						tr
@@ -180,13 +180,11 @@ mixin scool-card2(img)
 							//=====price cell =====
 							td.cell-price
 								.cell-price__btn
-									a(href="#!") #[span 36 315€]/2 недели
+									a(href="#!") #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/2 недели
 									svg.svg-chevron-down
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
 								+price-drop
-								
-
 						//====== single row ====
 						tr
 							td.cell-name 
@@ -194,7 +192,7 @@ mixin scool-card2(img)
 							td.cell-age 16-17
 							td.cell-price
 								.cell-price__btn
-									a(href="#!") #[span 36 315€]/2 недели
+									a(href="#!") #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/2 недели
 									svg.svg-chevron-down
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
@@ -207,7 +205,7 @@ mixin scool-card2(img)
 							td.cell-age 14-15
 							td.cell-price
 								.cell-price__btn
-									a(href="#!") #[span 36 315€]/месяц
+									a(href="#!") #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/месяц
 									svg.svg-chevron-down
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
@@ -219,7 +217,7 @@ mixin scool-card2(img)
 							td.cell-age 18-21
 							td.cell-price
 								.cell-price__btn
-									a(href="#!") #[span 36 315€]/1год
+									a(href="#!") #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/1год
 									svg.svg-chevron-down
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
@@ -232,7 +230,7 @@ mixin scool-card2(img)
 							//=====price cell =====
 							td.cell-price
 								.cell-price__btn
-									a(href="#!") #[span 36 315€]/2 недели
+									a(href="#!") #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/2 недели
 									svg.svg-chevron-down
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
@@ -245,7 +243,7 @@ mixin scool-card2(img)
 							td.cell-age 16-17
 							td.cell-price
 								.cell-price__btn
-									a(href="#!") #[span 36 315€]/2 недели
+									a(href="#!") #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/2 недели
 									svg.svg-chevron-down
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
@@ -258,7 +256,7 @@ mixin scool-card2(img)
 							td.cell-age 14-15
 							td.cell-price
 								.cell-price__btn
-									a(href="#!") #[span 36 315€]/месяц
+									a(href="#!") #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/месяц
 									svg.svg-chevron-down
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								+price-drop
@@ -269,7 +267,7 @@ mixin scool-card2(img)
 							td.cell-age 18-21
 							td.cell-price
 								.cell-price__btn
-									a(href="#!") #[span 36 315€]/1год
+									a(href="#!") #[span.cur-first 36 315€]#[span.cur-second.hide-item 210 315&#8381;]/1год
 									svg.svg-chevron-down
 										use(href='./img/spriteSvg.svg#svg-chevron-down')
 								//=====price cell drop=====
