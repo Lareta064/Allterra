@@ -286,11 +286,15 @@ article>p+p{margin-top: 12px;}
 		background-color: transparent;
 	}
 }
-.accent-txt, .accent-link{
+.accent-txt, .accent-link, .seminar__registration{
 	color: $main-accent;
 }
 .white-txt, .white-link{
 	color: $white;
+}
+.seminar__registration:hover {
+	opacity: 0.6;
+	color: $main-accent;
 }
 *.white-link,
 *.accent-link,
