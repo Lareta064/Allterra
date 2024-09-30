@@ -162,6 +162,7 @@ line-height: 1.33;}
 	opacity: .5;
 	line-height: 1.71;
 	margin-bottom: 12px;
+	
 }
 .txt-opac{
 	opacity: 0.8;
@@ -286,16 +287,13 @@ article>p+p{margin-top: 12px;}
 		background-color: transparent;
 	}
 }
-.accent-txt, .accent-link, .seminar__registration{
+.accent-txt, .accent-link{
 	color: $main-accent;
 }
 .white-txt, .white-link{
 	color: $white;
 }
-.seminar__registration:hover {
-	opacity: 0.6;
-	color: $main-accent;
-}
+
 *.white-link,
 *.accent-link,
 *.grey-link{

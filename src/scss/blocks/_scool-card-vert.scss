@@ -149,7 +149,9 @@
 			display: none;
 		}
 }
-
+.scool-card.scool-card--vertical .scool-info {
+	width: 100%
+}
 .scool-cards-grid.three-columns .scool-card {
 	box-shadow: 0 14px 28px 0 rgba(22, 29, 43, 0.24), 0 6px 10px 0 rgba(22, 29, 43, 0.06), 0 0 1px 0 rgba(22, 29, 43, 0.08);
 }

@@ -799,11 +799,15 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(blockTable.offsetHeight < 107){
 				block.classList.add('active');
 			}else{
-
 				const heightDynamicBtn = block.querySelector('.height-dynamic__btn');
 				heightDynamicBtn.addEventListener('click', ()=>{
-					block.classList.add('active');
-					block.style.maxHeight = block.scrollHeight + 'px';
+					if(!block.classList.contains('active')){
+						block.classList.add('active');
+						block.style.maxHeight = block.scrollHeight +'px';	
+					}else{
+						block.classList.remove('active');
+						block.style.maxHeight = 170+'px';
+					}
 				});
 			}
 			

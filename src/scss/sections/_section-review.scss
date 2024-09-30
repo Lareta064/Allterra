@@ -40,6 +40,9 @@
 			left: 0;
 			right:0;
 		}
+		@media (max-width: 767px) {
+		display: none;
+		}
 	}
 
 
