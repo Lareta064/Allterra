@@ -1,119 +1,186 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
-		<meta name="format-detection" content="telephone=no">
-		<link rel="stylesheet" href="../libs/swiper/swiper.min.css">
-		<link rel="stylesheet" href="../fonts/fonts.css">
-		<link rel="stylesheet" href="../css/main.css">
-		<title></title>
-	</head>
-	<body class="body-dashboard">
-		<div class="ui-panel">
-			<div class="ui-panel-block">
-				<div class="ui-panel-block__part"><a class="back-index" href="http://localhost:3000/">На Главную</a>
-					<h3>Базовые компоненты</h3>
-					<ul>
-						<li><a href="colors.html">Цветовая схема</a></li>
-						<li><a href="grids.html">Сетки				</a></li>
-						<li><a href="typography.html">Типографика</a></li>
-						<li><a href="positions-classes.html">Классы</a></li>
-						<li><a href="icons.html">Иконки</a></li>
-						<li><a href="buttons.html">Кнопки</a></li>
-						<li><a href="forms.html">Формы</a></li>
-						<li><a href="components.html">Компоненты</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Карточки</h3>
-					<ul>
-						<li><a href="review-card.html">Карточка Отзыва</a></li>
-						<li><a href="boss-card.html">Карточка Руководителя	</a></li>
-						<li><a href="persone-card.html">Short-Карточка Персоны </a></li>
-						<li><a href="blog-card.html">Карточка Блога</a></li>
-						<li><a href="accredit-card.html">Карточка Аккредитации</a></li>
-						<li><a href="info-card.html">Карточка Услуги</a></li>
-						<li><a href="process-stage.html">Карточка Этап работы</a></li>
-						<li><a href="contacts-card.html">Карточка Контакты</a></li>
-						<li><a href="scool-card.html">Карточка Заведения</a></li>
-						<li><a href="level-card.html">Карточка - ссылка ступень образования</a></li>
-						<li><a href="tab-toggles.html">Переключатели табов		</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Блоки</h3>
-					<ul>
-						<li><a href="ul-blocks.html">Текстовые списки</a></li>
-						<li><a href="acordion.html">Аккордеон</a></li>
-						<li><a href="stage-tabs.html">Этапы работы (tabs)</a></li>
-						<li><a href="search-single-result.html">Результат поиска</a></li>
-						<li><a href="filters-menu.html">Меню с фильтрами</a></li>
-						<li><a href="section-title.html">Заголовoк + подзаголовок в секции</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Секции</h3>
-					<ul>
-						<li><a href="header.html">Шапка с навигациями				</a></li>
-						<li><a href="header-banner.html">Баннер в шапке (внутренние страницы)</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Страницы </h3>
-				</div>
-			</div>
-		</div>
-		<div class="container-dashboard" style="background: #F0F3F9">
-			<h2>Short card</h2>
-			<div class="person short-card">
-				<!--====== top row =====-->
-				<div class="person__info">
-					<div class="person__photo"><img class="wh-100 lazy" src="./img/boss/boss1.webp" width="295" alt="img"/></div>
-					<div class="person__details">
-						<div class="flex-center-y">
-							<div class="person__name">Гречко Владимир Ильич</div>
-						</div>
-						<div class="person__range">
-							<p>Генеральный директор</p>
-							<p>Опыт работы 27 лет</p>
-						</div>
-						<div class="person__links"><a class="accent-link" href="#!">grechko@allterra.ru</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<pre>+person('boss/boss1','Гречко Владимир Ильич','grechko@allterra.ru', 'Генеральный директор', 'Опыт работы 27 лет')(class="short-card")
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../libs/swiper/swiper.min.css">
+  <link rel="stylesheet" href="../fonts/fonts.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title></title>
+</head>
+
+<body class="body-dashboard">
+  <div class="ui-panel">
+    <div class="ui-panel-block">
+      <div class="ui-panel-block__part">
+        <a class="back-index" href="http://localhost:3000/">На Главную</a>
+        <h3>Базовые компоненты</h3>
+        <ul>
+          <li>
+            <a href="colors.html">Цветовая схема</a>
+          </li>
+          <li>
+            <a href="grids.html">Сетки </a>
+          </li>
+          <li>
+            <a href="typography.html">Типографика</a>
+          </li>
+          <li>
+            <a href="positions-classes.html">Классы</a>
+          </li>
+          <li>
+            <a href="icons.html">Иконки</a>
+          </li>
+          <li>
+            <a href="buttons.html">Кнопки</a>
+          </li>
+          <li>
+            <a href="forms.html">Формы</a>
+          </li>
+          <li>
+            <a href="components.html">Компоненты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Карточки</h3>
+        <ul>
+          <li>
+            <a href="review-card.html">Карточка Отзыва</a>
+          </li>
+          <li>
+            <a href="boss-card.html">Карточка Руководителя </a>
+          </li>
+          <li>
+            <a href="persone-card.html">Short-Карточка Персоны </a>
+          </li>
+          <li>
+            <a href="blog-card.html">Карточка Блога</a>
+          </li>
+          <li>
+            <a href="accredit-card.html">Карточка Аккредитации</a>
+          </li>
+          <li>
+            <a href="info-card.html">Карточка Услуги</a>
+          </li>
+          <li>
+            <a href="process-stage.html">Карточка Этап работы</a>
+          </li>
+          <li>
+            <a href="contacts-card.html">Карточка Контакты</a>
+          </li>
+          <li>
+            <a href="scool-card.html">Карточка Заведения</a>
+          </li>
+          <li>
+            <a href="level-card.html">Карточка - ссылка ступень образования</a>
+          </li>
+          <li>
+            <a href="tab-toggles.html">Переключатели табов </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Блоки</h3>
+        <ul>
+          <li>
+            <a href="ul-blocks.html">Текстовые списки</a>
+          </li>
+          <li>
+            <a href="acordion.html">Аккордеон</a>
+          </li>
+          <li>
+            <a href="stage-tabs.html">Этапы работы (tabs)</a>
+          </li>
+          <li>
+            <a href="search-single-result.html">Результат поиска</a>
+          </li>
+          <li>
+            <a href="filters-menu.html">Меню с фильтрами</a>
+          </li>
+          <li>
+            <a href="section-title.html">Заголовoк + подзаголовок в секции</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Секции</h3>
+        <ul>
+          <li>
+            <a href="header.html">Шапка с навигациями </a>
+          </li>
+          <li>
+            <a href="header-banner.html">Баннер в шапке (внутренние страницы)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Страницы </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-dashboard" style="background: #F0F3F9">
+    <h2>Short card</h2>
+    <div class="person short-card">
+      <!--====== top row =====-->
+      <div class="person__info">
+        <div class="person__photo">
+          <img class="wh-100 lazy" src="./img/boss/boss1.webp" width="295" alt="img" />
+        </div>
+        <div class="person__details">
+          <div class="flex-center-y">
+            <div class="person__name">Гречко Владимир Ильич</div>
+          </div>
+          <div class="person__range">
+            <p>Генеральный директор</p>
+            <p>Опыт работы 27 лет</p>
+          </div>
+          <div class="person__links">
+            <a class="accent-link" href="#!">grechko@allterra.ru</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre>+person('boss/boss1','Гречко Владимир Ильич','grechko@allterra.ru', 'Генеральный директор', 'Опыт работы 27 лет')(class="short-card")
 </pre>
-			<h2>Short card</h2>
-			<div class="person-card light-bg">
-				<div class="person">
-					<!--====== top row =====-->
-					<div class="person__info">
-						<div class="person__photo"><img class="wh-100 lazy" src="./img/review/author4.webp" width="295" alt="img"/></div>
-						<div class="person__details">
-							<div class="flex-center-y">
-								<div class="person__name">Иван Рябинин</div>
-								<div class="person__date">02.02.2024</div>
-							</div>
-							<div class="tags-list"><a href="#!">#среднее_образование</a><a href="#!">#родитель</a>
-							</div>
-							<div class="person__links"><a class="accent-link" href="#!">Giggleswick School</a><a class="pin-item" href="#!">США</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<pre>+person('review/review4','Иван Рябинин','Giggleswick School', '', '', ['#среднее_образование', '#родитель', '', 'США'])(class="short-card")</pre>
-		</div>
-		<!--=============== jquery ===================-->
-		<script src="../libs/jquery/jquery-3.0.0.min.js"></script>
-		<!--=============== jquery lazy load===================-->
-		<script src="../libs/jquery.lazy.min.js"></script>
-		<script src="../libs/swiper/swiper.js"></script>
-		<!--=============== мои скрипты ===================-->
-		<script src="../js/main.js"></script>
-	</body>
+    <h2>Short card</h2>
+    <div class="person-card light-bg">
+      <div class="person">
+        <!--====== top row =====-->
+        <div class="person__info">
+          <div class="person__photo">
+            <img class="wh-100 lazy" src="./img/review/author4.webp" width="295" alt="img" />
+          </div>
+          <div class="person__details">
+            <div class="flex-center-y">
+              <div class="person__name">Иван Рябинин</div>
+              <div class="person__date">02.02.2024</div>
+            </div>
+            <div class="tags-list">
+              <a href="#!">#среднее_образование</a>
+              <a href="#!">#родитель</a>
+            </div>
+            <div class="person__links">
+              <a class="accent-link" href="#!">Giggleswick School</a>
+              <a class="pin-item" href="#!">США</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre>+person('review/review4','Иван Рябинин','Giggleswick School', '', '', ['#среднее_образование', '#родитель', '', 'США'])(class="short-card")</pre>
+  </div>
+  <!--=============== jquery ===================-->
+  <script src="../libs/jquery/jquery-3.0.0.min.js"></script>
+  <!--=============== jquery lazy load===================-->
+  <script src="../libs/jquery.lazy.min.js"></script>
+  <script src="../libs/swiper/swiper.js"></script>
+  <!--=============== мои скрипты ===================-->
+  <script src="../js/main.js"></script>
+</body>
+
 </html>

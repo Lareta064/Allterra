@@ -1,75 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-		<!--====убрать синий цвет у ссылок в сафари ========-->
-		<meta name="format-detection" content="telephone=no"/>
-		<link rel="stylesheet" href="../css/main.css"/>
-		<title>UI-KIT</title>
-	</head>
-	<body class="body-dashboard">
-		<div class="ui-panel">
-			<div class="ui-panel-block">
-				<div class="ui-panel-block__part"><a class="back-index" href="http://localhost:3000/">На Главную</a>
-					<h3>Базовые компоненты</h3>
-					<ul>
-						<li><a href="colors.html">Цветовая схема</a></li>
-						<li><a href="grids.html">Сетки				</a></li>
-						<li><a href="typography.html">Типографика</a></li>
-						<li><a href="positions-classes.html">Классы</a></li>
-						<li><a href="icons.html">Иконки</a></li>
-						<li><a href="buttons.html">Кнопки</a></li>
-						<li><a href="forms.html">Формы</a></li>
-						<li><a href="components.html">Компоненты</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Карточки</h3>
-					<ul>
-						<li><a href="review-card.html">Карточка Отзыва</a></li>
-						<li><a href="boss-card.html">Карточка Руководителя	</a></li>
-						<li><a href="persone-card.html">Short-Карточка Персоны </a></li>
-						<li><a href="blog-card.html">Карточка Блога</a></li>
-						<li><a href="accredit-card.html">Карточка Аккредитации</a></li>
-						<li><a href="info-card.html">Карточка Услуги</a></li>
-						<li><a href="process-stage.html">Карточка Этап работы</a></li>
-						<li><a href="contacts-card.html">Карточка Контакты</a></li>
-						<li><a href="scool-card.html">Карточка Заведения</a></li>
-						<li><a href="level-card.html">Карточка - ссылка ступень образования</a></li>
-						<li><a href="tab-toggles.html">Переключатели табов		</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Блоки</h3>
-					<ul>
-						<li><a href="ul-blocks.html">Текстовые списки</a></li>
-						<li><a href="acordion.html">Аккордеон</a></li>
-						<li><a href="stage-tabs.html">Этапы работы (tabs)</a></li>
-						<li><a href="search-single-result.html">Результат поиска</a></li>
-						<li><a href="filters-menu.html">Меню с фильтрами</a></li>
-						<li><a href="section-title.html">Заголовoк + подзаголовок в секции</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Секции</h3>
-					<ul>
-						<li><a href="header.html">Шапка с навигациями				</a></li>
-						<li><a href="header-banner.html">Баннер в шапке (внутренние страницы)</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Страницы </h3>
-				</div>
-			</div>
-		</div>
-		<div class="container-dashboard">
-			<h2>UI классы</h2>
-			<div class="container-dashboard__content">
-				<ul>
-					<li>
-						<pre>.hide-mobile    - скрыть на экранах от 0 - 767(включит)
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--====убрать синий цвет у ссылок в сафари ========-->
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <title>UI-KIT</title>
+</head>
+
+<body class="body-dashboard">
+  <div class="ui-panel">
+    <div class="ui-panel-block">
+      <div class="ui-panel-block__part">
+        <a class="back-index" href="http://localhost:3000/">На Главную</a>
+        <h3>Базовые компоненты</h3>
+        <ul>
+          <li>
+            <a href="colors.html">Цветовая схема</a>
+          </li>
+          <li>
+            <a href="grids.html">Сетки </a>
+          </li>
+          <li>
+            <a href="typography.html">Типографика</a>
+          </li>
+          <li>
+            <a href="positions-classes.html">Классы</a>
+          </li>
+          <li>
+            <a href="icons.html">Иконки</a>
+          </li>
+          <li>
+            <a href="buttons.html">Кнопки</a>
+          </li>
+          <li>
+            <a href="forms.html">Формы</a>
+          </li>
+          <li>
+            <a href="components.html">Компоненты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Карточки</h3>
+        <ul>
+          <li>
+            <a href="review-card.html">Карточка Отзыва</a>
+          </li>
+          <li>
+            <a href="boss-card.html">Карточка Руководителя </a>
+          </li>
+          <li>
+            <a href="persone-card.html">Short-Карточка Персоны </a>
+          </li>
+          <li>
+            <a href="blog-card.html">Карточка Блога</a>
+          </li>
+          <li>
+            <a href="accredit-card.html">Карточка Аккредитации</a>
+          </li>
+          <li>
+            <a href="info-card.html">Карточка Услуги</a>
+          </li>
+          <li>
+            <a href="process-stage.html">Карточка Этап работы</a>
+          </li>
+          <li>
+            <a href="contacts-card.html">Карточка Контакты</a>
+          </li>
+          <li>
+            <a href="scool-card.html">Карточка Заведения</a>
+          </li>
+          <li>
+            <a href="level-card.html">Карточка - ссылка ступень образования</a>
+          </li>
+          <li>
+            <a href="tab-toggles.html">Переключатели табов </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Блоки</h3>
+        <ul>
+          <li>
+            <a href="ul-blocks.html">Текстовые списки</a>
+          </li>
+          <li>
+            <a href="acordion.html">Аккордеон</a>
+          </li>
+          <li>
+            <a href="stage-tabs.html">Этапы работы (tabs)</a>
+          </li>
+          <li>
+            <a href="search-single-result.html">Результат поиска</a>
+          </li>
+          <li>
+            <a href="filters-menu.html">Меню с фильтрами</a>
+          </li>
+          <li>
+            <a href="section-title.html">Заголовoк + подзаголовок в секции</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Секции</h3>
+        <ul>
+          <li>
+            <a href="header.html">Шапка с навигациями </a>
+          </li>
+          <li>
+            <a href="header-banner.html">Баннер в шапке (внутренние страницы)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Страницы </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-dashboard">
+    <h2>UI классы</h2>
+    <div class="container-dashboard__content">
+      <ul>
+        <li>
+          <pre>.hide-mobile    - скрыть на экранах от 0 - 767(включит)
 
 .block-1023 - скрыт до 1024(включит), далее блок
 .flex-1023 - скрыт до 1024(включит), далее флекс
@@ -79,56 +136,60 @@
 
 аналогичные классы для 1279 и 1280						
 </pre>
-					</li>
-					<li>
-						<h3 class="txt-center">Текст по центру</h3>
-						<pre>h2.txt-center Текст по центру</pre>
-					</li>
-					<hr/>
-					<li>
-						<h3 class="txt-upper">Текст Uppercase</h3>
-					</li>
-					<pre>h3.txt-upper Текст Uppercase
+        </li>
+        <li>
+          <h3 class="txt-center">Текст по центру</h3>
+          <pre>h2.txt-center Текст по центру</pre>
+        </li>
+        <hr />
+        <li>
+          <h3 class="txt-upper">Текст Uppercase</h3>
+        </li>
+        <pre>h3.txt-upper Текст Uppercase
 </pre>
-					<hr/>
-					<p>ФЛЕКС классы</p>
-					<li>.flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,.flex-col,  </li>
-					<hr/>
-					<h3>Флекс-шапка секции. Блок с кнопками скрывается на экранах < 1024px</h3>
-					<div class="header-group">
-						<h2 class="h2" style="margin-bottom: 0">Статьи об обучении</h2>
-						<div class="btns-group"><a class="btn--slim btn-white" href="#!">Все новости</a><a class="btn--slim btn" href="#!">Все статьи</a></div>
-					</div>
-					<pre>.header-group
+        <hr />
+        <p>ФЛЕКС классы</p>
+        <li>.flex-row,.flex-center-y, .flex-center-x, .flex-center,.flex-justify,.flex-col, </li>
+        <hr />
+        <h3>Флекс-шапка секции. Блок с кнопками скрывается на экранах < 1024px</h3>
+            <div class="header-group">
+              <h2 class="h2" style="margin-bottom: 0">Статьи об обучении</h2>
+              <div class="btns-group">
+                <a class="btn--slim btn-white" href="#!">Все новости</a>
+                <a class="btn--slim btn" href="#!">Все статьи</a>
+              </div>
+            </div>
+            <pre>.header-group
 	h2.h2 Статьи об обучении
 	
 	.btns-group
 		a(href="#!").btn--slim.btn-white Все новости
 		a(href="#!").btn--slim.btn Все статьи</pre>
-					<hr/>
-					<li>.w-100{width:100%!important;}</li>
-					<hr/>
-					<li> 
-						<h3>Отступы</h3>
-						<pre>.mb-20, -40 -48 -60 -80
+            <hr />
+            <li>.w-100{width:100%!important;}</li>
+            <hr />
+            <li>
+              <h3>Отступы</h3>
+              <pre>.mb-20, -40 -48 -60 -80
 .mt-20, 40, 48, 60, 80
 pt-100
 mt-auto
 
 </pre>
-					</li>
-					<hr/>
-					<li> 
-						<h3>Для изображений</h3>
-						<pre>img.wh-100
+            </li>
+            <hr />
+            <li>
+              <h3>Для изображений</h3>
+              <pre>img.wh-100
 .img-zoom - ховер масштабирование</pre>
-					</li>
-					<hr/>
-					<li>
-						<h3>Обертка для кнопки по центру</h3>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</body>
+            </li>
+            <hr />
+            <li>
+              <h3>Обертка для кнопки по центру</h3>
+            </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
 </html>

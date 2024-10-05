@@ -1,153 +1,226 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
-		<meta name="format-detection" content="telephone=no">
-		<link rel="stylesheet" href="../libs/swiper/swiper.min.css">
-		<link rel="stylesheet" href="../fonts/fonts.css">
-		<link rel="stylesheet" href="../css/main.css">
-		<title></title>
-	</head>
-	<body class="body-dashboard">
-		<div class="ui-panel">
-			<div class="ui-panel-block">
-				<div class="ui-panel-block__part"><a class="back-index" href="http://localhost:3000/">На Главную</a>
-					<h3>Базовые компоненты</h3>
-					<ul>
-						<li><a href="colors.html">Цветовая схема</a></li>
-						<li><a href="grids.html">Сетки				</a></li>
-						<li><a href="typography.html">Типографика</a></li>
-						<li><a href="positions-classes.html">Классы</a></li>
-						<li><a href="icons.html">Иконки</a></li>
-						<li><a href="buttons.html">Кнопки</a></li>
-						<li><a href="forms.html">Формы</a></li>
-						<li><a href="components.html">Компоненты</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Карточки</h3>
-					<ul>
-						<li><a href="review-card.html">Карточка Отзыва</a></li>
-						<li><a href="boss-card.html">Карточка Руководителя	</a></li>
-						<li><a href="persone-card.html">Short-Карточка Персоны </a></li>
-						<li><a href="blog-card.html">Карточка Блога</a></li>
-						<li><a href="accredit-card.html">Карточка Аккредитации</a></li>
-						<li><a href="info-card.html">Карточка Услуги</a></li>
-						<li><a href="process-stage.html">Карточка Этап работы</a></li>
-						<li><a href="contacts-card.html">Карточка Контакты</a></li>
-						<li><a href="scool-card.html">Карточка Заведения</a></li>
-						<li><a href="level-card.html">Карточка - ссылка ступень образования</a></li>
-						<li><a href="tab-toggles.html">Переключатели табов		</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Блоки</h3>
-					<ul>
-						<li><a href="ul-blocks.html">Текстовые списки</a></li>
-						<li><a href="acordion.html">Аккордеон</a></li>
-						<li><a href="stage-tabs.html">Этапы работы (tabs)</a></li>
-						<li><a href="search-single-result.html">Результат поиска</a></li>
-						<li><a href="filters-menu.html">Меню с фильтрами</a></li>
-						<li><a href="section-title.html">Заголовoк + подзаголовок в секции</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Секции</h3>
-					<ul>
-						<li><a href="header.html">Шапка с навигациями				</a></li>
-						<li><a href="header-banner.html">Баннер в шапке (внутренние страницы)</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Страницы </h3>
-				</div>
-			</div>
-		</div>
-		<div class="container-dashboard">
-			<h3>Простой список</h3>
-			<div class="list-block">
-				<ul>
-					<li>Находим варианты с высокими шансами на поступление</li>
-					<li>Выясняем наличие свободных мест</li>
-					<li>Уточняем вступительные требования и сроки</li>
-					<li>Согласовываем индивидуальные условия</li>
-				</ul>
-			</div>
-			<pre>+list-block('Находим варианты с высокими шансами на поступление', 'Выясняем наличие свободных мест', 'Уточняем вступительные требования и сроки', 'Согласовываем индивидуальные условия')
-</pre><br>
-			<div class="border-block">
-				<div class="list-block">
-					<ul>
-						<li>Находим варианты с высокими шансами на поступление</li>
-						<li>Выясняем наличие свободных мест</li>
-						<li>Уточняем вступительные требования и сроки</li>
-						<li>Согласовываем индивидуальные условия</li>
-					</ul>
-				</div>
-			</div>
-			<pre>.border-block
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../libs/swiper/swiper.min.css">
+  <link rel="stylesheet" href="../fonts/fonts.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title></title>
+</head>
+
+<body class="body-dashboard">
+  <div class="ui-panel">
+    <div class="ui-panel-block">
+      <div class="ui-panel-block__part">
+        <a class="back-index" href="http://localhost:3000/">На Главную</a>
+        <h3>Базовые компоненты</h3>
+        <ul>
+          <li>
+            <a href="colors.html">Цветовая схема</a>
+          </li>
+          <li>
+            <a href="grids.html">Сетки </a>
+          </li>
+          <li>
+            <a href="typography.html">Типографика</a>
+          </li>
+          <li>
+            <a href="positions-classes.html">Классы</a>
+          </li>
+          <li>
+            <a href="icons.html">Иконки</a>
+          </li>
+          <li>
+            <a href="buttons.html">Кнопки</a>
+          </li>
+          <li>
+            <a href="forms.html">Формы</a>
+          </li>
+          <li>
+            <a href="components.html">Компоненты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Карточки</h3>
+        <ul>
+          <li>
+            <a href="review-card.html">Карточка Отзыва</a>
+          </li>
+          <li>
+            <a href="boss-card.html">Карточка Руководителя </a>
+          </li>
+          <li>
+            <a href="persone-card.html">Short-Карточка Персоны </a>
+          </li>
+          <li>
+            <a href="blog-card.html">Карточка Блога</a>
+          </li>
+          <li>
+            <a href="accredit-card.html">Карточка Аккредитации</a>
+          </li>
+          <li>
+            <a href="info-card.html">Карточка Услуги</a>
+          </li>
+          <li>
+            <a href="process-stage.html">Карточка Этап работы</a>
+          </li>
+          <li>
+            <a href="contacts-card.html">Карточка Контакты</a>
+          </li>
+          <li>
+            <a href="scool-card.html">Карточка Заведения</a>
+          </li>
+          <li>
+            <a href="level-card.html">Карточка - ссылка ступень образования</a>
+          </li>
+          <li>
+            <a href="tab-toggles.html">Переключатели табов </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Блоки</h3>
+        <ul>
+          <li>
+            <a href="ul-blocks.html">Текстовые списки</a>
+          </li>
+          <li>
+            <a href="acordion.html">Аккордеон</a>
+          </li>
+          <li>
+            <a href="stage-tabs.html">Этапы работы (tabs)</a>
+          </li>
+          <li>
+            <a href="search-single-result.html">Результат поиска</a>
+          </li>
+          <li>
+            <a href="filters-menu.html">Меню с фильтрами</a>
+          </li>
+          <li>
+            <a href="section-title.html">Заголовoк + подзаголовок в секции</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Секции</h3>
+        <ul>
+          <li>
+            <a href="header.html">Шапка с навигациями </a>
+          </li>
+          <li>
+            <a href="header-banner.html">Баннер в шапке (внутренние страницы)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Страницы </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-dashboard">
+    <h3>Простой список</h3>
+    <div class="list-block">
+      <ul>
+        <li>Находим варианты с высокими шансами на поступление</li>
+        <li>Выясняем наличие свободных мест</li>
+        <li>Уточняем вступительные требования и сроки</li>
+        <li>Согласовываем индивидуальные условия</li>
+      </ul>
+    </div>
+    <pre>+list-block('Находим варианты с высокими шансами на поступление', 'Выясняем наличие свободных мест', 'Уточняем вступительные требования и сроки', 'Согласовываем индивидуальные условия')
+</pre>
+    <br>
+    <div class="border-block">
+      <div class="list-block">
+        <ul>
+          <li>Находим варианты с высокими шансами на поступление</li>
+          <li>Выясняем наличие свободных мест</li>
+          <li>Уточняем вступительные требования и сроки</li>
+          <li>Согласовываем индивидуальные условия</li>
+        </ul>
+      </div>
+    </div>
+    <pre>.border-block
 	+list-block('Находим варианты с высокими шансами на поступление', 'Выясняем наличие свободных мест', 'Уточняем вступительные требования и сроки', 'Согласовываем индивидуальные условия')</pre>
-			<h3>Список с оформлением</h3><br>
-			<div class="list-check">
-				<ul>
-					<li>Лучшие, рейтинговые средние школы и частные школы-пансионы Великобритании, США, Швейцарии и Германии</li>
-					<li>Сильнейшие технические вузы мира</li>
-				</ul>
-			</div>
-			<pre>+list-check('Лучшие, рейтинговые средние школы и частные школы-пансионы Великобритании, США, Швейцарии и Германии', 'Сильнейшие технические вузы мира')</pre>
-			<h3>Список нумерованный</h3><br>
-			<ol>
-				<li>Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.</li>
-				<li>Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.</li>
-			</ol>
-			<pre>ol
+    <h3>Список с оформлением</h3>
+    <br>
+    <div class="list-check">
+      <ul>
+        <li>Лучшие, рейтинговые средние школы и частные школы-пансионы Великобритании, США, Швейцарии и Германии</li>
+        <li>Сильнейшие технические вузы мира</li>
+      </ul>
+    </div>
+    <pre>+list-check('Лучшие, рейтинговые средние школы и частные школы-пансионы Великобритании, США, Швейцарии и Германии', 'Сильнейшие технические вузы мира')</pre>
+    <h3>Список нумерованный</h3>
+    <br>
+    <ol>
+      <li>Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.</li>
+      <li>Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.</li>
+    </ol>
+    <pre>ol
 	li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.
 	li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.</pre>
-			<div class="custom-text">
-				<ol>
-					<li>Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.</li>
-					<li>Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.</li>
-				</ol>
-			</div>
-			<pre>.custom-text
+    <div class="custom-text">
+      <ol>
+        <li>Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.</li>
+        <li>Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.</li>
+      </ol>
+    </div>
+    <pre>.custom-text
 	ol
 		li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet.
 		li Et malesuada fames ac turpis. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel.</pre>
-			<ul class="services-list">
-				<li class="grid-12">
-					<div class="txt-20">Подбор школы и программы обучения</div>
-					<p>Проводим собеседование и тестирование. Определяем критерии подбора школы, ищем максимально подходящие варианты. Составляем с родителями шорт-лист (1-3 учебных заведения)	</p>
-				</li>
-			</ul>
-			<pre>+services-list([{title: 'Подбор школы и программы обучения', txt:'Проводим собеседование и тестирование. Определяем критерии подбора школы, ищем максимально подходящие варианты. Составляем с родителями шорт-лист (1-3 учебных заведения)	'}])
+    <ul class="services-list">
+      <li class="grid-12">
+        <div class="txt-20">Подбор школы и программы обучения</div>
+        <p>Проводим собеседование и тестирование. Определяем критерии подбора школы, ищем максимально подходящие варианты. Составляем с родителями шорт-лист (1-3 учебных заведения) </p>
+      </li>
+    </ul>
+    <pre>+services-list([{title: 'Подбор школы и программы обучения', txt:'Проводим собеседование и тестирование. Определяем критерии подбора школы, ищем максимально подходящие варианты. Составляем с родителями шорт-лист (1-3 учебных заведения)	'}])
 </pre>
-			<div class="dark-bg">
-				<ul class="stripes-list">
-					<li><span class="check-icon">
-							<svg class="svg-check">
-								<use href="../img/spriteSvg.svg#svg-check"></use>
-							</svg></span><span>Сильнейшие технические вузы мира</span></li>
-					<li><span class="check-icon">
-							<svg class="svg-check">
-								<use href="../img/spriteSvg.svg#svg-check"></use>
-							</svg></span><span>Медицинские факультеты</span></li>
-					<li><span class="check-icon">
-							<svg class="svg-check">
-								<use href="../img/spriteSvg.svg#svg-check"></use>
-							</svg></span><span>Университеты искусств</span></li>
-				</ul>
-			</div>
-			<pre>+stripes-list('Сильнейшие технические вузы мира', 'Медицинские факультеты', 'Университеты искусств')</pre>
-		</div>
-		<!--=============== jquery ===================-->
-		<script src="../libs/jquery/jquery-3.0.0.min.js"></script>
-		<!--=============== jquery lazy load===================-->
-		<script src="../libs/jquery.lazy.min.js"></script>
-		<script src="../libs/swiper/swiper.js"></script>
-		<!--=============== мои скрипты ===================-->
-		<script src="../js/main.js"></script>
-	</body>
+    <div class="dark-bg">
+      <ul class="stripes-list">
+        <li>
+          <span class="check-icon">
+            <svg class="svg-check">
+              <use href="../img/spriteSvg.svg#svg-check"></use>
+            </svg>
+          </span>
+          <span>Сильнейшие технические вузы мира</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg class="svg-check">
+              <use href="../img/spriteSvg.svg#svg-check"></use>
+            </svg>
+          </span>
+          <span>Медицинские факультеты</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg class="svg-check">
+              <use href="../img/spriteSvg.svg#svg-check"></use>
+            </svg>
+          </span>
+          <span>Университеты искусств</span>
+        </li>
+      </ul>
+    </div>
+    <pre>+stripes-list('Сильнейшие технические вузы мира', 'Медицинские факультеты', 'Университеты искусств')</pre>
+  </div>
+  <!--=============== jquery ===================-->
+  <script src="../libs/jquery/jquery-3.0.0.min.js"></script>
+  <!--=============== jquery lazy load===================-->
+  <script src="../libs/jquery.lazy.min.js"></script>
+  <script src="../libs/swiper/swiper.js"></script>
+  <!--=============== мои скрипты ===================-->
+  <script src="../js/main.js"></script>
+</body>
+
 </html>
