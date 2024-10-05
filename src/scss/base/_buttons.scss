@@ -7,7 +7,7 @@
 	align-items: center;
 	flex-shrink: 0;
 	cursor: pointer;
-	white-space: nowrap;
+	// white-space: nowrap;
 	outline: none;
 	font-family: $font-family;
 	font-weight: 500;
@@ -16,8 +16,9 @@
 	transition: .3s; 
 	text-align: center;
 	height: 64px;
-	line-height: 44px;
+	// line-height: 44px;
 	color: $white;
+	
 	@media (max-width: 1023px) {
 		height: 60px;
 	}
