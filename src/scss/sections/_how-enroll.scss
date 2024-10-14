@@ -98,3 +98,135 @@
 		}
 	}
 }
+
+.how-enroll-new {
+	position: relative;
+	padding-top: 50px !important;
+	padding-bottom: 0!important;
+	background: #e9e9e9;
+	.container{position: relative;}
+	.how-enroll-img img{margin: 0;}	
+		
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 50px;
+		background-color: #efefef;
+		filter: blur(44px);
+		z-index: 2;
+	}
+
+	
+	.how-enroll__content {
+		margin-inline: auto;
+		width: 63vw;
+		position: absolute;
+		top: 50px;
+		left: 90px;
+		z-index: 2;
+
+		.h3 {
+			margin-bottom: 32px;
+			letter-spacing: -0.03em;
+		}
+
+		p,
+		li {
+			line-height: 1.75;
+		}
+
+		li {
+			list-style-type: "- ";
+			margin-left: 10px;
+		}
+
+		ul {
+			margin-bottom: 32px;
+		}
+
+		strong {
+			font-weight: 600;
+
+			span {
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					height: 2px;
+					bottom: -8px;
+					background-color: $main-accent;
+					;
+				}
+			}
+		}
+
+		.btn-accent {
+			margin-top: 66px;
+			box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06)
+		}
+
+		@media (max-width: 1279px) {
+			width: 82vw;
+
+			.btn-accent {
+				margin-top: 50px;
+			}
+		}
+	}
+
+	@media (max-width: 1023px) {
+		padding-top: 80px !important;
+		padding-bottom: 90px!important;
+		background-color: white;
+		&:before {
+			display: none;
+		}
+
+		.how-enroll-img {
+			display: none;
+		}
+
+		.btn-accent {
+			background-color: $bg-black !important;
+		}
+
+		.how-enroll__content {
+			width: auto;
+			padding-inline: 20px;
+			position: relative;
+			top: auto;
+			left: auto;
+			
+		}
+	}
+
+	@media (max-width: 767px) {
+		.how-enroll__content {
+			padding-inline: 0;
+
+			p,
+			li {
+				font-size: 14px;
+				line-height: 1.71;
+			}
+		}
+	}
+
+	@media (max-width: 374px) {
+		.how-enroll__content {
+			padding-inline: 12px;
+
+			p,
+			li {
+				font-size: 13px;
+				line-height: 1.71;
+			}
+		}
+	}
+}
