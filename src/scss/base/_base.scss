@@ -548,3 +548,14 @@ section.light-bg, section.dark-bg{
 		display: flex;
 	}
 }
+#back-top {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 7;
+	background-color: $main-accent;
+	transform: rotate(-90deg);
+	svg{color: white; fill: transparent;}
+	opacity: 0;
+	transition: .3s; 
+}

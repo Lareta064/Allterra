@@ -947,4 +947,12 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	});
   }
+  const btnBackTop = document.getElementById('back-top');
+  window.addEventListener('scroll', ()=>{
+	if(window.scrollY > 800){
+		btnBackTop.style.opacity = 1;
+	}else{
+		btnBackTop.style.opacity = 0;
+	}
+  });
 });
