@@ -1,895 +1,1393 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
-		<meta name="format-detection" content="telephone=no">
-		<!--========= swiper slider ==============-->
-		<link rel="stylesheet" href="./libs/swiper/swiper.min.css">
-		<!--========= custom styles ========-->
-		<link rel="stylesheet" href="./css/main.css">
-		<title>Статьи</title>
-		<!--======= подключаем шрифты в head для ускорения загрузки страницы ==-->
-		<style>
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Regular.woff2) format("woff2");
-				font-weight: 400;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Medium.woff2) format("woff2");
-				font-weight: 500;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
-				font-weight: 600;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Bold.woff2) format("woff2");
-				font-weight: 700;
-				font-style: normal;
-				font-display: swap;
-			}
-			
-.hero { background-image: url('./img/blog/header-bg.webp');} @media ( max-width: 767px ){.hero { background-image: url('./img/blog/header-mob.webp');}}
-			
-		</style>
-	</head>
-	<body>
-		<!--========== HEADER =========-->
-		<header class="header">
-			<div class="header-search-popup flex-center-x" id="search-popup">
-				<div class="header-search-wrapper">
-					<form class="header-search flex-center-y">
-						<div class="form_field">
-							<input type="text" name="search-input" placeholder="Поиск по сайту">
-							<!--===== clean input button =====-->
-							<button class="btn-icon" type="reset">
-								<svg class="svg-cross">
-									<use href="./img/spriteSvg.svg#svg-cross"></use>
-								</svg>
-							</button>
-						</div>
-						<!--======FORM BUTTON=====		-->
-						<div class="form__btn">
-							<button class="btn-accent" type="submit">Найти</button>
-						</div>
-					</form>
-				</div>
-			</div>
-			<!--======= HEADER TOP ROW=======-->
-			<div class="header-top">
-				<div class="container">
-					<div class="header-flex">
-						<!--====== NAVIGATION =====-->
-						<nav class="header-nav">
-							<ul>
-								<!--======single LI====-->
-								<li class="menu-li drop-menu-li"><a href="#!">О компании</a>
-									<!--======single LI Drop-menu====-->
-									<div class="drop-menu-wrapper">
-										<ul>
-											<li> <a href="about.html">Об Allterra Education</a></li>
-											<li> <a href="greeting.html">Обращение директора</a></li>
-											<li> <a href="cooperation.html">Сотрудничество</a></li>
-											<li> <a href="vacant.html">Вакансии</a></li>
-											<li> <a href="partners.html">Partner`s zone</a></li>
-											<li> <a href="services.html">Все услуги</a></li>
-											<li> <a href="#!">Отзывы</a></li>
-											<li> <a href="#!">Контакты</a></li>
-										</ul>
-									</div>
-								</li>
-								<!--======single LI====-->
-								<li class="menu-li drop-menu-li"><a href="#!">Все услуги</a>
-									<div class="drop-menu-wrapper">
-										<ul>
-											<li> <a href="#!">Поступление в школу</a></li>
-											<li> <a href="#!">Поступление в университет</a></li>
-											<li> <a href="#!">Каникулы за рубежом</a></li>
-											<li> <a href="#!">Искусство и дизайн</a></li>
-										</ul>
-									</div>
-								</li>
-								<!--======single LI====-->
-								<li class="menu-li drop-menu-li"><a href="#!">Страны</a>
-									<div class="drop-menu-wrapper">
-										<div class="three-columns-grid">
-											<div class="grid-column">
-												<div class="grid-column__title">
-													<p>Англоговорящие</p>
-												</div>
-												<div class="grid-column__list"><a class="flex-item" href="#!">
-														<svg class="fl-uk">
-															<use href="./img/flags-sprite.svg#fl-uk"></use>
-														</svg><span>Великобритания</span></a><a class="flex-item" href="#!">
-														<svg class="fl-usa">
-															<use href="./img/flags-sprite.svg#fl-usa"></use>
-														</svg><span>США</span></a><a class="flex-item" href="#!">
-														<svg class="fl-irl">
-															<use href="./img/flags-sprite.svg#fl-irl"></use>
-														</svg><span>Ирландия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-can">
-															<use href="./img/flags-sprite.svg#fl-can"></use>
-														</svg><span>Канада</span></a><a class="flex-item" href="#!">
-														<svg class="fl-aus">
-															<use href="./img/flags-sprite.svg#fl-aus"></use>
-														</svg><span>Австралия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-malta">
-															<use href="./img/flags-sprite.svg#fl-malta"></use>
-														</svg><span>Мальта</span></a>
-												</div>
-											</div>
-											<div class="grid-column">
-												<div class="grid-column__title">
-													<p>Европа</p>
-												</div>
-												<div class="grid-column__list"><a class="flex-item" href="#!">
-														<svg class="fl-swet">
-															<use href="./img/flags-sprite.svg#fl-swet"></use>
-														</svg><span>Швейцария</span></a><a class="flex-item" href="#!">
-														<svg class="fl-spain">
-															<use href="./img/flags-sprite.svg#fl-spain"></use>
-														</svg><span>Испания</span></a><a class="flex-item" href="#!">
-														<svg class="fl-de">
-															<use href="./img/flags-sprite.svg#fl-de"></use>
-														</svg><span>Германия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-fr">
-															<use href="./img/flags-sprite.svg#fl-fr"></use>
-														</svg><span>Франция</span></a><a class="flex-item" href="#!">
-														<svg class="fl-netherl">
-															<use href="./img/flags-sprite.svg#fl-netherl"></use>
-														</svg><span>Голландия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-fin">
-															<use href="./img/flags-sprite.svg#fl-fin"></use>
-														</svg><span>Финлядия</span></a>
-												</div>
-											</div>
-											<div class="grid-column">
-												<div class="grid-column__title">
-													<p>Азия</p>
-												</div>
-												<div class="grid-column__list"><a class="flex-item" href="#!">
-														<svg class="fl-sing">
-															<use href="./img/flags-sprite.svg#fl-sing"></use>
-														</svg><span>Сингапур</span></a><a class="flex-item" href="#!">
-														<svg class="fl-oae">
-															<use href="./img/flags-sprite.svg#fl-oae"></use>
-														</svg><span>ОАЭ</span></a><a class="flex-item" href="#!">
-														<svg class="fl-thail">
-															<use href="./img/flags-sprite.svg#fl-thail"></use>
-														</svg><span>Тайланд</span></a><a class="flex-item" href="#!">
-														<svg class="fl-kor">
-															<use href="./img/flags-sprite.svg#fl-kor"></use>
-														</svg><span>Южная Корея</span></a><a class="flex-item" href="#!">
-														<svg class="fl-malasia">
-															<use href="./img/flags-sprite.svg#fl-malasia"></use>
-														</svg><span>Малайзия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-china">
-															<use href="./img/flags-sprite.svg#fl-china"></use>
-														</svg><span>Китай</span></a>
-												</div>
-											</div>
-										</div>
-										<!--======= bottom link =====-->
-										<div class="drop-menu-footer"><a class="accent-link" href="#!">Показать все страны</a></div>
-									</div>
-								</li>
-								<!--======single LI====-->
-								<li class="menu-li"><a href="article.html">Справочник поступающего</a></li>
-								<!--======single LI====-->
-								<li class="menu-li"><a href="#!">Новости</a></li>
-								<!--======single LI====-->
-								<li class="menu-li"><a href="contacts.html">Контакты</a></li>
-							</ul>
-						</nav>
-						<!--======RIGHT COLUMN =====-->
-						<div class="header-column">
-							<!--==== выбор языка ===-->
-							<div class="custom-select custom-select--lang">
-								<div class="custom-select-trigger">Ru</div>
-								<div class="custom-options">
-									<!--=== список с языками===-->
-									<div class="custom-select__drop">
-										<ul class="custom-select__list">
-											<li class="custom-option" data-value="En"><a class="flex-item" href="#!">
-													<svg class="fl-uk">
-														<use href="./img/flags-sprite.svg#fl-uk"></use>
-													</svg><span>En</span></a>
-											</li>
-											<li class="custom-option" data-value="Ru"><a class="flex-item" href="#!">
-													<svg class="fl-ru">
-														<use href="./img/flags-sprite.svg#fl-ru"></use>
-													</svg><span>RU</span></a>
-											</li>
-											<li class="custom-option" data-value="ESP"><a class="flex-item" href="#!">
-													<svg class="fl-spain">
-														<use href="./img/flags-sprite.svg#fl-spain"></use>
-													</svg><span>ESP</span></a>
-											</li>
-											<li class="custom-option" data-value="GE"><a class="flex-item" href="#!">
-													<svg class="fl-de">
-														<use href="./img/flags-sprite.svg#fl-de"></use>
-													</svg><span>GE</span></a>
-											</li>
-											<li class="custom-option" data-value="FR"><a class="flex-item" href="#!">
-													<svg class="fl-fr">
-														<use href="./img/flags-sprite.svg#fl-fr"></use>
-													</svg><span>FR</span></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div><a class="contact-item" href="tel:88005114993">8 (800) 511-4993</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--======= HEADER BOTTOM ROW =======-->
-			<div class="header-bottom">
-				<div class="container">
-					<div class="header-flex">
-						<!--=======LOGO=====--><a class="logo" href="main.html">
-							<svg class="svg-logo">
-								<use href="./img/spriteSvg.svg#logo"></use>
-							</svg></a>
-						<!--====== NAVIGATION =====-->
-						<nav class="header-nav header-nav--white">
-							<ul>
-								<li class="menu-li"><a href="">Высшее образование</a></li>
-								<li class="menu-li"><a href="">Среднее образование</a></li>
-								<li class="menu-li drop-menu-li"><a href="">Языковая программа</a>
-									<div class="drop-menu-wrapper">
-										<div class="two-colums-grid">
-											<div class="grid-column">
-												<div class="grid-column__title"> 
-													<p>Страны</p>
-												</div>
-												<div class="grid-column__list"><a class="flex-item" href="#!">
-														<svg class="fl-uk">
-															<use href="./img/flags-sprite.svg#fl-uk"></use>
-														</svg><span>Великобритания</span></a><a class="flex-item" href="#!">
-														<svg class="fl-usa">
-															<use href="./img/flags-sprite.svg#fl-usa"></use>
-														</svg><span>США</span></a><a class="flex-item" href="#!">
-														<svg class="fl-can">
-															<use href="./img/flags-sprite.svg#fl-can"></use>
-														</svg><span>Канада</span></a><a class="flex-item" href="#!">
-														<svg class="fl-aus">
-															<use href="./img/flags-sprite.svg#fl-aus"></use>
-														</svg><span>Австралия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-spain">
-															<use href="./img/flags-sprite.svg#fl-spain"></use>
-														</svg><span>Испания</span></a><a class="flex-item" href="#!">
-														<svg class="fl-de">
-															<use href="./img/flags-sprite.svg#fl-de"></use>
-														</svg><span>Германия</span></a>
-												</div>
-											</div>
-											<div class="grid-colum">
-												<div class="grid-column__title"> 
-													<p>Программы</p>
-												</div>
-												<div class="grid-column__list"><a href="#!">Язык и спорт</a><a href="#!">Язык и творчество</a><a href="#!">Футбольные лагеря</a><a href="#!">Весенние каникулы</a><a href="#!">Осенние каникулы</a><a href="#!">Зимние каникулы</a></div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="menu-li"><a href="">Учебные заведения</a></li>
-							</ul>
-						</nav>
-						<!--======== BUTTONS GROUP=========-->
-						<div class="header-column">
-							<button class="btn-icon search-btn" id="search-btn">
-								<svg class="svg-search">
-									<use href="./img/spriteSvg.svg#svg-search"></use>
-								</svg>
-							</button><a class="btn-accent btn-advice" href="#feedback">Консультация</a>
-							<!--====== menu-toggle =====-->
-							<button class="menu-toggle" type="button" id="menu-toggle"><span></span></button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--=========HEADER MOBILE MENU ======-->
-			<div class="mobile-menu-wrapper" id="mobile-menu">
-				<div class="mobile-menu-content flex-col flex-justify">
-					<nav class="mobile-menu">
-						<ul>
-							<li class="menu-item"><a href="#!">Высшее образование</a></li>
-							<li class="menu-item"><a href="#!">Среднее образование</a></li>
-							<!--=======MENU ITEM ======-->
-							<li class="menu-item drop-menu-li"><a href="#!">Языковая программа</a>
-								<!--========CHILD MENU ======-->
-								<div class="drop-menu-wrapper">
-									<div class="drop-menu__header flex-justify"><a class="back-link" href="#!"><span class="chevron-back"></span><span>Языковая программа</span></a></div>
-									<div class="drop-menu__list">
-										<div class="two-colums-grid">
-											<div class="grid-column">
-												<div class="grid-column__title"> 
-													<p>Страны</p>
-												</div>
-												<div class="grid-column__list"><a class="flex-item" href="#!">
-														<svg class="fl-uk">
-															<use href="./img/flags-sprite.svg#fl-uk"></use>
-														</svg><span>Великобритания</span></a><a class="flex-item" href="#!">
-														<svg class="fl-usa">
-															<use href="./img/flags-sprite.svg#fl-usa"></use>
-														</svg><span>США</span></a><a class="flex-item" href="#!">
-														<svg class="fl-can">
-															<use href="./img/flags-sprite.svg#fl-can"></use>
-														</svg><span>Канада</span></a><a class="flex-item" href="#!">
-														<svg class="fl-aus">
-															<use href="./img/flags-sprite.svg#fl-aus"></use>
-														</svg><span>Австралия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-spain">
-															<use href="./img/flags-sprite.svg#fl-spain"></use>
-														</svg><span>Испания</span></a><a class="flex-item" href="#!">
-														<svg class="fl-de">
-															<use href="./img/flags-sprite.svg#fl-de"></use>
-														</svg><span>Германия</span></a>
-												</div>
-											</div>
-											<div class="grid-colum">
-												<div class="grid-column__title"> 
-													<p>Программы</p>
-												</div>
-												<div class="grid-column__list"><a href="#!">Язык и спорт</a><a href="#!">Язык и творчество</a><a href="#!">Футбольные лагеря</a><a href="#!">Весенние каникулы</a><a href="#!">Осенние каникулы</a><a href="#!">Зимние каникулы</a></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<!--=======MENU ITEM ======-->
-							<li class="menu-item drop-menu-li"><a href="#!">Страны</a>
-								<!--========CHILD MENU ======-->
-								<div class="drop-menu-wrapper">
-									<div class="drop-menu__header flex-justify"><a class="back-link" href="#!"><span class="chevron-back"></span><span>Страны</span></a><a class="accent-link" href="#!">Показать все</a></div>
-									<div class="drop-menu__list">
-										<div class="three-columns-grid">
-											<div class="grid-column">
-												<div class="grid-column__title">
-													<p>Англоговорящие</p>
-												</div>
-												<div class="grid-column__list"><a class="flex-item" href="#!">
-														<svg class="fl-uk">
-															<use href="./img/flags-sprite.svg#fl-uk"></use>
-														</svg><span>Великобритания</span></a><a class="flex-item" href="#!">
-														<svg class="fl-usa">
-															<use href="./img/flags-sprite.svg#fl-usa"></use>
-														</svg><span>США</span></a><a class="flex-item" href="#!">
-														<svg class="fl-irl">
-															<use href="./img/flags-sprite.svg#fl-irl"></use>
-														</svg><span>Ирландия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-can">
-															<use href="./img/flags-sprite.svg#fl-can"></use>
-														</svg><span>Канада</span></a><a class="flex-item" href="#!">
-														<svg class="fl-aus">
-															<use href="./img/flags-sprite.svg#fl-aus"></use>
-														</svg><span>Австралия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-malta">
-															<use href="./img/flags-sprite.svg#fl-malta"></use>
-														</svg><span>Мальта</span></a>
-												</div>
-											</div>
-											<div class="grid-column">
-												<div class="grid-column__title">
-													<p>Европа</p>
-												</div>
-												<div class="grid-column__list"><a class="flex-item" href="#!">
-														<svg class="fl-swet">
-															<use href="./img/flags-sprite.svg#fl-swet"></use>
-														</svg><span>Швейцария</span></a><a class="flex-item" href="#!">
-														<svg class="fl-spain">
-															<use href="./img/flags-sprite.svg#fl-spain"></use>
-														</svg><span>Испания</span></a><a class="flex-item" href="#!">
-														<svg class="fl-de">
-															<use href="./img/flags-sprite.svg#fl-de"></use>
-														</svg><span>Германия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-fr">
-															<use href="./img/flags-sprite.svg#fl-fr"></use>
-														</svg><span>Франция</span></a><a class="flex-item" href="#!">
-														<svg class="fl-netherl">
-															<use href="./img/flags-sprite.svg#fl-netherl"></use>
-														</svg><span>Голландия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-fin">
-															<use href="./img/flags-sprite.svg#fl-fin"></use>
-														</svg><span>Финлядия</span></a>
-												</div>
-											</div>
-											<div class="grid-column">
-												<div class="grid-column__title">
-													<p>Азия</p>
-												</div>
-												<div class="grid-column__list"><a class="flex-item" href="#!">
-														<svg class="fl-sing">
-															<use href="./img/flags-sprite.svg#fl-sing"></use>
-														</svg><span>Сингапур</span></a><a class="flex-item" href="#!">
-														<svg class="fl-oae">
-															<use href="./img/flags-sprite.svg#fl-oae"></use>
-														</svg><span>ОАЭ</span></a><a class="flex-item" href="#!">
-														<svg class="fl-tln">
-															<use href="./img/flags-sprite.svg#fl-tln"></use>
-														</svg><span>Тайланд</span></a><a class="flex-item" href="#!">
-														<svg class="fl-kor">
-															<use href="./img/flags-sprite.svg#fl-kor"></use>
-														</svg><span>Южная Корея</span></a><a class="flex-item" href="#!">
-														<svg class="fl-malasia">
-															<use href="./img/flags-sprite.svg#fl-malasia"></use>
-														</svg><span>Малайзия</span></a><a class="flex-item" href="#!">
-														<svg class="fl-china">
-															<use href="./img/flags-sprite.svg#fl-china"></use>
-														</svg><span>Китай</span></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="menu-item"><a href="#!">Учебные заведения</a></li>
-							<li class="menu-item drop-menu-li"><a href="#!">О компании</a>
-								<!--========CHILD MENU ======-->
-								<div class="drop-menu-wrapper">
-									<div class="drop-menu__header flex-justify"><a class="back-link" href="#!"><span class="chevron-back"></span><span>О компании</span></a></div>
-									<div class="drop-menu__list"><a href="about.html">Об Allterra Education</a><a href="greeting.html">Обращение директора</a><a href="cooperation.html">Сотрудничество</a><a href="vacant.html">Вакансии</a><a href="partners.html">Partner`s zone</a><a href="services.html">Все услуги</a><a href="#!">Отзывы</a><a href="#!">Контакты</a></div>
-								</div>
-							</li>
-							<li class="menu-item drop-menu-li"><a href="#!">Все услуги</a>
-								<!--========CHILD MENU ======-->
-								<div class="drop-menu-wrapper">
-									<div class="drop-menu__header flex-justify"><a class="back-link" href="#!"><span class="chevron-back"></span><span>Все услуги</span></a></div>
-									<div class="drop-menu__list"><a href="#!">Поступление в школу</a><a href="#!">Поступление в университет</a><a href="#!">Каникулы за рубежом</a><a href="#!">Искусство и дизайн</a></div>
-								</div>
-							</li>
-							<li class="menu-item"><a href="#!">Справочник поступающего</a></li>
-							<li class="menu-item"><a href="#!">Новости</a></li>
-							<li class="menu-item"><a href="#!">Контакты</a></li>
-						</ul>
-					</nav>
-					<!--=====buttons=====-->
-					<div class="fixed-buttons"><a class="btn-accent" href="#!">Задать вопрос</a><a class="btn" href="#!">
-							<svg class="svg-phone">
-								<use href="./img/spriteSvg.svg#svg-phone"></use>
-							</svg><span>Позвонить</span></a></div>
-				</div>
-			</div>
-		</header>
-		<!--=============MAIN===========-->
-		<main class="inner-page">
-			<section class="hero">
-				<div class="container">
-					<div class="hero-content">
-						<ul class="breadcrumb">
-							<li><a href="#!">Главная</a></li>
-							<li><a href="#!">Статьи об образовании за рубежом</a></li>
-						</ul>
-						<div class="hero-title">
-							<h1 class="title">Актуальные и интересные статьи об образовании за рубежом</h1>
-						</div>
-						<!--===== bottom text =====-->
-						<div class="hero-bottom"><a class="back-link" href="#!">
-								<svg class="svg-chevron">
-									<use href="./img/spriteSvg.svg#svg-chevron"></use>
-								</svg><span>Назад</span></a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="blog-page">
-				<div class="container">
-					<div class="aside-grid aside-grid--1023 gap-20">
-						<!--=====left column ====-->
-						<div class="aside-grid__col filters dynamic-menu">
-							<!--====== filters header ===-->
-							<div class="filters-header dynamic-menu__header">
-								<div class="h4">Выберите статьи,<br> интересующие вас</div>
-								<svg class="svg-chevron-down">
-									<use href="./img/spriteSvg.svg#svg-chevron-down"></use>
-								</svg>
-							</div>
-							<!--====== filters content ===-->
-							<div class="filters-drop dynamic-menu__list">
-								<div class="filters-body">
-									<!--=====ОДНА ГРУППА ======-->
-									<div class="filters-group">
-										<div class="filters-group__title">Уровень образования</div>
-										<div class="filters-group__list"><a href="#!">Арт и Дизайн</a><a href="#!">Высшее образование</a><a href="#!">Каникулы</a><a href="#!">Подготовка к экзаменам</a><a href="#!">Среднее образование</a><a href="#!">Языковые курсы</a></div>
-									</div>
-									<!--=====ОДНА ГРУППА ======-->
-									<!--====внутри дива с классом .has-hide есть скрытые элементы с классом .hide-item  и кнопка .btn-more  По клику на .btn-more удаляется .hide-item и скрывается кнопка ===-->
-									<div class="filters-group has-hide">
-										<div class="filters-group__title">Страна</div>
-										<div class="filters-group__list"><a href="#!">Австралия</a><a href="#!">Великобритания</a><a href="#!">Германия</a><a href="#!">Ирландия</a><a href="#!">Испания</a><a href="#!">Италия</a><a class="hide-item" href="#!">Германия</a><a class="hide-item" href="#!">Ирландия</a><a class="hide-item" href="#!">Испания</a><a class="hide-item" href="#!">Италия</a>
-											<!--======= показать еще =======-->
-										</div>
-										<button class="accent-link btn-more" type="button">Показать еще
-											<svg class="svg-chevron-down">
-												<use href="./img/spriteSvg.svg#svg-chevron-down"></use>
-											</svg>
-										</button>
-									</div>
-									<!--=====ОДНА ГРУППА ======-->
-									<div class="filters-group">
-										<div class="filters-group__title">Отзывы</div>
-										<div class="filters-group__list"><a href="#!">Родители</a><a href="#!">Дети</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--==== right column ====-->
-						<div class="aside-grid__content">
-							<article class="level-edu-cards mb-48">
-								<div class="three-columns"><a class="level-edu" href="#!">
-										<div class="demi-15">Высшее образование за рубежом</div>
-										<p class="txt-14 cut">Включает в себя список пунктов меню</p><span class="accent-txt">Подробнее</span></a><a class="level-edu" href="#!">
-										<div class="demi-15">Бакалавриат</div>
-										<p class="txt-14 cut">Включает в себя список пунктов меню и управляется вручную. Этот блок функционирует как переключатель вкладок: при выборе определенного пункта меню на текущей странице отображается раздел со статьями, соответствующими этому пункту.</p><span class="accent-txt">Подробнее</span></a><a class="level-edu" href="#!">
-										<div class="demi-15">Магистратура</div>
-										<p class="txt-14 cut">Включает в себя список пунктов меню и управляется вручную.</p><span class="accent-txt">Подробнее</span></a><a class="level-edu" href="#!">
-										<div class="demi-15">Среднее образование</div>
-										<p class="txt-14 cut">Включает в себя список пунктов меню и управляется вручную. </p><span class="accent-txt">Подробнее</span></a><a class="level-edu" href="#!">
-										<div class="demi-15">Изучение языков</div>
-										<p class="txt-14 cut">Включает в себя список пунктов меню</p><span class="accent-txt">Подробнее</span></a><a class="level-edu" href="#!">
-										<div class="demi-15">Построение карьеры</div>
-										<p class="txt-14 cut">Включает в себя список пунктов меню и управляется вручную. Этот блок функционирует как переключатель вкладок: при выборе определенного пункта меню на текущей странице отображается раздел со статьями, соответствующими этому пункту.</p><span class="accent-txt">Подробнее</span></a></div>
-							</article>
-							<article class="blog-cards-wrapper">
-								<h2 class="h2">Популярные статьи справочника</h2>
-								<!--==== переключатели  карточек. Для них есть скрипт, который переключает у них класс active , для изменения внешнего вида кнопки. Скрипта, переключающего контент не прописано. -->
-								<div class="mb-48">
-									<!--====== табы для десктоп версии от 768 пикс =====-->
-									<div class="tab-toggles">
-										<button class="tab-toggle btn-toggle active" type="button">Высшее образование</button>
-										<button class="tab-toggle btn-toggle" type="button">Среднее образование</button>
-										<button class="tab-toggle btn-toggle" type="button">Карьера</button>
-									</div>
-									<!--====== табы на экаранах от 370 до 767 пикс =====-->
-									<div class="custom-select-wrapper tab-toggles-mobile">
-										<div class="custom-select">
-											<div class="custom-select-trigger">Высшее образование</div>
-											<div class="custom-options custom-options--rel"><span class="custom-option" data-value="1">Высшее образование</span><span class="custom-option" data-value="2">Среднее образование</span><span class="custom-option" data-value="3">Карьера</span></div>
-										</div>
-									</div>
-								</div>
-								<!--====== карточки =====-->
-								<div class="three-columns">
-									<!--===============группа из 6 карточек ===============-->
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/1@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/1.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Статья</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">Как написать мотивационное письмо в&nbsp;университет?</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/2@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/2.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Статья</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">Экономическое образование в США</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/9@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/9.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">Техническое образование в Германии</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/10@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/10.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">Обучение на промышленного дизайнера за границей</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/11@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/11.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">В какой стране лучшее образование?</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/12@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/12.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">IELTS или TOEFL: что лучше для поступления в университет</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<!--===============BANNER ==============--><a class="img-banner" href="#!">
-										<picture class="img-banner__picture">
-											<source srcset="./img/main-page/faq-img-tablet.webp" media="(max-width: 767px)" width="767" height="164" type="image/webp">
-											<source srcset="./img/main-page/faq-img-tablet@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)" type="image/webp" width="767" height="164">
-											<source srcset="./img/main-page/faq-img@2x.webp" media="(min-resolution: 192dpi)" type="image/webp" width="1240" height="220"><img class="lazy" src="./img/main-page/faq-img.webp" width="1240" height="220" alt="image">
-										</picture></a>
-									<!--===============группа из 6 карточек ===============-->
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/13@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/13.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Статья</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">MBA в США: особенности обучения, преимущества и недостатки, подготовка</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/14@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/14.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Статья</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">PSHE, CAS и другие: необычные предметы в зарубежных школах</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/15@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/15.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">Система высшего образования в Англии</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/16@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/16.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">ОТехническое образование в Германии</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/2@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/2.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">IELTS или TOEFL: что лучше для поступления в университет</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/1@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/1.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">Как написать мотивационное письмо в университет?</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<!--===============BANNER ==============--><a class="img-banner" href="#!">
-										<picture class="img-banner__picture">
-											<source srcset="./img/main-page/faq-img-tablet.webp" media="(max-width: 767px)" width="767" height="164" type="image/webp">
-											<source srcset="./img/main-page/faq-img-tablet@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)" type="image/webp" width="767" height="164">
-											<source srcset="./img/main-page/faq-img@2x.webp" media="(min-resolution: 192dpi)" type="image/webp" width="1240" height="220"><img class="lazy" src="./img/main-page/faq-img.webp" width="1240" height="220" alt="image">
-										</picture></a>
-									<!--===============группа из 6 карточек ===============-->
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/13@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/13.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Статья</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">MBA в США: особенности обучения, преимущества и недостатки, подготовка</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/14@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/14.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Статья</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">PSHE, CAS и другие: необычные предметы в зарубежных школах</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/15@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/15.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">Система высшего образования в Англии</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/16@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/16.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">ОТехническое образование в Германии</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/5@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/5.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">IELTS или TOEFL: что лучше для поступления в университет</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-									<div class="blog-card img-zoom">
-										<div class="blog-card__img">
-											<picture>
-												<source srcset="./img/blog/1@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp"/><img class="lazy wh-100" src="./img/blog/1.webp" width="295" height="194" alt="image"/>
-											</picture>
-										</div><a class="blog-card__text" href="#!">
-											<div class="blog-card__info txt-14"><span>Новость</span>
-												<time datetime="2024-03-12">12.03.2024</time>
-											</div>
-											<h3 class="txt-16">Как написать мотивационное письмо в университет?</h3>
-											<p></p><span class="accent-link">Подробнее</span></a>
-									</div>
-								</div>
-							</article>
-							<!--=====pagination =======-->
-							<div class="pagination"><a class="page-num prev disable" href="#!"></a><a class="page-num" href="#!">1</a><a class="page-num" href="#!">2</a><a class="page-num active" href="#!">3</a><a class="page-num" href="#!">...</a><a class="page-num" href="#!">22</a><a class="page-num next" href="#!"></a></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--============ CONTACTS ================-->
-			<section class="contacts dark-bg">
-				<div class="container">
-					<form class="contacts-form dark-opacity">
-						<p class="h3">Задать вопрос</p>
-						<div class="form_field">
-							<input type="text" name="name" placeholder="Ваше имя*">
-						</div>
-						<div class="form_field">
-							<input type="text" name="phone" placeholder="Ваш телефон*">
-						</div>
-						<div class="form_field">
-							<input type="text" name="email" placeholder="Ваш email">
-						</div>
-						<!--====== эелемент .message-field  имеет высоту в зависимости от количества  напечатанного в него текста. То есть высота меняется динамично =======-->
-						<div class="form_field">
-							<p class="message-field" contenteditable="true" placeholder="Ваш вопрос"></p>
-						</div>
-						<div class="form-confirm">
-							<label class="form-checkbox">
-								<input type="checkbox" name="name_chk"><span class="fake-checkbox"></span><span class="form-confirm__text">Ознакомился с <a class="white-link" href="#!">политикой конфидециальности</a> и даю своё согласие на обработку персональных данных</span>
-							</label>
-						</div>
-						<div class="form__btn">
-							<button class="btn-white w-100" type="submit">Получить консультацию</button>
-						</div>
-					</form>
-				</div>
-			</section>
-		</main>
-		<!--=============FOOTER============-->
-		<footer class="footer light-bg">
-			<div class="container">
-				<div class="footer-row two-columns">
-					<!--=======nav lists=====-->
-					<div class="footer-nav two-columns">
-						<!--=======sincle list ======-->
-						<nav><a href="#!">О компании</a><a href="#!">Услуги</a><a href="#!">Вакансии</a><a href="#!">Каникулы</a><a href="#!">Университеты</a><a href="#!">Как выбрать программу</a></nav>
-						<!--=======sincle list ======-->
-						<nav><a href="#!">Обращение директора</a><a href="#!">Сотрудничество</a><a href="#!">Partner`s zone</a><a href="#!">Школы</a><a href="#!">Контакты</a></nav>
-					</div>
-					<!--====== footer-contacts =======-->
-					<div class="footer-contacts two-columns">
-						<!--=======contacts col ====-->
-						<div class="footer-contacts__col">
-							<div class="contact-group"><span class="contact-name">Телефон</span><a href="tel:88005114993">8(800) 511-4993</a></div>
-							<div class="contact-group"><span class="contact-name">Время работы</span>
-								<p>с 10:00 до 19:00 (пн-пт)</p>
-							</div>
-							<div class="social"><a class="social-item" href="#!"><img src="./img/icons/skype.svg" alt="icon"></a><a class="social-item" href="#!"><img src="./img/icons/vk.svg" alt="icon"></a></div>
-						</div>
-						<!--=======contacts col ====-->
-						<div class="footer-contacts__col">
-							<address class="contact-group">
-								<p><strong>Москва</strong><br> ул. Тверская, д. 7  <br><a class="accent-link" href="#!">На карте</a></p>
-							</address>
-							<address class="contact-group">
-								<p><strong>Санкт-Петербург</strong><br> ул. Введенского канала, 7  <br><a class="accent-link" href="#!">На карте</a></p>
-							</address>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom flex-center-y">
-					<div class="accreditation-short flex-center-y">
-						<div class="accredit-logo"><img src="./img/accredit/logo1.webp" width="138" height="60" alt="img"></div>
-						<div class="accredit-logo"><img src="./img/accredit/logo2.webp" width="116" height="60" alt="img"></div>
-						<div class="accredit-logo"><img src="./img/accredit/logo3.webp" width="60" height="60" alt="img"></div>
-						<div class="accredit-logo"><img src="./img/accredit/logo4.webp" width="138" height="60" alt="img"></div>
-					</div><a class="grey-link" href="#!">Политика конфиденциальности</a>
-				</div>
-			</div>
-		</footer><a class="round-arrow" href="#top" id="back-top">
-			<svg class="svg-arrow">
-				<use href="./img/spriteSvg.svg#svg-arrow"></use>
-			</svg></a>
-		<!--======  BOTTOM FIXED BUTTONS =======-->
-		<div class="fixed-buttons" id="fixed-buttons"><a class="btn-accent" href="#!">Задать вопрос</a><a class="btn" href="#!">
-				<svg class="svg-phone">
-					<use href="./img/spriteSvg.svg#svg-phone"></use>
-				</svg><span>Позвонить</span></a></div>
-		<!--=============== jquery ===================-->
-		<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
-		<!--=============== jquery lazy load===================-->
-		<script src="./libs/jquery.lazy.min.js"></script>
-		<!--========= swiper slider =================-->
-		<script src="./libs/swiper/swiper.js"></script>
-		<!--=============== мои скрипты ===================-->
-		<script src="./js/main.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
+  <meta name="format-detection" content="telephone=no">
+  <!--========= swiper slider ==============-->
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+  <!--========= custom styles ========-->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Статьи</title>
+  <!--======= подключаем шрифты в head для ускорения загрузки страницы ==-->
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Regular.woff2) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Medium.woff2) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Bold.woff2) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .hero {
+      background-image: url('./img/blog/header-bg.webp');
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        background-image: url('./img/blog/header-mob.webp');
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--========== HEADER =========-->
+  <header class="header">
+    <div class="header-search-popup flex-center-x" id="search-popup">
+      <div class="header-search-wrapper">
+        <form class="header-search flex-center-y">
+          <div class="form_field">
+            <input type="text" name="search-input" placeholder="Поиск по сайту">
+            <!--===== clean input button =====-->
+            <button class="btn-icon" type="reset">
+              <svg class="svg-cross">
+                <use href="./img/spriteSvg.svg#svg-cross"></use>
+              </svg>
+            </button>
+          </div>
+          <!--======FORM BUTTON=====		-->
+          <div class="form__btn">
+            <button class="btn-accent" type="submit">Найти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--======= HEADER TOP ROW=======-->
+    <div class="header-top">
+      <div class="container">
+        <div class="header-flex">
+          <!--====== NAVIGATION =====-->
+          <nav class="header-nav">
+            <ul>
+              <!--======single LI====-->
+              <li class="menu-li drop-menu-li">
+                <a href="#!">О компании</a>
+                <!--======single LI Drop-menu====-->
+                <div class="drop-menu-wrapper">
+                  <ul>
+                    <li>
+                      <a href="about.html">Об Allterra Education</a>
+                    </li>
+                    <li>
+                      <a href="greeting.html">Обращение директора</a>
+                    </li>
+                    <li>
+                      <a href="cooperation.html">Сотрудничество</a>
+                    </li>
+                    <li>
+                      <a href="vacant.html">Вакансии</a>
+                    </li>
+                    <li>
+                      <a href="partners.html">Partner`s zone</a>
+                    </li>
+                    <li>
+                      <a href="services.html">Все услуги</a>
+                    </li>
+                    <li>
+                      <a href="#!">Отзывы</a>
+                    </li>
+                    <li>
+                      <a href="#!">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!--======single LI====-->
+              <li class="menu-li drop-menu-li">
+                <a href="#!">Все услуги</a>
+                <div class="drop-menu-wrapper">
+                  <ul>
+                    <li>
+                      <a href="#!">Поступление в школу</a>
+                    </li>
+                    <li>
+                      <a href="#!">Поступление в университет</a>
+                    </li>
+                    <li>
+                      <a href="#!">Каникулы за рубежом</a>
+                    </li>
+                    <li>
+                      <a href="#!">Искусство и дизайн</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!--======single LI====-->
+              <li class="menu-li drop-menu-li">
+                <a href="#!">Страны</a>
+                <div class="drop-menu-wrapper">
+                  <div class="three-columns-grid">
+                    <div class="grid-column">
+                      <div class="grid-column__title">
+                        <p>Англоговорящие</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-uk">
+                            <use href="./img/flags-sprite.svg#fl-uk"></use>
+                          </svg>
+                          <span>Великобритания</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-usa">
+                            <use href="./img/flags-sprite.svg#fl-usa"></use>
+                          </svg>
+                          <span>США</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-irl">
+                            <use href="./img/flags-sprite.svg#fl-irl"></use>
+                          </svg>
+                          <span>Ирландия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-can">
+                            <use href="./img/flags-sprite.svg#fl-can"></use>
+                          </svg>
+                          <span>Канада</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-aus">
+                            <use href="./img/flags-sprite.svg#fl-aus"></use>
+                          </svg>
+                          <span>Австралия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-malta">
+                            <use href="./img/flags-sprite.svg#fl-malta"></use>
+                          </svg>
+                          <span>Мальта</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="grid-column">
+                      <div class="grid-column__title">
+                        <p>Европа</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-swet">
+                            <use href="./img/flags-sprite.svg#fl-swet"></use>
+                          </svg>
+                          <span>Швейцария</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-spain">
+                            <use href="./img/flags-sprite.svg#fl-spain"></use>
+                          </svg>
+                          <span>Испания</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-de">
+                            <use href="./img/flags-sprite.svg#fl-de"></use>
+                          </svg>
+                          <span>Германия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-fr">
+                            <use href="./img/flags-sprite.svg#fl-fr"></use>
+                          </svg>
+                          <span>Франция</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-netherl">
+                            <use href="./img/flags-sprite.svg#fl-netherl"></use>
+                          </svg>
+                          <span>Голландия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-fin">
+                            <use href="./img/flags-sprite.svg#fl-fin"></use>
+                          </svg>
+                          <span>Финлядия</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="grid-column">
+                      <div class="grid-column__title">
+                        <p>Азия</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-sing">
+                            <use href="./img/flags-sprite.svg#fl-sing"></use>
+                          </svg>
+                          <span>Сингапур</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-oae">
+                            <use href="./img/flags-sprite.svg#fl-oae"></use>
+                          </svg>
+                          <span>ОАЭ</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-thail">
+                            <use href="./img/flags-sprite.svg#fl-thail"></use>
+                          </svg>
+                          <span>Тайланд</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-kor">
+                            <use href="./img/flags-sprite.svg#fl-kor"></use>
+                          </svg>
+                          <span>Южная Корея</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-malasia">
+                            <use href="./img/flags-sprite.svg#fl-malasia"></use>
+                          </svg>
+                          <span>Малайзия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-china">
+                            <use href="./img/flags-sprite.svg#fl-china"></use>
+                          </svg>
+                          <span>Китай</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--======= bottom link =====-->
+                  <div class="drop-menu-footer">
+                    <a class="accent-link" href="#!">Показать все страны</a>
+                  </div>
+                </div>
+              </li>
+              <!--======single LI====-->
+              <li class="menu-li">
+                <a href="article.html">Справочник поступающего</a>
+              </li>
+              <!--======single LI====-->
+              <li class="menu-li">
+                <a href="#!">Новости</a>
+              </li>
+              <!--======single LI====-->
+              <li class="menu-li">
+                <a href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <!--======RIGHT COLUMN =====-->
+          <div class="header-column">
+            <!--==== выбор языка ===-->
+            <div class="custom-select custom-select--lang">
+              <div class="custom-select-trigger">Ru</div>
+              <div class="custom-options">
+                <!--=== список с языками===-->
+                <div class="custom-select__drop">
+                  <ul class="custom-select__list">
+                    <li class="custom-option" data-value="En">
+                      <a class="flex-item" href="#!">
+                        <svg class="fl-uk">
+                          <use href="./img/flags-sprite.svg#fl-uk"></use>
+                        </svg>
+                        <span>En</span>
+                      </a>
+                    </li>
+                    <li class="custom-option" data-value="Ru">
+                      <a class="flex-item" href="#!">
+                        <svg class="fl-ru">
+                          <use href="./img/flags-sprite.svg#fl-ru"></use>
+                        </svg>
+                        <span>RU</span>
+                      </a>
+                    </li>
+                    <li class="custom-option" data-value="ESP">
+                      <a class="flex-item" href="#!">
+                        <svg class="fl-spain">
+                          <use href="./img/flags-sprite.svg#fl-spain"></use>
+                        </svg>
+                        <span>ESP</span>
+                      </a>
+                    </li>
+                    <li class="custom-option" data-value="GE">
+                      <a class="flex-item" href="#!">
+                        <svg class="fl-de">
+                          <use href="./img/flags-sprite.svg#fl-de"></use>
+                        </svg>
+                        <span>GE</span>
+                      </a>
+                    </li>
+                    <li class="custom-option" data-value="FR">
+                      <a class="flex-item" href="#!">
+                        <svg class="fl-fr">
+                          <use href="./img/flags-sprite.svg#fl-fr"></use>
+                        </svg>
+                        <span>FR</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a class="contact-item" href="tel:88005114993">8 (800) 511-4993</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--======= HEADER BOTTOM ROW =======-->
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-flex">
+          <!--=======LOGO=====-->
+          <a class="logo" href="main.html">
+            <svg class="svg-logo">
+              <use href="./img/spriteSvg.svg#logo"></use>
+            </svg>
+          </a>
+          <!--====== NAVIGATION =====-->
+          <nav class="header-nav header-nav--white">
+            <ul>
+              <li class="menu-li">
+                <a href="">Высшее образование</a>
+              </li>
+              <li class="menu-li">
+                <a href="">Среднее образование</a>
+              </li>
+              <li class="menu-li drop-menu-li">
+                <a href="">Языковая программа</a>
+                <div class="drop-menu-wrapper">
+                  <div class="two-colums-grid">
+                    <div class="grid-column">
+                      <div class="grid-column__title">
+                        <p>Страны</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-uk">
+                            <use href="./img/flags-sprite.svg#fl-uk"></use>
+                          </svg>
+                          <span>Великобритания</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-usa">
+                            <use href="./img/flags-sprite.svg#fl-usa"></use>
+                          </svg>
+                          <span>США</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-can">
+                            <use href="./img/flags-sprite.svg#fl-can"></use>
+                          </svg>
+                          <span>Канада</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-aus">
+                            <use href="./img/flags-sprite.svg#fl-aus"></use>
+                          </svg>
+                          <span>Австралия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-spain">
+                            <use href="./img/flags-sprite.svg#fl-spain"></use>
+                          </svg>
+                          <span>Испания</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-de">
+                            <use href="./img/flags-sprite.svg#fl-de"></use>
+                          </svg>
+                          <span>Германия</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="grid-colum">
+                      <div class="grid-column__title">
+                        <p>Программы</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a href="#!">Язык и спорт</a>
+                        <a href="#!">Язык и творчество</a>
+                        <a href="#!">Футбольные лагеря</a>
+                        <a href="#!">Весенние каникулы</a>
+                        <a href="#!">Осенние каникулы</a>
+                        <a href="#!">Зимние каникулы</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="menu-li">
+                <a href="">Учебные заведения</a>
+              </li>
+            </ul>
+          </nav>
+          <!--======== BUTTONS GROUP=========-->
+          <div class="header-column">
+            <button class="btn-icon search-btn" id="search-btn">
+              <svg class="svg-search">
+                <use href="./img/spriteSvg.svg#svg-search"></use>
+              </svg>
+            </button>
+            <a class="btn-accent btn-advice" href="#feedback">Консультация</a>
+            <!--====== menu-toggle =====-->
+            <button class="menu-toggle" type="button" id="menu-toggle">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=========HEADER MOBILE MENU ======-->
+    <div class="mobile-menu-wrapper" id="mobile-menu">
+      <div class="mobile-menu-content flex-col flex-justify">
+        <nav class="mobile-menu">
+          <ul>
+            <li class="menu-item">
+              <a href="#!">Высшее образование</a>
+            </li>
+            <li class="menu-item">
+              <a href="#!">Среднее образование</a>
+            </li>
+            <!--=======MENU ITEM ======-->
+            <li class="menu-item drop-menu-li">
+              <a href="#!">Языковая программа</a>
+              <!--========CHILD MENU ======-->
+              <div class="drop-menu-wrapper">
+                <div class="drop-menu__header flex-justify">
+                  <a class="back-link" href="#!">
+                    <span class="chevron-back"></span>
+                    <span>Языковая программа</span>
+                  </a>
+                </div>
+                <div class="drop-menu__list">
+                  <div class="two-colums-grid">
+                    <div class="grid-column">
+                      <div class="grid-column__title">
+                        <p>Страны</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-uk">
+                            <use href="./img/flags-sprite.svg#fl-uk"></use>
+                          </svg>
+                          <span>Великобритания</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-usa">
+                            <use href="./img/flags-sprite.svg#fl-usa"></use>
+                          </svg>
+                          <span>США</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-can">
+                            <use href="./img/flags-sprite.svg#fl-can"></use>
+                          </svg>
+                          <span>Канада</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-aus">
+                            <use href="./img/flags-sprite.svg#fl-aus"></use>
+                          </svg>
+                          <span>Австралия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-spain">
+                            <use href="./img/flags-sprite.svg#fl-spain"></use>
+                          </svg>
+                          <span>Испания</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-de">
+                            <use href="./img/flags-sprite.svg#fl-de"></use>
+                          </svg>
+                          <span>Германия</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="grid-colum">
+                      <div class="grid-column__title">
+                        <p>Программы</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a href="#!">Язык и спорт</a>
+                        <a href="#!">Язык и творчество</a>
+                        <a href="#!">Футбольные лагеря</a>
+                        <a href="#!">Весенние каникулы</a>
+                        <a href="#!">Осенние каникулы</a>
+                        <a href="#!">Зимние каникулы</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!--=======MENU ITEM ======-->
+            <li class="menu-item drop-menu-li">
+              <a href="#!">Страны</a>
+              <!--========CHILD MENU ======-->
+              <div class="drop-menu-wrapper">
+                <div class="drop-menu__header flex-justify">
+                  <a class="back-link" href="#!">
+                    <span class="chevron-back"></span>
+                    <span>Страны</span>
+                  </a>
+                  <a class="accent-link" href="#!">Показать все</a>
+                </div>
+                <div class="drop-menu__list">
+                  <div class="three-columns-grid">
+                    <div class="grid-column">
+                      <div class="grid-column__title">
+                        <p>Англоговорящие</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-uk">
+                            <use href="./img/flags-sprite.svg#fl-uk"></use>
+                          </svg>
+                          <span>Великобритания</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-usa">
+                            <use href="./img/flags-sprite.svg#fl-usa"></use>
+                          </svg>
+                          <span>США</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-irl">
+                            <use href="./img/flags-sprite.svg#fl-irl"></use>
+                          </svg>
+                          <span>Ирландия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-can">
+                            <use href="./img/flags-sprite.svg#fl-can"></use>
+                          </svg>
+                          <span>Канада</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-aus">
+                            <use href="./img/flags-sprite.svg#fl-aus"></use>
+                          </svg>
+                          <span>Австралия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-malta">
+                            <use href="./img/flags-sprite.svg#fl-malta"></use>
+                          </svg>
+                          <span>Мальта</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="grid-column">
+                      <div class="grid-column__title">
+                        <p>Европа</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-swet">
+                            <use href="./img/flags-sprite.svg#fl-swet"></use>
+                          </svg>
+                          <span>Швейцария</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-spain">
+                            <use href="./img/flags-sprite.svg#fl-spain"></use>
+                          </svg>
+                          <span>Испания</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-de">
+                            <use href="./img/flags-sprite.svg#fl-de"></use>
+                          </svg>
+                          <span>Германия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-fr">
+                            <use href="./img/flags-sprite.svg#fl-fr"></use>
+                          </svg>
+                          <span>Франция</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-netherl">
+                            <use href="./img/flags-sprite.svg#fl-netherl"></use>
+                          </svg>
+                          <span>Голландия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-fin">
+                            <use href="./img/flags-sprite.svg#fl-fin"></use>
+                          </svg>
+                          <span>Финлядия</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="grid-column">
+                      <div class="grid-column__title">
+                        <p>Азия</p>
+                      </div>
+                      <div class="grid-column__list">
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-sing">
+                            <use href="./img/flags-sprite.svg#fl-sing"></use>
+                          </svg>
+                          <span>Сингапур</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-oae">
+                            <use href="./img/flags-sprite.svg#fl-oae"></use>
+                          </svg>
+                          <span>ОАЭ</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-tln">
+                            <use href="./img/flags-sprite.svg#fl-tln"></use>
+                          </svg>
+                          <span>Тайланд</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-kor">
+                            <use href="./img/flags-sprite.svg#fl-kor"></use>
+                          </svg>
+                          <span>Южная Корея</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-malasia">
+                            <use href="./img/flags-sprite.svg#fl-malasia"></use>
+                          </svg>
+                          <span>Малайзия</span>
+                        </a>
+                        <a class="flex-item" href="#!">
+                          <svg class="fl-china">
+                            <use href="./img/flags-sprite.svg#fl-china"></use>
+                          </svg>
+                          <span>Китай</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <a href="#!">Учебные заведения</a>
+            </li>
+            <li class="menu-item drop-menu-li">
+              <a href="#!">О компании</a>
+              <!--========CHILD MENU ======-->
+              <div class="drop-menu-wrapper">
+                <div class="drop-menu__header flex-justify">
+                  <a class="back-link" href="#!">
+                    <span class="chevron-back"></span>
+                    <span>О компании</span>
+                  </a>
+                </div>
+                <div class="drop-menu__list">
+                  <a href="about.html">Об Allterra Education</a>
+                  <a href="greeting.html">Обращение директора</a>
+                  <a href="cooperation.html">Сотрудничество</a>
+                  <a href="vacant.html">Вакансии</a>
+                  <a href="partners.html">Partner`s zone</a>
+                  <a href="services.html">Все услуги</a>
+                  <a href="#!">Отзывы</a>
+                  <a href="#!">Контакты</a>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item drop-menu-li">
+              <a href="#!">Все услуги</a>
+              <!--========CHILD MENU ======-->
+              <div class="drop-menu-wrapper">
+                <div class="drop-menu__header flex-justify">
+                  <a class="back-link" href="#!">
+                    <span class="chevron-back"></span>
+                    <span>Все услуги</span>
+                  </a>
+                </div>
+                <div class="drop-menu__list">
+                  <a href="#!">Поступление в школу</a>
+                  <a href="#!">Поступление в университет</a>
+                  <a href="#!">Каникулы за рубежом</a>
+                  <a href="#!">Искусство и дизайн</a>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <a href="#!">Справочник поступающего</a>
+            </li>
+            <li class="menu-item">
+              <a href="#!">Новости</a>
+            </li>
+            <li class="menu-item">
+              <a href="#!">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!--=====buttons=====-->
+        <div class="fixed-buttons">
+          <a class="btn-accent" href="#!">Задать вопрос</a>
+          <a class="btn" href="#!">
+            <svg class="svg-phone">
+              <use href="./img/spriteSvg.svg#svg-phone"></use>
+            </svg>
+            <span>Позвонить</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--=============MAIN===========-->
+  <main class="inner-page">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <ul class="breadcrumb">
+            <li>
+              <a href="#!">Главная</a>
+            </li>
+            <li>
+              <a href="#!">Статьи об образовании за рубежом</a>
+            </li>
+          </ul>
+          <div class="hero-title">
+            <h1 class="title">Актуальные и интересные статьи об образовании за рубежом</h1>
+          </div>
+          <!--===== bottom text =====-->
+          <div class="hero-bottom">
+            <a class="back-link" href="#!">
+              <svg class="svg-chevron">
+                <use href="./img/spriteSvg.svg#svg-chevron"></use>
+              </svg>
+              <span>Назад</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog-page">
+      <div class="container">
+        <div class="aside-grid aside-grid--1023 gap-20">
+          <!--=====left column ====-->
+          <div class="aside-grid__col filters dynamic-menu">
+            <!--====== filters header ===-->
+            <div class="filters-header dynamic-menu__header">
+              <div class="h4">Выберите статьи,
+                <br> интересующие вас
+              </div>
+              <svg class="svg-chevron-down">
+                <use href="./img/spriteSvg.svg#svg-chevron-down"></use>
+              </svg>
+            </div>
+            <!--====== filters content ===-->
+            <div class="filters-drop dynamic-menu__list">
+              <div class="filters-body">
+                <!--=====ОДНА ГРУППА ======-->
+                <div class="filters-group">
+                  <div class="filters-group__title">Уровень образования</div>
+                  <div class="filters-group__list">
+                    <a href="#!">Арт и Дизайн</a>
+                    <a href="#!">Высшее образование</a>
+                    <a href="#!">Каникулы</a>
+                    <a href="#!">Подготовка к экзаменам</a>
+                    <a href="#!">Среднее образование</a>
+                    <a href="#!">Языковые курсы</a>
+                  </div>
+                </div>
+                <!--=====ОДНА ГРУППА ======-->
+                <!--====внутри дива с классом .has-hide есть скрытые элементы с классом .hide-item  и кнопка .btn-more  По клику на .btn-more удаляется .hide-item и скрывается кнопка ===-->
+                <div class="filters-group has-hide">
+                  <div class="filters-group__title">Страна</div>
+                  <div class="filters-group__list">
+                    <a href="#!">Австралия</a>
+                    <a href="#!">Великобритания</a>
+                    <a href="#!">Германия</a>
+                    <a href="#!">Ирландия</a>
+                    <a href="#!">Испания</a>
+                    <a href="#!">Италия</a>
+                    <a class="hide-item" href="#!">Германия</a>
+                    <a class="hide-item" href="#!">Ирландия</a>
+                    <a class="hide-item" href="#!">Испания</a>
+                    <a class="hide-item" href="#!">Италия</a>
+                    <!--======= показать еще =======-->
+                  </div>
+                  <button class="accent-link btn-more" type="button">Показать еще
+                    <svg class="svg-chevron-down">
+                      <use href="./img/spriteSvg.svg#svg-chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+                <!--=====ОДНА ГРУППА ======-->
+                <div class="filters-group">
+                  <div class="filters-group__title">Отзывы</div>
+                  <div class="filters-group__list">
+                    <a href="#!">Родители</a>
+                    <a href="#!">Дети</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--==== right column ====-->
+          <div class="aside-grid__content">
+            <article class="level-edu-cards mb-48">
+              <div class="three-columns">
+                <a class="level-edu" href="#!">
+                  <div class="demi-15">Высшее образование за рубежом</div>
+                  <p class="txt-14 cut">Включает в себя список пунктов меню</p>
+                  <span class="accent-txt">Подробнее</span>
+                </a>
+                <a class="level-edu" href="#!">
+                  <div class="demi-15">Бакалавриат</div>
+                  <p class="txt-14 cut">Включает в себя список пунктов меню и управляется вручную. Этот блок функционирует как переключатель вкладок: при выборе определенного пункта меню на текущей странице отображается раздел со статьями, соответствующими этому пункту.</p>
+                  <span class="accent-txt">Подробнее</span>
+                </a>
+                <a class="level-edu" href="#!">
+                  <div class="demi-15">Магистратура</div>
+                  <p class="txt-14 cut">Включает в себя список пунктов меню и управляется вручную.</p>
+                  <span class="accent-txt">Подробнее</span>
+                </a>
+                <a class="level-edu" href="#!">
+                  <div class="demi-15">Среднее образование</div>
+                  <p class="txt-14 cut">Включает в себя список пунктов меню и управляется вручную. </p>
+                  <span class="accent-txt">Подробнее</span>
+                </a>
+                <a class="level-edu" href="#!">
+                  <div class="demi-15">Изучение языков</div>
+                  <p class="txt-14 cut">Включает в себя список пунктов меню</p>
+                  <span class="accent-txt">Подробнее</span>
+                </a>
+                <a class="level-edu" href="#!">
+                  <div class="demi-15">Построение карьеры</div>
+                  <p class="txt-14 cut">Включает в себя список пунктов меню и управляется вручную. Этот блок функционирует как переключатель вкладок: при выборе определенного пункта меню на текущей странице отображается раздел со статьями, соответствующими этому пункту.</p>
+                  <span class="accent-txt">Подробнее</span>
+                </a>
+              </div>
+            </article>
+            <article class="blog-cards-wrapper">
+              <h2 class="h2">Популярные статьи справочника</h2>
+              <!--==== переключатели  карточек. Для них есть скрипт, который переключает у них класс active , для изменения внешнего вида кнопки. Скрипта, переключающего контент не прописано. -->
+              <div class="mb-48">
+                <!--====== табы для десктоп версии от 768 пикс =====-->
+                <div class="tab-toggles">
+                  <button class="tab-toggle btn-toggle active" type="button">Высшее образование</button>
+                  <button class="tab-toggle btn-toggle" type="button">Среднее образование</button>
+                  <button class="tab-toggle btn-toggle" type="button">Карьера</button>
+                </div>
+                <!--====== табы на экаранах от 370 до 767 пикс =====-->
+                <div class="custom-select-wrapper tab-toggles-mobile">
+                  <div class="custom-select">
+                    <div class="custom-select-trigger">Высшее образование</div>
+                    <div class="custom-options custom-options--rel">
+                      <span class="custom-option" data-value="1">Высшее образование</span>
+                      <span class="custom-option" data-value="2">Среднее образование</span>
+                      <span class="custom-option" data-value="3">Карьера</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--====== карточки =====-->
+              <div class="three-columns">
+                <!--===============группа из 6 карточек ===============-->
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/1@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/1.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Статья</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">Как написать мотивационное письмо в&nbsp;университет?</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/2@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/2.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Статья</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">Экономическое образование в США</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/9@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/9.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">Техническое образование в Германии</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/10@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/10.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">Обучение на промышленного дизайнера за границей</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/11@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/11.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">В какой стране лучшее образование?</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/12@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/12.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">IELTS или TOEFL: что лучше для поступления в университет</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <!--===============BANNER ==============-->
+                <a class="img-banner" href="#!">
+                  <picture class="img-banner__picture">
+                    <source srcset="./img/main-page/faq-img-tablet.webp" media="(max-width: 767px)" width="767" height="164" type="image/webp">
+                    <source srcset="./img/main-page/faq-img-tablet@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)" type="image/webp" width="767" height="164">
+                    <source srcset="./img/main-page/faq-img@2x.webp" media="(min-resolution: 192dpi)" type="image/webp" width="1240" height="220">
+                    <img class="lazy" src="./img/main-page/faq-img.webp" width="1240" height="220" alt="image">
+                  </picture>
+                </a>
+                <!--===============группа из 6 карточек ===============-->
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/13@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/13.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Статья</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">MBA в США: особенности обучения, преимущества и недостатки, подготовка</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/14@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/14.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Статья</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">PSHE, CAS и другие: необычные предметы в зарубежных школах</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/15@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/15.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">Система высшего образования в Англии</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/16@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/16.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">ОТехническое образование в Германии</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/2@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/2.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">IELTS или TOEFL: что лучше для поступления в университет</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/1@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/1.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">Как написать мотивационное письмо в университет?</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <!--===============BANNER ==============-->
+                <a class="img-banner" href="#!">
+                  <picture class="img-banner__picture">
+                    <source srcset="./img/main-page/faq-img-tablet.webp" media="(max-width: 767px)" width="767" height="164" type="image/webp">
+                    <source srcset="./img/main-page/faq-img-tablet@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)" type="image/webp" width="767" height="164">
+                    <source srcset="./img/main-page/faq-img@2x.webp" media="(min-resolution: 192dpi)" type="image/webp" width="1240" height="220">
+                    <img class="lazy" src="./img/main-page/faq-img.webp" width="1240" height="220" alt="image">
+                  </picture>
+                </a>
+                <!--===============группа из 6 карточек ===============-->
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/13@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/13.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Статья</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">MBA в США: особенности обучения, преимущества и недостатки, подготовка</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/14@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/14.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Статья</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">PSHE, CAS и другие: необычные предметы в зарубежных школах</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/15@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/15.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">Система высшего образования в Англии</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/16@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/16.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">ОТехническое образование в Германии</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/5@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/5.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">IELTS или TOEFL: что лучше для поступления в университет</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+                <div class="blog-card img-zoom">
+                  <div class="blog-card__img">
+                    <picture>
+                      <source srcset="./img/blog/1@2x.webp" media="(min-resolution: 192dpi)" width="295" height="194" type="image/webp" />
+                      <img class="lazy wh-100" src="./img/blog/1.webp" width="295" height="194" alt="image" />
+                    </picture>
+                  </div>
+                  <a class="blog-card__text" href="#!">
+                    <div class="blog-card__info txt-14">
+                      <span>Новость</span>
+                      <time datetime="2024-03-12">12.03.2024</time>
+                    </div>
+                    <h3 class="txt-16">Как написать мотивационное письмо в университет?</h3>
+                    <p></p>
+                    <span class="accent-link">Подробнее</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!--=====pagination =======-->
+            <div class="pagination">
+              <a class="page-num prev disable" href="#!"></a>
+              <a class="page-num" href="#!">1</a>
+              <a class="page-num" href="#!">2</a>
+              <a class="page-num active" href="#!">3</a>
+              <a class="page-num" href="#!">...</a>
+              <a class="page-num" href="#!">22</a>
+              <a class="page-num next" href="#!"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--============ CONTACTS ================-->
+    <section class="contacts dark-bg">
+      <div class="container">
+        <form class="contacts-form dark-opacity">
+          <p class="h3">Задать вопрос</p>
+          <div class="form_field">
+            <input type="text" name="name" placeholder="Ваше имя*">
+          </div>
+          <div class="form_field">
+            <input type="text" name="phone" placeholder="Ваш телефон*">
+          </div>
+          <div class="form_field">
+            <input type="text" name="email" placeholder="Ваш email">
+          </div>
+          <!--====== эелемент .message-field  имеет высоту в зависимости от количества  напечатанного в него текста. То есть высота меняется динамично =======-->
+          <div class="form_field">
+            <p class="message-field" contenteditable="true" placeholder="Ваш вопрос"></p>
+          </div>
+          <div class="form-confirm">
+            <label class="form-checkbox">
+              <input type="checkbox" name="name_chk">
+              <span class="fake-checkbox"></span>
+              <span class="form-confirm__text">Ознакомился с <a class="white-link" href="#!">политикой конфидециальности</a> и даю своё согласие на обработку персональных данных</span>
+            </label>
+          </div>
+          <div class="form__btn">
+            <button class="btn-white w-100" type="submit">Получить консультацию</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!--=============FOOTER============-->
+  <footer class="footer light-bg">
+    <div class="container">
+      <div class="footer-row two-columns">
+        <!--=======nav lists=====-->
+        <div class="footer-nav two-columns">
+          <!--=======sincle list ======-->
+          <nav>
+            <a href="#!">О компании</a>
+            <a href="#!">Услуги</a>
+            <a href="#!">Вакансии</a>
+            <a href="#!">Каникулы</a>
+            <a href="#!">Университеты</a>
+            <a href="#!">Как выбрать программу</a>
+          </nav>
+          <!--=======sincle list ======-->
+          <nav>
+            <a href="#!">Обращение директора</a>
+            <a href="#!">Сотрудничество</a>
+            <a href="#!">Partner`s zone</a>
+            <a href="#!">Школы</a>
+            <a href="#!">Контакты</a>
+          </nav>
+        </div>
+        <!--====== footer-contacts =======-->
+        <div class="footer-contacts two-columns">
+          <!--=======contacts col ====-->
+          <div class="footer-contacts__col">
+            <div class="contact-group">
+              <span class="contact-name">Телефон</span>
+              <a href="tel:88005114993">8(800) 511-4993</a>
+            </div>
+            <div class="contact-group">
+              <span class="contact-name">Время работы</span>
+              <p>с 10:00 до 19:00 (пн-пт)</p>
+            </div>
+            <div class="social">
+              <a class="social-item" href="#!">
+                <img src="./img/icons/skype.svg" alt="icon">
+              </a>
+              <a class="social-item" href="#!">
+                <img src="./img/icons/vk.svg" alt="icon">
+              </a>
+            </div>
+          </div>
+          <!--=======contacts col ====-->
+          <div class="footer-contacts__col">
+            <address class="contact-group">
+              <p>
+                <strong>Москва</strong>
+                <br> ул. Тверская, д. 7
+                <br>
+                <a class="accent-link" href="#!">На карте</a>
+              </p>
+            </address>
+            <address class="contact-group">
+              <p>
+                <strong>Санкт-Петербург</strong>
+                <br> ул. Введенского канала, 7
+                <br>
+                <a class="accent-link" href="#!">На карте</a>
+              </p>
+            </address>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom flex-center-y">
+        <div class="accreditation-short flex-center-y">
+          <div class="accredit-logo">
+            <img src="./img/accredit/logo1.webp" width="138" height="60" alt="img">
+          </div>
+          <div class="accredit-logo">
+            <img src="./img/accredit/logo2.webp" width="116" height="60" alt="img">
+          </div>
+          <div class="accredit-logo">
+            <img src="./img/accredit/logo3.webp" width="60" height="60" alt="img">
+          </div>
+          <div class="accredit-logo">
+            <img src="./img/accredit/logo4.webp" width="138" height="60" alt="img">
+          </div>
+        </div>
+        <a class="grey-link" href="#!">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+  <a class="round-arrow" href="#top" id="back-top">
+    <svg class="svg-arrow">
+      <use href="./img/spriteSvg.svg#svg-arrow"></use>
+    </svg>
+  </a>
+  <!--======  BOTTOM FIXED BUTTONS =======-->
+  <div class="fixed-buttons" id="fixed-buttons">
+    <a class="btn-accent" href="#!">Задать вопрос</a>
+    <a class="btn" href="#!">
+      <svg class="svg-phone">
+        <use href="./img/spriteSvg.svg#svg-phone"></use>
+      </svg>
+      <span>Позвонить</span>
+    </a>
+  </div>
+  <!--=============== jquery ===================-->
+  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+  <!--=============== jquery lazy load===================-->
+  <script src="./libs/jquery.lazy.min.js"></script>
+  <!--========= swiper slider =================-->
+  <script src="./libs/swiper/swiper.js"></script>
+  <!--=============== мои скрипты ===================-->
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
