@@ -309,6 +309,7 @@ header .logo{
 }
 .custom-select--lang .custom-select__list{
 	padding: 10px 20px;
+	padding: 10px 0;
 	
 }
 .custom-select--lang{
@@ -320,7 +321,7 @@ header .logo{
 		column-gap:12px;
 		font-size: 15px;
 		align-items: center;
-		padding: 0;
+		padding: 0 20px;
 		padding-top: 10px;
 		padding-bottom: 10px; 
 

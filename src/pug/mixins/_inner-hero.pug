@@ -12,6 +12,7 @@ mixin hero-section(links, name, bottomText, titleClass, backLink, subtitle )
 					h1(class=(titleClass != ''? ''+ titleClass : '')) !{name}
 					if subtitle
 						p.header-subtitle !{subtitle}
+						a(href="").btn-accent Задать вопрос о высшем образовании за рубежом
 				//===== bottom text =====
 				.hero-bottom
 					if bottomText != ''

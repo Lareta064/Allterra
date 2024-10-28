@@ -7,7 +7,7 @@
 	align-items: center;
 	flex-shrink: 0;
 	cursor: pointer;
-	white-space: nowrap;
+	// white-space: nowrap;
 	outline: none;
 	font-family: $font-family;
 	font-weight: 500;
@@ -16,8 +16,9 @@
 	transition: .3s; 
 	text-align: center;
 	height: 64px;
-	line-height: 44px;
+	// line-height: 44px;
 	color: $white;
+	
 	@media (max-width: 1023px) {
 		height: 60px;
 	}
@@ -110,7 +111,7 @@
 *[class^="btn-"].w-auto{width: fit-content;}
 .btn-white.btn--slim{box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);}
 
-.btns-group , .social{
+.btns-group, .social{
 	gap: 20px;
 	display: flex;
 	align-items: center;
@@ -127,4 +128,33 @@
 	
 		}
 	}
+}
+a.seminar__registration {
+	display: inline-block;
+	color: #3cbac6;
+	border: 1px solid #3cbac6;
+	font-size: 30px;
+	line-height: 21px;
+	padding: 16px 18px;
+
+	-webkit-transition: background-color 1s;
+	transition: 0.5s;
+}
+
+a.news-btn {
+	font-size: 32px;
+	padding: 9px 40px 10px;
+	line-height: 40px;
+	letter-spacing: -1.3px;
+}
+
+.seminar__registration.news-btn:hover {
+	background-color: #3cbac6;
+	color: white;
+}
+.preview-text ul+p {
+	margin-top: 12px !important;
+} 
+@media (max-width: 1279px) {
+	a.news-btn{font-size: 18px;}
 }

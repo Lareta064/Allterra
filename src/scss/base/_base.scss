@@ -371,9 +371,9 @@ address {
 }
 .offset-top-48{
 	&>*+*{
-		margin-top: 48px;
+		margin-top: 48px!important;
 		@media (max-width: 767px) {
-			margin-top: 32px;
+			margin-top: 32px!important;
 		}
 	}
 	article{
@@ -482,8 +482,6 @@ section.light-bg, section.dark-bg{
 		padding-bottom: 80px;
 	}
 }
-
-
 .hide-mobile{
 	@media (max-width: 767px) {
 	display: none!important;
@@ -547,4 +545,15 @@ section.light-bg, section.dark-bg{
 	@media (max-width: 1279px) {
 		display: flex;
 	}
+}
+#back-top {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 7;
+	background-color: $main-accent;
+	transform: rotate(-90deg);
+	svg{color: white; fill: transparent;}
+	opacity: 0;
+	transition: .3s; 
 }

@@ -16,8 +16,9 @@
 	}
 	article{
 		
-		
+		&>.programs-table{margin-top: 12px;}
 		&>*+*{margin-top: 12px;}
+		ol, ul{margin-bottom:12px;}
 		.scool-card +.scool-card{margin-top: 24px;}
 		.two-columns +.two-columns{margin-top: 20px;}
 		picture{
@@ -34,7 +35,7 @@
 	.checker-content{
 		margin-block: 24px;
 	}
-	.list-block li+li{margin-top: 15px;}
+	.list-block li+li{margin-top: 12px;}
 	@media (max-width: 767px) {
 		padding-top: 32px!important;
 		padding-bottom: 90px!important;
@@ -55,6 +56,61 @@
 }
 .catalogy-list .txt-20{
 	margin-bottom: 12px;
+}
+.snippet_v2_mark_list_and_h4 .v2_title {
+	font-weight: 600;
+}
+
+.prospects .services-list {
+	margin-top: 32px;
+	line-height: 1.8;
+}
+
+article.list-block p+p {
+	margin-top: 12px;
+}
+
+article.list-block p+p,
+article.scool-cards-wrapper p+p {
+	margin-top: 12px !important;
+}
+section.list-block h3, section.list-block h4,
+article.list-block h2,
+article.list-block h3,
+article.list-block h4,
+article.scool-cards-wrapper h3, article.scool-cards-wrapper h4 {
+	margin-top: 48px;
+	margin-bottom: 12px;
+}
+article.list-block img, article.scool-cards-wrapper img{
+	margin-block:48px;
+	@media (max-width: 767px) {
+			margin-block: 32px;
+		}
+}
+.catalogy-page +.blog{background-color: #f0f3f9;}
+.prospects .services-list .txt-20 {
+	line-height: 1.4;
+}
+.additional-help-list .list-block p {
+	text-transform: uppercase;
+	color: #101724;
+	opacity: 0.5;
+	line-height: 1.71;
+	margin-bottom: 12px;
+	font-size: 14px;
+}
+article.list-block p+p {
+	margin-top: 12px;
+}
+
+article.list-block h2,
+article.list-block h3 {
+	margin-top: 48px;
+	margin-bottom: 12px;
+	@media (max-width: 767px) {
+	margin-top: 32px;
+	}
 }
 .prospects .services-list{
 	margin-top: 32px;

@@ -2,6 +2,7 @@
 	position: relative;
 	overflow: hidden;
 	max-height: 170px;
+	min-height: 110px;
 	transition: .5s;
 	margin-block:32px;
 	&:after{
@@ -55,7 +56,10 @@
 	}
 }
 .height-dynamic.active{
-	&:after, .height-dynamic__btn{display: none;}
+	padding-bottom: 20px;
+	box-sizing:content-box;
+	&:after {display: none;}
+	.svg-chevron-down{transform: translateY(-8px) rotate(180deg);}
 	
 }
 .programs-table.programs-table--simple{

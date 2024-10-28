@@ -1,11 +1,11 @@
 /*=====СПИСКИ ========*/
 .list-block,
-.list-check {
+.list-check, .custom-text  {
 	ul{margin-top: 12px;}
 	li {
 		position: relative;
-		display: flex;
-
+		// display: flex;
+		padding-left: 18px;
 		column-gap: 10px;
 		line-height: 1.6;
 
@@ -23,6 +23,8 @@
 			border-radius: 50%;
 			border: 2px solid $main-accent;
 			position: relative;
+			position: absolute;
+			left: 0;
 			top: 8px;
 		}
 	}
@@ -37,6 +39,7 @@
 	li {
 		line-height: 1.75;
 		align-items: flex-start;
+		padding-left: 34px;
 
 		&+li {
 			margin-top: 12px;
