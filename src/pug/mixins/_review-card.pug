@@ -3,7 +3,7 @@ mixin person(img, name, persLink, range, exper, tags, date, loc, txt, txtLink, r
 		//====== top row =====
 		.person__info
 			.person__photo
-				img.wh-100.lazy(src="./img/"+ img +".webp", width="295"  alt="img")
+				img.wh-100(src="./img/"+ img +".webp", width="295"  alt="img")
 			.person__details
 				.flex-center-y
 					.person__name #{name}
@@ -110,3 +110,4 @@ mixin person-review(img, name, persLink, range, exper, tags, date, loc, txt, txt
 						a(href="#!").accent-link.und-line #{txtLink}
 					
 					.person__date 02.02.2024
+

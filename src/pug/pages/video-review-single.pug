@@ -1,0 +1,17 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	//=============MAIN===========
+	main.inner-page
+		include ../sections/_video-review-single-section
+		+review-slider('Другие отзывы', 'tt-none')
+		+blogCardsSlider-inner('Похожие учебные заведения')
+		
+		include ../sections/_contacts
+	include ../sections/_footer
+
+block variables
+	-var title = "Видео отзыв";
+	
+

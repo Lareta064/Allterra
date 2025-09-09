@@ -6,7 +6,7 @@
 		flex-wrap: wrap;
 	}
 }
-.hero.hero--light .breadcrumb{
+.hero.hero--light .breadcrumb, .bcr-text-primary .breadcrumb{
 	margin-bottom: 48px;
 	@media (max-width: 767px) {
 	margin-bottom: 40px;
@@ -43,7 +43,7 @@
 	padding: 0 5px;
 	color: #fff;
 }
-.hero.hero--light {
+.hero.hero--light, .bcr-text-primary {
 	.breadcrumb {
 
 		li+li:before,
