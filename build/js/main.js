@@ -1071,6 +1071,7 @@ const checkWidthAndAddListeners = () => {
   window.addEventListener('resize', checkWidthAndAddListeners);
 }
 });
+
 document.addEventListener('DOMContentLoaded', () =>{
     const runUserVideoreview = document.getElementById('user-review-btn-play');
     if(runUserVideoreview){
