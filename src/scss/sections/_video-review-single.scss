@@ -81,4 +81,63 @@
 }
 .single-video-review-page{
 	padding-top: 24px;
+    .single-video-media{
+		margin-bottom: 30px;
+		@media (max-width: 767px) {
+		margin-bottom: 20px;
+		}
+	}
+	.talk-content{margin-top: 50px;}
+	@media (max-width: 767px) {
+	.single-video-review__group{order: 1; margin-bottom: 80px;}
+	.single-video-review-page__title{order:2}
+	.talk-content{order:3; margin-top: 40px;}
+	}
+}
+.single-video-review-page__title{
+	margin-bottom: 48px;
+	@media (max-width: 767px) {
+	margin-bottom: 0;
+	}
+}
+.person-card{
+	margin-bottom: 20px;
+	@media (max-width: 767px) {
+	 margin-bottom: 30px;
+	}
+}
+.video-media-content{
+	position: relative;
+	width: 100%;
+	aspect-ratio: 960/472;
+	.video-media__img{
+		position: absolute;
+		inset:0;
+	}
+	.accent-btn-play{
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 3;
+	
+	}
+	.video-media__iframe{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		
+		iframe{
+			width: 100%;
+			height: 100%;
+			object-fit:cover;
+		}
+	}
+	.video-media-content.active{
+		.video-media__iframe{z-index: 5;}
+	}
 }

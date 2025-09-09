@@ -1071,3 +1071,15 @@ const checkWidthAndAddListeners = () => {
   window.addEventListener('resize', checkWidthAndAddListeners);
 }
 });
+document.addEventListener('DOMContentLoaded', () =>{
+    const runUserVideoreview = document.getElementById('user-review-btn-play');
+    if(runUserVideoreview){
+        runUserVideoreview.addEventListener('click',()=>{
+            if(runUserVideoreview.classList.contains('active')){
+                runUserVideoreview.classList.remove('active')
+            }else{
+                runUserVideoreview.classList.add('active')
+            }
+        })
+    }
+})
