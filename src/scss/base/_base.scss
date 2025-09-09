@@ -154,7 +154,7 @@ input::placeholder, textarea::placeholder{
 	}
 }
 .container-narrow{
-	width: min(960px, 100%);
+	width: min(1000px, 100%);
 
 	@media (max-width: 1279px) {
 		width: 100%;

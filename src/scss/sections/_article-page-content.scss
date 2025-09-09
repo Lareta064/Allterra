@@ -226,13 +226,14 @@
 			position: sticky;}
 }
 #institute-menu.dynamic-menu{
-	top:-40px;
+	top:100px;
+	position: sticky;
 	@media (max-width: 1023px) {
 		top: 66px;
 		z-index: 5;
 		background: #f0f3f9;
 		background: blue;
-		position: sticky;
+		// position: sticky;
 		margin-left: -16px;
 		margin-right: -16px;
 		display: none;

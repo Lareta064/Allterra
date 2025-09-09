@@ -2,8 +2,8 @@
 .menu-toggle {
 	display: none;
 	flex-shrink: 0;
-	width: 36px;
-	height: 36px;
+	width: 44px;
+	height: 44px;
 	background-color: #fff;
 	z-index: 11;
 	cursor: pointer;
@@ -18,11 +18,17 @@
 
 	}
 }
-
+@media (max-width: 1023px) {
+	.menu-toggle {
+		width: 36px;
+	    height: 36px;
+	}
+	
+}
 .menu-toggle span {
 	position: relative;
 	height: 2px;
-	width: 18px;
+	width: 50%;
 	border-radius: 3px;
 	background-color: $bg-black;
 	-webkit-transition: .2s;

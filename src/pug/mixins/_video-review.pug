@@ -1,0 +1,11 @@
+mixin video-review-card(img, name='Александр Ференц')
+	.video-review-card
+		.video-review__img
+			img(src='./img/video-review/rev'+img+'.webp', srcset='./img/video-review/rev'+img+'@2x.webp 2x' width='270' height='270' loading='lazy' alt='img')
+
+			button(type="button").accent-btn-play
+				svg.svg-play
+					use( href='./img/spriteSvg.svg#svg-play')
+		.h4 !{name}
+		.txt-16 Генеральный директор ГК «АК&#8209;Сервис»
+		a.accent-link.txt-14(href="") Подробнее

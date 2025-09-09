@@ -1,0 +1,44 @@
+//========VIDEO REVIEW SWIPER =======
+section.video-review-section
+	.container
+		h2.h2.txt-center Видеоотзывы
+		.slider-wrapper
+			//======== slider-content =======
+			.video-review-slider.swiper
+				.swiper-wrapper
+					//===== single slide ========
+					.swiper-slide
+						.video-review-card
+							.video-review__img
+								img(src='./img/video-review/rev1.webp', srcset='./img/video-review/rev1@2x.webp 2x' width='270' height='270' loading='lazy' alt='img')
+
+								a(href="").accent-btn-play
+									svg.svg-play
+										use( href='./img/spriteSvg.svg#svg-play')
+							.h4 Александр Ференц
+							.txt-16 Генеральный директор ГК «АК&#8209;Сервис»
+							a.accent-link.txt-14(href="") Подробнее
+					//===== single slide ========
+					.swiper-slide
+						+video-review-card(2)
+					//===== single slide ========
+					.swiper-slide
+						+video-review-card(3)
+					//===== single slide ========
+					.swiper-slide
+						+video-review-card(4)
+					//===== single slide ========
+					.swiper-slide
+						+video-review-card(1)
+					//===== single slide ========
+					.swiper-slide
+						+video-review-card(2)
+			
+			//===== swiper navigation========
+			.slider-nav
+				.swiper-button-next
+				.swiper-button-prev
+
+		//========= section button =========
+		.review-btn.flex-center
+			a(href="#!").btn-accent Смотреть все отзывы

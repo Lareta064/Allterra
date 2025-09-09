@@ -150,12 +150,16 @@ header.header
 				
 				//======== BUTTONS GROUP=========
 				.header-column
+					a(href="tel:").header-phone-mobile.btn-icon
+						svg.svg-phone
+							use(href='./img/spriteSvg.svg#svg-phone')
 					button.btn-icon.search-btn#search-btn
 						svg.svg-search
 							use( href='./img/spriteSvg.svg#svg-search')
 						
 					a(href="#feedback").btn-accent.btn-advice Консультация
 
+					
 					//====== menu-toggle =====
 					button(type="button").menu-toggle#menu-toggle
 						span

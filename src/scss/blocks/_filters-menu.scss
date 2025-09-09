@@ -152,3 +152,10 @@
 		
 	}
 }
+.filters.filters-fixed{
+	position: sticky;
+	top:68px;
+	width: 100vw;
+    z-index: 6;
+	margin-left: -16px;
+}

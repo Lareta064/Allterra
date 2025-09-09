@@ -1,0 +1,69 @@
+.accent-btn-play{
+    cursor:pointer;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: $main-accent;
+	display: flex;
+	justify-content: center;
+	align-items: center;flex-shrink: 0;
+	transition: .3s; 
+	&:hover{
+		background-color: #19abb6;
+	}
+}
+.video-review-card{
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	width: 270px;
+	color: #151515;
+   .h4{letter-spacing: unset;}
+	@media (max-width: 767px) {
+		width: 200px;
+		.h4{font-size: 20px;}
+		.txt-16{font-size: 16px;}
+		
+	}
+}
+.video-review__txt{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 160%;
+	color: #151515;
+}
+.video-review__img{
+	position: relative;
+	height: 270px;	
+	flex-shrink: 0;
+	width: 100%;
+
+	img{
+		width: 100%;height: 100%;border-radius: 50%;object-fit: cover;}
+	.accent-btn-play{
+		position: absolute;
+		bottom: -10px;
+		right: 0;
+		z-index: 2;
+	}
+	@media (max-width: 767px) {
+	 height: 200px;
+	}
+}
+.video-review-slider{
+	max-width: 1155px;
+}
+.video-review-slider.swiper .swiper-slide{
+	width: 270px!important;
+	@media (max-width: 767px) {
+	 width: 200px!important;
+	}
+}
+.video-review-section{
+	.review-btn{
+		margin-top: 100px;
+		@media (max-width: 767px) {
+		margin-top: 50px;
+		}
+	}
+}
