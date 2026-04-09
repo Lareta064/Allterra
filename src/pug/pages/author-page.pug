@@ -1,0 +1,16 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	//=============MAIN===========
+	main.inner-page
+		include ../sections/_author-page-content
+		
+
+		include ../sections/_contacts
+	include ../sections/_footer
+	//- include ../blocks/_mobile-fixed-buttons.pug
+
+block variables
+	-var title = "Страница автора";
+	

@@ -1,0 +1,297 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	//=============MAIN===========
+	main.inner-main
+		//===STATISTICS ===
+		.statistics.statistics-new
+			.container
+				//=======wrapper======
+				.statistics-content
+					//====single item =======
+					.statistics-item
+						span.h5 Помогаем поступить
+						p.bold-48 с 2008
+						span.txt-18 года
+					//====single item =======
+					.statistics-item
+						span.h5 Успешно зачислили
+						p.bold-48 >4950
+						span.txt-18 студентов
+					//====single item =======
+					.statistics-item
+						span.h5 Довольных клиентов
+						p.bold-48 >99%
+						span.txt-18 среди поступающих
+						
+					//====single item =======
+					.statistics-item
+						span.h5 Нам доверяют
+						p.bold-48 >340
+						span.txt-18 семей ежегодно
+		
+		// Спасибо, ваша заявка принята!
+		.thank-message.light-bg
+			.container
+				.thank-message.two-columns
+					.thank-message-img
+						
+					.thank-message-content
+						.left-accent-group
+							p.bold-32.left-accent Спасибо, ваша заявка принята!
+							p.demi-18 Специалист уже готовится к консультации, чтобы обсудить детали.
+						ul.list-block.before-center
+							li Мы работаем с 10 до 19 по московскому времени
+							li Длительность консультации: 30–45 минут
+							li Стоимость консультации: бесплатно
+		
+
+		//Что вы узнаете на консультации
+		.info-steps.pb-40
+			.container
+				.left-accent-group
+					.bold-32.left-accent Что вы узнаете на консультации
+					p.demi-18 Уже после первого созвона со специалистом у вас появится понятный план действий и ответы на вопросы:
+				.steps-block
+					//ITEM
+					.steps-item
+						.steps-item-col
+							span 1
+						.steps-item-txt
+							p.demi-18 Какие страны подойдут именно вам
+					//ITEM
+					.steps-item
+						.steps-item-col
+							span 2
+						.steps-item-txt
+							p.demi-18 Реальная стоимость обучения
+
+					//ITEM
+					.steps-item
+						.steps-item-col
+							span 3
+						.steps-item-txt
+							p.demi-18 Ваши объективные шансы
+
+					//ITEM
+					.steps-item
+						.steps-item-col
+							span 4
+						.steps-item-txt
+							p.demi-18 Конкретный следующий шаг
+	
+		// Как происходит разбор кейса
+		.case-study.pb-40.light-bg
+			.container.gap-50
+				.left-accent-group
+					.bold-32.left-accent Как происходит разбор кейса
+				ul.list-block.before-center.demi-18
+					li Специалист задаст ряд вопросов, чтобы понять ваши ожидания и цели в учебе
+					li Предложит предварительные варианты по стране и школе/вузу, которые подходят под ваш запрос
+					li Расскажет о вступительных требованиях 
+					li Объяснит бюрократические нюансы: визовую политику страны
+					li Составит дальнейший план действий
+		
+		//Как происходит разбор кейса
+		.case-study.pb-40
+			.container.gap-50
+				.left-accent-group
+					.bold-32.left-accent Как получить максимум пользы от разговора
+					p.demi-18 Чтобы консультация была наиболее информативной, подготовьте ответы на вопросы: 
+				
+				ol.number-list.demi-18
+					li Какой этап учебы вас интересует: средняя/старшая школа или университет? Бакалавриат или магистратура?
+					li Какой уровень образования уже получен?
+					li На какую страну ориентируетесь? 
+					li Хорошо ли вы говорите на языке этой страны или понадобится дополнительная подготовка?
+					li Под какой бюджет рассматриваете школы/вузы?
+					li В каком году планируется начало учебы?
+		
+		//Мы помогаем даже в сложных ситуациях
+		.review-short.pb-40.light-bg
+			.container.gap-50
+				.left-accent-group
+					.bold-32.left-accent Мы помогаем даже в сложных ситуациях
+					p.demi-18 В 90% случаев все идет как по маслу: выбор вуза, подготовка, подача документов, оформление визы, зачисление. Но бывают и нестандартные случаи. Например:
+				
+				.review-short-content
+					.review-short-txt.font-18
+						p.demi-18 Алия, Узбекистан
+						p Девушка из Узбекистана с запросом в стиле «Миссия невыполнима»: поступить в Великобританию за 3 месяца (Алия обратилась к нам в июне, а старт программы — в сентябре).
+						p Справились, и даже без Тома Круза. Алия не просто поступила, а получила офферы от трёх вузов из мирового топ-100. Остановились на University of Manchester, экстренно оформили документы и визу (а это отдельный квест) и успели точно к началу учебы.
+					
+					.review-short-video
+						.bold-32 Видеоотзывы
+						.short-video-group
+							.short-video-item
+								.short-video-image
+									img(src='./img/thankyou/vid-rev1.webp', srcset='./img/thankyou/vid-rev1@2x.webp 2x' width='144' height='144' loading='lazy' alt='img')
+									a(href="#!").short-video-play
+								
+								.short-video-text
+									p.demi-18 Александра Новикова
+									a.font-13(href="#!") подробнее
+							
+							
+							.short-video-item
+								.short-video-image
+									img(src='./img/thankyou/vid-rev2.webp', srcset='./img/thankyou/vid-rev2@2x.webp 2x' width='144' height='144' loading='lazy' alt='img')
+									a(href="#!").short-video-play
+								
+								.short-video-text
+									p.demi-18 Александра Новикова
+									a.font-13(href="#!") подробнее
+	
+		//Как проходит консультация
+		.consult-video.pb-40
+			.container.gap-50
+				.left-accent-group
+					.bold-32.left-accent Как проходит консультация
+				.consult-video-wrapper
+					span.play-button
+					video.consultation-short(controls 	poster="./img/thankyou/poster.webp"	 preload="metadata")
+						source(src="./video/consultation.webm" type="video/webm")
+						source(src="./video/consultation.mp4" type="video/mp4")
+
+		//Этапы работы
+		.process-stages.light-bg.pb-40
+			.container.gap-50
+				.left-accent-group
+					.bold-32.left-accent Этапы работы
+					p.demi-18 Мы организуем поступление «под ключ»: на связи от первой консультации до заселения в общежитие вуза.
+				.process-cards
+					+process-card('01','Анализ ситуации. ', 'Знакомимся с абитуриентом, выясняем цели, составляем образовательный маршрут и план дальнейших действий.' )
+					+process-card('02','Подготовка к поступлению.', 'Оцениваем уровень знаний, организуем занятия с репетиторами-иностранцами, которые знают требования вузов/школ и смогут эффективно подготовить к экзаменам.' )
+					+process-card('03','Зачисление', 'Куратор работает с приёмной комиссией, следит за сроками и оформлением документов. Если предстоит собеседование — организует репетиции.' )
+					+process-card('04','Получение визы.', 'Визовый специалист оценивает риски, помогает собрать документы, грамотно перевести их на иностранный язык, заполняет анкету и записывает на интервью.' )
+					+process-card('05','Подготовка к поездке.', 'Консультируем по жизни в стране, составляем список вещей и план действий: как пройти границу, оформить страховку и т.д., чтобы клиент понимал, что предстоит.' )
+					+process-card('06','Курирование. ', 'Пункт для родителей, которые отправляют ребёнка в школу. Hаши кураторы на связи: решают бытовые вопросы, общаются со школой, организовывают визиты родителей.' )
+	
+		//Доп информация
+		.thankyou-cta.pb-40
+			.container.gap-50
+				.left-accent-group
+					.bold-32.left-accent Дополнительная информация
+				.thankyou-cta-wrapper
+					.thankyou-cta-img
+						img(src='./img/thankyou/add-bg-w375.webp', srcset='./img/thankyou/add-bg-w375@2x.webp 2x' width='390' height='609' loading='lazy' alt='img')
+					.thankyou-cta-column
+						.h4.white-txt Оставайтесь на связи — подписывайтесь на Telegram-канал: там свежие новости о зарубежном образовании, личные поездки экспертов в школы и университеты с подробными видеоотчетами.
+						
+						a.btn--slim.btn(href='') Подписаться
+		
+		//Часто задаваемые вопросы
+		.thankyou-faq.light-bg.pb-40
+			.container.gap-50
+				.left-accent-group
+					.bold-32.left-accent Часто задаваемые вопросы
+				
+				.accordion-group
+					//=======single item =====
+					.accordion-header Это действительно бесплатно?
+					.accordion-body
+						p Да. Поступление в вуз/школу за рубежом — это сложный и долгий проект. Вы должны быть уверены, что отдаете его в руки тех специалистов, которым доверяете. Поэтому предварительное бесплатное знакомство — необходимость.
+					
+					//=======single item =====	
+					.accordion-header Реально ли поступить в Оксфорд или Кембридж?
+					.accordion-body
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+					
+					//=======single item =====	
+					.accordion-header Я не знаю, куда поступать, что делать?
+					.accordion-body
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+					//=======single item =====	
+					.accordion-header Можно ли прийти с родителями?
+					.accordion-body
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+					
+					//=======single item =====	
+					.accordion-header Вы работаете только с гражданами РФ?
+					.accordion-body
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!	
+		
+		//cards slider
+		.blog.pb-40
+			.container
+				.header-group.w-100
+					h2.section-title
+						span.accent-border читайте статьи об 
+						| образовании
+						
+					.btns-group
+						a.btn--slim.btn-white(href='#!') Все новости
+						a.btn--slim.btn-accent(href='#!') Все статьи
+				// ======= SECTION SLIDER =======
+				.slider-wrapper
+					// ======== slider-content =======
+					.blog-cards-slider.swiper
+						.swiper-wrapper
+							//slide
+							.swiper-slide
+								.blog-card.img-zoom
+									.blog-card__img
+										picture
+											img.wh-100(src='./img/thankyou/news-card1.webp' srcset="./img/thankyou/news-card1@2x.webp" loading='lazy'  width='295' height='194' alt='img')
+								
+									a.blog-card__text(href='#!')
+										.blog-card__info.txt-14
+											span Статья
+											time(datetime='26.03.2026') 12.03.2026
+										h3.txt-16 Частный вуз в Германии предлагает стипендии абитуриентам
+										span.accent-link Подробнее
+							//slide
+							.swiper-slide
+								.blog-card.img-zoom
+									.blog-card__img
+										picture
+											img.wh-100(src='./img/thankyou/news-card2.webp' srcset="./img/thankyou/news-card2@2x.webp" loading='lazy'  width='295' height='194' alt='img')
+								
+									a.blog-card__text(href='#!')
+										.blog-card__info.txt-14
+											span Статья
+											time(datetime='26.03.2026') 12.03.2026
+										h3.txt-16 В Англии открывается школа для одарённых математиков
+										span.accent-link Подробнее
+							//slide
+							.swiper-slide
+								.blog-card.img-zoom
+									.blog-card__img
+										picture
+											img.wh-100(src='./img/thankyou/news-card2.webp' srcset="./img/thankyou/news-card2@2x.webp" loading='lazy'  width='295' height='194' alt='img')
+								
+									a.blog-card__text(href='#!')
+										.blog-card__info.txt-14
+											span Статья
+											time(datetime='26.03.2026') 12.03.2026
+										h3.txt-16 Школа кино открывает летний лагерь в Лондоне
+										span.accent-link Подробнее
+							//slide
+							.swiper-slide
+								.blog-card.img-zoom
+									.blog-card__img
+										picture
+											img.wh-100(src='./img/thankyou/news-card2.webp' srcset="./img/thankyou/news-card2@2x.webp" loading='lazy'  width='295' height='194' alt='img')
+								
+									a.blog-card__text(href='#!')
+										.blog-card__info.txt-14
+											span Статья
+											time(datetime='26.03.2026') 12.03.2026
+										h3.txt-16 Юридическое образование в США: как выучиться на юриста?
+										span.accent-link Подробнее
+					// ===== swiper navigation========
+					.slider-nav
+						.swiper-button-next
+						.swiper-button-prev
+					// ========VISIBLE MOBILE =======
+					.btns-group
+						a.btn--slim.btn-br-white(href='') Все новости
+						a.btn--slim.btn(href='') Все статьи
+			
+	
+	include ../sections/_footer
+
+block variables
+	-var title = "Thankyou";

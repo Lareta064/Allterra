@@ -2,17 +2,40 @@ mixin blog-card(img, meta, txt, desk, loc)
 	.blog-card.img-zoom&attributes(attributes)
 		.blog-card__img
 			+pic-short-blog(img, 295, 194, 'wh-100')
-		a(href="#!").blog-card__text
+		.blog-card__text
 			.blog-card__info.txt-14
 				if meta!=''
 					span #{meta}
 					time(datetime="2024-03-12") 12.03.2024
 				if loc
 					span.pin-item #{loc}
-			h3.txt-16 !{txt}
-			if desk !=''
+			a(href="#!").txt-16 !{txt}
+			if desk
 				p #{desk}
-			span.accent-link Подробнее
+		
+			.blog-card__author.txt-14.muted-txt
+				span Автор:
+				a.author-link(href='#!') Севастов Иван Петрович
+			.blog-card__row
+				a(href="#!").accent-link Подробнее
+				.views-item 525
+mixin blog-card-no-author(img, meta, txt, desk, loc)
+	.blog-card.img-zoom&attributes(attributes)
+		.blog-card__img
+			+pic-short-blog(img, 295, 194, 'wh-100')
+		.blog-card__text
+			.blog-card__info.txt-14
+				if meta!=''
+					span #{meta}
+					time(datetime="2024-03-12") 12.03.2024
+				if loc
+					span.pin-item #{loc}
+			a(href="#!").txt-16 !{txt}
+			if desk
+				p #{desk}
+			.blog-card__row
+				a(href="#!").accent-link Подробнее
+				.views-item 525				
 
 //-  для ui панели (что бы отображалась картинка)
 mixin blog-card-ui(img, meta, txt, desk, loc)

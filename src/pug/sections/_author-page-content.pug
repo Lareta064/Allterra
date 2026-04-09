@@ -1,0 +1,93 @@
+section.hero.hero--light.hero-author
+	.container
+		+brcr('Главная', 'Новости', 'Все авторы', 'Иванов Иван Иванович')
+		.author-hero
+			.grid-12.author-hero__grid
+				.author-photo
+					img(src='./img/authors/photo.webp', srcset='./img/authors/photo@2x.webp 2x' width='400' height='400' loading='lazy' alt='img')
+				.author-about
+					.author-about__head
+						h1.h-36 Иванов Иван Иванович
+						.author-subtitle
+							span Эксперт в области:
+							strong Образование, Математика, Математика
+							
+					.author-about__info
+						.h4  Об авторе
+						.author-info__text.txt-14.muted-txt
+							p Lorem ipsum tristique mauris sed mus lacus pulvinar ipsum tellus faucibus bibendum fames eget adipiscing ullamcorper bibendum massa libero aliquam nascetur malesuada ultricies in volutpat tempor potenti vel ultrices quam ut felis ut nulla nunc congue tellus enim sem enim non fusce quis nulla nullam nisl faucibus eget sagittis id.
+					
+					.author-about__media.txt-14
+						.h4 Публикации и упоминание в СМИ
+						ul.list-block
+							li
+								p
+									strong New York Times: 
+									a(href="#!") Как поступать в ведущие университеты каждый год с нуля
+							li
+								p
+									strong The Guardian: 
+									a(href="#!") Harvard, но с первого раза: как поступают те, кто не боится начать заново
+							li
+								p
+									strong Financial Times:
+									a(href="#!") Поступить в Стэнфорд — не мечта, а стратегия: как абитуриенты взламывают систему
+							li
+								p
+									strong The Washington Post:
+									a(href="#!") Каждый год с нуля: что объединяет людей, поступающих в лучшие университеты мира
+							li
+								p
+									strong The Atlantic:
+									a(href="#!") The Atlantic: Великая игра поступления: как готовятся те, кто всегда попадает в топ-10 университетов
+					
+					.author-about__social
+						.h4 Cоц сети:
+						.social
+							a(href="#!").social-item
+								img(src="./img/icons/skype.svg", alt="icon")
+							a(href="#!").social-item
+								img(src="./img/icons/vk.svg", alt="icon")
+							a(href="#!").social-item
+								img(src="./img/icons/fb.svg", alt="icon")
+							a(href="#!").social-item
+								img(src="./img/icons/tw.svg", alt="icon")
+					
+					.author-about__talk
+						.h4 Интервью с автором
+						.author-about__talk-content.txt-14.muted-txt
+							p Lorem ipsum tristique mauris sed mus lacus pulvinar ipsum tellus faucibus bibendum fames eget adipiscing ullamcorper bibendum massa libero aliquam nascetur malesuada ultricies in volutpat tempor potenti vel ultrices quam ut felis ut nulla nunc congue tellus enim sem enim non fusce quis nulla nullam nisl faucibus eget sagittis id.
+							p Lorem ipsum tristique mauris sed mus lacus pulvinar ipsum tellus faucibus bibendum fames eget adipiscing ullamcorper bibendum massa libero aliquam nascetur malesuada ultricies in volutpat tempor potenti vel ultrices quam ut felis ut nulla nunc congue tellus enim sem enim non fusce quis nulla nullam nisl faucibus eget sagittis id.
+							p Lorem ipsum tristique mauris sed mus lacus pulvinar ipsum tellus faucibus bibendum fames eget adipiscing ullamcorper bibendum massa libero aliquam nascetur malesuada ultricies in volutpat tempor potenti vel ultrices quam ut felis ut nulla nunc congue tellus enim sem enim non fusce quis nulla nullam nisl faucibus eget sagittis id.
+
+section.author-articles
+	.container
+		h2.h2.accent-border Все статьи <br>автора
+		.four-columns
+			//===============группа из 6 карточек ===============
+			+blog-card-no-author(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+			+blog-card-no-author(2, 'Статья', 'Экономическое образование в США')
+			+blog-card-no-author(9, 'Статья', 'Техническое образование в Германии')
+			+blog-card-no-author(10, 'Статья', 'Обучение на промышленного дизайнера за границей')
+			+blog-card-no-author(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+			+blog-card-no-author(2, 'Статья', 'Экономическое образование в США')
+			+blog-card-no-author(9, 'Статья', 'Техническое образование в Германии')
+			+blog-card-no-author(10, 'Статья', 'Обучение на промышленного дизайнера за границей')
+			+blog-card-no-author(1, 'Статья', 'Как написать мотивационное письмо в&nbsp;университет?')
+			+blog-card-no-author(2, 'Статья', 'Экономическое образование в США')
+			+blog-card-no-author(9, 'Статья', 'Техническое образование в Германии')
+			+blog-card-no-author(10, 'Статья', 'Обучение на промышленного дизайнера за границей')
+		
+		//=====btn + pagination =====
+		.justify-group.mt-48
+			button(type="button").btn-br-white.h-40 Показать еще
+			//=====пагинация====
+			.pagination
+				a(href="#!").page-num.prev.disable
+				a(href="#!").page-num 1
+				a(href="#!").page-num 2
+				a(href="#!").page-num.active 3
+				a(href="#!").page-num ...
+				a(href="#!").page-num 22
+				a(href="#!").page-num.next
+			
