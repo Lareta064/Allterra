@@ -365,6 +365,14 @@ a.font-13:hover{opacity: .7;}
 		object-fit: cover;
 	}
 }
+.thankyou-faq{
+	padding-top: 60px;
+	padding-bottom: 80px;
+	@media (max-width: 1023px) {
+	padding-top: 34px;
+	padding-bottom: 40px;
+	}
+}
 .consult-video-wrapper{
 	border-radius: 30px;
 	width: 100%;
